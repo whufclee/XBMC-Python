@@ -1,0 +1,2271 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TotalRevolution Addons\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "[COLOR=gold]INCORRECT PASSWORD[/COLOR]"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Wrong password entered!"
+msgstr ""
+
+msgctxt "#30002"
+msgid "[COLOR=gold]ENTER PASSWORD[/COLOR]"
+msgstr ""
+
+msgctxt "#30003"
+msgid "ADULT CONTENT %s"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Your adult rated add-ons have now been %s"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Select the folder you want to scan"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Checking File Structure"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Please wait..."
+msgstr ""
+
+msgctxt "#30008"
+msgid "LIST OF NON-ASCII FILES FOUND ON SYSTEM:\n\n"
+msgstr ""
+
+msgctxt "#30009"
+msgid "ASCII CHECK RESULTS"
+msgstr ""
+
+msgctxt "#30010"
+msgid "DELETE FILES"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Would you like to delete these files?"
+msgstr ""
+
+msgctxt "#30012"
+msgid "CONFIRMATION REQUIRED"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Are you absolutely certain you want to delete these files? Once they are gone they are gone!"
+msgstr ""
+
+msgctxt "#30014"
+msgid "THE FOLLOWING ITEMS COULD NOT BE REMOVED:\n\n"
+msgstr ""
+
+msgctxt "#30015"
+msgid "SOME FAILED FILES"
+msgstr ""
+
+msgctxt "#30016"
+msgid "SUCCESS"
+msgstr ""
+
+msgctxt "#30017"
+msgid "Your non ASCII files have now been removed."
+msgstr ""
+
+msgctxt "#30018"
+msgid "ASCII CHECK CLEAN"
+msgstr ""
+
+msgctxt "#30019"
+msgid "Congratulations!"
+msgstr ""
+
+msgctxt "#30020"
+msgid "There weren\'t any non-ASCII files found on this system."
+msgstr ""
+
+msgctxt "#30021"
+msgid "[COLOR=gold]BACKUP ADD-ONS ONLY[/COLOR]"
+msgstr ""
+
+msgctxt "#30022"
+msgid "[COLOR=gold]BACKUP ADD-ON DATA ONLY[/COLOR]"
+msgstr ""
+
+msgctxt "#30023"
+msgid "[COLOR=dodgerblue]BACKUP GUISETTINGS[/COLOR]"
+msgstr ""
+
+msgctxt "#30024"
+msgid "[COLOR=dodgerblue]BACKUP MY FAVOURITES[/COLOR]"
+msgstr ""
+
+msgctxt "#30025"
+msgid "[COLOR=dodgerblue]BACKUP MY SOURCES (FILEMANAGER)[/COLOR]"
+msgstr ""
+
+msgctxt "#30026"
+msgid "[COLOR=dodgerblue]BACKUP ADVANCED SETTINGS[/COLOR]"
+msgstr ""
+
+msgctxt "#30027"
+msgid "[COLOR=dodgerblue]BACKUP KEYMAPS[/COLOR]"
+msgstr ""
+
+msgctxt "#30028"
+msgid "[COLOR=dodgerblue]BACKUP RSS FEEDS[/COLOR]"
+msgstr ""
+
+msgctxt "#30029"
+msgid "[COLOR=gold]BACKUP MY CONTENT[/COLOR]"
+msgstr ""
+
+msgctxt "#30030"
+msgid "[COLOR=dodgerblue]RESTORE MY CONTENT[/COLOR]"
+msgstr ""
+
+msgctxt "#30031"
+msgid "[COLOR=darkcyan]Wi-Fi Settings[/COLOR]"
+msgstr ""
+
+msgctxt "#30032"
+msgid "[COLOR=dodgerblue]SOCIAL TV[/COLOR]"
+msgstr ""
+
+msgctxt "#30033"
+msgid "INSTALL CONTENT"
+msgstr ""
+
+msgctxt "#30034"
+msgid "STARTUP WIZARD"
+msgstr ""
+
+msgctxt "#30035"
+msgid "MAINTENANCE"
+msgstr ""
+
+msgctxt "#30036"
+msgid "Enter new User ID"
+msgstr ""
+
+msgctxt "#30037"
+msgid "Download/Storage Path Check"
+msgstr ""
+
+msgctxt "#30038"
+msgid "The download location you have stored does not exist .\nPlease update the addon settings and try again."
+msgstr ""
+
+msgctxt "#30039"
+msgid "Clear All Known Cache?"
+msgstr ""
+
+msgctxt "#30040"
+msgid "This will clear all known cache files and can help if you\'re encountering kick-outs during playback as well as other random issues. There is no harm in using this."
+msgstr ""
+
+msgctxt "#30041"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30042"
+msgid "Delete"
+msgstr ""
+
+msgctxt "#30043"
+msgid "Add-ons To Include In Keyword Pack"
+msgstr ""
+
+msgctxt "#30044"
+msgid "ARE YOU CERTAIN?"
+msgstr ""
+
+msgctxt "#30045"
+msgid "This will completely wipe this folder, are you absolutely certain you want to continue? There is NO going back after this!"
+msgstr ""
+
+msgctxt "#30046"
+msgid "WIPING DATA"
+msgstr ""
+
+msgctxt "#30047"
+msgid "Wiping..."
+msgstr ""
+
+msgctxt "#30048"
+msgid "Please Wait"
+msgstr ""
+
+msgctxt "#30049"
+msgid "SOCIAL TV SHARES"
+msgstr ""
+
+msgctxt "#30050"
+msgid "Due to the nature of social shares there is no way to guarantee the reliability or legality of any content provided. If you enable this option it\'s your responsibility to check the content provided is legal in your country prior to installing."
+msgstr ""
+
+msgctxt "#30051"
+msgid "UPDATING SYSTEM"
+msgstr ""
+
+msgctxt "#30052"
+msgid "Calculating Used Space"
+msgstr ""
+
+msgctxt "#30053"
+msgid "Results"
+msgstr ""
+
+msgctxt "#30054"
+msgid "You can free up [COLOR=dodgerblue]%sMB[/COLOR] of space if you run this cleanup program. Would you like to run the cleanup procedure?"
+msgstr ""
+
+msgctxt "#30055"
+msgid "THUMBNAIL CLEANUP"
+msgstr ""
+
+msgctxt "#30056"
+msgid "We highly recommend only wiping your OLD unused thumbnails. Do you want to clear just the old ones or all thumbnails?"
+msgstr ""
+
+msgctxt "#30057"
+msgid "ALL"
+msgstr ""
+
+msgctxt "#30058"
+msgid "OLD ONLY"
+msgstr ""
+
+msgctxt "#30059"
+msgid "CHECKING FOR UPDATES"
+msgstr ""
+
+msgctxt "#30060"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#30061"
+msgid "Comedy"
+msgstr ""
+
+msgctxt "#30062"
+msgid "Fitness"
+msgstr ""
+
+msgctxt "#30063"
+msgid "Gaming"
+msgstr ""
+
+msgctxt "#30064"
+msgid "Kids"
+msgstr ""
+
+msgctxt "#30065"
+msgid "Live TV"
+msgstr ""
+
+msgctxt "#30066"
+msgid "Movies"
+msgstr ""
+
+msgctxt "#30067"
+msgid "Music"
+msgstr ""
+
+msgctxt "#30068"
+msgid "News"
+msgstr ""
+
+msgctxt "#30069"
+msgid "Sports"
+msgstr ""
+
+msgctxt "#30070"
+msgid "Technology"
+msgstr ""
+
+msgctxt "#30071"
+msgid "Travel"
+msgstr ""
+
+msgctxt "#30072"
+msgid "TV Shows"
+msgstr ""
+
+msgctxt "#30073"
+msgid "World"
+msgstr ""
+
+msgctxt "#30074"
+msgid "YouTube"
+msgstr ""
+
+msgctxt "#30075"
+msgid "XXX"
+msgstr ""
+
+msgctxt "#30076"
+msgid "Disable"
+msgstr ""
+
+msgctxt "#30077"
+msgid "Cooking"
+msgstr ""
+
+msgctxt "#30078"
+msgid "Please select the categories you would like to install"
+msgstr ""
+
+msgctxt "#30079"
+msgid "NO CONTENT AVAILABLE"
+msgstr ""
+
+msgctxt "#30080"
+msgid "You currently have no content in this section."
+msgstr ""
+
+msgctxt "#30081"
+msgid "Sorry there\'s currently no new content available for this category. If you\'re looking for community social shares you need to enable that feature first via Maintenance>Setup Wizard>Social Shares."
+msgstr ""
+
+msgctxt "#30082"
+msgid "NO RESPONSE FROM SERVER"
+msgstr ""
+
+msgctxt "#30083"
+msgid "Sorry Please try later"
+msgstr ""
+
+msgctxt "#30084"
+msgid "FAULT DETECTED"
+msgstr ""
+
+msgctxt "#30085"
+msgid "It was not possible to obtain your MAC address details, please check your wifi and ethernet modules are enabled."
+msgstr ""
+
+msgctxt "#30086"
+msgid "REMOVING CONTENT"
+msgstr ""
+
+msgctxt "#30087"
+msgid "Please be patient during this process"
+msgstr ""
+
+msgctxt "#30088"
+msgid "Select from the list below"
+msgstr ""
+
+msgctxt "#30089"
+msgid "NOTHING TO REMOVE"
+msgstr ""
+
+msgctxt "#30090"
+msgid "You currently have no items installed on the system, please try adding shares."
+msgstr ""
+
+msgctxt "#30091"
+msgid "SCANNING INSTALLED APPS"
+msgstr ""
+
+msgctxt "#30092"
+msgid "Package: [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30093"
+msgid "Processing APK: %s/%s"
+msgstr ""
+
+msgctxt "#30094"
+msgid "HIDE PASSWORDS"
+msgstr ""
+
+msgctxt "#30095"
+msgid "This will hide all your passwords in your add-on settings, are you sure you wish to continue?"
+msgstr ""
+
+msgctxt "#30096"
+msgid "PASSWORDS HIDDEN"
+msgstr ""
+
+msgctxt "#30097"
+msgid "Your passwords will now show as stars (hidden), if you want to undo this please use the option to unhide passwords."
+msgstr ""
+
+msgctxt "#30098"
+msgid "[COLOR=gold]WARNING: YOU ARE IN MASTER MODE[/COLOR]"
+msgstr ""
+
+msgctxt "#30099"
+msgid "[COLOR=lime]USER ID: [/COLOR]%s"
+msgstr ""
+
+msgctxt "#30100"
+msgid "[COLOR=dodgerblue]CHECK FOR UPDATES[/COLOR]"
+msgstr ""
+
+msgctxt "#30101"
+msgid "INSTALL A KEYWORD BACKUP"
+msgstr ""
+
+msgctxt "#30102"
+msgid "INSTALL FROM ZIP"
+msgstr ""
+
+msgctxt "#30103"
+msgid "BROWSE MY REPOSITORIES"
+msgstr ""
+
+msgctxt "#30104"
+msgid "SERVICE UNAVAILABLE"
+msgstr ""
+
+msgctxt "#30105"
+msgid "It was not possible to contact the relevant website to check your details. Please check your internet connection and if that\'s ok try using an alternative site in the settings."
+msgstr ""
+
+msgctxt "#30106"
+msgid "[COLOR=lime]KEYWORD SUCCESS[/COLOR]"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Congratulations, your Keyword backup has now been restored."
+msgstr ""
+
+msgctxt "#30108"
+msgid "KEYWORD INSTALLER"
+msgstr ""
+
+msgctxt "#30109"
+msgid "Downloading"
+msgstr ""
+
+msgctxt "#30110"
+msgid "Congratulations your content has now been installed"
+msgstr ""
+
+msgctxt "#30111"
+msgid "System will now reboot"
+msgstr ""
+
+msgctxt "#30112"
+msgid "KEYWORD ERROR"
+msgstr ""
+
+msgctxt "#30113"
+msgid "The keyword you typed could not be installed. Please check the spelling, if you continue to receive this message it probably means that keyword is no longer available."
+msgstr ""
+
+msgctxt "#30114"
+msgid "ERROR WITH ZIP"
+msgstr ""
+
+msgctxt "#30115"
+msgid "The file you attempted to download is not in a valid zip format, please double check you typed in the correct word."
+msgstr ""
+
+msgctxt "#30116"
+msgid "CODE NOT RECOGNISED"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Sorry the code you entered has not been recognised, please check the spelling and try again."
+msgstr ""
+
+msgctxt "#30118"
+msgid "LOG VIEWER"
+msgstr ""
+
+msgctxt "#30119"
+msgid "Would you like to view the log or upload to a website so you can ask for support on a forum?"
+msgstr ""
+
+msgctxt "#30120"
+msgid "UPLOAD"
+msgstr ""
+
+msgctxt "#30121"
+msgid "VIEW"
+msgstr ""
+
+msgctxt "#30122"
+msgid "ERRORS ONLY"
+msgstr ""
+
+msgctxt "#30123"
+msgid "WARNINGS & ERRORS"
+msgstr ""
+
+msgctxt "#30124"
+msgid "FULL (NEWEST FIRST)"
+msgstr ""
+
+msgctxt "#30125"
+msgid "FULL (ORIGINAL)"
+msgstr ""
+
+msgctxt "#30126"
+msgid "OLD LOG"
+msgstr ""
+
+msgctxt "#30127"
+msgid "Please select the log type from below"
+msgstr ""
+
+msgctxt "#30128"
+msgid "Choose Menu"
+msgstr ""
+
+msgctxt "#30129"
+msgid "UNABLE TO CONNECT TO SERVER"
+msgstr ""
+
+msgctxt "#30130"
+msgid "There was a problem trying to access the server, please try again later."
+msgstr ""
+
+msgctxt "#30131"
+msgid "[COLOR=gold]PROBLEM DETECTED[/COLOR]"
+msgstr ""
+
+msgctxt "#30132"
+msgid "Sorry it wasn't possible to execute this command, please check your internet connection. If you're sure this is ok we may be experiencing some downtime on our servers, if that's the case we apologise and they will be back online asap."
+msgstr ""
+
+msgctxt "#30133"
+msgid "DELETE ADD-ON DATA"
+msgstr ""
+
+msgctxt "#30134"
+msgid "Do you want to remove individual addon_data folders or wipe all addon_data?"
+msgstr ""
+
+msgctxt "#30135"
+msgid "EVERYTHING"
+msgstr ""
+
+msgctxt "#30136"
+msgid "INDIVIDUAL ITEMS"
+msgstr ""
+
+msgctxt "#30137"
+msgid "ABSOLUTELY CERTAIN?"
+msgstr ""
+
+msgctxt "#30138"
+msgid "This will remove ALL your addon_data, there\'s no getting it back! Are you certain you want to continue?"
+msgstr ""
+
+msgctxt "#30139"
+msgid "ADD-ON DATA REMOVED"
+msgstr ""
+
+msgctxt "#30140"
+msgid "Your addon_data folder has now been wiped."
+msgstr ""
+
+msgctxt "#30141"
+msgid "No add-on has been found on your system that matches this ID. The most likely scenario for this is you\'ve previously uninstalled this add-on and left the old addon_data on the system."
+msgstr ""
+
+msgctxt "#30142"
+msgid "Unknown Add-on"
+msgstr ""
+
+msgctxt "#30143"
+msgid "Add-on data to remove"
+msgstr ""
+
+msgctxt "#30144"
+msgid " all settings (including any login details) created for"
+msgstr ""
+
+msgctxt "#30145"
+msgid " the following add-on"
+msgstr ""
+
+msgctxt "#30146"
+msgid "ADD-ON DATA"
+msgstr ""
+
+msgctxt "#30147"
+msgid "ADD-ON"
+msgstr ""
+
+msgctxt "#30148"
+msgid "REMOVE %s"
+msgstr ""
+
+msgctxt "#30149"
+msgid "Do you want to remove: %s"
+msgstr ""
+
+msgctxt "#30150"
+msgid "Would you also like to remove the addon data associated with this add-on? This contains your add-on settings and can contain personal information such as username/password."
+msgstr ""
+
+msgctxt "#30151"
+msgid "REMOVAL COMPLETE"
+msgstr ""
+
+msgctxt "#30152"
+msgid "The addons database file now needs purging, to do so we need to restart. If prompted please agree to the deletion otherwise your add-ons may still appear even if they don\'t physically exist."
+msgstr ""
+
+msgctxt "#30153"
+msgid "REMOVE CRASH LOGS"
+msgstr ""
+
+msgctxt "#30154"
+msgid "There is absolutely no harm in doing this, these are log files generated when the system crashes and are only used for debugging purposes."
+msgstr ""
+
+msgctxt "#30155"
+msgid "SUCCESSFULLY REMOVED"
+msgstr ""
+
+msgctxt "#30156"
+msgid "Your crashlog files have now been removed."
+msgstr ""
+
+msgctxt "#30157"
+msgid "DELETE PACKAGES FOLDER"
+msgstr ""
+
+msgctxt "#30158"
+msgid "Do you wipe the packages folder? This will delete your old zip install files that are no longer in use. This will disable the ability to rollback but causes no harm."
+msgstr ""
+
+msgctxt "#30159"
+msgid "Your old zip install files have now been removed."
+msgstr ""
+
+msgctxt "#30160"
+msgid "[COLOR=gold]WIPE ALL IMAGES?[/COLOR]"
+msgstr ""
+
+msgctxt "#30161"
+msgid "We recommend using the "Clean My Folders" option. The option you\'ve chose will [COLOR=dodgerblue]TOTALLY[/COLOR] wipe all your cached images, this is not a task you should need to ever perform. Are you absolutely certain this is the option you want?"
+msgstr ""
+
+msgctxt "#30162"
+msgid "QUIT"
+msgstr ""
+
+msgctxt "#30163"
+msgid "Cache has been successfully deleted. You must now restart, would you like to quit now?"
+msgstr ""
+
+msgctxt "#30164"
+msgid "I\'ll restart later"
+msgstr ""
+
+msgctxt "#30165"
+msgid "Yes, quit"
+msgstr ""
+
+msgctxt "#30166"
+msgid "OPERATION COMPLETE"
+msgstr ""
+
+msgctxt "#30167"
+msgid "Successfully completed."
+msgstr ""
+
+msgctxt "#30168"
+msgid "RESTORE"
+msgstr ""
+
+msgctxt "#30169"
+msgid "BACKUP"
+msgstr ""
+
+msgctxt "#30170"
+msgid "ADD-ONS"
+msgstr ""
+
+msgctxt "#30171"
+msgid "GUISETTINGS"
+msgstr ""
+
+msgctxt "#30172"
+msgid "FAVOURITES"
+msgstr ""
+
+msgctxt "#30173"
+msgid "SOURCE.XML"
+msgstr ""
+
+msgctxt "#30174"
+msgid "ADVANCED SETTINGS"
+msgstr ""
+
+msgctxt "#30175"
+msgid "KEYMAPS"
+msgstr ""
+
+msgctxt "#30176"
+msgid "CREATING BACKUP"
+msgstr ""
+
+msgctxt "#30177"
+msgid "Backing up"
+msgstr ""
+
+msgctxt "#30178"
+msgid "EXTRACTING ZIP"
+msgstr ""
+
+msgctxt "#30179"
+msgid "Checking"
+msgstr ""
+
+msgctxt "#30180"
+msgid "INSTALL COMPLETE"
+msgstr ""
+
+msgctxt "#30181"
+msgid "The system will now close. When you restart please wait for all the updates to complete."
+msgstr ""
+
+msgctxt "#30182"
+msgid "Add to %s - [COLOR=dodgerblue]Browse All[/COLOR]"
+msgstr ""
+
+msgctxt "#30183"
+msgid "Add to %s - [COLOR=dodgerblue]Search For Specific Shares[/COLOR]"
+msgstr ""
+
+msgctxt "#30184"
+msgid "Add to %s"
+msgstr ""
+
+msgctxt "#30185"
+msgid "Remove from %s"
+msgstr ""
+
+msgctxt "#30186"
+msgid "Type The Channel Name"
+msgstr ""
+
+msgctxt "#30187"
+msgid "3RD PARTY SHARES STATUS: [COLOR=lime]ENABLED[/COLOR]"
+msgstr ""
+
+msgctxt "#30188"
+msgid "3RD PARTY SHARES STATUS: [COLOR=red]DISABLED[/COLOR]"
+msgstr ""
+
+msgctxt "#30189"
+msgid "CREATE KEYWORD BACKUP"
+msgstr ""
+
+msgctxt "#30190"
+msgid "MY LOCAL FOLDERS"
+msgstr ""
+
+msgctxt "#30191"
+msgid "UPDATE MY ONLINE SHARES"
+msgstr ""
+
+msgctxt "#30192"
+msgid "ADD-ON TOOLS"
+msgstr ""
+
+msgctxt "#30193"
+msgid "BACKUP/RESTORE"
+msgstr ""
+
+msgctxt "#30194"
+msgid "CLEAN MY SYSTEM"
+msgstr ""
+
+msgctxt "#30195"
+msgid "MISC. TOOLS"
+msgstr ""
+
+msgctxt "#30196"
+msgid "[COLOR=dodgerblue]NETWORK SETTINGS[/COLOR]"
+msgstr ""
+
+msgctxt "#30197"
+msgid "[COLOR=gold]SHOW ALL[/COLOR]"
+msgstr ""
+
+msgctxt "#30198"
+msgid "[COLOR=dodgerblue]AUDIO[/COLOR] add-on removal"
+msgstr ""
+
+msgctxt "#30199"
+msgid "[COLOR=dodgerblue]PICTURE[/COLOR] add-on removal"
+msgstr ""
+
+msgctxt "#30200"
+msgid "[COLOR=dodgerblue]PROGRAM[/COLOR] add-on removal"
+msgstr ""
+
+msgctxt "#30201"
+msgid "[COLOR=dodgerblue]VIDEO[/COLOR] add-on removal"
+msgstr ""
+
+msgctxt "#30202"
+msgid "[COLOR=dodgerblue]REPOSITORY[/COLOR] removal"
+msgstr ""
+
+msgctxt "#30203"
+msgid "[COLOR=dodgerblue]ADD-ONS[/COLOR] - Remove add-ons from system"
+msgstr ""
+
+msgctxt "#30204"
+msgid "[COLOR=dodgerblue]ADD-ON DATA[/COLOR] - Clean add-on settings"
+msgstr ""
+
+msgctxt "#30205"
+msgid "[COLOR=dodgerblue]PASSWORDS[/COLOR] - Hide when typing in"
+msgstr ""
+
+msgctxt "#30206"
+msgid "[COLOR=dodgerblue]PASSWORDS[/COLOR] - Unhide when typing in"
+msgstr ""
+
+msgctxt "#30207"
+msgid "[COLOR=dodgerblue]UPDATE[/COLOR] - Force an add-on update check"
+msgstr ""
+
+msgctxt "#30208"
+msgid "[COLOR=gold]CLEAN MY FOLDERS (Save Space)[/COLOR]"
+msgstr ""
+
+msgctxt "#30209"
+msgid "CLEAR [COLOR=dodgerblue]ALL[/COLOR] CACHE"
+msgstr ""
+
+msgctxt "#30210"
+msgid "CLEAR [COLOR=dodgerblue]ALL[/COLOR] CACHED ARTWORK"
+msgstr ""
+
+msgctxt "#30211"
+msgid "CLEAR PACKAGES FOLDER"
+msgstr ""
+
+msgctxt "#30212"
+msgid "[COLOR=red]FRESH START[/COLOR] - WIPE MY INSTALL"
+msgstr ""
+
+msgctxt "#30213"
+msgid "[COLOR=gold]IP ADDRESS[/COLOR]"
+msgstr ""
+
+msgctxt "#30214"
+msgid "[COLOR=gold]SYSTEM VERSION[/COLOR]"
+msgstr ""
+
+msgctxt "#30215"
+msgid "[COLOR=dodgerblue]CONVERT PATHS TO SPECIAL[/COLOR]"
+msgstr ""
+
+msgctxt "#30216"
+msgid "[COLOR=dodgerblue]CHECK FOR SPECIAL CHARACTERS[/COLOR]"
+msgstr ""
+
+msgctxt "#30217"
+msgid "[COLOR=pink]XXX[/COLOR] - HIDE MY ADULT CONTENT"
+msgstr ""
+
+msgctxt "#30218"
+msgid "[COLOR=dodgerblue]FORCE CLOSE[/COLOR]"
+msgstr ""
+
+msgctxt "#30219"
+msgid "[COLOR=dodgerblue]LOG TOOLS[/COLOR]"
+msgstr ""
+
+msgctxt "#30220"
+msgid "[COLOR=pink]XXX[/COLOR] - SHOW MY ADULT CONTENT"
+msgstr ""
+
+msgctxt "#30221"
+msgid "MAKE PASSWORDS VISIBLE"
+msgstr ""
+
+msgctxt "#30222"
+msgid "This will make all your add-on passwords visible in the add-on settings. Are you sure you wish to continue?"
+msgstr ""
+
+msgctxt "#30223"
+msgid "PASSWORDS VISIBLE"
+msgstr ""
+
+msgctxt "#30224"
+msgid "Your passwords will now be visible in your add-on settings. If you want to undo this please use the option to hide passwords."
+msgstr ""
+
+msgctxt "#30225"
+msgid "NO EMAIL ADDRESS SET"
+msgstr ""
+
+msgctxt "#30226"
+msgid "A new window will Now open for you to enter your Email address."
+msgstr ""
+
+msgctxt "#30227"
+msgid "Depending on the amount of content you have installed it could take a minute or two for all updates to take effect."
+msgstr ""
+
+msgctxt "#30228"
+msgid "Are you absolutely certain you want to wipe? All addons and settings will be completely wiped!"
+msgstr ""
+
+msgctxt "#30229"
+msgid "YES, WIPE"
+msgstr ""
+
+msgctxt "#30230"
+msgid "NO, STOP!"
+msgstr ""
+
+msgctxt "#30231"
+msgid "DEFAULT SKIN REQUIRED"
+msgstr ""
+
+msgctxt "#30232"
+msgid "Please switch to the default skin before performing a wipe."
+msgstr ""
+
+msgctxt "#30233"
+msgid "BACKUP EXISTING BUILD"
+msgstr ""
+
+msgctxt "#30234"
+msgid "Would you like to create a backup of your existing setup before proceeding?"
+msgstr ""
+
+msgctxt "#30235"
+msgid "SET BACKUP PATH"
+msgstr ""
+
+msgctxt "#30236"
+msgid "You have not set your backup storage folder. Please update the addon settings and try again."
+msgstr ""
+
+msgctxt "#30237"
+msgid "Enter a name for this backup"
+msgstr ""
+
+msgctxt "#30238"
+msgid "Creating full backup of existing build"
+msgstr ""
+
+msgctxt "#30239"
+msgid "DELETE REPOSITORIES?"
+msgstr ""
+
+msgctxt "#30240"
+msgid "Do you want to delete your repositories? Keeping bad repositories can be the cause of many problems, we recommend running Security Shield if you\'re in doubt."
+msgstr ""
+
+msgctxt "#30241"
+msgid "KEEP REPOS"
+msgstr ""
+
+msgctxt "#30242"
+msgid "DELETE REPOS"
+msgstr ""
+
+msgctxt "#30243"
+msgid "[COLOR=dodgerblue]CURRENT VERSION[/COLOR]"
+msgstr ""
+
+msgctxt "#30244"
+msgid "[COLOR=gold]You are running:[/COLOR] %s"
+msgstr ""
+
+msgctxt "#30245"
+msgid "[COLOR=gold]Compile Details:[/COLOR] %s"
+msgstr ""
+
+msgctxt "#30246"
+msgid "[COLOR=gold]Version:[/COLOR] %s"
+msgstr ""
+
+msgctxt "#30247"
+msgid "UPDATE SHARE"
+msgstr ""
+
+msgctxt "#30248"
+msgid "The following social share has changed locally:\n[COLOR=dodgerblue]%s[/COLOR]\nWould you like to update the online share?"
+msgstr ""
+
+msgctxt "#30249"
+msgid "NOTHING TO UPDATE"
+msgstr ""
+
+msgctxt "#30250"
+msgid "You have not shared anything on the system which requires updating on the server."
+msgstr ""
+
+msgctxt "#30251"
+msgid "SOCIAL SHARE UPDATED"
+msgstr ""
+
+msgctxt "#30252"
+msgid "Thank you for sharing with the community. [COLOR=dodgerblue]%s[/COLOR] has now been updated and is publicly available."
+msgstr ""
+
+msgctxt "#30253"
+msgid "NOT UPDATED"
+msgstr ""
+
+msgctxt "#30254"
+msgid "There was an error trying to contact the server, please try again later."
+msgstr ""
+
+msgctxt "#30255"
+msgid "Super Favourites contents are too large, please trim down in size and try again."
+msgstr ""
+
+msgctxt "#30256"
+msgid "There was an error trying to add your content, please try again."
+msgstr ""
+
+msgctxt "#30257"
+msgid "It was not possible to obtain your MAC address details, please check your wifi and ethernet modules are enabled."
+msgstr ""
+
+msgctxt "#30258"
+msgid "%s Not Submitted"
+msgstr ""
+
+msgctxt "#30259"
+msgid "Items must be added to a valid Super Favourite folder first."
+msgstr ""
+
+msgctxt "#30260"
+msgid "EMPTY FOLDER"
+msgstr ""
+
+msgctxt "#30261"
+msgid "This folder doesn\'t contain any content. Please populate with content and try again."
+msgstr ""
+
+msgctxt "#30262"
+msgid "CONTENT SUBMITTED"
+msgstr ""
+
+msgctxt "#30263"
+msgid "Thank you for sharing with the community. [COLOR=dodgerblue]%s[/COLOR] has now been shared and is publicly available."
+msgstr ""
+
+msgctxt "#30264"
+msgid "Select Listings provider"
+msgstr ""
+
+msgctxt "#30265"
+msgid "Please choose the main provider you'd like to use for grabbing listings. The channels found from this provider will appear first in your EPG."
+msgstr ""
+
+msgctxt "#30266"
+msgid "Would you like to add another provider? You can add as many as you want but you may find some providers use different naming conventions resulting in duplicate channels appearing."
+msgstr ""
+
+msgctxt "#30267"
+msgid "Select Listings provider"
+msgstr ""
+
+msgctxt "#30268"
+msgid "Backup details"
+msgstr ""
+
+msgctxt "#30269"
+msgid "Backup storage location"
+msgstr ""
+
+msgctxt "#30270"
+msgid "[COLOR=yellow]Click here to check download path[/COLOR]"
+msgstr ""
+
+msgctxt "#30271"
+msgid "[COLOR=gold]---------------------------------------------------------------[/COLOR]"
+msgstr ""
+
+msgctxt "#30272"
+msgid "IP LOOKUP"
+msgstr ""
+
+msgctxt "#30273"
+msgid "Site to use for IP lookups"
+msgstr ""
+
+msgctxt "#30274"
+msgid "AUTOMATICALLY CLEAN CACHE"
+msgstr ""
+
+msgctxt "#30275"
+msgid "Enable service to periodically wipe unused cache"
+msgstr ""
+
+msgctxt "#30276"
+msgid "LOG UPLOADER"
+msgstr ""
+
+msgctxt "#30277"
+msgid "E-Mail Address"
+msgstr ""
+
+msgctxt "#30278"
+msgid "[COLOR=yellow]Click here to upload a log[/COLOR]"
+msgstr ""
+
+msgctxt "#30279"
+msgid "HOME MENUS"
+msgstr ""
+
+msgctxt "#30280"
+msgid "MAIN MENU ITEMS"
+msgstr ""
+
+msgctxt "#30281"
+msgid "Add Menus"
+msgstr ""
+
+msgctxt "#30282"
+msgid "Remove Menus"
+msgstr ""
+
+msgctxt "#30283"
+msgid "[COLOR=dodgerblue]------ SOCIAL SHARING ------[/COLOR]"
+msgstr ""
+
+msgctxt "#30284"
+msgid "[COLOR=gold]Add[/COLOR] to main %s menu"
+msgstr ""
+
+msgctxt "#30285"
+msgid "[COLOR=gold]Remove[/COLOR] from main %s menu"
+msgstr ""
+
+msgctxt "#30286"
+msgid "[COLOR=gold]Add / Remove[/COLOR] Sub-menus"
+msgstr ""
+
+msgctxt "#30287"
+msgid "[COLOR=gold]Share[/COLOR] a %s menu"
+msgstr ""
+
+msgctxt "#30288"
+msgid "[COLOR=lightsteelblue][TUTORIAL][/COLOR] Add/Remove Main Menu Items"
+msgstr ""
+
+msgctxt "#30289"
+msgid "[COLOR=lightsteelblue][TUTORIAL][/COLOR] Add/Remove Content"
+msgstr ""
+
+msgctxt "#30290"
+msgid "[COLOR=lightsteelblue][TUTORIAL][/COLOR] Sharing Content"
+msgstr ""
+
+msgctxt "#30291"
+msgid "[COLOR=gold]Add / Remove[/COLOR] Sub-menus"
+msgstr ""
+
+msgctxt "#30292"
+msgid "Configure Home Menus"
+msgstr ""
+
+msgctxt "#30293"
+msgid "Configure "
+msgstr ""
+
+msgctxt "#30294"
+msgid "SELECT MENU TO CONFIGURE"
+msgstr ""
+
+msgctxt "#30295"
+msgid "Open into %s Super Favourites"
+msgstr ""
+
+msgctxt "#30296"
+msgid "Open into list of %s add-ons"
+msgstr ""
+
+msgctxt "#30297"
+msgid "Open into my custom list"
+msgstr ""
+
+msgctxt "#30298"
+msgid "Run custom command"
+msgstr ""
+
+msgctxt "#30299"
+msgid "[COLOR=red]RESET TO FACTORY DEFAULTS[/COLOR]"
+msgstr ""
+
+msgctxt "#30300"
+msgid "Configure Home Sub-Menus"
+msgstr ""
+
+msgctxt "#30301"
+msgid "[COLOR=lime][B]+[/B][/COLOR] ADD CONTENT"
+msgstr ""
+
+msgctxt "#30302"
+msgid "[COLOR=red][B]-[/B][/COLOR] REMOVE CONTENT"
+msgstr ""
+
+msgctxt "#30303"
+msgid "SELECT MENU TYPE"
+msgstr ""
+
+msgctxt "#30304"
+msgid "[COLOR=cyan][APP][/COLOR] %s"
+msgstr ""
+
+msgctxt "#30305"
+msgid "[COLOR=dodgerblue][ADD-ON][/COLOR] %s"
+msgstr ""
+
+msgctxt "#30306"
+msgid "SELECT ADD-ONS TO INCLUDE IN YOUR MENU"
+msgstr ""
+
+msgctxt "#30307"
+msgid "SELECT ADD-ON TO REMOVE FROM MENU"
+msgstr ""
+
+msgctxt "#30308"
+msgid "ITEM ALREADY EXISTS"
+msgstr ""
+
+msgctxt "#30309"
+msgid "This menu item already exists in this section. You can only have one instance of this menu."
+msgstr ""
+
+msgctxt "#30310"
+msgid "All your avaialable menus are already enabled. You have no more menus that can be added to this setup."
+msgstr ""
+
+msgctxt "#30311"
+msgid "There are no menus available to remove, your install is already as minimalistic as it can be!"
+msgstr ""
+
+msgctxt "#30312"
+msgid "Add-ons To Fully Remove"
+msgstr ""
+
+msgctxt "#30313"
+msgid "QLICKPLAY MENUS"
+msgstr ""
+
+msgctxt "#30314"
+msgid "SELECT ITEMS TO ADD"
+msgstr ""
+
+msgctxt "#30315"
+msgid "[COLOR=steelblue][QP][/COLOR] MOVIES - SEARCH"
+msgstr ""
+
+msgctxt "#30316"
+msgid "[COLOR=steelblue][QP][/COLOR] TV SHOWS - SEARCH"
+msgstr ""
+
+msgctxt "#30317"
+msgid "[COLOR=steelblue][QP][/COLOR] YOUTUBE CHANNELS - BROWSE"
+msgstr ""
+
+msgctxt "#30318"
+msgid "[COLOR=steelblue][QP][/COLOR] MOVIES - BROWSE"
+msgstr ""
+
+msgctxt "#30319"
+msgid "[COLOR=steelblue][QP][/COLOR] TV SHOWS - BROWSE"
+msgstr ""
+
+msgctxt "#30320"
+msgid "[COLOR=steelblue][QP][/COLOR] YOUTUBE VIDEOS - BROWSE"
+msgstr ""
+
+msgctxt "#30321"
+msgid "[COLOR=steelblue][QP][/COLOR] YOUTUBE VIDEOS - SEARCH"
+msgstr ""
+
+msgctxt "#30322"
+msgid "[COLOR=steelblue][QP][/COLOR] YOUTUBE CHANNELS - SEARCH"
+msgstr ""
+
+msgctxt "#30323"
+msgid "FAVOURITES"
+msgstr ""
+
+msgctxt "#30324"
+msgid "NO FAVOURITES FOUND"
+msgstr ""
+
+msgctxt "#30325"
+msgid "You have no favourites on your system yet. To add items to your favourites just navigate to a section you\'d like to favourite then press the menu button. You should now see the option to \"ADD TO FAVOURITES\""
+msgstr ""
+
+msgctxt "#30326"
+msgid "[COLOR=cadetblue][FAV][/COLOR] %s"
+msgstr ""
+
+msgctxt "#30327"
+msgid "MISSING LOGFILE"
+msgstr ""
+
+msgctxt "#30328"
+msgid "No valid logfile could be found on this system, please restart and try again."
+msgstr ""
+
+msgctxt "#30329"
+msgid "Enable debugging mode"
+msgstr ""
+
+msgctxt "#30330"
+msgid "Updates Complete"
+msgstr ""
+
+msgctxt "#30331"
+msgid "No more updates to show"
+msgstr ""
+
+msgctxt "#30332"
+msgid "NO CONNECTION"
+msgstr ""
+
+msgctxt "#30333"
+msgid "This device is not connected to the internet. Would you like to open your network settings?"
+msgstr ""
+
+msgctxt "#30334"
+msgid "[COLOR=lime]SUCCESS[/COLOR]"
+msgstr ""
+
+msgctxt "#30335"
+msgid "Congratulations the path you\'ve chosen is writeable and can be used for backups."
+msgstr ""
+
+msgctxt "#30336"
+msgid "INVALID PATH"
+msgstr ""
+
+msgctxt "#30337"
+msgid "The path you\'ve chosen cannot be written to. Please click OK and choose another location. Currently network shares are not supported."
+msgstr ""
+
+msgctxt "#30338"
+msgid "[COLOR=lime]RESET SUCCESSFUL[/COLOR]"
+msgstr ""
+
+msgctxt "#30339"
+msgid "Your add-on has now been reset to defaults. If you previously had login information entered in the settings don\'t forget to add the details back again."
+msgstr ""
+
+msgctxt "#30340"
+msgid "UPDATE REQUIRED"
+msgstr ""
+
+msgctxt "#30341"
+msgid "Your box is now going to download the latest updates. Please do not power down your device during this process."
+msgstr ""
+
+msgctxt "#30342"
+msgid "FRESH INSTALL RECOMMENDED"
+msgstr ""
+
+msgctxt "#30343"
+msgid "We recommend a full wipe. Are you happy to do a full wipe? This will revert your box back to a factory default state."
+msgstr ""
+
+msgctxt "#30344"
+msgid "CONNECTIVITY CHECK"
+msgstr ""
+
+msgctxt "#30345"
+msgid "Periodically check to see if internet connection is alive"
+msgstr ""
+
+msgctxt "#30346"
+msgid "[COLOR=gold]MY PROFILE[/COLOR]"
+msgstr ""
+
+msgctxt "#30347"
+msgid "UNREGSITERED"
+msgstr ""
+
+msgctxt "#30348"
+msgid "[COLOR=gold]CLICK HERE TO SET USERNAME[/COLOR]"
+msgstr ""
+
+msgctxt "#30349"
+msgid "[COLOR=cyan]ID:[/COLOR] [COLOR=white]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30350"
+msgid "[COLOR=gold]MY PROFILE[/COLOR] [COLOR=dodgerblue](%s)[/COLOR]"
+msgstr ""
+
+msgctxt "#30351"
+msgid "NO LONGER AVAILABLE"
+msgstr ""
+
+msgctxt "#30352"
+msgid "The following no longer exists on your system:\n[COLOR=dodgerblue]%s[/COLOR]\nWould you like to remove this from the public list of shares?"
+msgstr ""
+
+msgctxt "#30353"
+msgid "This share has now been removed and is no longer publicly available."
+msgstr ""
+
+msgctxt "#30354"
+msgid "SOCIAL SHARES"
+msgstr ""
+
+msgctxt "#30355"
+msgid "MY UPLOADED SHARES"
+msgstr ""
+
+msgctxt "#30356"
+msgid "[COLOR=red]-[/COLOR] REMOVE MY LOCAL VERSION"
+msgstr ""
+
+msgctxt "#30357"
+msgid "[COLOR=red]-[/COLOR] REMOVE PUBLIC SHARE"
+msgstr ""
+
+msgctxt "#30358"
+msgid "This will completely remove this local folder, there is no getting it back once it's gone. Are you absolutely certain you want to proceed?"
+msgstr ""
+
+msgctxt "#30359"
+msgid "[COLOR=cyan]%s MENU[/COLOR]"
+msgstr ""
+
+msgctxt "#30360"
+msgid "SHARE PUBLICLY"
+msgstr ""
+
+msgctxt "#30361"
+msgid "OPEN FOLDER"
+msgstr ""
+
+msgctxt "#30362"
+msgid "UPDATE THIS SHARE ONLINE"
+msgstr ""
+
+msgctxt "#30363"
+msgid "Congratulations your logfile has now successfully been uploaded. When contacting support please give them your Device ID: [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30364"
+msgid "Username"
+msgstr ""
+
+msgctxt "#30365"
+msgid "LOGIN DETAILS"
+msgstr ""
+
+msgctxt "#30366"
+msgid "To use the Social TV features you need to register with a valid email address. Press OK to continue to the on-screen keyboard where you can enter your email address."
+msgstr ""
+
+msgctxt "#30367"
+msgid "EMAIL ADDRESS"
+msgstr ""
+
+msgctxt "#30368"
+msgid "Please enter a username you\'d like to associate with this account. Once set this cannot be changed unless you register with a different email account."
+msgstr ""
+
+msgctxt "#30369"
+msgid "INVALID EMAIL"
+msgstr ""
+
+msgctxt "#30370"
+msgid "Please correct your email address.\n[COLOR=dodgerblue]%s[/COLOR] is not a valid email."
+msgstr ""
+
+msgctxt "#30371"
+msgid "[COLOR=gold]INVALID PASSWORD[/COLOR]"
+msgstr ""
+
+msgctxt "#30372"
+msgid "Please correct your password, this must be a minimum of 8 characters and it must not contain spaces or any special characters (A-Z, numbers, underscores and dashes only)."
+msgstr ""
+
+msgctxt "#30373"
+msgid "[COLOR=gold]ENTER PASSWORD[/COLOR]"
+msgstr ""
+
+msgctxt "#30374"
+msgid "Password"
+msgstr ""
+
+msgctxt "#30375"
+msgid "Please enter a password, this must be a minimum of 8 characters and it must not contain spaces or any special characters  (A-Z, numbers, underscores and dashes only)."
+msgstr ""
+
+msgctxt "#30376"
+msgid "MY MESSAGES"
+msgstr ""
+
+msgctxt "#30377"
+msgid "MY FRIENDS"
+msgstr ""
+
+msgctxt "#30378"
+msgid "RESET PASSWORD"
+msgstr ""
+
+msgctxt "#30379"
+msgid "UPDATE EMAIL ADDRESS"
+msgstr ""
+
+msgctxt "#30380"
+msgid "[COLOR=gold]NOT REGISTERED[/COLOR]"
+msgstr ""
+
+msgctxt "#30381"
+msgid "This device has not been registered. Please enter a license key via the REGISTER option in Startup Wizard."
+msgstr ""
+
+msgctxt "#30382"
+msgid "UNLINK DEVICE FROM ACCOUNT"
+msgstr ""
+
+msgctxt "#30383"
+msgid "Your user details have now been reset and this device is no longer linked to account."
+msgstr ""
+
+msgctxt "#30384"
+msgid "Congratulations, your cookies have now been reset."
+msgstr ""
+
+msgctxt "#30385"
+msgid "RESET COOKIES"
+msgstr ""
+
+msgctxt "#30386"
+msgid "[B][COLOR gold]Address: [/COLOR][/B] %s"
+msgstr ""
+
+msgctxt "#30387"
+msgid "[B][COLOR gold]Provider: [/COLOR][/B] %s"
+msgstr ""
+
+msgctxt "#30388"
+msgid "[B][COLOR gold]Location: [/COLOR][/B] %s"
+msgstr ""
+
+msgctxt "#30389"
+msgid "MY LOGS"
+msgstr ""
+
+msgctxt "#30390"
+msgid "This will allow you to view your uploaded log files - when you uploaded a log it would have uploaded a current log and an old log. Would you like to view the old or current?"
+msgstr ""
+
+msgctxt "#30391"
+msgid "OLD"
+msgstr ""
+
+msgctxt "#30392"
+msgid "CURRENT"
+msgstr ""
+
+msgctxt "#30393"
+msgid "NO LOG FILE UPLOADED"
+msgstr ""
+
+msgctxt "#30394"
+msgid "You do not have any logfiles uploaded, if you\'re looking for support please use the log uploader in Maintenance > Misc. Tools > Log Tools"
+msgstr ""
+
+msgctxt "#30395"
+msgid "Would you like to create a full backup containing all of your add-ons and settings or would you prefer to choose what\'s included in this keyword backup?"
+msgstr ""
+
+msgctxt "#30396"
+msgid "FULL"
+msgstr ""
+
+msgctxt "#30397"
+msgid "SELECT"
+msgstr ""
+
+msgctxt "#30398"
+msgid "CUSTOM SELECTION"
+msgstr ""
+
+msgctxt "#30399"
+msgid "You will now be taken to a list of add-ons installed on your system. Please tick the ones you want added to this keyword backup."
+msgstr ""
+
+msgctxt "#30400"
+msgid "ADD-ON SETTINGS"
+msgstr ""
+
+msgctxt "#30401"
+msgid "You now have the option to backup any custom add-on settings. Would you like to include ALL add-on settings or SELECT which ones to include?"
+msgstr ""
+
+msgctxt "#30402"
+msgid "ALL"
+msgstr ""
+
+msgctxt "#30403"
+msgid "You will now be taken to a list of add-ons installed on your system. Please tick the ones you want added to this keyword backup."
+msgstr ""
+
+msgctxt "#30404"
+msgid "UPDATE XXX PASSWORD"
+msgstr ""
+
+msgctxt "#30405"
+msgid "To access this feature you need to register a username and link this device to that username."
+msgstr ""
+
+msgctxt "#30406"
+msgid "On the following screen please enter your LOGIN password. This is [COLOR=gold]NOT[/COLOR] your XXX password but the password used for your USERNAME LOGIN."
+msgstr ""
+
+msgctxt "#30407"
+msgid "UPDATE LOGIN PASSWORD"
+msgstr ""
+
+msgctxt "#30408"
+msgid "NEW XXX PASSWORD"
+msgstr ""
+
+msgctxt "#30409"
+msgid "Congratulations you\'ve passed the security check. On the next screen please enter your NEW XXX password."
+msgstr ""
+
+msgctxt "#30410"
+msgid "EMAIL REGISTERED"
+msgstr ""
+
+msgctxt "#30411"
+msgid "This email has already been registered on the system. In the next step please enter the username associated with this email address."
+msgstr ""
+
+msgctxt "#30412"
+msgid "NEW EMAIL"
+msgstr ""
+
+msgctxt "#30413"
+msgid "Please check your emails for an activation code, make sure you check your spam folder as they can end up in there. Press OK when you\'re ready to enter the code."
+msgstr ""
+
+msgctxt "#30414"
+msgid "EMAIL CODE SENT"
+msgstr ""
+
+msgctxt "#30415"
+msgid "Please check your emails for an activation code, make sure you check your spam folder as they can end up in there. Press OK when you\'re ready to enter the code."
+msgstr ""
+
+msgctxt "#30416"
+msgid "ENTER CODE"
+msgstr ""
+
+msgctxt "#30417"
+msgid "This email has already been registered on the system. Would you like to add this device to that existing account?"
+msgstr ""
+
+msgctxt "#30418"
+msgid "Email: [COLOR=dodgerblue]%s[/COLOR]\nAre you happy to continue registration with this email? If you click YES you\'ll need to enter a username on the following screen, clicking NO will allow you to edit the email."
+msgstr ""
+
+msgctxt "#30419"
+msgid "USERNAME TAKEN"
+msgstr ""
+
+msgctxt "#30420"
+msgid "Sorry the username you chose is already in use, please try another."
+msgstr ""
+
+msgctxt "#30421"
+msgid "USERNAME AVAILABLE"
+msgstr ""
+
+msgctxt "#30422"
+msgid "Username: [COLOR=dodgerblue]%s[/COLOR]\nCongratulations, this username is available. Do you want to complete registration using this username? It cannot be altered."
+msgstr ""
+
+msgctxt "#30423"
+msgid "INVALID USERNAME"
+msgstr ""
+
+msgctxt "#30424"
+msgid "Please try again making sure you do not use spaces or any special characters (A-Z, numbers, underscores and dashes only)"
+msgstr ""
+
+msgctxt "#30425"
+msgid "EXISTING USER"
+msgstr ""
+
+msgctxt "#30426"
+msgid "In order to link this device to the email you supplied you now need to enter the username associated with that account. If you want to quit and start over please enter a blank username."
+msgstr ""
+
+msgctxt "#30427"
+msgid "Wrong Username: [COLOR=dodgerblue]%s[/COLOR]\nThis is not the username associated with the email account given. Would you like to enter a new email address?"
+msgstr ""
+
+msgctxt "#30428"
+msgid "This is now the final step of linking your device to the account. Please enter the password associated with this account."
+msgstr ""
+
+msgctxt "#30429"
+msgid "Email: [COLOR=dodgerblue]%s[/COLOR]\nAre you happy to continue registration with this email address?"
+msgstr ""
+
+msgctxt "#30430"
+msgid "Email successfully changed to:\n[COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30431"
+msgid "NEW EMAIL SET"
+msgstr ""
+
+msgctxt "#30432"
+msgid "Congratulations, this device is now linked to your account!"
+msgstr ""
+
+msgctxt "#30433"
+msgid "A window will Now open for you to enter your [COLOR=gold]NEW[/COLOR] Email address. Press OK to continue."
+msgstr ""
+
+msgctxt "#30434"
+msgid "EMAIL ALREADY IN USE"
+msgstr ""
+
+msgctxt "#30435"
+msgid "The email address you\'ve entered is already in use. If you want to link this device to that email address please select the UNLINK option and then re-register."
+msgstr ""
+
+msgctxt "#30436"
+msgid "Sorry this email is already in use. There can only be one email address assigned to one unique username."
+msgstr ""
+
+msgctxt "#30437"
+msgid "Congratulations, your new account has now been created and this device is now linked."
+msgstr ""
+
+msgctxt "#30438"
+msgid "INCORRECT EMAIL"
+msgstr ""
+
+msgctxt "#30439"
+msgid "The login credentials you\'ve supplied do not match up with this email address. Please re-check your email address details."
+msgstr ""
+
+msgctxt "#30440"
+msgid "INCORRECT USERNAME"
+msgstr ""
+
+msgctxt "#30441"
+msgid "Please check your username was entered correctly. The one supplied does not match the email/password combination on the system."
+msgstr ""
+
+msgctxt "#30442"
+msgid "Please Enter the password associated with this account"
+msgstr ""
+
+msgctxt "#30443"
+msgid "This is now the final step of your account creation, please create a password for this account. The password must be a min. 8 characters in length and only consist of standard characters (A-Z, numbers, underscores and dashes)"
+msgstr ""
+
+msgctxt "#30444"
+msgid "CONFIRM PASSWORD"
+msgstr ""
+
+msgctxt "#30445"
+msgid "Please confirm your password"
+msgstr ""
+
+msgctxt "#30446"
+msgid "Sorry there was a problem completing this task, if you continue to receive this message please try unlinking your account and the relinking. Thank you."
+msgstr ""
+
+msgctxt "#30447"
+msgid "VIEW OR UPLOAD LOG"
+msgstr ""
+
+msgctxt "#30448"
+msgid "Would you like to view your previously uploaded log or would you perfer to overwrite these with your new logfiles?"
+msgstr ""
+
+msgctxt "#30449"
+msgid "VIEW"
+msgstr ""
+
+msgctxt "#30450"
+msgid "UPLOAD"
+msgstr ""
+
+msgctxt "#30451"
+msgid "[COLOR=gold]FRIEND REQUEST[/COLOR]"
+msgstr ""
+
+msgctxt "#30452"
+msgid "FRIEND NAME"
+msgstr ""
+
+msgctxt "#30453"
+msgid "On the following screen please enter the username of the friend you\'d like to add. If they accept you\'ll be able to communicate via Social TV allowing messaging and the sharing of videos, images, audio as well as full menus!"
+msgstr ""
+
+msgctxt "#30454"
+msgid "The username you entered does not exist, please re-check and try again."
+msgstr ""
+
+msgctxt "#30455"
+msgid "FRIEND REQUEST SENT"
+msgstr ""
+
+msgctxt "#30456"
+msgid "Congratulations, your friend requst to [COLOR=dodgerblue]%s[/COLOR] has been sent. You will be notified if this user accepts your request."
+msgstr ""
+
+msgctxt "#30457"
+msgid "You\'ve received a new friend request from [COLOR=dodgerblue]%s[/COLOR]. Would you like to accept this request?"
+msgstr ""
+
+msgctxt "#30458"
+msgid "FRIEND REQUEST RECEIVED"
+msgstr ""
+
+msgctxt "#30459"
+msgid "FRIEND REQUEST NOT SENT"
+msgstr ""
+
+msgctxt "#30460"
+msgid "[COLOR=dodgerblue]%s[/COLOR] has already received a friend request from you. A new request has not been generated."
+msgstr ""
+
+msgctxt "#30461"
+msgid "You cannot become a friend of yourself!\n\nPlease try again making sure you enter a username of someone other than yourself."
+msgstr ""
+
+msgctxt "#30462"
+msgid "[COLOR=gold]NEW MESSAGES[/COLOR]"
+msgstr ""
+
+msgctxt "#30463"
+msgid "You have new messages in your inbox, would you like to view your messages?"
+msgstr ""
+
+msgctxt "#30464"
+msgid "FRIEND REQUEST ACCEPTED"
+msgstr ""
+
+msgctxt "#30465"
+msgid "Congratulation you are now friends with:\n[COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30466"
+msgid "REQUEST DECLINED"
+msgstr ""
+
+msgctxt "#30467"
+msgid "Would you like to block this user from contacting you again or would you prefer to just ignore? Ignore will allow you to come back at any time and accept the request."
+msgstr ""
+
+msgctxt "#30468"
+msgid "BLOCK"
+msgstr ""
+
+msgctxt "#30469"
+msgid "IGNORE"
+msgstr ""
+
+msgctxt "#30470"
+msgid "%s - BLOCKED"
+msgstr ""
+
+msgctxt "#30471"
+msgid "You have now successfully blocked user [COLOR=dodgerblue]%s[/COLOR]. They will not receive any notification that you\'ve blocked them."
+msgstr ""
+
+msgctxt "#30472"
+msgid "%s - PENDING"
+msgstr ""
+
+msgctxt "#30473"
+msgid "The friend request status for [COLOR=dodgerblue]%s[/COLOR] has been set to PENDING. They will not receive any notification of this, they will only be updated if you choose to accept."
+msgstr ""
+
+msgctxt "#30474"
+msgid "REVOKE FRIEND REQUEST"
+msgstr ""
+
+msgctxt "#30475"
+msgid "Your friend request to [COLOR=dodgerblue]%s[/COLOR] has now been cancelled."
+msgstr ""
+
+msgctxt "#30476"
+msgid "This is a friend request you sent, would you like to remove this request? You can always send another request in future."
+msgstr ""
+
+msgctxt "#30477"
+msgid "I just found this movie trailer and thought you might like it. Would you like to watch [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30478"
+msgid "I just found this movie and thought you might like it. Would you like to watch [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30479"
+msgid "I just found this video and thought you might like it. Would you like to watch [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30480"
+msgid "I just found this music video and thought you might like it. Would you like to watch [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30481"
+msgid "I just found this picture and thought you might like it."
+msgstr ""
+
+msgctxt "#30482"
+msgid "I just found this add-on and thought you might like it. Would you like to install [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30483"
+msgid "I just found this song and thought you might like it. Would you like to listen to [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30484"
+msgid "MOVIE TRAILER"
+msgstr ""
+
+msgctxt "#30485"
+msgid "MOVIE"
+msgstr ""
+
+msgctxt "#30486"
+msgid "VIDEO"
+msgstr ""
+
+msgctxt "#30487"
+msgid "MUSIC VIDEO"
+msgstr ""
+
+msgctxt "#30488"
+msgid "PICTURE"
+msgstr ""
+
+msgctxt "#30489"
+msgid "ADD-ON"
+msgstr ""
+
+msgctxt "#30490"
+msgid "SONG"
+msgstr ""
+
+msgctxt "#30491"
+msgid "CUSTOM MESSAGE"
+msgstr ""
+
+msgctxt "#30492"
+msgid "NEW MESSAGE"
+msgstr ""
+
+msgctxt "#30493"
+msgid "MESSAGE SENT"
+msgstr ""
+
+msgctxt "#30494"
+msgid "Congratulations your message has successfully been sent to [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30495"
+msgid "SEND MESSAGE/MEDIA"
+msgstr ""
+
+msgctxt "#30496"
+msgid "VIDEO CHECK"
+msgstr ""
+
+msgctxt "#30497"
+msgid "[COLOR=dodgerblue]%ss[/COLOR] remaining to start video"
+msgstr ""
+
+msgctxt "#30498"
+msgid "SHARE VIDEO"
+msgstr ""
+
+msgctxt "#30499"
+msgid "When you click OK a countdown timer will commence. You will be given [COLOR=dodgerblue]60 seconds[/COLOR] to navigate and open the video you want to share."
+msgstr ""
+
+msgctxt "#30500"
+msgid "You have no custom settings associated with these add-ons.\nYour keyword will be created when you click OK."
+msgstr ""
+
+msgctxt "#30501"
+msgid "FORCE UPDATES"
+msgstr ""
+
+msgctxt "#30502"
+msgid "EPG Tools"
+msgstr ""
+
+msgctxt "#30503"
+msgid "Installing Keyword"
+msgstr ""
+
+msgctxt "#30504"
+msgid "[COLOR=red]RESET ALL TO FACTORY DEFAULTS[/COLOR]"
+msgstr ""
+
+msgctxt "#30505"
+msgid "Are you sure you want to reset all %s menus to their default settings?"
+msgstr ""
+
+msgctxt "#30506"
+msgid "[COLOR=red]RESET ALL MENUS TO DEFAULTS[/COLOR]"
+msgstr ""
+
+msgctxt "#30507"
+msgid "[COLOR=gold]ADD CONTENT TO MENU[/COLOR]"
+msgstr ""
+
+msgctxt "#30508"
+msgid "Would you like to add content to this menu which already exists on your system or would you prefer to install a new add-on by entering the add-on id?"
+msgstr ""
+
+msgctxt "#30509"
+msgid "EXISTING"
+msgstr ""
+
+msgctxt "#30510"
+msgid "INSTALL NEW"
+msgstr ""
+
+msgctxt "#30511"
+msgid "ENTER ADD-ON ID TO SEARCH FOR"
+msgstr ""
+
+msgctxt "#30512"
+msgid "Congratulations the add-on id [COLOR=dodgerblue]%s[/COLOR] has been found online and is now installed."
+msgstr ""
+
+msgctxt "#30513"
+msgid "[COLOR=gold]ADD-ON ID NOT FOUND[/COLOR]"
+msgstr ""
+
+msgctxt "#30514"
+msgid "Unfortunately a search on the internet found no results for the add-on:\n[COLOR=dodgerblue]%s[/COLOR]\nPlease check you have the correct ID and try again."
+msgstr ""
+
+msgctxt "#30515"
+msgid "Congratulations your keyword backup has now been created. You can use this keyword to restore your setup on any of your devices running this software.\nKEYWORD: [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30516"
+msgid "Unfortunately there was a problem creating your keyword backup, please try again. If you continue to receive this error please upload a log and contact support with your Device ID number."
+msgstr ""
+
+msgctxt "#30517"
+msgid "ENTER YOUR KEYWORD"
+msgstr ""
+
+msgctxt "#30518"
+msgid "Sorry this keyword is already in use.\nPlease try a different keyword."
+msgstr ""
+
+msgctxt "#30519"
+msgid "[COLOR=gold]KEYWORD IN USE[/COLOR]"
+msgstr ""
+
+msgctxt "#30520"
+msgid "The credentials you\'ve provided do not match what\'s stored on our system. Please check your login details and try again."
+msgstr ""
+
+msgctxt "#30521"
+msgid "[COLOR=gold]LOGIN ERROR[/COLOR]"
+msgstr ""
+
+msgctxt "#30522"
+msgid "[COLOR=gold]ADD PASSWORD LOCK[/COLOR]"
+msgstr ""
+
+msgctxt "#30523"
+msgid "Do you want to lock this keyword with a password? If you have any sensitive login credentials in your setup we would recommend adding this extra layer of security."
+msgstr ""
+
+msgctxt "#30524"
+msgid "[COLOR=gold]LOCK TO USERNAME[/COLOR]"
+msgstr ""
+
+msgctxt "#30525"
+msgid "Do you want to lock this keyword so only devices logged in as [COLOR=dodgerblue]%s[/COLOR] can install?"
+msgstr ""
+
+msgctxt "#30526"
+msgid "On the following screen please enter a keyword you would like to associate with this backup.\nPress OK to continue."
+msgstr ""
+
+msgctxt "#30527"
+msgid "The passwords do not match, please try again."
+msgstr ""
+
+msgctxt "#30528"
+msgid "UPDATING ADD-ONS"
+msgstr ""
+
+msgctxt "#30529"
+msgid "Enabling keyword content, please wait..."
+msgstr ""
+
+msgctxt "#30530"
+msgid "DELETE THIS ACCOUNT"
+msgstr ""
+
+msgctxt "#30531"
+msgid "This will completely delete this account and all content.\nThis includes ALL your keyword backups and messages.\nAre you certain you want to fully delete this account?"
+msgstr ""
+
+msgctxt "#30532"
+msgid "VERY LAST CHANCE!"
+msgstr ""
+
+msgctxt "#30533"
+msgid "The following account will be deleted:\nUsername: [COLOR=dodgerblue]%s[/COLOR]\nEmail: [COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30534"
+msgid "The account for [COLOR=dodgerblue]%s[/COLOR] has now been fully removed.\nAll custom data has been wiped from the servers."
+msgstr ""
+
+msgctxt "#30535"
+msgid "Would you like to browse through your previously created keyword backups? Choosing NO will allow you to manually enter a keyword."
+msgstr ""
+
+msgctxt "#30536"
+msgid "[COLOR=gold]MY KEYWORDS[/COLOR]"
+msgstr ""
+
+msgctxt "#30537"
+msgid "[COLOR=gold]NO KEYWORDS CREATED[/COLOR]"
+msgstr ""
+
+msgctxt "#30538"
+msgid "You currently have no keyword backups."
+msgstr ""
+
+msgctxt "#30539"
+msgid "[COLOR=gold]EMAIL IN USE[/COLOR]"
+msgstr ""
+
+msgctxt "#30540"
+msgid "This email address is already associated to a different username.\nYou can only have one username linked to each email address."
+msgstr ""
+
+msgctxt "#30541"
+msgid "This keyword contains a guisettings.xml file. This contains details of all the system settings inc. screen resolution, subtitle, language info etc. Do you want to install this and overwrite your own settings?"
+msgstr ""
+
+msgctxt "#30542"
+msgid "This keyword contains a sources.xml file. This contains details of all the paths added into filemanager. Do you want to install this and overwrite your own sources?"
+msgstr ""
+
+msgctxt "#30543"
+msgid "This keyword contains a favourites.xml file. This contains details of all the favourites saved on the system. Do you want to install this and overwrite your own favourites?"
+msgstr ""
+
+msgctxt "#30544"
+msgid "This will completely erase all updates and attempt to re-install. Are you certain this is the action you want to take? There is no way to rollback to a previous state after this!"
+msgstr ""
+
+msgctxt "#30545"
+msgid "[COLOR=gold]CANCELLED[/COLOR]"
+msgstr ""
+
+msgctxt "#30546"
+msgid "The registration process has been cancelled."
+msgstr ""
+
+msgctxt "#30547"
+msgid "[COLOR=gold]ENABLE ALL ADD-ONS[/COLOR]"
+msgstr ""
+
+msgctxt "#30548"
+msgid "This will enable ALL your installed add-ons including any you may have previously disabled. Are you sure you want to continue?"
+msgstr ""
+
+msgctxt "#30549"
+msgid "[COLOR=gold]Top 50 Right Now[/COLOR]"
+msgstr ""
+
+msgctxt "#30550"
+msgid "DELETE A KEYWORD BACKUP"
+msgstr ""
+
+msgctxt "#30551"
+msgid "Are you sure you want to delete the keyword backup:\n[COLOR=dodgerblue]%s[/COLOR]\nClicking yes will completely wipe this backup from the server and there is no getting it back!"
+msgstr ""
+
+msgctxt "#30552"
+msgid "KEYWORD BACKUPS"
+msgstr ""
+
+msgctxt "#30553"
+msgid "[COLOR=gold]KEYWORD DELETED[/COLOR]"
+msgstr ""
+
+msgctxt "#30554"
+msgid "The following keyword backup has now been deleted and is no longer available:\n[COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+
+msgctxt "#30555"
+msgid "INVALID KEYWORD"
+msgstr ""
+
+msgctxt "#30556"
+msgid "Keyword names must be a minimum of 5 characters.\nPlease try again and enter a valid name."
+msgstr ""
+
+msgctxt "#30557"
+msgid "ADD-ON INSTALL STATUS"
+msgstr ""
+
+msgctxt "#30558"
+msgid "Show failed add-on installs when restoring keyword backup."
+msgstr ""
+
+msgctxt "#30559"
+msgid "System"
+msgstr ""
+
+msgctxt "#30560"
+msgid "[COLOR gold]PARTIAL SUCCESS[/COLOR]"
+msgstr ""
+
+msgctxt "#30561"
+msgid "The keyword was successfully installed but there was %s add-on(s) that failed to install. Would you like to view the list of add-ons which failed to install?"
+msgstr ""
+
+msgctxt "#30562"
+msgid "OK I understand"
+msgstr ""
+
+msgctxt "#30563"
+msgid "ADD-ONS WHICH FAILED TO INSTALL"
+msgstr ""
+
+msgctxt "#30564"
+msgid "Our servers do not host any add-ons and the details are pulled from a number of public websites (very similar to using a search engine in your web browser) but unfortunately no download details could be found for the add-ons listed below.\n\nIf you absolutely need these on your system then please have a search online to see if you can find them and then install from zip. If you do find the content please consider updating the team at noobsandnerds.com of where you found the content and they can update their Add-on Portal library accordingly. Anything indexed on their system can be installed so long as the download links are still valid and the original developer hasn't deleted the add-on.\n\n[COLOR gold]ADD-ONS:\n[/COLOR]%s"
+msgstr ""

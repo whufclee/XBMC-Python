@@ -1,0 +1,236 @@
+v.3.0.2:
+- Added compatibility for new genre method
+
+v.3.0.1:
+- Added back old reboot method after build install (if android)
+
+v.3.0:
+- Changed Language so it no longer reloads profile
+- Fixed bug with adult disable service
+
+v.2.9.9.9:
+- Can now set custom icons on upper menu in admin panel
+- Only show busy if run as startup or from maintenance menu
+- Added Registration function for Startup Wizard (to enable Social TV features)
+
+v.2.9.9.8:
+- Added reload of skin to autoexec.py
+
+v.2.9.9.7:
+- Auto creation of autoexec.py
+- Integration of new keyword system
+
+v.2.9.9.6:
+- Fixed adult/genre filter
+
+v.2.9.9.5:
+- Fixed keyword and social tv menus
+
+v.2.9.9.4:
+- Added better error reporting when in debug mode.
+
+v.2.9.9.3:
+- Reverted back to older way of checking if playback active during initial install
+
+v.2.9.9.2:
+- Changed all open_url functions to proper posts
+
+v.2.9.9.1:
+- Removed url base check from default and functions, now only in service
+- Edited Toggle of addons, was making 2 calls to server
+
+v.2.9.9:
+- Changed base default to totalrevolution
+
+v.2.9.8:
+- Fixed Base URL check
+
+v.2.9.7:
+- Cleaned up some bits and pieces
+
+v.2.9.6:
+- Only refresh skin if xml has been downloaded
+
+v.2.9.5:
+- Only refresh skin if homepage has focus
+
+v.2.9.4:
+- Fixed Get_ID and Fresh_Install for Android
+
+v.2.9.3:
+- Fixed auto-close after initial install
+
+v.2.9.2:
+- Updated strings
+- Removed NON_REGISTERED placeholder if download completes
+
+v.2.9.1:
+- Create unregistered placeholder so register button appears after no connection
+- Changed to use force close instead of reboot on Android (causes error messages on 6.0)
+- Added backup server check
+- Added option in settings to allow device to run in offline mode
+
+v.2.9:
+- Hidden standard kodi home window from after initial extraction on android
+
+v.2.8.9:
+- Added Android Krypton support for skinswitch
+
+v.2.8.8:
+- Fixed the typo in default __main__
+
+v.2.8.7:
+- Increased timeouts for installing of zips
+- Added registered check in service
+
+v.2.8.6:
+- Removed busy dialogs during update of files. Could get annoying real quick!
+
+v.2.8.5:
+- Fixed working loop on update install
+
+v.2.8.4:
+- Do not run skinreload on first run
+- Fixed base url
+- Added more strings
+- Added threading for install of addons
+- Added option in settings to auto-install addons
+
+v.2.8.3:
+- Fixed zipsize check
+
+v.2.8.2:
+- Added set_property TBS_Running
+- Rerun the update script if new addons are downloaded so custom files can be redownloaded
+- Refresh the skin after the update
+- Cleaned up some more code in line with Python Koding (using Strings)
+- Put a url request check in wifi_check so we can determine if connected to web
+
+v.2.8.1:
+- Updated strings, all ready for translations now
+
+v.2.8:
+- Changed 'json' commands to 'kodi_setting' to match python koding
+
+v.2.7.9:
+- Fixed Extract function
+- Removed traces of old download/extract in default.py
+
+v.2.7.8:
+- Fixed the download function
+
+v.2.7.7:
+- Fixed the service - partial installs should now reinstall correctly
+
+v.2.7.6:
+- Fixed sleep functions for install of addons
+- Tidied up a lot of code in line with Python Koding
+
+v.2.7.5:
+- Integrated Python Koding modules
+- Added Registration option
+- Re-done the add-on enable section with Koding framework.
+
+v.2.7.3.9:
+- Fixed bug with Create_Paths function failing on some platforms
+
+v.2.7.3.8:
+- Added a try/except for making the language placecholder on startup
+
+v.2.7.3.7:
+- Fixed bug with language selection, now shows current selected as default
+
+v.2.7.3.6:
+- Fixed mac pull failing on certain android units.
+
+v.2.7.3.5:
+- Some tidying up so shouldn't create multiple instances of autorun service.
+
+v.2.6.2:
+- Fixed bug with initial download of addons not being recorded in temp file
+
+v.2.6.1:
+- Fixed bug with updates not kicking in if no disclaimer was set
+
+v.2.6:
+- Imporoved debugging option
+- Added fix for clients who upload master settings with empty lines
+
+v.2.5.8:
+- Fixed auto update after startup wizard is complete
+
+v.2.5.7:
+- Fixed typo in default, if download fails it should now restart.
+
+v.2.5.6:
+- Replaced the wrong language.jpg file
+- Added forced re-populate of skinshortcuts after setup wizard
+- Added provides tag in addon.xml in hope to speed up install of addon from zip.
+- Moved temp install files to addon data so third party addons don't accidentally remove
+
+v.2.5.5:
+- Replaced rogue artwork which had found it's way in.
+- Edited the partial install code so it only removes tbs and reboots
+
+v.2.5.4:
+- Fixed client branding not showing on left hand side of wizard.
+- Fixed zip auto-update, was continually updating regardless of whether online was newer.
+- Added reboot command after initial setup if on Android, caused black screen previously.
+
+v.2.5.3:
+- Installation process will re-start if a previously failed partial install is detected.
+- Now opens into startup wizard correctly after registering
+- Now installs addons from server automatically
+- Update function now enables all non-adult addons automatically
+- Texture wipe is no longer doing a full wipe, leaves folder structure intact
+- Big tidy up of code and resources
+- Language selection is now done as a separate section to the main wizard and has been re-coded from scratch.
+- Improved keyword install, now defaults as totalrevolution as the base and allows for apk installs and also android app data folders.
+- Update function now does the android folder check for apks
+- Makes sure all adult content is disabled on boot
+
+v.2.4.7:
+- Replaced rogue artwork
+- Made more compatible with skins on large fonts
+
+v.2.4.6:
+- Bug fix for loop with hitting server if unregistered
+
+v.2.4.5:
+- Can now choose which sections to show in startup wizard (done via admin panel)
+- Added Android resolution/calibration page as well as Android audio
+
+v.2.3.8:
+- Will now startup just once automatically, if not licensed opens into Startup Wizard
+- If not licensed a dialog appears in Social Share menu of how to register along with MAC info.
+- Defaults to TR branding in startup wizard unless branding exists in media folder
+
+v.2.3.7:
+- Fixed service
+- Tweaked
+
+v.2.3.6:
+- Fixed service not starting from root install location (Android apk/OE/LE)
+- Fixed update service also not starting from root
+
+v.2.3.5:
+- Added check for internet on startup
+
+v2.1:
+- Added extra menu to enable/disable social sharing
+
+
+v2.0:
+- Added support for weather.openweathermap.extended
+
+- Switched Region and Country positions
+
+- Clean dialog messages if no results are populated (esp. useful for region section)
+
+- Fixed autorun of social update
+
+- Added back tar option
+
+
+
+v1.0.5.1: Fixed keywords and added social tv update after wizard.

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+<!-- MAINTENANCE -->
+	<setting type="lsep" label="30268"/>
+    <setting id="zip" type="folder" label="30269" default=""/>
+	<setting id="dummy" label="30270" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.tbs/checkPath.py)" option="close"/>
+	<setting type="lsep" label="30271"/>
+	<setting type="lsep" label="30272"/>
+	<setting id="ip_site" label="30273" type="labelenum" default="whatismyipaddress.com" values="iplocation.net|whatismyipaddress.com" visible="true"/>
+	<setting type="lsep" label="30271"/>
+	<setting type="lsep" label="30344"/>
+	<setting id="internetcheck" type="bool" label="30345" default="false"/>
+	<setting type="lsep" label="30271"/>
+	<setting type="lsep" label="30274"/>
+	<setting id="cleancache" type="bool" label="30275" default="false"/>
+	<setting type="lsep" label="30271"/>
+	<setting type="lsep" label="30557"/>
+	<setting id="show_addon_results" type="bool" label="30558" default="false"/>
+	<setting type="lsep" label="30271"/>
+	<setting type="lsep" label="30365"/>
+	<setting id="email" type="text" default="" label="30277"/>
+	<setting id="username" type="text" default="" label="30364"/>
+	<setting id="password" type="text" default="" label="30374" option="hidden"/>
+	<setting type="lsep" label="30271"/>
+	<setting type="lsep" label="30276"/>
+		<setting id="dummy" label="30278" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.tbs/uploadLog.py)" option="close"/>
+
+<!-- HOME MENUS -->
+	<setting id="HOME_COMEDY" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_COOKING" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_FITNESS" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_GAMING" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_KIDS" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_LIVE_TV" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_MOVIES" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_MUSIC" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_NEWS" type="text" visible="false" default=""/>
+	<setting id="HOME_SPORTS" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_SYSTEM" type="text" visible="false" default="executable"/>
+	<setting id="HOME_TECHNOLOGY" type="text" visible="false" default=""/>
+	<setting id="HOME_TRAVEL" type="text" visible="false" default=""/>
+	<setting id="HOME_TV_SHOWS" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_WORLD" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_XXX" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_YOUTUBE" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_COMEDY_APKS" type="text" visible="false"/>
+	<setting id="HOME_COOKING_APKS" type="text" visible="false"/>
+	<setting id="HOME_FITNESS_APKS" type="text" visible="false"/>
+	<setting id="HOME_GAMING_APKS" type="text" visible="false"/>
+	<setting id="HOME_KIDS_APKS" type="text" visible="false"/>
+	<setting id="HOME_LIVE_TV_APKS" type="text" visible="false"/>
+	<setting id="HOME_MOVIES_APKS" type="text" visible="false"/>
+	<setting id="HOME_MUSIC_APKS" type="text" visible="false"/>
+	<setting id="HOME_NEWS_APKS" type="text" visible="false"/>
+	<setting id="HOME_SPORTS_APKS" type="text" visible="false"/>
+	<setting id="HOME_SYSTEM_APKS" type="text" visible="false"/>
+	<setting id="HOME_TECHNOLOGY_APKS" type="text" visible="false"/>
+	<setting id="HOME_TRAVEL_APKS" type="text" visible="false"/>
+	<setting id="HOME_TV_SHOWS_APKS" type="text" visible="false"/>
+	<setting id="HOME_WORLD_APKS" type="text" visible="false"/>
+	<setting id="HOME_XXX_APKS" type="text" visible="false"/>
+	<setting id="HOME_YOUTUBE_APKS" type="text" visible="false"/>
+
+<!-- USER DETAILS -->
+	<setting id="thirdparty" type="bool" default="false" visible="false"/>
+	<setting id="disclaimer" type="bool" default="false" visible="false"/>
+	<setting id="adult" type="bool" default="false" visible="false"/>
+	<setting id="debug" label="30329" type="bool" default="false" visible="true"/>
+	<setting id="master" type="bool" default="false" visible="false"/>
+	<setting id="userid" type="text" default="" visible="false"/>
+	<setting id="xxxpass" type="text" default="" option="hidden" visible="false"/>
+	<setting id="eiu" type="bool" default="false" visible="false"/>
+	<setting id="kw" type="text" default="" visible="false"/>
+	<setting id="kw_date" type="text" default="" visible="false"/>
+
+</settings>
