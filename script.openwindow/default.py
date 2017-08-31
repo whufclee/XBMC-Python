@@ -243,7 +243,9 @@ def Select_Local_Content():
     mydisplay.doModal()
     del mydisplay
 #-----------------------------------------------------------------------------
-def Select_Language(status = False):
+def Select_Language(status=False,new_order):
+    global main_order
+    main_order = new_order
     if os.path.exists(RUN_WIZARD) and not os.path.exists(STARTUP_WIZARD):
         Set_Language()
 
