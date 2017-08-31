@@ -1,3 +1,6 @@
+v.3.0.5:
+- Some new modifications for pages() and Select_Language
+
 v.3.0.4:
 - Basic test version, still needs a little work
 
