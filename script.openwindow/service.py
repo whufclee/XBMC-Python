@@ -20,5 +20,4 @@ if os.path.exists(autoexec):
     if '# STARTUP WIZARD AUTOEXEC' in contents:
         os.remove(autoexec)
 
-if xbmc.getInfoLabel('Skin.String(Branding)') == 'off':
-    xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,update)')
+xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,update)')
