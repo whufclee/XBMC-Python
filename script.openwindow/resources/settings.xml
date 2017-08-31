@@ -8,4 +8,6 @@
 	<setting id="showprogress"		type="bool"			default="true"	visible="true"	label="30149"/>
  	<setting id="showprogress_size"	type="labelenum"	default="40"	visible="true"	label="30150"	values="0|5|10|15|20|25|30|35|40|45|50|75|100|150"/>
 	<setting id="base"				type="text"			default="http://totalrevolution.tv/"	visible="false"/>
+	<setting id="addonlist"			type="text"			default="{}"	visible="false"/>
+	<setting id="ziplist"			type="text"			default="{}"	visible="false"/>	
 </settings>

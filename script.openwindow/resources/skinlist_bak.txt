@@ -1,4 +1,0 @@
-Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod	BigNoid	skin.aeon.nox.5.tr	/storage/.kodi/addons/skin.aeon.nox.5/icon.png	01	
-Arctic: Zephyr - [COLOR=dodgerblue]TR[/COLOR]ev Mod	jurialmunkey	skin.arctic.zephyr.tr	/storage/.kodi/addons/skin.arctic.zephyr/icon.png	02	
-Mimic - [COLOR=dodgerblue]TR[/COLOR]ev Mod	bryanbrazil	skin.mimic.tr	/storage/.kodi/addons/skin.mimic/icon.png	03	
-Nebula - [COLOR=dodgerblue]TR[/COLOR]ev Mod	Tgx	skin.nebula.tr	/storage/.kodi/addons/skin.nebula/icon.png	04	

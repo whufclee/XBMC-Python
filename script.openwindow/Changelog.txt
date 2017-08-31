@@ -1,3 +1,9 @@
+v.3.0.4:
+- Basic test version, still needs a little work
+
+v.3.0.3:
+- Test version for new server
+
 v.3.0.2:
 - Added compatibility for new genre method
 
