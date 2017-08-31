@@ -77,9 +77,9 @@ BASE                       = Addon_Setting(setting='base')
 adult_store                = xbmc.translatePath('special://profile/addon_data/script.module.python.koding.aio/adult_store')
 zip_path                   = xbmc.translatePath('special://home/addons/packages/~~ZIPS~~')
 OWSETTINGS                 = xbmc.translatePath('special://profile/addon_data/script.openwindow/settings.xml')
+branding                   = xbmc.translatePath('special://home/media/branding/branding.png')
 if not os.path.exists(adult_store):
     os.makedirs(adult_store)
-
 if BASE == '':
     Addon_Setting(setting='base',value='http://totalrevolution.xyz/')
     BASE = 'http://totalrevolution.xyz/'
@@ -97,6 +97,29 @@ runamount                  = 0
 updatescreen_thread        = ''
 main_order                 = []
 MENU_FILE                  = os.path.join(OPENWINDOW_DATA,'menus')
+
+if not os.path.exists(MENU_FILE):
+    MENU_FILE              = os.path.join(ADDONS,ADDONID,'resources','menus')
+    if not os.path.exists(MENU_FILE):
+        MENU_FILE          = os.path.join(NATIVE,'addons',ADDONID,'resources','menus')
+
+# Check the menu order set by admin panel
+with open(MENU_FILE) as f:
+    content = f.read().splitlines()
+
+normal_sort = 1
+for line in content:
+    order, function = line.split('|')
+
+# Make exception for old menus which had Select_Language as part of the main wizard
+    if order == '1' and function == 'Select_Language()':
+        normal_sort = 0
+    if line != '1|Select_Language()':
+        if not normal_sort:
+           order = int(order)-1
+        main_order.append([str(order),function])
+main_order.sort()
+dolog('### main_order = %s' % main_order)
 #-----------------------------------------------------------------------------
 ##############################################################################
 ######################## MAIN SKINNING/IMAGE CODE ############################
@@ -758,15 +781,6 @@ def Keyword_Search():
 #-----------------------------------------------------------------------------
 # Define which menu items open, set by admin panel
 def Pages(menutype='', current=''):
-# Check the menu order set by admin panel
-    if not os.path.exists(MENU_FILE):
-        MENU_FILE=os.path.join(ADDONS,ADDONID,'resources','menus')
-    with open(MENU_FILE) as f:
-        content = f.read().splitlines()
-    for line in content:
-        order, function = line.split('|')
-    main_order.sort()
-    dolog('### main_order = %s' % main_order)
     dolog('MENU TYPE: %s' % menutype)
     if menutype == 'start':
         for item in main_order:
