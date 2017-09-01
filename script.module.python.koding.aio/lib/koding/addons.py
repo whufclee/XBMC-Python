@@ -17,315 +17,932 @@
 # then any affected add-ons will be blacklisted and will not be able to work on the same system
 # as any other add-ons which use this code. Thank you for your cooperation.
 
+import datetime
 import os
-import time
-import urllib
+import sys
+import shutil
 import xbmc
+import xbmcaddon
 import xbmcgui
-#----------------------------------------------------------------    
-# TUTORIAL #
-def Cleanup_URL(url):
-    """
-Clean a url, removes whitespaces and common buggy formatting when pulling from websites
 
-CODE: Cleanup_URL(url)
+import filetools
 
-    AVAILABLE PARAMS:
-        
-        (*) url   -  This is the main url you want cleaned up.
+ADDONS      = xbmc.translatePath('special://home/addons')
+XBMC_PATH   = xbmc.translatePath('special://xbmc')
+kodi_ver    = int(float(xbmc.getInfoLabel("System.BuildVersion")[:2]))
+dialog      = xbmcgui.Dialog()
 
-EXAMPLE CODE:
-raw_url = '" http://test.com/video/"/'
-clean_url = koding.Cleanup_URL(raw_url)
-dialog.ok('CLEANUP URL', 'Orig: %s'%raw_url,'Clean: %s'%clean_url)
-~"""
-    from HTMLParser import HTMLParser
-
-    bad_chars = ['/','\\',':',';','"',"'"]
-    url = url.strip()
-
-    while url[0] in bad_chars or url[-1] in bad_chars:
-        if url[-1] in bad_chars:
-            url = url[:-1]
-        if url[0] in bad_chars:
-            url = url[1:]
-        url = url.strip()
-    return HTMLParser().unescape(url)
-#----------------------------------------------------------------    
-# TUTORIAL #
-def Delete_Cookies(filename='cookiejar'):
-    """
-This will delete your cookies file.
-
-CODE: Delete_Cookies([filename])
-
-AVAILABLE PARAMS:
-
-    filename - By default this is set to the filename 'cookiejar'.
-    This is the default cookie filename which is created by the Open_URL
-    function but you can use any name you want and this function will
-    return True or False on whether or not it's successfully been removed.
-
-EXAMPLE CODE:
-Open_URL(url='http://google.com',cookiejar='google')
-dialog.ok('GOOGLE COOKIES CREATED','We have just opened a page to google.com, if you check your addon_data folder for your add-on you should see a cookies folder and in there should be a cookie called "google". When you press OK this will be removed.')
-koding.Delete_Cookies(filename='google')
-~"""
-    from addons     import Addon_Info
-    Addon_Version = Addon_Info(id='version')
-    Addon_Profile = xbmc.translatePath(Addon_Info(id='profile'))
-    Cookie_File   = os.path.join(Addon_Profile,'cookies',filename)
-    try:
-        if os.path.exists(Cookie_File):
-            os.remove(Cookie_File)
-        return True
-    except:
-        return False
-#----------------------------------------------------------------    
-# TUTORIAL #
-def Download(url, dest, dp=None, timeout=5):
-    """
-This will download a file, currently this has to be a standard download link which doesn't require cookies/login.
-
-CODE: Download(src,dst,[dp])
-dp is optional, by default it is set to false
-
-AVAILABLE PARAMS:
-
-    (*) src  - This is the source file, the URL to your download. If you attempted to download an item but it's not behaving the way you think it should (e.g. a zip file not unzipping) then change the extension of the downloaded file to .txt and open up in a text editor. You'll most likely find it's just a piece of text that was returned from the URL you gave and it should have details explaining why it failed. Could be that's the wrong URL, it requires some kind of login, it only accepts certain user-agents etc.
-
-    (*) dst  - This is the destination file, make sure it's a physical path and not "special://...". Also remember you need to add the actual filename to the end of the path, so if we were downloading something to the "downloads" folder and we wanted the file to be called "test.txt" we would use this path: dst = "downloads/test.txt". Of course the downloads folder would actually need to exist otherwise it would fail and based on this poor example the downloads folder would be at root level of your device as we've not specified a path prior to that so it just uses the first level that's accessible.
-
-    dp - This is optional, if you pass through the dp function as a DialogProgress() then you'll get to see the progress of the download. If you choose not to add this paramater then you'll just get a busy spinning circle icon until it's completed. See the example below for a dp example.
-
-    timeout - By default this is set to 5. This is the max. amount of time you want to allow for checking whether or
-    not the url is a valid link and can be accessed via the system.
-
-EXAMPLE CODE:
-src = 'http://noobsandnerds.com/portal/Bits%20and%20bobs/Documents/user%20guide%20of%20the%20gyro%20remote.pdf'
-dst = xbmc.translatePath('special://home/remote.pdf')
-dp = xbmcgui.DialogProgress()
-dp.create('Downloading File','Please Wait')
-koding.Download(src,dst,dp)
-dialog.ok('[COLOR gold]DOWNLOAD COMPLETE[/COLOR]','Your download is complete, please check your home Kodi folder. There should be a new file called remote.pdf - you can delete this if you want.')
-~"""
-    if Validate_Link(url,timeout) >= 200 and r.status_code < 400:
-        start_time=time.time()
-        urllib.urlretrieve(url, dest, lambda nb, bs, fs: Download_Progress(nb, bs, fs, dp, start_time))
-        return True
-    else:
-        return False
-#----------------------------------------------------------------    
-def Download_Progress(numblocks, blocksize, filesize, dp, start_time):
-    """ internal command ~"""
-
-    try: 
-        percent = min(numblocks * blocksize * 100 / filesize, 100) 
-        currently_downloaded = float(numblocks) * blocksize / (1024 * 1024) 
-        kbps_speed = numblocks * blocksize / (time.time() - start_time) 
-        if kbps_speed > 0: 
-            eta = (filesize - numblocks * blocksize) / kbps_speed 
-        else: 
-            eta = 0 
-        kbps_speed = kbps_speed / 1024 
-        total = float(filesize) / (1024 * 1024) 
-        mbs = '%.02f MB of %.02f MB' % (currently_downloaded, total) 
-        e = 'Speed: %.02f Kb/s ' % kbps_speed 
-        e += 'ETA: %02d:%02d' % divmod(eta, 60) 
-        if dp:
-            dp.update(percent, mbs, e)
-        if dp.iscanceled(): 
-            dp.close()
-    except: 
-        percent = 100
-        if dp:
-            dp.update(percent) 
-    if dp:
-        if dp.iscanceled(): 
-            dp.close()
-        dp.close()
-#----------------------------------------------------------------    
-# TUTORIAL #
-def Get_Extension(url):
-    """
-Return the extension of a url
-
-CODE:   Get_Extension(url)
-
-AVAILABLE PARAMS:
-
-    (*) url  -  This is the url you want to grab the extension from
-
-EXAMPLE CODE:
-url_extension = koding.Get_Extension('http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4')
-dialog.ok('FILE EXTENSION','The file extension of this Big Buck Bunny sample is:','','[COLOR=dodgerblue]%s[/COLOR]'%url_extension)
-~"""
-    
-    import os
-    import urlparse
-
-    parsed = urlparse.urlparse(url)
-    root, ext = os.path.splitext(parsed.path)
-    return ext
 #----------------------------------------------------------------
 # TUTORIAL #
-def Open_URL(url='',post_type='get',payload={},headers={'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'},cookies=True,auth=None,timeout=None,cookiejar=None,proxies={}):
+def Addon_Genre(genre='adult',custom_url=''):
     """
-If you need to pull the contents of a webpage it's very simple to do so by using this function.
-This uses the Python Requests module, for more detailed info on how the params work
-please look at the following link: http://docs.python-requests.org/en/master/user/advanced/
+Return a dictionary of add-ons which match a specific genre.
 
-IMPORTANT: This function will attempt to convert a url with a query string into the
-correct params for a post or get command but I highly recommend sending through your
-query string as a dictionary using the payload params. It's much cleaner and is a
-safer way of doing things, if you send through your url with a query string attached
-then I take no responsibility if it doesn't work!
-
-CODE:   Open_URL(url,[post_type,payload,headers,cookies,auth,timeout,cookiejar])
+CODE: Addon_Genre([genre, custom_url])
 
 AVAILABLE PARAMS:
-
-    url  -  This is the main url you want to send through. Send it through
-    as a query string format even if it's a post.
-
-    post_type  -  By default this is set to 'get' but this can be set to 'post',
-    if set to post the query string will be split up into a post format automatically.
     
-    payload - By default this is not used but if you just want a standard
-    basic Open_URL function you can add a dictionary of params here. If you
-    don't enter anything in here the function will just split up your url
-    accordingly. Make sure you read the important information at the top
-    of this tutorial text.
+    genre  -  By default this is set to 'adult' which will return
+    a dictionary of all known adult add-ons. The genre details are pulled from the
+    Add-on Portal at noobsandnerds.com so you can use any of the supported genre tags
+    listed on this page: http://noobsandnerds.com/latest/?p=3762
 
-    headers -  Optionally send through headers in form of a dictionary.
-
-    cookies  -  If set to true your request will send through and store cookies.
-
-    auth  -  User/pass details
-
-    timeout  -  Optionally set a timeout for the request.
-
-    cookiejar  -  An name for the location to store cookies. By default it's
-    set to addon_data/<addon_id>/cookies/cookiejar but if you have multiple
-    websites you access then you may want to use a separate filename for each site.
-
-    proxies - Use a proxy for accessing the link, see requests documentation for full
-    information but essentially you would send through a dictionary like this:
-    proxies = {"http":"http://10.10.1.10:3128","htts":"https://10.10.1.10:3128"}
+    custom_url  -  If you have your own custom url which returns a dictionary
+    of genres you can enter it here and use that rather than rely on NaN categorisation.
 
 EXAMPLE CODE:
-dialog.ok('[COLOR gold]OPEN FORUM PAGE[/COLOR]','We will attempt to open the noobsandnerds forum page and return the contents. You will now be asked for your forum credentials.')
-myurl = 'http://noobsandnerds.com/support/index.php'
-username = koding.Keyboard('ENTER USERNAME')
-password = koding.Keyboard('ENTER PASSWORD')
-params = {"username":username,"password":password}
-xbmc.log(repr(params),2)
-url_contents = koding.Open_URL(url=myurl, payload=params, post_type='get')
-koding.Text_Box('CONTENTS OF WEB PAGE',url_contents)
+dialog.ok('[COLOR gold]ADD-ON GENRES[/COLOR]','We will now list all known comedy based add-ons. If you have add-ons installed which you feel should be categorised as supplying comedy but they aren\'t then you can help tag them up correctly via the Add-on Portal at NaN.')
+comedy_addons = koding.Addon_Genre(genre='comedy')
+if comedy_addons:
+    my_return = 'LIST OF AVAILABLE COMEDY BASED ADD-ONS:\n\n'
+
+# Convert the dictionary into a list:
+    comedy_addons = comedy_addons.items()
+    for item in comedy_addons:
+        my_return += '[COLOR=gold]Name:[/COLOR] %s   |   [COLOR=dodgerblue]ID:[/COLOR] %s\n' % (item[0],item[1])
+    koding.Text_Box('[COLOR gold]COMEDY ADD-ONS[/COLOR]',my_return)
 ~"""
-    import os
-    import pickle
-    import requests
-    import sys
-    import xbmc
+    import binascii
+    from __init__       import converthex
+    from filetools      import Text_File
+    from systemtools    import Timestamp
+    from web            import Open_URL
+    
+    download_new = True
+    local_path   = binascii.hexlify('addons')
+    cookie_path  = xbmc.translatePath("special://profile/addon_data/script.module.python.koding.aio/cookies/")
+    final_path   = os.path.join(cookie_path,local_path)
+    if not os.path.exists(cookie_path):
+        os.makedirs(cookie_path)
+
+    if os.path.exists(final_path):
+        modified = os.path.getmtime(final_path)
+        old = int(modified)
+        now = int(Timestamp('epoch'))
+# Add a 24hr wait so we don't kill server
+        if now < (modified+86400):
+            download_new = False
+
+# Create new file
+    if download_new:
+        if custom_url == '':
+            custom_url = converthex('687474703a2f2f6e6f6f6273616e646e657264732e636f6d2f6164646f6e732f6164646f6e5f6c6973742e747874')
+        addon_list = Open_URL(custom_url)
+        Text_File(final_path, "w", addon_list)
+
+# Grab details of the relevant genre
+    if os.path.exists(final_path):
+        try:
+            addon_list = eval( Text_File(final_path, 'r') )
+            return addon_list[genre]
+        except:
+            os.remove(final_path)
+            return False
+    else:
+        return False
+#----------------------------------------------------------------
+# TUTORIAL #
+def Addon_Info(id='',addon_id=''):
+    """
+Retrieve details about an add-on, lots of built-in values are available
+such as path, version, name etc.
+
+CODE: Addon_Setting(id, [addon_id])
+
+AVAILABLE PARAMS:
+            
+    (*) id  -  This is the name of the id you want to retrieve.
+    The list of built in id's you can use (current as of 15th April 2017)
+    are: author, changelog, description, disclaimer, fanart, icon, id, name,
+    path, profile, stars, summary, type, version
+
+    addon_id  -  By default this will use your current add-on id but you
+    can access any add-on you want by entering an id in here.
+    
+EXAMPLE CODE:
+dialog.ok('ADD-ON INFO','We will now try and pull name and version details for our current running add-on.')
+version = koding.Addon_Info(id='version')
+name = koding.Addon_Info(id='name')
+dialog.ok('NAME AND VERSION','[COLOR=dodgerblue]Add-on Name:[/COLOR] %s' % name,'[COLOR=dodgerblue]Version:[/COLOR] %s' % version)
+~"""
     import xbmcaddon
-
-    from __init__   import converthex, dolog, Encryption, ADDON_ID, LOGIN, FORUM, USERNAME, PASSWORD, KODI_VER
-    from addons     import Addon_Info
-    from filetools  import Text_File
-
-    dolog('POST TYPE: %s'%post_type)
-    dolog('url: %s'%url)
-    Addon_Version = Addon_Info(id='version')
-    Addon_Profile = xbmc.translatePath(Addon_Info(id='profile'))
-    Cookie_Folder = os.path.join(Addon_Profile,'cookies')
-    if not os.path.exists(Cookie_Folder):
-        os.makedirs(Cookie_Folder)
-
-    if cookiejar == None:
-        Cookie_Jar = os.path.join(Cookie_Folder,'cookiejar')
+    if addon_id == '':
+        addon_id = Caller()
+    ADDON = xbmcaddon.Addon(id=addon_id)
+    if id == '':
+        dialog.ok('ENTER A VALID ID','You\'ve called the Addon_Info function but forgot to add an ID. Please correct your code and enter a valid id to pull info on (e.g. "version")')
     else:
-        Cookie_Jar = os.path.join(Cookie_Folder,cookiejar)
-    
-    my_cookies = None
-    if cookies:
-        if os.path.exists(Cookie_Jar):
-            try:
-                with open(Cookie_Jar, 'rb') as f:
-                    my_cookies = pickle.load(f)
-            except:
-                my_cookies = None
-
-# If the payload is empty we split the params
-    if len(payload) == 0:
-        dolog('###### QUERY STRING CONVERSION MODE')
-
-# If the url sent through is not http then we presume it's hitting the NaN page
-        if not url.startswith(converthex('68747470')):
-            NaN_URL = True
-            args = url
-            post_type = 'post'
-            url = converthex('687474703a2f2f6e6f6f6273616e646e657264732e636f6d2f43505f53747566662f6c6f67696e5f74657374696e672e7068703f753d257326703d257326663d257326613d257326763d2573266b3d257326653d2573') % (USERNAME, PASSWORD, FORUM, ADDON_ID, Addon_Version, KODI_VER, args)
-        else:
-            NaN_URL = False
-        if '?' in url:
-            url, args = url.split('?')
-            args = args.split('&')
-            for item in args:
-                var, data = item.split('=')
-                if NaN_URL:
-                    payload[var] = Encryption('e', data)
-                else:
-                    payload[var] = data
-
-    dolog('PAYLOAD: %s'%payload)
-
-    try:
-        if post_type == 'post':
-            r = requests.post(url, payload, headers=headers, cookies=my_cookies, auth=auth, timeout=timeout, proxies=proxies)
-        else:
-            r = requests.get(url, payload, headers=headers, cookies=my_cookies, auth=auth, timeout=timeout, proxies=proxies)
-    except:
-        dolog('Failed to pull content for %s'%url)
-        return False
-    dolog('### CODE: %s   |   REASON: %s' % (r.status_code, r.reason))
-    if r.status_code >= 200 and r.status_code < 400:
-        content = r.text.encode('utf-8')
-        dolog('content: %s'%content)
-        if cookies:
-            with open(Cookie_Jar, 'wb') as f:
-                pickle.dump(r.cookies, f)
-        return content
-    else:
-        dolog('Failed to pull content for %s'%url)
-        return False
+        return ADDON.getAddonInfo(id=id)
+#----------------------------------------------------------------
+def Addon_Install(addon_id,confirm=True,silent=0,repo_install=1):
+    xbmc.log('### DUE TO SERVER PROBLEMS AT NAN THE ADDON INSTALL FUNCTION YOU\'VE ATTEMPTED TO CALL IS CURRENTLY DISABLED. PLEASE REMOVE FROM YOUR CODE.',2)
+    xbmc.log('### AT THIS MOMENT IN TIME IT\'S UNSURE WHETHER OR NOT THIS FUNCTION WILL BE GETTING ADDED BACK TO PYTHON KODING OR NOT - SORRY FOR ANY INCONVENIENCE.',2)
+    pass
 #----------------------------------------------------------------
 # TUTORIAL #
-def Validate_Link(url='',timeout=30):
+def Addon_List(enabled=True, inc_new=False):
     """
-Returns the code for a particular link, so for example 200 is a good link and 404 is a URL not found
+Return a list of enabled or disabled add-ons found in the database.
 
-CODE:   Validate_Link(url,[timeout])
+CODE: Addon_List([enabled, inc_new])
+
+AVAILABLE PARAMS:
+    
+    enabled  -  By default this is set to True which means you'll
+    get a list of all the enabled add-ons found in addons*.db but
+    if you want a list of all the disabled ones just set this to
+    False.
+
+    inc_new  -  This will also add any new add-on folders found on
+    your system that aren't yet in the database (ie ones that have
+    been recently been manually extracted but not scanned in). By
+    default this is set to False.
+        
+EXAMPLE CODE:
+enabled_list = Addon_List(enabled=True)
+disabled_list = Addon_List(enabled=False)
+my_return = ''
+
+for item in enabled_list:
+    my_return += '[COLOR=lime]ENABLED:[/COLOR] %s\n' % item
+for item in disabled_list:
+    my_return += '[COLOR=red]DISABLED:[/COLOR] %s\n' % item
+koding.Text_Box('ADDON STATUS',my_return)
+~"""
+    from database   import DB_Query
+    from guitools   import Text_Box
+    from filetools  import DB_Path_Check, Get_Contents
+    
+    enabled_list  = []
+    disabled_list = []
+    addons_db     = DB_Path_Check('addons')
+    on_system     = DB_Query(addons_db,'SELECT addonID, enabled from installed')
+
+# Create a list of enabled and disabled add-ons already on system
+    for item in on_system:
+        if item["enabled"]:
+            enabled_list.append(item["addonID"])
+        else:
+            disabled_list.append(item["addonID"])
+
+    if inc_new:
+        my_addons = Get_Contents(path=ADDONS, exclude_list=['packages','temp'])
+        for item in my_addons:
+            addon_id = Get_Addon_ID(item)
+            if not addon_id in enabled_list and not addon_id in disabled_list:
+                disabled_list.append(addon_id)
+
+    if enabled:
+        return enabled_list
+    else:
+        return disabled_list
+#----------------------------------------------------------------
+# TUTORIAL #
+def Addon_Service(addons='all', mode='list', skip_service='all'):
+    """
+Send through an add-on id, list of id's or leave as the default which is "all". This
+will loop through the list of add-ons and return the ones which are run as services.
+
+This enable/disable feature will comment out the service lines, and does not stop a running
+service or start a service. This is designed more for if you've manually extracted a new
+add-on into your system and it isn't yet enabled. Occasionally if the add-ons have dependencies
+which are run as services then trying to enable them can cause Kodi to freeze.
+
+CODE: Addon_Service([addon,disable])
+
+AVAILABLE PARAMS:
+    
+    addons  -  By default this is set to "all" but if there's a sepcific set of add-ons you
+    want to disable the service for just send through the id's in the form of a list.
+
+    mode  -  By default this is set to 'list' meaning you'll get a return of add-on folders
+    which contain an instance of service in the add-on.xml. You can set this to "disable" to
+    comment out the instances of service and similarly when you need to re-enable you can use
+    "enable" and that will uncomment out the service item. Please note that by uncommenting
+    the service will not automatically start - you'll need to reload the profile for that.
+
+    skip_service  -  This function can fail if certain dependencies are
+    run as a service, if they are causing problems you can send through
+    the id or a list of id's which you want to disable the service for.
+    This will comment out the service part in the addon.xml before attempting
+    to enable the add-on. Don't forget to re-enable this if you want the service
+    running.
+
+EXAMPLE CODE:
+dialog.ok('[COLOR gold]CHECKING FOR SERVICES[/COLOR]','We will now check for all add-ons installed which contain services')
+service_addons = Addon_Service(mode='list')
+my_text = 'List of add-ons running as a service:\n\n'
+for item in service_addons:
+    my_text += item+'\n'
+koding.Text_Box('[COLOR gold]SERVICE ADDONS[/COLOR]',my_text)
+~"""
+    from filetools   import Get_Contents, Text_File
+    from systemtools import Data_Type
+    from guitools    import Text_Box
+    service_addons = []
+    if addons=='all':
+        addons = Get_Contents(path=ADDONS, exclude_list=['packages','temp'],full_path=False)
+    else:
+        if Data_Type(addons) == 'str':
+            addons = [addons]
+
+    if skip_service=='all':
+        skip_service = addons
+    else:
+        if Data_Type(skip_service) == 'str':
+            skip_service = [skip_service]
+
+    service_line = '<extension point="xbmc.service"'
+    
+    for item in addons:
+        addon_path = os.path.join(ADDONS,item,'addon.xml')
+        if os.path.exists(addon_path) and item not in skip_service:
+            content = Text_File(addon_path,'r')
+            if service_line in content:
+                xbmc.log('%s contains a service,'%item,2)
+                for line in content.splitlines():
+                    if service_line in line:
+                        if item not in service_addons:
+                            service_addons.append(item)
+                            if not (line.strip().startswith('<!--')) and (mode == 'disable'):
+                                replace_line = '<!--%s-->'%line
+                                Text_File(addon_path,'w',content.replace(line,replace_line))
+                                break
+                            elif line.strip().startswith('<!--') and mode == 'enable':
+                                replace_line = line.replace(r'<!--','').replace(r'-->','')
+                                Text_File(addon_path,'w',content.replace(line,replace_line))
+                                break
+    return service_addons
+#----------------------------------------------------------------
+# TUTORIAL #
+def Addon_Setting(setting='',value='return_default',addon_id=''):
+    """
+Change or retrieve an add-on setting.
+
+CODE: Addon_Setting(setting, [value, addon_id])
+
+AVAILABLE PARAMS:
+            
+    (*) setting  -  This is the name of the setting you want to access, by
+    default this function will return the value but if you add the
+    value param shown below it will CHANGE the setting.
+
+    value  -  If set this will change the setting above to whatever value
+    is in here.
+
+    addon_id  -  By default this will use your current add-on id but you
+    can access any add-on you want by entering an id in here.
+    
+EXAMPLE CODE:
+dialog.ok('ADDON SETTING','We will now try and pull the language settings for the YouTube add-on')
+if os.path.exists(xbmc.translatePath('special://home/addons/plugin.video.youtube')):
+    my_setting = koding.Addon_Setting(setting='youtube.language',addon_id='plugin.video.youtube')
+    dialog.ok('YOUTUBE SETTING','[COLOR=dodgerblue]Setting name:[/COLOR] youtube.language','[COLOR=dodgerblue]Value:[/COLOR] %s' % my_setting)
+else:
+    dialog.ok('YOUTUBE NOT INSTALLED','Sorry we cannot run this example as you don\'t have YouTube installed.')
+~"""
+    import xbmcaddon
+    if addon_id == '':
+        addon_id = Caller()
+    ADDON = xbmcaddon.Addon(id=addon_id)
+    if value == 'return_default':
+        mysetting = ADDON.getSetting(setting)
+        return mysetting
+    else:
+        ADDON.setSetting(id=setting, value=value)
+#----------------------------------------------------------------
+# TUTORIAL #
+def Adult_Toggle(adult_list=[],disable=True):
+    """
+Remove/Enable a list of add-ons, these are put into a containment area until enabled again.
+
+CODE: Adult_Toggle(adult_list, [disable])
+
+AVAILABLE PARAMS:
+            
+    (*) adult_list  -  A list containing all the add-ons you want to be disabled.
+
+    disable  -  By default this is set to true so any add-ons in the list sent
+    through will be disabled. Set to False if you want to enable the hidden add-ons.
+~"""
+    from filetools   import Move_Tree, End_Path
+
+    adult_store = xbmc.translatePath("special://profile/addon_data/script.module.python.koding.aio/adult_store")
+    if not os.path.exists(adult_store):
+        os.makedirs(adult_store)
+    my_addons = Installed_Addons()
+    if disable:
+        for item in my_addons:
+            if item != None:
+                item = item["addonid"]
+                if item in adult_list:
+                    try:
+                        addon_path = xbmcaddon.Addon(id=item).getAddonInfo("path")
+                    except:
+                        addon_path = os.path.join(ADDONS,item)
+                    Toggle_Addons(addon=item, enable=False, safe_mode=False, refresh=True)
+                    path_id = End_Path(addon_path)
+                    if os.path.exists(addon_path):
+                        Move_Tree(addon_path,os.path.join(adult_store,path_id))
+    else:
+        KODI_VER    = int(float(xbmc.getInfoLabel("System.BuildVersion")[:2]))
+        addon_vault = []
+        if os.path.exists(adult_store):
+            for item in os.listdir(adult_store):
+                store_dir = os.path.join(adult_store,item)
+                addon_dir = os.path.join(ADDONS, item)
+                if os.path.isdir(store_dir):
+                    Move_Tree(store_dir,addon_dir)
+                    addon_vault.append(item)
+        if KODI_VER >= 16:
+            Toggle_Addons(addon=addon_vault, safe_mode=True, refresh=True)
+        else:
+            Refresh(['addons','repos'])
+#----------------------------------------------------------------
+# TUTORIAL #
+def Caller(my_return='addon'):
+    """
+Return the add-on id or path of the script which originally called
+your function. If it's been called through a number of add-ons/scripts
+you can grab a list of paths that have been called.
+
+CODE: Caller(my_return)
+
+AVAILABLE PARAMS:
+    
+    my_return  -  By default this is set to 'addon', view the options below:
+        
+        'addon' : Return the add-on id of the add-on to call this function.
+        
+        'addons': Return a list of all add-on id's called to get to this function.
+        
+        'path'  : Return the full path to the script which called this funciton.
+        
+        'paths' : Return a list of paths which have been called to get to this
+        final function.
+        
+EXAMPLE CODE:
+my_addon = koding.Caller(my_return='addon')
+my_addons = koding.Caller(my_return='addons')
+my_path = koding.Caller(my_return='path')
+my_paths = koding.Caller(my_return='paths')
+
+dialog.ok('ADD-ON ID', 'Addon id you called this function from:','[COLOR=dodgerblue]%s[/COLOR]' % my_addon)
+dialog.ok('SCRIPT PATH', 'Script which called this function:','[COLOR=dodgerblue]%s[/COLOR]' % my_path)
+
+addon_list = 'Below is a list of add-on id\'s which have been called to get to this final piece of code:\n\n'
+for item in my_addons:
+    addon_list += item+'\n'
+koding.Text_Box('ADD-ON LIST', addon_list)
+koding.Sleep_If_Window_Active(10147)
+path_list = 'Below is a list of scripts which have been called to get to this final piece of code:\n\n'
+for item in my_paths:
+    path_list += item+'\n'
+koding.Text_Box('ADD-ON LIST', path_list)
+~"""
+    import inspect
+    stack       = inspect.stack()
+    last_stack  = len(stack)-1
+    stack_array = []
+    addon_array = []
+    for item in stack:
+        last_stack = item[1].replace('<string>','')
+        last_stack = last_stack.strip()
+        stack_array.append(last_stack)
+        try:
+            scrap,addon_id = last_stack.split('addons%s'%os.sep)
+            addon_id = addon_id.split(os.sep)[0]
+            addon_id = Get_Addon_ID(addon_id)
+            if addon_id not in addon_array:
+                addon_array.append(addon_id)
+        except:
+            pass
+
+    if my_return == 'addons':
+        return addon_array
+    if my_return == 'addon':
+        return addon_array[len(addon_array)-1]
+    if my_return == 'path':
+        return stack_array[len(stack_array)-1]
+    if my_return == 'paths':
+        return stack_array
+#----------------------------------------------------------------
+def Check_Deps(addon_path, depfiles = []):
+    import re
+    from filetools import Text_File
+    from __init__  import dolog
+    exclude_list  = ['xbmc.gui', 'script.module.metahandler', 'metadata.common.allmusic.com',\
+                    'kodi.resource','xbmc.core','xbmc.metadata','xbmc.addon','xbmc.json','xbmc.python']
+    file_location = os.path.join(addon_path,'addon.xml')
+    if os.path.exists(file_location):
+        readxml = Text_File(file_location,'r')
+        dmatch   = re.compile('import addon="(.+?)"').findall(readxml)
+        for requires in dmatch:
+            if not requires in exclude_list and not requires in depfiles:
+                depfiles.append(requires)
+    return depfiles
+#----------------------------------------------------------------
+# TUTORIAL #
+def Check_Repo(repo,show_busy=True,timeout=10):
+    """
+This will check the status of repo and return True if the repo is online or False
+if it contains paths that are no longer accessible online.
+
+IMPORTANT: If you're running an old version of Kodi which uses the old Python 2.6
+(OSX and Android lower than Kodi 17 or a linux install with old Python installed on system)
+you will get a return of False on https links regardless of their real status. This is due
+to the fact Python 2.6 cannot access secure links. Any still using standard http links
+will return the correct results.
+
+CODE:  Check_Repo(repo, [show_busy, timeout])
 
 AVAILABLE PARAMS:
 
-    (*) url  -  This is url you want to check the header code for
+    (*) repo  -  This is the name of the folder the repository resides in.
+    You can either use the full path or just the folder name which in 99.99%
+    of cases is the add-on id. If only using the folder name DOUBLE check first as
+    there are a handful which have used a different folder name to the actual add-on id!
 
-    timeout  -  An optional timeout integer for checking url (default is 30 seconds)
+    show_busy - By default this is set to True and a busy dialog will show during the check
+
+    timeout - By default this is set to 10 (seconds) - this is the maximum each request
+    to the repo url will take before timing out and returning False.
 
 EXAMPLE CODE:
-url_code = koding.Validate_Link('http://totalrevolution.tv')
-if url_code == 200:
-    dialog.ok('WEBSITE STATUS','The website [COLOR=dodgerblue]totalrevolution.tv[/COLOR] is [COLOR=lime]ONLINE[/COLOR]')
+repo_status = Check_Repo('repository.xxxecho',show_busy=False,timeout=10)
+if repo_status:
+    dialog.ok('REPO STATUS','The repository modules4all is: [COLOR=lime]ONLINE[/COLOR]')
 else:
-    dialog.ok('WEBSITE STATUS','The website [COLOR=dodgerblue]totalrevolution.tv[/COLOR] is [COLOR=red]OFFLINE[/COLOR]')
+    dialog.ok('REPO STATUS','The repository modules4all is: [COLOR=red]OFFLINE[/COLOR]')
 ~"""
-    import requests
-    import xbmc
+    import re
 
-    try:
-        r = requests.get(url,timeout=timeout)
-        return r.status_code
-    except:
-        return 400
+    from __init__  import dolog
+    from filetools import Text_File
+    from guitools  import Show_Busy
+    from web       import Validate_Link
+    dolog('### CHECKING %s'%repo)
+    status = True
+    if show_busy:
+        Show_Busy()
+    if repo.startswith('special://'):
+        repo_path = xbmc.translatePath(repo)
+    elif not ADDONS in repo and not XBMC_PATH in repo:
+        repo_path = os.path.join(ADDONS,repo)
+    else:
+        repo_path = repo
+    repo_path = os.path.join(repo_path,'addon.xml')
+    dolog(repo_path)
+    if os.path.exists(repo_path):
+        content  = Text_File(repo_path,'r')
+        md5_urls = re.findall(r'<checksum>(.+?)</checksum>', content, re.DOTALL)
+        for item in md5_urls:
+            link_status = Validate_Link(item,timeout)
+            dolog(item)
+            dolog('STATUS: %s'%link_status)
+            if link_status < 200 or link_status >= 400:
+                status = False
+                break
+        if show_busy:
+            Show_Busy(False)
+        return status
+    else:
+        if show_busy:
+            Show_Busy(False)
+        return False
+#----------------------------------------------------------------
+# TUTORIAL #
+def Default_Setting(setting='',addon_id='',reset=False):
+    """
+This will return the DEFAULT value for a setting (as set in resources/settings.xml)
+and optionally reset the current value back to this default. If you pass through
+the setting as blank it will return a dictionary of all default settings.
+
+CODE:  Default_Setting(setting, [addon_id, reset])
+
+AVAILABLE PARAMS:
+
+    setting  -  The setting you want to retreive the value for.
+    Leave blank to return a dictionary of all settings
+
+    addon_id  -  This is optional, if not set it will use the current id.
+
+    reset  -  By default this is set to False but if set to true and it will
+    reset the current value to the default.
+
+EXAMPLE CODE:
+youtube_path = xbmc.translatePath('special://home/addons/plugin.video.youtube')
+if os.path.exists(youtube_path):
+    my_value = koding.Default_Setting(setting='youtube.region', addon_id='plugin.video.youtube', reset=False)
+    dialog.ok('YOUTUBE SETTING','Below is a default setting for plugin.video.youtube:','Setting: [COLOR=dodgerblue]youtube.region[/COLOR]','Value: [COLOR=dodgerblue]%s[/COLOR]' % my_value)
+else:
+    dialog.ok('YOUTUBE NOT INSTALLED','We cannot run this example as it uses the YouTube add-on which has not been found on your system.')
+~"""
+    import re
+    from filetools   import Text_File
+    from systemtools import Data_Type
+
+    if addon_id == '':
+        addon_id = Caller()
+    values = {}
+    addon_path = Addon_Info(id='path',addon_id=addon_id)
+    settings_path = os.path.join(addon_path,'resources','settings.xml')
+    content = Text_File(settings_path,'r').splitlines()
+    for line in content:
+        if 'id="' in line and 'default="' in line:
+            idx = re.compile('id="(.*?)"').findall(line)
+            idx = idx[0] if (len(idx) > 0) else ''
+            value = re.compile('default="(.*?)"').findall(line)
+            value = value[0] if (len(value) > 0) else ''
+            if setting != '' and idx == setting:
+                values = value
+                break
+            elif idx != '' and value != '' and setting == '':
+                values[idx] = value
+    if reset:
+        if Data_Type(values) == 'dict':
+            for item in values.items():
+                Addon_Setting(addon_id=addon_id,setting=item[0],value=item[1])
+        elif setting != '':
+            Addon_Setting(addon_id=addon_id,setting=setting,value=value)
+    return values
+#----------------------------------------------------------------
+# TUTORIAL #
+def Dependency_Check(addon_id = 'all', recursive = False):
+    """
+This will return a list of all dependencies required by an add-on.
+This information is grabbed directly from the currently installed addon.xml,
+an individual add-on id or a list of add-on id's.
+
+CODE:  Dependency_Check([addon_id, recursive])
+
+AVAILABLE PARAMS:
+
+    addon_id  -  This is optional, if not set it will return a list of every
+    dependency required from all installed add-ons. If you only want to
+    return results of one particular add-on then send through the id.
+
+    recursive  -  By default this is set to False but if set to true and you
+    also send through an individual addon_id it will return all dependencies
+    required for that addon id AND the dependencies of the dependencies.
+
+EXAMPLE CODE:
+current_id = xbmcaddon.Addon().getAddonInfo('id')
+dependencies = koding.Dependency_Check(addon_id=current_id, recursive=True)
+clean_text = ''
+for item in dependencies:
+    clean_text += item+'\n'
+koding.Text_Box('Modules required for %s'%current_id,clean_text)
+~"""
+    import xbmcaddon
+    import re
+    from filetools      import Text_File
+    from systemtools    import Data_Type 
+    
+    processed    = []
+    depfiles     = []    
+    
+    if addon_id == 'all':
+        addon_id = os.listdir(ADDONS)
+    elif Data_Type(addon_id) == 'str':
+        addon_id = [addon_id]
+
+    for name in addon_id:
+        try:
+            addon_path = xbmcaddon.Addon(id=name).getAddonInfo('path')
+        except:
+            addon_path = os.path.join(ADDONS, name)
+        if not name in processed:
+            processed.append(name)
+
+    # Get list of master dependencies
+        depfiles = Check_Deps(addon_path,[name])
+        
+    # Recursively check all other dependencies
+        depchecks = depfiles
+        if recursive:
+            while len(depchecks):
+                for depfile in depfiles:
+                    if depfile not in processed:
+                        try:
+                            dep_path = xbmcaddon.Addon(id=depfile).getAddonInfo('path')
+                        except:
+                            dep_path = os.path.join(ADDONS,depfile)
+                        newdepfiles = Check_Deps(dep_path, depfiles)
+                    # Pass through the path of sub-dependency and add items to master list and list to check
+                        for newdep in newdepfiles:
+                            if not (newdep in depchecks) and not (newdep in processed):
+                                depchecks.append(newdep)
+                            if not newdep in depfiles:
+                                depfiles.append(newdep)
+                    processed.append(depfile)
+                    depchecks.remove(depfile)
+                if name in depchecks:
+                    depchecks.remove(name)
+    return processed[1:]
+#----------------------------------------------------------------
+# TUTORIAL #
+def Get_Addon_ID(folder):
+    """
+If you know the folder name of an add-on but want to find out the
+addon id (it may not necessarily be the same as folder name) then
+you can use this function. Even if the add-on isn't enabled on the
+system this will regex out the add-on id.
+
+CODE:  Get_Addon_ID(folder)
+
+AVAILABLE PARAMS:
+    
+    folder  -  This is folder name of the add-on. Just the name not the path.
+
+EXAMPLE CODE:
+my_id = koding.Get_Addon_ID(folder='script.module.python.koding.aio')
+dialog.ok('ADDON ID','The add-on id found is:','[COLOR=dodgerblue]%s[/COLOR]'%my_id)
+~"""
+    from filetools import Text_File
+    import re
+    xmlpath = os.path.join(ADDONS, folder, 'addon.xml')
+    if os.path.exists(xmlpath):
+        contents = Text_File(xmlpath,'r')
+        addon_id = re.compile('id="(.+?)"').findall(contents)
+        addon_id = addon_id[0] if (len(addon_id) > 0) else ''
+        return addon_id
+    else:
+        return folder
+#----------------------------------------------------------------
+# TUTORIAL #
+def Installed_Addons(types='unknown', content ='unknown', properties = ''):
+    """
+This will send back a list of currently installed add-ons on the system.
+All the three paramaters you can send through to this function are optional,
+by default (without any params) this function will return a dictionary of all
+installed add-ons. The dictionary will contain "addonid" and "type" e.g. 'xbmc.python.pluginsource'.
+
+CODE: Installed_Addons([types, content, properties]):
+
+AVAILABLE PARAMS:
+
+    types       -  If you only want to retrieve details for specific types of add-ons
+    then use this filter. Unfortunately only one type can be filtered at a time,
+    it is not yet possible to filter multiple types all in one go. Please check
+    the official wiki for the add-on types avaialble but here is an example if
+    you only wanted to show installed repositories: koding.Installed_Addons(types='xbmc.addon.repository')
+
+    content     -  Just as above unfortunately only one content type can be filtered
+    at a time, you can filter by video,audio,image and executable. If you want to
+    only return installed add-ons which appear in the video add-ons section you
+    would use this: koding.Installed_Addons(content='video')
+
+    properties  -  By default a dictionary containing "addonid" and "type" will be
+    returned for all found add-ons meeting your criteria. However you can add any
+    properties in here available in the add-on xml (check official Wiki for properties
+    available). Unlike the above two options you can choose to add multiple properties
+    to your dictionary, see example below:
+    koding.Installed_Addons(properties='name,thumbnail,description')
+
+
+EXAMPLE CODE:
+my_video_plugins = koding.Installed_Addons(types='xbmc.python.pluginsource', content='video', properties='name')
+final_string = ''
+for item in my_video_plugins:
+    final_string += 'ID: %s | Name: %s\n'%(item["addonid"], item["name"])
+koding.Text_Box('LIST OF VIDEO PLUGINS',final_string)
+~"""
+    try:    import simplejson as json
+    except: import json
+
+    addon_dict = []
+    if properties != '':
+        properties = properties.replace(' ','')
+        properties = '"%s"' % properties
+        properties = properties.replace(',','","')
+    
+    query = '{"jsonrpc":"2.0", "method":"Addons.GetAddons","params":{"properties":[%s],"enabled":"all","type":"%s","content":"%s"}, "id":1}' % (properties,types,content)
+    response = xbmc.executeJSONRPC(query)
+    data = json.loads(response)
+    if "result" in data:
+        try:
+            addon_dict = data["result"]["addons"]
+        except:
+            pass
+    return addon_dict
+#----------------------------------------------------------------
+# TUTORIAL #
+def Open_Settings(addon_id='',focus='',click=False,stop_script=True):
+    """
+By default this will open the current add-on settings but if you pass through an addon_id it will open the settings for that add-on.
+
+CODE: Open_Settings([addon_id, focus, click, stop_script])
+
+AVAILABLE PARAMS:
+
+    addon_id    - This optional, it can be any any installed add-on id. If nothing is passed
+    through the current add-on settings will be opened.
+
+    focus  -  This is optional, if not set the settings will just open to the first item
+    in the list (normal behaviour). However if you want to open to a specific category and
+    setting then enter the number in here separated by a dot. So for example if we want to
+    focus on the 2nd category and 3rd setting in the list we'd send through focus='2.3'
+
+    click  -  If you want the focused item to automatically be clicked set this to True.
+
+    stop_script - By default this is set to True, as soon as the addon settings are opened
+    the current script will stop running. If you pass through as False then the script will
+    continue running in the background - opening settings does not pause a script, Kodi just
+    see's it as another window being opened.
+
+EXAMPLE CODE:
+youtube_path = xbmc.translatePath('special://home/addons/plugin.video.youtube')
+if os.path.exists(youtube_path):
+    dialog.ok('YOUTUBE SETTINGS','We will now open the YouTube settings.','We will focus on category 2, setting 3 AND send a click.')
+    koding.Open_Settings(addon_id='plugin.video.youtube',focus='2.3',click=True,stop_script=True)
+else:
+    dialog.ok('YOUTUBE NOT INSTALLED','We cannot run this example as it uses the YouTube add-on which has not been found on your system.')
+~"""
+    import xbmcaddon
+    if addon_id == '':
+        addon_id = Caller()
+    xbmc.log('ADDON ID: %s'%addon_id,2)
+    xbmc.executebuiltin('Addon.OpenSettings(%s)' % addon_id)
+    if focus != '':
+        category, setting = focus.split('.')
+        xbmc.executebuiltin('SetFocus(%d)' % (int(category) + 99))
+        xbmc.executebuiltin('SetFocus(%d)' % (int(setting) + 199))
+    if click:
+        xbmc.sleep(500)
+        xbmc.executebuiltin('Action(Select,10140)')
+    if stop_script:
+        try:
+            sys.exit()
+        except:
+            pass
+#----------------------------------------------------------------
+# TUTORIAL #
+def Toggle_Addons(addon='all', enable=True, safe_mode=True, exclude_list=[], new_only=True, refresh=True):
+    """
+Send through either a list of add-on ids or one single add-on id.
+The add-ons sent through will then be added to the addons*.db
+and enabled or disabled (depending on state sent through).
+
+WARNING: If safe_mode is set to False this directly edits the
+addons*.db rather than using JSON-RPC. Although directly amending
+the db is a lot quicker there is no guarantee it won't cause
+severe problems in later versions of Kodi (this was created for v17).
+DO NOT set safe_mode to False unless you 100% understand the consequences!
+
+CODE:  Toggle_Addons([addon, enable, safe_mode, exclude_list, new_only, refresh])
+
+AVAILABLE PARAMS:
+    (*) addon  -  This can be a list of addon ids, one single id or
+    'all' to enable/disable all. If enabling all you can still use
+    the exclude_list for any you want excluded from this function.
+    enable  -  By default this is set to True, if you want to disable
+    the add-on(s) then set this to False.
+    
+    safe_mode  -  By default this is set to True which means the add-ons
+    are enabled/disabled via JSON-RPC which is the method recommended by
+    the XBMC foundation. Setting this to False will result in a much
+    quicker function BUT there is no guarantee this will work on future
+    versions of Kodi and it may even cause corruption in future versions.
+    Setting to False is NOT recommended and you should ONLY use this if
+    you 100% understand the risks that you could break multiple setups.
+    
+    exclude_list  -  Send through a list of any add-on id's you do not
+    want to be included in this command.
+    
+    new_only  -  By default this is set to True so only newly extracted
+    add-on folders will be enabled/disabled. This means that any existing
+    add-ons which have deliberately been disabled by the end user are
+    not affected.
+    
+    refresh  - By default this is set to True, it will refresh the
+    current container and also force a local update on your add-ons db.
+
+EXAMPLE CODE:
+from systemtools import Refresh
+xbmc.executebuiltin('ActivateWindow(Videos, addons://sources/video/)')
+xbmc.sleep(2000)
+dialog.ok('DISABLE YOUTUBE','We will now disable YouTube (if installed)')
+koding.Toggle_Addons(addon='plugin.video.youtube', enable=False, safe_mode=True, exclude_list=[], new_only=False)
+koding.Refresh('container')
+xbmc.sleep(2000)
+dialog.ok('ENABLE YOUTUBE','When you click OK we will enable YouTube (if installed)')
+koding.Toggle_Addons(addon='plugin.video.youtube', enable=True, safe_mode=True, exclude_list=[], new_only=False)
+koding.Refresh('container')
+~"""
+    from __init__       import dolog
+    from filetools      import DB_Path_Check, Get_Contents
+    from database       import DB_Query
+    from systemtools    import Data_Type, Last_Error, Refresh, Set_Setting, Sleep_If_Function_Active, Timestamp
+
+    kodi_ver        = int(float(xbmc.getInfoLabel("System.BuildVersion")[:2]))
+    addons_db       = DB_Path_Check('addons')
+    data_type       = Data_Type(addon)
+    state           = int(bool(enable))
+    enabled_list    = []
+    disabled_list   = []
+    if kodi_ver >= 17:
+        on_system   = DB_Query(addons_db,'SELECT addonID, enabled from installed')
+# Create a list of enabled and disabled add-ons already on system
+        enabled_list  = Addon_List(enabled=True)
+        disabled_list = Addon_List(enabled=False)
+
+# If addon has been sent through as a string we add into a list
+    if data_type == 'unicode':
+        addon = addon.encode('utf8')
+        data_type = Data_Type(addon)
+
+    if data_type == 'str' and addon!= 'all':
+        addon = [addon]
+
+# Grab all the add-on ids from addons folder
+    if addon == 'all':
+        addon     = []
+        ADDONS    = xbmc.translatePath('special://home/addons')
+        my_addons = Get_Contents(path=ADDONS, exclude_list=['packages','temp'])
+        for item in my_addons:
+            addon_id = Get_Addon_ID(item)
+            addon.append(addon_id)
+
+# Find out what is and isn't enabled in the addons*.db
+    temp_list = []
+    for addon_id in addon:
+        if not addon_id in exclude_list and addon_id != '':
+            dolog('CHECKING: %s'%addon_id)
+            if addon_id in disabled_list and not new_only and enable:
+                temp_list.append(addon_id)
+            elif addon_id not in disabled_list and addon_id not in enabled_list:
+                temp_list.append(addon_id)
+            elif addon_id in enabled_list and not enable:
+                temp_list.append(addon_id)
+            elif addon_id in disabled_list and enable:
+                temp_list.append(addon_id)
+    addon = temp_list
+
+# If you want to bypass the JSON-RPC mode and directly modify the db (READ WARNING ABOVE!!!)
+    if not safe_mode and kodi_ver >= 17:
+        installedtime   = Timestamp('date_time')
+        insert_query    = 'INSERT or IGNORE into installed (addonID , enabled, installDate) VALUES (?,?,?)'
+        update_query    = 'UPDATE installed SET enabled = ? WHERE addonID = ? '
+        insert_values   = [addon, state, installedtime]
+        try:
+            for item in addon:
+                DB_Query(addons_db, insert_query, [item, state, installedtime])
+                DB_Query(addons_db, update_query, [state, item])
+        except:
+            dolog(Last_Error())
+        if refresh:
+            Refresh()
+
+# Using the safe_mode (JSON-RPC)
+    else:
+        mydeps        = []
+        final_enabled = []
+        if state:
+            my_value      = 'true'
+            log_value     = 'ENABLED'
+            final_addons  = []
+        else:
+            my_value      = 'false'
+            log_value     = 'DISABLED'
+            final_addons  = addon
+
+        for my_addon in addon:
+
+        # If enabling the add-on then we also check for dependencies and enable them first
+            if state:
+                dolog('Checking dependencies for : %s'%my_addon)
+                dependencies = Dependency_Check(addon_id=my_addon, recursive=True)
+                mydeps.append(dependencies)
+
+    # if enable selected we traverse through the dependencies enabling addons with lowest amount of deps to highest
+        if state:
+            mydeps = sorted(mydeps, key=len)
+            for dep in mydeps:
+                counter = 0
+                for item in dep:
+                    enable_dep = True
+                    if counter == 0:
+                        final_addons.append(item)
+                        enable_dep = False
+                    elif item in final_enabled:
+                        enable_dep = False
+                    else:
+                        enable_dep = True
+                    if enable_dep:
+                        if not item in exclude_list and not item in final_enabled and not item in enabled_list:
+                            dolog('Attempting to enable: %s'%item)
+                            if Set_Setting(setting_type='addon_enable', setting=item, value = 'true'):
+                                dolog('%s now %s' % (item, log_value))
+                                final_enabled.append(item)
+                    counter += 1
+
+    # Now the dependencies are enabled we need to enable the actual main add-ons
+        for my_addon in final_addons:
+            if not my_addon in final_enabled:
+                if Set_Setting(setting_type='addon_enable', setting=my_addon, value = my_value):
+                    dolog('%s now %s' % (my_addon, log_value))
+                    final_enabled.append(addon)
+    if refresh:
+        Refresh(['addons','container'])
 #----------------------------------------------------------------

@@ -83,7 +83,7 @@ koding.Delete_Cookies(filename='google')
         return False
 #----------------------------------------------------------------    
 # TUTORIAL #
-def Download(url, dest, dp = None):
+def Download(url, dest, dp=None, timeout=5):
     """
 This will download a file, currently this has to be a standard download link which doesn't require cookies/login.
 
@@ -98,6 +98,9 @@ AVAILABLE PARAMS:
 
     dp - This is optional, if you pass through the dp function as a DialogProgress() then you'll get to see the progress of the download. If you choose not to add this paramater then you'll just get a busy spinning circle icon until it's completed. See the example below for a dp example.
 
+    timeout - By default this is set to 5. This is the max. amount of time you want to allow for checking whether or
+    not the url is a valid link and can be accessed via the system.
+
 EXAMPLE CODE:
 src = 'http://noobsandnerds.com/portal/Bits%20and%20bobs/Documents/user%20guide%20of%20the%20gyro%20remote.pdf'
 dst = xbmc.translatePath('special://home/remote.pdf')
@@ -106,8 +109,12 @@ dp.create('Downloading File','Please Wait')
 koding.Download(src,dst,dp)
 dialog.ok('[COLOR gold]DOWNLOAD COMPLETE[/COLOR]','Your download is complete, please check your home Kodi folder. There should be a new file called remote.pdf - you can delete this if you want.')
 ~"""
-    start_time=time.time()
-    urllib.urlretrieve(url, dest, lambda nb, bs, fs: Download_Progress(nb, bs, fs, dp, start_time))
+    if Validate_Link(url,timeout) >= 200 and r.status_code < 400:
+        start_time=time.time()
+        urllib.urlretrieve(url, dest, lambda nb, bs, fs: Download_Progress(nb, bs, fs, dp, start_time))
+        return True
+    else:
+        return False
 #----------------------------------------------------------------    
 def Download_Progress(numblocks, blocksize, filesize, dp, start_time):
     """ internal command ~"""
