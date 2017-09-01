@@ -109,7 +109,8 @@ dp.create('Downloading File','Please Wait')
 koding.Download(src,dst,dp)
 dialog.ok('[COLOR gold]DOWNLOAD COMPLETE[/COLOR]','Your download is complete, please check your home Kodi folder. There should be a new file called remote.pdf - you can delete this if you want.')
 ~"""
-    if Validate_Link(url,timeout) >= 200 and r.status_code < 400:
+    status = Validate_Link(url,timeout)
+    if status >= 200 and status < 400:
         start_time=time.time()
         urllib.urlretrieve(url, dest, lambda nb, bs, fs: Download_Progress(nb, bs, fs, dp, start_time))
         return True
