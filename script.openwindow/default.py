@@ -127,8 +127,9 @@ dolog('### main_order = %s' % main_order)
 #-----------------------------------------------------------------------------
 # Show the Registration Screen
 def Registration():
-    backpage    = Pages('back','Registration()')
-    nextpage    = Pages('next','Registration()')
+    mypages     = Pages('Registration()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30062,
         background='register.png',
@@ -151,8 +152,9 @@ def Registration():
 #-----------------------------------------------------------------------------
 # Show the Android audio menu
 def Select_Audio_Android():
-    backpage    = Pages('back','Select_Audio_Android()')
-    nextpage    = Pages('next','Select_Audio_Android()')
+    mypages     = Pages('Select_Audio_Android()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30136,
         background='audio1.png',
@@ -175,8 +177,9 @@ def Select_Audio_Android():
 #-----------------------------------------------------------------------------
 # Show the bluetooth pairing menu on Android
 def Select_Bluetooth_Android():
-    backpage    = Pages('back','Select_Bluetooth_Android()')
-    nextpage    = Pages('next','Select_Bluetooth_Android()')
+    mypages     = Pages('Select_Bluetooth_Android()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30147,
         background='bluetooth.png',
@@ -199,8 +202,9 @@ def Select_Bluetooth_Android():
 #-----------------------------------------------------------------------------
 # Show the keyword install menu
 def Select_Keyword():
-    backpage    = Pages('back','Select_Keyword()')
-    nextpage    = Pages('next','Select_Keyword()')
+    mypages     = Pages('Select_Keyword()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30023,
         background='keywords1.png',
@@ -223,8 +227,9 @@ def Select_Keyword():
 #-----------------------------------------------------------------------------
 # Show the local content selection menu
 def Select_Local_Content():
-    backpage    = Pages('back','Select_Local_Content()')
-    nextpage    = Pages('next','Select_Local_Content()')
+    mypages     = Pages('Select_Local_Content()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenuThreeItems(
         header=30026,
         background='localcontent1.png',
@@ -243,29 +248,18 @@ def Select_Local_Content():
     mydisplay.doModal()
     del mydisplay
 #-----------------------------------------------------------------------------
-def Select_Language(status=False,new_order=main_order):
+def Select_Language(new_order=main_order):
     global main_order
+    if new_order:
+        main_order = new_order
     main_order = new_order
-    if os.path.exists(RUN_WIZARD) and not os.path.exists(STARTUP_WIZARD):
-        Set_Language()
-
-# Add STARTUP WIZARD and leave RUN_WIZARD so it will auto start after profile load
-        try:
-            os.makedirs(STARTUP_WIZARD)
-        except:
-            pass
-        try:
-            xbmc.executebuiltin('RunPlugin(plugin://plugin.video.metalliq/setup/silent)')
-        except:
-            pass
-        exec(Pages('start'))
-    else:
-        exec(Pages('start'))
+    Set_Language()
 #-----------------------------------------------------------------------------
 # Show the resolution select screen
 def Select_Resolution():
-    backpage    = Pages('back','Select_Resolution()')
-    nextpage    = Pages('next','Select_Resolution()')
+    mypages     = Pages('Select_Resolution()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30011,
         background='resolution1.png',
@@ -288,8 +282,9 @@ def Select_Resolution():
 #-----------------------------------------------------------------------------
 # Show the third party enable/disable menu
 def Select_Third_Party():
-    backpage    = Pages('back','Select_Third_Party()')
-    nextpage    = Pages('next','Select_Third_Party()')
+    mypages     = Pages('Select_Third_Party()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30091,   
         background='thirdparty.png',
@@ -312,8 +307,9 @@ def Select_Third_Party():
 #-----------------------------------------------------------------------------
 # Show the third party enable/disable menu
 def Select_Timezone_Android():
-    backpage    = Pages('back','Select_Timezone_Android()')
-    nextpage    = Pages('next','Select_Timezone_Android()')
+    mypages     = Pages('Select_Timezone_Android()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30006,   
         background='region1.png',
@@ -336,8 +332,9 @@ def Select_Timezone_Android():
 #-----------------------------------------------------------------------------
 # Show the weather selection menu
 def Select_Weather():
-    backpage    = Pages('back','Select_Weather()')
-    nextpage    = Pages('next','Select_Weather()')
+    mypages     = Pages('Select_Weather()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30016,
         background='weather1.png',
@@ -360,8 +357,9 @@ def Select_Weather():
 #-----------------------------------------------------------------------------
 # Show the screen calibration menu
 def Select_Zoom():
-    backpage    = Pages('back','Select_Zoom()')
-    nextpage    = Pages('next','Select_Zoom()')
+    mypages     = Pages('Select_Zoom()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenu(
         header=30013,
         background='zoom1.png',
@@ -384,8 +382,9 @@ def Select_Zoom():
 #-----------------------------------------------------------------------------
 # Show the region select screen
 def Select_Zoom_Android():
-    backpage    = Pages('back','Select_Zoom_Android()')
-    nextpage    = Pages('next','Select_Zoom_Android()')
+    mypages     = Pages('Select_Zoom_Android()')
+    backpage    = mypages[0]
+    nextpage    = mypages[1]
     mydisplay = MainMenuThreeItems(
         header=30013,
         background='zoom1.png',
@@ -782,39 +781,25 @@ def Keyword_Search():
     xbmc.executebuiltin('RunPlugin(plugin://plugin.program.tbs/?mode=keywords)')
 #-----------------------------------------------------------------------------
 # Define which menu items open, set by admin panel
-def Pages(menutype='', current=''):
-    dolog('MENU TYPE: %s' % menutype)
-    if menutype == 'start':
+def Pages(current=''):
+    if current == 'start':
+    # Run first item in list - called from Select_Language
         for item in main_order:
-            dolog('### start: %s'%item[1])
             return item[1]
     else:
         for item in main_order:
             if current == item[1]:
-                current_number = item[0]
-    # Return previous menu
-        if menutype == 'back':
-            if current_number == '1':
-                return 'Select_Language()'
-            else:
-                for item in main_order:
-                    if int(current_number)-1 == int(item[0]):
-                        dolog('back: %s' % item[1])
-                        return item[1]
-    # Return next menu
-        if menutype == 'next':
-            dolog('current: %s   len: %s' % (current_number, len(main_order)))
-            if int(current_number)+1 <= len(main_order):
-                for item in main_order:
-                # Check if the next number in list exists
-                    if int(current_number)+1 == int(item[0]):
-                        myreturn = item[1]
-                        if int(current_number)+1 == len(main_order):
-                            myreturn = str(myreturn)+';xbmc.executebuiltin("Skin.SetString(Wizard,complete)")'
-                        dolog('next: %s' % myreturn)
-                        return myreturn
-            else:
-                return ''
+                current_number = int(item[0])-1
+
+        if current_number == 0:
+            back_function = 'Select_Language()'
+        else:
+            back_function = main_order[current_number-1][1]
+        if current_number+1 == len(main_order):
+            next_function = 'xbmc.executebuiltin("Skin.SetString(Wizard,complete)")'
+        else:
+            next_function = main_order[current_number+1][1]
+        return [back_function,next_function]
 #-----------------------------------------------------------------------------
 # Bring up the dialog selection for choosing the language
 def Set_Language():

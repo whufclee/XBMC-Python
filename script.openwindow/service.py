@@ -17,7 +17,7 @@ if os.path.exists(autoexec):
     readfile = open(autoexec,'r')
     contents = readfile.read()
     readfile.close()
-    if '# STARTUP WIZARD AUTOEXEC' in contents:
+    if 'RUN_WIZARD' in contents:
         os.remove(autoexec)
 
 xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,update)')
