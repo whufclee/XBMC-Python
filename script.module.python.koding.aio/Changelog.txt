@@ -1,3 +1,6 @@
+v.0.9.7.8:
+- Added Reset_Percent function
+
 v.0.9.7.7:
 - Added timeout checker for Download function, especially useful on older installs which do not support SSL as it was previously waiting 30s before finally giving up.
 

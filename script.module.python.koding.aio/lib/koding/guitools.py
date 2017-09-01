@@ -592,6 +592,30 @@ koding.Text_Box('TEST HEADER','Just some random text... Use kodi tags for new li
     controller.getControl(5).setText(message)
 #----------------------------------------------------------------
 # TUTORIAL #
+def Reset_Percent(property='update_percent_',window_id=10000):
+    """
+If using the Update_Progress function for setting percentages in skinning then this
+will allow you to reset all the percent properties (1-100)
+
+CODE: Reset_Percent([property,window_id])
+
+AVAILABLE PARAMS:
+
+    property  -  the property name you want reset, this will reset all properties starting
+    with this string from 1-100. For example if you use the default 'update_percent_' this
+    will loop through and reset update_percent_1, update_percent_2 etc. all the way through
+    to update_percent_100.
+
+    window_id -  By default this is set to 10000 but you can send any id through you want.
+
+    kwargs  -  Send through any other params and the respective property will be set.colours etc.')
+~"""
+    counter = 0
+    while counter <= 100:
+        xbmcgui.Window(10000).clearProperty('update_percent_%s'%counter)
+        counter +=1
+#----------------------------------------------------------------
+# TUTORIAL #
 def Update_Progress(total_items,current_item,update_spinner="false",**kwargs):
     """
 This function is designed for skinners but can be used for general Python too. It will
@@ -613,10 +637,7 @@ AVAILABLE PARAMS:
 
     kwargs  -  Send through any other params and the respective property will be set.colours etc.')
 ~"""
-    counter = 0
-    while counter <= 100:
-        xbmcgui.Window(10000).clearProperty('update_percent_%s'%counter)
-        counter +=1
+    Reset_Percent()
     xbmcgui.Window(10000).setProperty('update_spinner',str(update_spinner))
     for item in kwargs:
         if item.endswith('color'):

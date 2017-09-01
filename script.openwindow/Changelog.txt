@@ -1,3 +1,6 @@
+v.3.0.6:
+- New skin string, wizard is set to 'inprogress' if main setup wizard is running
+
 v.3.0.5:
 - Some new modifications for pages() and Select_Language
 

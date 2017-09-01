@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # script.openwindow
 # Startup Wizard (c) by whufclee (info@totalrevolution.tv)
@@ -249,6 +249,7 @@ def Select_Local_Content():
     del mydisplay
 #-----------------------------------------------------------------------------
 def Select_Language(new_order=main_order):
+    xbmc.executebuiltin("Skin.SetString(Wizard,inprogress)")
     global main_order
     if new_order:
         main_order = new_order
@@ -796,7 +797,8 @@ def Pages(current=''):
         else:
             back_function = main_order[current_number-1][1]
         if current_number+1 == len(main_order):
-            next_function = 'xbmc.executebuiltin("Skin.SetString(Wizard,complete)")'
+            next_function = 'xbmc.executebuiltin("Skin.Reset(Wizard)")'
+
         else:
             next_function = main_order[current_number+1][1]
         return [back_function,next_function]
