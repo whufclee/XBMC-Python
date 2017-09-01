@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+*- coding: utf-8 -*-
 
 # script.openwindow
 # Startup Wizard (c) by whufclee (info@totalrevolution.tv)
@@ -83,10 +83,6 @@ if not os.path.exists(adult_store):
 if BASE == '':
     Addon_Setting(setting='base',value='http://totalrevolution.xyz/')
     BASE = 'http://totalrevolution.xyz/'
-if not os.path.exists(branding):
-    branding = os.path.join(ADDON_PATH,'resources','images','branding.png')
-    if not os.path.exists(branding):
-        branding = os.path.join(NATIVE, 'addons',ADDONID,'resources','images','branding.png')
 
 STOP_COOKIE_CHECK          = 0
 ACTION_HOME                = 7
@@ -433,6 +429,10 @@ class Image_Screen(xbmcgui.Window):
 # Main menu GUI page        
 class MainMenu(xbmcgui.Window):
   def __init__(self,*args,**kwargs):
+    if not os.path.exists(branding):
+        branding = os.path.join(ADDON_PATH,'resources','images','branding.png')
+        if not os.path.exists(branding):
+            branding = os.path.join(NATIVE, 'addons',ADDONID,'resources','images','branding.png')
     self.header=String(kwargs['header'])
     self.background=kwargs['background']
     
@@ -588,6 +588,10 @@ class MainMenu(xbmcgui.Window):
 #-----------------------------------------------------------------------------
 class MainMenuThreeItems(xbmcgui.Window):
   def __init__(self,*args,**kwargs):
+    if not os.path.exists(branding):
+        branding = os.path.join(ADDON_PATH,'resources','images','branding.png')
+        if not os.path.exists(branding):
+            branding = os.path.join(NATIVE, 'addons',ADDONID,'resources','images','branding.png')
     self.header=String(kwargs['header'])
     self.background=kwargs['background']
     
@@ -756,13 +760,6 @@ def Check_Status(extension, email=''):
     else:
         OK_Dialog(String(30123),String(30124))
         Network_Settings()
-#-----------------------------------------------------------------------------
-# Check for branding updates - Seems to crash out too early, we will do it on startup instead
-def Check_Updates():
-    if os.path.exists(xbmc.translatePath('special://home/addons/script.openwindow/functions.py')):
-        xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/functions.py,silent)')
-    elif os.path.exists(xbmc.translatePath('special://xbmc/addons/script.openwindow/functions.py')):
-        xbmc.executebuiltin('RunScript(special://xbmc/addons/script.openwindow/functions.py,silent)')
 #-----------------------------------------------------------------------------
 # Not on system, get user to register at www.totalrevolution.tv
 def Enter_Licence():
