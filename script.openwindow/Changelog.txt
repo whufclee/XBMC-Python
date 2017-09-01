@@ -1,3 +1,6 @@
+v.3.0.7:
+- Fixed branding bug
+
 v.3.0.6:
 - New skin string, wizard is set to 'inprogress' if main setup wizard is running
 

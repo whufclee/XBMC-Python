@@ -1,4 +1,4 @@
-# *- coding: utf-8 -*-
+# - coding: utf-8 -*-
 
 # script.openwindow
 # Startup Wizard (c) by whufclee (info@totalrevolution.tv)
@@ -429,6 +429,7 @@ class Image_Screen(xbmcgui.Window):
 # Main menu GUI page        
 class MainMenu(xbmcgui.Window):
   def __init__(self,*args,**kwargs):
+    global branding
     if not os.path.exists(branding):
         branding = os.path.join(ADDON_PATH,'resources','images','branding.png')
         if not os.path.exists(branding):
@@ -588,6 +589,7 @@ class MainMenu(xbmcgui.Window):
 #-----------------------------------------------------------------------------
 class MainMenuThreeItems(xbmcgui.Window):
   def __init__(self,*args,**kwargs):
+    global branding
     if not os.path.exists(branding):
         branding = os.path.join(ADDON_PATH,'resources','images','branding.png')
         if not os.path.exists(branding):
@@ -915,7 +917,7 @@ if __name__ == '__main__':
     if not os.path.exists(INSTALL_COMPLETE):
         regmode = 1
     elif len(sys.argv)>0 and os.path.exists(INSTALL_COMPLETE):
-        if sys.argv[len(sys.argv-1)] == 'update':
+        if sys.argv[len(sys.argv)-1] == 'update':
             regmode = 3
         else:
             regmode = 2
