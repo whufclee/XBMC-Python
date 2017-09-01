@@ -1,4 +1,4 @@
-*- coding: utf-8 -*-
+# *- coding: utf-8 -*-
 
 # script.openwindow
 # Startup Wizard (c) by whufclee (info@totalrevolution.tv)
