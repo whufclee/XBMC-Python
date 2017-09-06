@@ -56,7 +56,7 @@ def Configure_Menus(menutype='HOME_'):
     if choice >= 0:
         menu = sorted(master_list)[choice]
 
-# If it's reset all to factory defaults
+    # If it's reset all to factory defaults
         if menu == String(30504):
             Reset_Factory(menutype)
         else:
@@ -135,7 +135,7 @@ def Configure_Menus(menutype='HOME_'):
                         dolog( 'Setting %s to defaults' % (my_setting) )
                         Default_Setting(setting=my_setting, reset=True)
 
-# Find the relevant home menu and clear the contents
+                    # Find the relevant home menu and clear the contents
                         for item in os.listdir(redirects):
                             if item.startswith(my_setting) and item.endswith('_USER'):
                                 delete_path = os.path.join(redirects,item)                                
@@ -160,7 +160,7 @@ def Configure_Menus(menutype='HOME_'):
                                 os.remove(item)
                         koding.Refresh('skin')
 
-# If it's a submenu we try and add to the skinshortcuts and give it a name
+            # If it's a submenu we try and add to the skinshortcuts and give it a name
                 if menutype == 'SUBMENU_' and choice != 4:
                     sub_name = koding.Keyboard('Enter a name for this sub-menu item')
                     if not sub_name:
@@ -203,7 +203,7 @@ def Reset_Factory(menu_type):
 
     dolog('### MENU_TYPE: %s'%menu_type)
     if dialog.yesno( String(30504),String(30505)%menu_type.replace('_','') ):
-# Remove the redirects
+    # Remove the redirects
         dolog('CLEANING REDIRECTS')
         if menu_type != 'ALL':
             dolog('New menu type: %s'%menu_type)
@@ -222,7 +222,7 @@ def Reset_Factory(menu_type):
             except:
                 dolog('Failed to remove redirects folder')
 
-# Delete entries in settings
+    # Delete entries in settings
         if menu_type != 'SUBMENU_':
             tbs_settings = xbmc.translatePath('special://profile/addon_data/plugin.program.tbs/settings.xml')
             settings = Text_File(tbs_settings,'r').splitlines()
@@ -232,12 +232,12 @@ def Reset_Factory(menu_type):
                     new_settings += line+'\n'
             Text_File(tbs_settings,'w',new_settings)
 
-# Disable all home menus then run the update command to repopulate
+    # Disable all home menus then run the update command to repopulate
         if menu_type == 'ALL':
             for item in menu_list:
                 xbmc.executebuiltin('Skin.SetString(%s,True)'%item)
 
-# If we're changing all home to defaults we check for updates
+    # If we're changing all home to defaults we check for updates
         if menu_type == 'ALL':
             try:
                 os.remove(home_menus)
@@ -245,7 +245,7 @@ def Reset_Factory(menu_type):
                 dolog('Failed to remove home_menus')
             Main_Menu_Defaults()
 
-# If submenu or all we remove skinshortucts so they can repopulate
+    # If submenu or all we remove skinshortucts so they can repopulate
         if menu_type != 'HOME_':
             try:
                 dolog('SUCCESSFULLY REMOVE SKIN SHORTCUTS')
