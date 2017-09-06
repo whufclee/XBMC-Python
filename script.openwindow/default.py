@@ -894,7 +894,9 @@ if __name__ == '__main__':
     if not os.path.exists(INSTALL_COMPLETE):
         regmode = 1
     elif len(sys.argv)>0 and os.path.exists(INSTALL_COMPLETE):
-        if sys.argv[len(sys.argv)-1] == 'update':
+        if sys.argv[len(sys.argv)-1] == 'full':
+            regmode = 1
+        elif sys.argv[len(sys.argv)-1] == 'update':
             regmode = 3
         elif sys.argv[len(sys.argv)-1] == 'update_shares':
             regmode = 4

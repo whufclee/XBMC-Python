@@ -22,7 +22,7 @@ import xbmcgui
 from default import encryptme, Addon_Browser, Install_Addons, Share_Install,\
                     Share_Removal, Sleep_If_Function_Active, Toggle_Addons
 
-from koding import dolog, converthex, Addon_Setting, Keyboard, String, Text_File
+from koding import dolog, converthex, Addon_Setting, Keyboard, String, System, Text_File
 
 if os.path.exists(xbmc.translatePath('special://home/userdata/addon_data/script.trtv/skip.txt')):
     tvgskip = 1
@@ -303,10 +303,8 @@ def showlist(usenan = False):
         elif run_app[0] == 'addon':
             xbmc.executebuiltin('RunAddon(%s)' % run_app[2])
         elif run_app[0] == 'share':
-            if sys.argv[1] == 'HOME_MUSIC':
-                xbmc.executebuiltin('ActivateWindow(10501,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
-            else:
-                xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
+            xbmc.executebuiltin('ActivateWindow(10001,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
+            SF_Single_Entry()
         else:
             try:
                 exec(run_app[2])
@@ -363,12 +361,23 @@ def showlist_sf():
     else:
         run_app = final_array[choice]
         if run_app[0] == 'share':
-            if sys.argv[1] == 'HOME_MUSIC':
-                xbmc.executebuiltin('ActivateWindow(10501,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
-            else:
-                xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
+            xbmc.executebuiltin('ActivateWindow(10001,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
+            SF_Single_Entry()
         else:
             exec(run_app[2])
+#---------------------------------------------------------------------------------------------------
+def SF_Single_Entry():
+    window = 'Home.xml'
+    counter = 0
+    while window != 'MyPrograms.xml' and counter < 10:
+        window = xbmc.getInfoLabel('Window.Property(xmlfile)')
+        xbmc.sleep(200)
+        counter += 1
+    xbmc.sleep(250)
+    list_count = System('numitems')
+    if list_count == '1':
+        xbmc.executebuiltin('Action(PageDown)')
+        xbmc.executebuiltin('Action(Select)')
 #---------------------------------------------------------------------------------------------------
 def foldercheck(path):
     directories = 0

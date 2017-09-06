@@ -1,3 +1,10 @@
+v.4.3.8.7:
+- SF fix for Krypton, now opens into programs to fix window bug
+- If only one SF entry it will now open into that entry
+
+v.4.3.8.6:
+- Fixed update commands in maintenance
+
 v.4.3.8.5:
 - Changed SF menu behaviour, now opens into a dialog select
 

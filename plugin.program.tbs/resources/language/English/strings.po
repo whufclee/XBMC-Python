@@ -1331,7 +1331,7 @@ msgid "Enable debugging mode"
 msgstr ""
 
 msgctxt "#30330"
-msgid "Updates Complete"
+msgid "UPDATES COMPLETE"
 msgstr ""
 
 msgctxt "#30331"

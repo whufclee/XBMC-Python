@@ -445,9 +445,9 @@ def Check_Download_Path():
         Open_Settings()
 #---------------------------------------------------------------------------------------------------
 # Update registration status
-def Check_License(r_mode='3'):
+def Check_License():
     try:
-        Run_Code( url='boxer/Check_License_new.php', payload={'x':encryptme('e',URL_Params()),'v':XBMC_VERSION,'r':r_mode} )
+        Run_Code( url='boxer/Check_License_new.php', payload={'x':encryptme('e',URL_Params()),'r':'5'} )
     except:
         dolog( Last_Error() )
 #---------------------------------------------------------------------------------------------------
@@ -864,9 +864,16 @@ def Firmware_Update(url):
 def Force_Update():
     dolog('FORCE UPDATE')
     if YesNo_Dialog('[COLOR=gold]%s[/COLOR]'%String(30501),String(30544)):
-        Addon_Setting('script.openwindow','addonlist','{}')
-        Addon_Setting('script.openwindow','ziplist','{}')
-        Get_Updates()
+        username = Addon_Setting('script.openwindow','username')
+        password = Addon_Setting('script.openwindow','password')
+        email    = Addon_Setting('script.openwindow','email')
+        shutil.rmtree(TBSDATA)
+        shutil.rmtree(SF_ROOT)
+        shutil.rmtree(MEDIA)
+        Get_Updates('full')
+        Addon_Setting('script.openwindow','username',username)
+        Addon_Setting('script.openwindow','password',password)
+        Addon_Setting('script.openwindow','email',email)
 #---------------------------------------------------------------------------------------------------
 # Clean up all known cache files
 def Friend_Options(my_array=[]):
@@ -1050,22 +1057,22 @@ def Get_Mac(protocol):
     return str(mac)
 #---------------------------------------------------------------------------------------------------
 # Run the social update command and optionally show a busy working symbol until finished
-@route(mode='get_updates', args=['url','runtype'])
-def Get_Updates(url=True, runtype='silent'):
-    if url:
-        Show_Busy(True)
-    Sleep_If_Function_Active(function=Grab_Updates, kill_time=600)
+@route(mode='get_updates', args=['url'])
+def Get_Updates(url='update'):
+    Grab_Updates(url)
     Sync_Settings()
     dolog('### TBS_RUNNING: %s'%xbmcgui.Window(10000).getProperty('TBS_Running'))
-    if runtype != 'silent':
-        counter = 2
-        updates_running = 'true'
-        while updates_running == 'true':
-            xbmc.sleep(2000)
-            updates_running = xbmcgui.Window(10000).getProperty('TBS_Running')
-            dolog('### TBS_RUNNING: %ss'%counter)
-            counter += 2
-        Notify(String(30330),String(30331),'1000',os.path.join(ADDONS,'plugin.program.tbs','resources','tick.png'))
+    Notify(String(30059),String(30007),'1000',os.path.join(ADDONS,'plugin.program.tbs','resources','tick.png'))
+    Show_Busy(True)
+    counter = 2
+    updates_running = 'true'
+    while updates_running == 'true':
+        xbmc.sleep(2000)
+        updates_running = xbmcgui.Window(10000).getProperty('TBS_Running')
+        dolog('### TBS_RUNNING: %ss'%counter)
+        counter += 2
+    Show_Busy(False)
+    Notify(String(30330),String(30331),'1000',os.path.join(ADDONS,'plugin.program.tbs','resources','tick.png'))
 #---------------------------------------------------------------------------------------------------
 # Grab current playing video details
 @route(mode='get_video')
@@ -1121,13 +1128,13 @@ def Get_Video():
         OK_Dialog('FAILED','Playback was unsuccessful')
 #---------------------------------------------------------------------------------------------------
 # Run social update command to check for any updates
-@route(mode='grab_updates')
-def Grab_Updates():
+@route(mode='grab_updates', args=['url'])
+def Grab_Updates(url='update'):
     dolog('### TBS GRAB UPDATES - RUNNING FUNCTIONS')
     if os.path.exists( xbmc.translatePath('special://home/addons/script.openwindow/default.py') ):
-        xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,update)')
+        xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,%s)'%url)
     elif os.path.exists( xbmc.translatePath('special://xbmc/addons/script.openwindow/default.py') ):
-        xbmc.executebuiltin('RunScript(special://xbmc/addons/script.openwindow/default.py,update)')
+        xbmc.executebuiltin('RunScript(special://xbmc/addons/script.openwindow/default.py,%s)'%url)
 #---------------------------------------------------------------------------------------------------
 # Hide passwords in addon settings
 @route(mode='hide_passwords')
@@ -1309,125 +1316,6 @@ def Install_Repos(to_install):
         except:
             dolog(Last_Error())
             OK_Dialog(String(30131),String(30132))
-#---------------------------------------------------------------------------------------------------
-# Show final results for installing (if multiple shares of same name order by popularity)
-def Install_Shares(function, menutype, menu, choices, contentarray = '', imagearray = '', descarray = ''):
-        shares_contentarray = []
-        shares_imagearray   = []
-        shares_descarray    = []
-        shares_contenturl   = []
-        urlparams           = URL_Params()
-
-# HAD TO REVERT BACK TO OLD OPEN_URL2 METHOD FOR THIS FUNCTION, SOMETHING CURRENTLY OFF WITH PYTHON KODING REQUESTS METHOD
-
-#    try:
-        for item in choices:
-            xbmc.log('CHOICE: %s' % item)
-            if debug == 'true':
-                xbmc.log(BASE+'boxer/cat_search_live.php?x=%s' % (encryptme('e','%s&%s&1&%s&%s' % (urlparams, function, social_shares, contentarray[item]))))
-            sharelist_URL  = BASE+'boxer/cat_search_live.php?x=%s' % (encryptme('e','%s&%s&1&%s&%s' % (urlparams, function, social_shares, contentarray[item])))
-            content_list   = Open_URL2(sharelist_URL)
-            clean_link     = encryptme('d',content_list)
-            if debug == 'true':
-                xbmc.log('#### %s' % clean_link)
-
-# Grab all the shares which match the master sub-category
-            match = re.compile('n="(.+?)"t="(.+?)"d="(.+?)"l="(.+?)"', re.DOTALL).findall(clean_link)
-            for name, thumb, desc, link in match:
-                shares_contentarray.append(name)
-                shares_imagearray.append(thumb)
-                shares_descarray.append(desc)
-                shares_contenturl.append(link)
-
-# If we have more than one item in the list we present them so the user can select which one they want installed
-            if len(shares_contentarray) > 1:
-                choice = dialog.select('Select share for [COLOR=dodgerblue]%s[/COLOR]' % contentarray[item].replace('ADD ',''), shares_contentarray)
-                install_share = shares_contenturl[choice]
-
-            else:
-                install_share = shares_contenturl[0]
-
-# Remove any matching menu items previously installed from different boxes
-            if len(shares_contentarray)>0:
-                for item in shares_contentarray:
-                    xbmc.log('### Removing any old instances of %s' % item)
-                    if item.startswith('Add'):
-                        item         = 'Remove'+item[3:]
-                    change_text  = re.compile(' to the (.+?)Menu').findall(item)[0]
-                    if change_text.endswith(' '):
-                        change_text = change_text[:-1]
-                    item         = item.replace(' to the %s' % change_text, '%'+' from the %s' % change_text)
-                    if 'by box' in item:
-                        change_text2 = re.compile('by box (.+?)from').findall(item)[0]
-                        xbmc.log('by box: %s' % change_text2)
-                        item         = item.replace(change_text2, '%')
-                    Remove_Menu('from_the_%s_menu' % change_text.lower().replace(' ', '_'), item)
-#            content_list   = Open_URL2(sharelist_URL)
-
-                Open_URL2(install_share)
-
-# Clean the arrays so they don't show old data
-            del shares_contentarray[:]
-            del shares_imagearray[:]
-            del shares_descarray[:]
-            del shares_contenturl[:]
-            del match[:]
-        xbmc.executebuiltin('ActivateWindow(HOME)')
-        Get_Updates()
-#---------------------------------------------------------------------------------------------------
-# Function to grab the main sub-categories 
-@route(mode='install_venz_menu', args=['url'])
-def Install_Venz_Menu(url):
-    menutype    = ''
-    menu        = ''
-    if '||' in url:
-        url,menutype,menu = url.split('||')
-    menu = menu.replace('_',' ').lower()
-
-    urlparams  = URL_Params()
-    if urlparams != 'Unknown':
-        try:
-
-# Inititalise the arrays for sending to multi-select window
-            contentarray = []
-            imagearray   = []
-            descarray    = []
-            contenturl   = []
-
-# Add an item to one of the main menu categories or add a sub-menu item
-            if menutype == 'add_main' or menutype == 'add_sub' or url.startswith('manualsearch'):
-                categoryURL  = BASE+'boxer/cat_search_live.php'
-                dolog(categoryURL)
-                link_orig  = Open_URL(url=categoryURL,post_type='post',payload={"x":encryptme('e','%s&%s&0&%s' % (urlparams, url, social_shares))})
-                link       = encryptme('d',link_orig)
-                dolog('#### '+encryptme('d',link_orig))
-            
-                match  = re.compile('n="(.+?)"t="(.+?)"d="(.+?)"', re.DOTALL).findall(link)
-                for name, thumb, desc in match:
-                    contentarray.append(name)
-                    imagearray.append(thumb)
-                    descarray.append(desc)
-
-                if len(contentarray)>0:
-                    choices = multiselect(String(30078), contentarray, imagearray, descarray)
-                    xbmc.executebuiltin('ActivateWindow(HOME)')
-                    dolog('Choices: %s' % choices)
-                    if len(choices) > 0:
-                        Install_Shares(url, menutype, menu, choices, contentarray, imagearray, descarray)
-                else:
-                    if thirdparty == 'true':
-                        OK_Dialog(String(30079),String(30080))
-                    else:
-                        OK_Dialog(String(30079),String(30081))
-
-
-# If this is a remove item
-            else:
-                Remove_Menu(url)
-        except:
-            Notify(String(30082),String(30083),'1000',os.path.join(ADDONS,'plugin.program.tbs','resources','cross.png'))
-    else:
-        OK_Dialog(String(30084), String(30085))    
 #---------------------------------------------------------------------------------------------------
 # Return details about the IP address lookup       
 @route(mode='ip_check')
@@ -1783,7 +1671,6 @@ def My_Details():
         if choice >= 0:
             if choice == 0:
                 Get_Updates()
-                # Grab_Updates(BASE+'boxer/comm_live.php?z=c&x=')
             if choice == 1 and username == String(30348):
                 Run_Code(url="boxer/User_Registration.php")
             elif choice == 1:
@@ -1794,7 +1681,7 @@ def My_Details():
                 Keyword_Options()
     else:
         OK_Dialog(String(30380),String(30381))
-        xbmc.executebuiltin('RunAddon(script.openwindow)')
+        Register_Device()
 #---------------------------------------------------------------------------------------------------
 # List all the users shared menus
 def My_Friends():
@@ -2229,44 +2116,6 @@ def Remove_Files():
                         dolog('### Successfully removed folder: %s' % rempath)
                     except:
                         dolog("### Failed to remove: %s" %rempath)
-#---------------------------------------------------------------------------------------------------
-# Remove an item from the system
-def Remove_Menu(function, menutype = ''):
-    contentarray = []
-    imagearray   = []
-    descarray    = []
-    contenturl   = []
-    urlparams = URL_Params()
-    dolog('### OPENING URL TO GRAB DETAILS OF WHAT TO REMOVE:')
-    dolog(BASE+'boxer/cat_search_live.php?x=%s' % (encryptme('e','%s&%s&0&%s&%s' % (urlparams, function, social_shares, menutype))))
-    content_list   = Open_URL(post_type='post',url=BASE+'boxer/cat_search_live.php',payload={"x":encryptme('e','%s&%s&0&%s&%s' % (urlparams, function, social_shares, menutype))})
-    clean_link     = encryptme('d',content_list)
-    dolog('#### RETURN: %s' % clean_link)
-# Grab all the shares which match the master sub-category
-    match = re.compile('n="(.+?)"t="(.+?)"d="(.+?)"l="(.+?)"', re.DOTALL).findall(clean_link)
-    for name, thumb, desc, link in match:
-        contentarray.append(name)
-        imagearray.append(thumb)
-        descarray.append(desc)
-        contenturl.append(link)
-
-# Return the results and update
-    if len(contentarray) > 0:
-        if menutype == '':
-            choices = multiselect(String(30088),contentarray,imagearray,descarray)
-            if len(choices) > 0:
-                Notify(String(30086),String(30087),'5000',os.path.join(ADDONS,'plugin.program.tbs','resources','update.png'))
-                xbmc.executebuiltin('ActivateWindow(HOME)')
-                for item in choices:
-                    Open_URL(post_type='post',url=contenturl[item])
-        else:
-            for item in contenturl:
-                dolog('### URL TO REMOVE: %s' % item)
-                Open_URL(post_type='post',url=item)
-
-        Get_Updates()
-    elif menutype == '':
-        OK_Dialog(String(30089),String(30090))
 #---------------------------------------------------------------------------------------------------
 # Function to clear the packages folder
 @route(mode='remove_packages', args=['url'])
