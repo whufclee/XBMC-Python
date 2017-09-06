@@ -940,9 +940,12 @@ koding.Refresh('container')
     # Now the dependencies are enabled we need to enable the actual main add-ons
         for my_addon in final_addons:
             if not my_addon in final_enabled:
+                dolog('Attempting to enable: %s'%my_addon)
                 if Set_Setting(setting_type='addon_enable', setting=my_addon, value = my_value):
                     dolog('%s now %s' % (my_addon, log_value))
                     final_enabled.append(addon)
+            else:
+                dolog('Already enabled, skipping: %s'%my_addon)
     if refresh:
         Refresh(['addons','container'])
 #----------------------------------------------------------------
