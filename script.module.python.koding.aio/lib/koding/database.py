@@ -26,6 +26,7 @@ import xbmc
 import xbmcaddon
 import xbmcgui
 import xbmcvfs
+from __init__ import Caller
 
 # Put this in a try statement, when called from a service it will throw an error otherwise
 try:

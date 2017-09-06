@@ -23,7 +23,6 @@ import shutil
 import xbmc
 import xbmcgui
 
-from __init__    import dolog
 from guitools    import Show_Busy
 from systemtools import Last_Error
 
@@ -79,21 +78,21 @@ else:
                         break
                 except:
                     pass
-            dolog('### Current Window: %s' % xbmc.getInfoLabel('System.CurrentWindow'))
-            dolog('### Current XML: %s' % xbmc.getInfoLabel('Window.Property(xmlfile)'))
-            dolog('### Progress Dialog active, sleeping for %s seconds' % counter)
+            xbmc.log('### Current Window: %s' % xbmc.getInfoLabel('System.CurrentWindow'))
+            xbmc.log('### Current XML: %s' % xbmc.getInfoLabel('Window.Property(xmlfile)'))
+            xbmc.log('### Progress Dialog active, sleeping for %s seconds' % counter)
             xbmc.sleep(1000)
             if xbmc.getCondVisibility('Window.IsActive(progressdialog)') or (xbmc.getInfoLabel('Window.Property(xmlfile)') == 'DialogProgress.xml'):
                 isdialog = True
             else:
                 isdialog = False
             counter += 1
-            dolog('counter: %s' % counter)
+            xbmc.log('counter: %s' % counter)
 
 # Given the DialogProgress 10 seconds to finish and it's still up - time to close it
             if counter >= 10:
                 try:
-                    dolog('attempting to send click to close dp')
+                    xbmc.log('attempting to send click to close dp')
                     xbmc.executebuiltin('SendClick()')
                     if dp.iscanceled():
                         dp.close()
@@ -102,7 +101,7 @@ else:
                     except:
                         pass
                 except:
-                    dolog('### FAILED TO CLOSE DP')
+                    xbmc.log('### FAILED TO CLOSE DP')
     try:
         dp.close()
     except:
@@ -116,7 +115,7 @@ else:
     while not isplaying and counter < timeout:
         xbmc.sleep(1000)
         isplaying = xbmc.Player().isPlaying()
-        dolog('### XBMC Player not yet active, sleeping for %s seconds' % counter)
+        xbmc.log('### XBMC Player not yet active, sleeping for %s seconds' % counter)
         counter += 1
 
     success = 0
@@ -135,7 +134,7 @@ else:
 
 # If playback doesn't start automatically (buffering) we force it to play
                 else:
-                    dolog('### Playback active but time at zero, trying to unpause')
+                    xbmc.log('### Playback active but time at zero, trying to unpause')
                     xbmc.executebuiltin('PlayerControl(Play)')
                     xbmc.sleep(2000)
                     vidtime = xbmc.Player().getTime()
@@ -151,7 +150,7 @@ else:
     isbusy  = xbmc.getCondVisibility('Window.IsActive(busydialog)')
     counter   = 1
     while isbusy:
-        dolog('### Busy dialog active, sleeping for %ss' % counter)
+        xbmc.log('### Busy dialog active, sleeping for %ss' % counter)
         xbmc.sleep(1000)
         isbusy  = xbmc.getCondVisibility('Window.IsActive(busydialog)')
         counter += 1
@@ -160,7 +159,7 @@ else:
 
     if not success:
         xbmc.executebuiltin('PlayerControl(Stop)')
-        dolog('### Failed playback, stopped stream')
+        xbmc.log('### Failed playback, stopped stream')
         return False
     else:
         return True
@@ -444,7 +443,7 @@ if vid:
                 name_array.append(Cleanup_String(name))
                 line = line.replace('<br>','').replace('<br />','').replace('<br/>','')
                 line = line.replace('</p>','').replace('</div>','').replace('</class>','')
-                dolog('line: %s'%line)
+                xbmc.log('line: %s'%line)
                 if 'm3u' in line or 'm3u8' in line:
                     line = 'LIST~'+line
                 if 'src="' in line:
@@ -564,7 +563,7 @@ else:
     dialog.ok('PLAYBACK FAILED','Sorry, playback failed :(')
 ~"""
 
-    dolog('### ORIGINAL VIDEO: %s'%video)
+    xbmc.log('### ORIGINAL VIDEO: %s'%video)
     import urlresolver
     try:    import simplejson as json
     except: import json
@@ -605,45 +604,45 @@ else:
 # if a plugin path is sent we try activate window
     if video.startswith('plugin://'):
         try:
-            dolog('Attempting to play via xbmc.Player().play() method')
+            xbmc.log('Attempting to play via xbmc.Player().play() method')
             player.play(video)
             playback = Check_Playback(ignore_dp,timeout)
         except:
-            dolog(Last_Error())
+            xbmc.log(Last_Error())
 
 # If an XBMC action has been sent through we do an executebuiltin command
     elif video.startswith('ActivateWindow') or video.startswith('RunAddon') or video.startswith('RunScript') or video.startswith('PlayMedia'):
         try:
-            dolog('Attempting to play via xbmc.executebuiltin method')
+            xbmc.log('Attempting to play via xbmc.executebuiltin method')
             xbmc.executebuiltin('%s'%video)
             playback = Check_Playback(ignore_dp,timeout)
         except:
-            dolog(Last_Error())
+            xbmc.log(Last_Error())
 
     elif ',' in video:
 # Standard xbmc.player method (a comma in url seems to throw urlresolver off)
         try:
-            dolog('Attempting to play via xbmc.Player.play() method')
+            xbmc.log('Attempting to play via xbmc.Player.play() method')
             player.play('%s'%video, item)
             playback = Check_Playback(ignore_dp,timeout)
 
 # Attempt to resolve via urlresolver
         except:
             try:
-                dolog('Attempting to resolve via urlresolver module')
-                dolog('video = %s'%video)
+                xbmc.log('Attempting to resolve via urlresolver module')
+                xbmc.log('video = %s'%video)
                 hmf = urlresolver.HostedMediaFile(url=video, include_disabled=False, include_universal=True)
                 if hmf.valid_url() == True:
                     video = hmf.resolve()
-                    dolog('### VALID URL, RESOLVED: %s'%video)
+                    xbmc.log('### VALID URL, RESOLVED: %s'%video)
                 player.play('%s' % video, item)
                 playback = Check_Playback(ignore_dp,timeout)
             except:
-                dolog(Last_Error())
+                xbmc.log(Last_Error())
 
 # Play from a db entry - untested
     elif video.isdigit():
-        dolog('### Video is digit, presuming it\'s a db item')
+        xbmc.log('### Video is digit, presuming it\'s a db item')
         command = ('{"jsonrpc": "2.0", "id":"1", "method": "Player.Open","params":{"item":{"channelid":%s}}}' % url)
         xbmc.executeJSONRPC(command)
         playback = Check_Playback(ignore_dp,timeout)
@@ -651,32 +650,32 @@ else:
     else:
 # Attempt to resolve via urlresolver
         try:
-            dolog('Attempting to resolve via urlresolver module')
-            dolog('video = %s'%video)
+            xbmc.log('Attempting to resolve via urlresolver module')
+            xbmc.log('video = %s'%video)
             hmf = urlresolver.HostedMediaFile(url=video, include_disabled=False, include_universal=True)
             if hmf.valid_url() == True:
                 video = hmf.resolve()
-                dolog('### VALID URL, RESOLVED: %s'%video)
+                xbmc.log('### VALID URL, RESOLVED: %s'%video)
             player.play('%s' % video, item)
             playback = Check_Playback(ignore_dp,timeout)
 
 # Standard xbmc.player method
         except:
             try:
-                dolog('Attempting to play via xbmc.Player.play() method')
+                xbmc.log('Attempting to play via xbmc.Player.play() method')
                 player.play('%s' % video, item)
                 playback = Check_Playback(ignore_dp,timeout)
             except:
-                dolog(Last_Error())
+                xbmc.log(Last_Error())
 
-    dolog('Playback status: %s' % playback)
+    xbmc.log('Playback status: %s' % playback)
     Show_Busy(False)
     counter = 1
     dialogprogress = xbmc.getCondVisibility('Window.IsActive(progressdialog)')
     if not ignore_dp:
         while dialogprogress:
             dp.create('Playback Good','Closing dialog...')
-            dolog('Attempting to close dp #%s'%counter)
+            xbmc.log('Attempting to close dp #%s'%counter)
             dp.close()
             xbmc.sleep(1000)
             counter += 1
