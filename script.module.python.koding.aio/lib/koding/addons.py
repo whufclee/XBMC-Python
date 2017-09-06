@@ -957,5 +957,5 @@ koding.Refresh('container')
                 dolog('Already enabled, skipping: %s'%my_addon)
     if refresh:
         Refresh(['addons','container'])
-    Set_Setting('general.addonupdates', 'kodi_setting', '%s'%udpate_status)
+    Set_Setting('general.addonupdates', 'kodi_setting', '%s'%update_status)
 #----------------------------------------------------------------
