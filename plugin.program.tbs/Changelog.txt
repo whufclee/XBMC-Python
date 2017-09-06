@@ -1,3 +1,7 @@
+v.4.3.8.8:
+- Fixed upload share options inc. adding to local db
+- Fixed removal of shares inc. removing from local db.
+
 v.4.3.8.7:
 - SF fix for Krypton, now opens into programs to fix window bug
 - If only one SF entry it will now open into that entry

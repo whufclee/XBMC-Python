@@ -475,14 +475,12 @@ def Check_My_Shares(url = ''):
             if oldmd5 != localcheck:
                 message     = 1
                 if YesNo_Dialog(String(30247), String(30248) % cleanpath):
-                    success = Update_Share(os.path.join(SF_ROOT, 'HOME_'+path))
-                    if success:
-                        DB_Query(db_path=db_social, query='UPDATE shares SET stamp=? WHERE `path`=?', values=[localcheck,path])
+                    Upload_Share(fullpath=os.path.join(SF_ROOT, 'HOME_'+path),item=share)
         elif section:
             dolog('String1: %s'%String(30351))
             dolog('String2: %s'%String(30352))
             if YesNo_Dialog(String(30351),String(30352)%cleanpath):
-                Sleep_If_Function_Active( Run_Code, ['boxer/Remove_Share.php', {"x":encryptme('e',URL_Params()),"y":encryptme('e',section),"z":encryptme('e',share)}] )
+                Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e','HOME_'+cleanpath)} )
     if url == 'manual' and message == 0:
         OK_Dialog(String(30249), String(30249))
 #---------------------------------------------------------------------------------------------------
@@ -1822,31 +1820,32 @@ def Open_SF():
         category    = final_list[choice]
         SF_Path     = os.path.join(SF_ROOT,category)
         My_Folders  = Get_Contents(path=SF_Path,full_path=False)
-        final_array = []
+        final_array = [String(30567)]
+        clean_array = [String(30567)]
         for item in My_Folders:
             item = item.replace(os.sep,'')
             xml_path = os.path.join(SF_Path,item,'favourites.xml')
             if os.path.exists(xml_path):
-                final_array.append(item)
-        dolog(repr(final_array))
-        if len(final_array) == 0:
-            OK_Dialog(String(30079),String(30080))
-            Open_SF()
-        else:
-            choice = Select_Dialog(String(30359)%menu_array[choice],final_array)
-            if choice >= 0:
-                share    = final_array[choice]
-                my_array = [String(30360),String(30361)]
-                share_choice = Select_Dialog(String(30359)%final_array[choice],my_array)
-                if share_choice >= 0:
-                    if share_choice == 0:
-                        Upload_Share( fullpath=xml_path.replace('favourites.xml',''), item=share )
-                    if share_choice == 1:
-                        xbmc.executebuiltin( 'ActivateWindow(programs,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)' % (category,share) )
-                else:
-                    Social_Shares()
+                final_array.append([xml_path.replace('favourites.xml',''),item])
+                clean_array.append(item.replace('_',' '))
+        choice = Select_Dialog(String(30359)%menu_array[choice],clean_array)
+        if choice == 0:
+            xbmc.executebuiltin( 'ActivateWindow(programs,"plugin://plugin.program.super.favourites/?folder=%s",return)' % (category) )
+            return
+        elif choice > 0:
+            share    = final_array[choice][1]
+            xml_path = final_array[choice][0]
+            my_array = [String(30360),String(30361)]
+            share_choice = Select_Dialog(String(30359)%clean_array[choice],my_array)
+            if share_choice >= 0:
+                if share_choice == 0:
+                    Upload_Share( fullpath=xml_path, item=share )
+                if share_choice == 1:
+                    xbmc.executebuiltin( 'ActivateWindow(programs,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)' % (category,share) )
             else:
                 Social_Shares()
+        else:
+            Social_Shares()
     else:
         Social_Shares()
 #---------------------------------------------------------------------------------------------------
@@ -2532,11 +2531,8 @@ def Share_Options(share):
         if choice == 0:
             if YesNo_Dialog( String(30044),String(30358) ):
                 shutil.rmtree(local_path,ignore_errors=True)
-                remove_share = urllib.quote(share, safe='')
-                Remove_From_Table('shares',{"path":remove_share})
         if choice == 1:
-            section,share = share.split('/')
-            Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e',section),"z":encryptme('e',share)} )
+            Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e','HOME_'+urllib.unquote(share).upper()),"z":"1"} )
         if choice == 2:
             Upload_Share(fullpath=local_path,item=share)
 #---------------------------------------------------------------------------------------------------
@@ -2774,51 +2770,6 @@ def Update_Repo():
     Refresh(['addons','repos'])  
     OK_Dialog(String(30166), String(30227))
 #---------------------------------------------------------------------------------------------------
-# Update a social share
-def Update_Share(fullpath):
-    urlparams = URL_Params()
-    if urlparams != 'Unknown':
-# Grab contents of the config file
-        try:
-            cfgfile=open(os.path.join(fullpath,'folder.cfg'),'r')
-            cfg = cfgfile.read()
-            cfg = cfg.replace('\r','').replace('\n','').replace('\t','')
-            cfgfile.close()
-        except:
-            cfg=''
-
-# Grab contents of the favourites.xml
-        if os.path.exists(os.path.join(fullpath,'favourites.xml')):
-            xmlfile  = open(os.path.join(fullpath,'favourites.xml'),'r')
-            xml = xmlfile.read()
-            xml = xml.replace(xbmc.translatePath('special://home'),'special://home/').replace(urllib.quote(xbmc.translatePath('special://home').encode("utf-8")),'special://home/').replace('\r','').replace('\n','').replace('\t','')
-            xmlfile.close()
-        else:
-            xml="not a SF"
-
-# Grab the clean part of the folder name to send
-        itemname  = fullpath.split('/')
-        last_item = len(itemname)-1
-        fullpath  = os.path.join(itemname[last_item-1], itemname[last_item])
-        dolog('### Clean Full Path: %s' % fullpath)
-
-# Attempt to send the share to system
-        try:
-            sendfaves = Open_URL(timeout=30,post_type='post',url=BASE+'boxer/share_box_live.php?x=%s&z=gs&k=%s&c=%s&p=%s' % (encryptme('e',urlparams), encryptme('e',xml), encryptme('e',cfg), encryptme('e',fullpath)))
-            dolog(BASE+'boxer/share_box_live.php?x=%s&z=gs&k=%s&c=%s&p=%s' % (encryptme('e',urlparams), encryptme('e',xml), encryptme('e',cfg), encryptme('e',fullpath)))
-            if 'success' in sendfaves:
-                itemname  = itemname[last_item]
-                OK_Dialog(String(30251), String(30252) % fullpath.split('/')[1])
-                return True
-            else:
-                OK_Dialog(String(30253), String(30254))
-                return False
-        except:
-            OK_Dialog(String(30253), String(30256))
-            return False
-    else:
-        OK_Dialog(String(30084), String(30257))
-#---------------------------------------------------------------------------------------------------
 # Upload current and old log to the server
 def Upload_Log():
     success = False
@@ -2852,13 +2803,11 @@ def Upload_Log():
 #---------------------------------------------------------------------------------------------------
 # Upload social share
 def Upload_Share(fullpath='',item=''):
-    userid         = Addon_Setting('userid')
-    master         = Addon_Setting('master')
     choice         = 0
-    master_share   = 0
     plugin_check   = True
     urlparams      = URL_Params()
-
+    SF_fanart      = ''
+    desc           = ''
     if fullpath != '':
         plugin_check = False
     if item == '':
@@ -2868,37 +2817,32 @@ def Upload_Share(fullpath='',item=''):
         path       = xbmc.getInfoLabel('ListItem.FolderPath')
         path       = urllib.unquote(path)
 
-    if master == 'true':
-        master_share = 1
-
     if urlparams != 'Unknown':
         if fullpath == '':
             try:
                 scrap,fullpath = path.split('path=')
                 fullpath       = xbmc.translatePath(fullpath)
-                dolog('### FULL PATH ORIG: %s' % fullpath)
             except:
                 fullpath = "not a SF"
-        dolog('### FULL PATH FINAL: %s' % fullpath)
         
         if fullpath != "not a SF":
             if fullpath.endswith(os.sep):
                 fullpath = fullpath[:-1]
             localcheck = md5_check(os.path.join(fullpath,'favourites.xml'))
+            dolog('local check: %s'%localcheck)
             mylistpath = urllib.quote(fullpath.split("HOME_",1)[1], safe='')
-            dolog('### md5: '+localcheck)
-            dolog('clean path: '+mylistpath)
-            data = DB_Query(db_path=db_social, query='SELECT COUNT(*) from shares WHERE `path` = ?', values=[mylistpath])
-            if int(data[0]['COUNT(*)']) > 0:
+            dolog('mylistpath: %s'%mylistpath)
+            data = DB_Query(db_path=db_social, query='SELECT COUNT(*) as mycount from shares WHERE `path` = ?', values=[mylistpath])
+            dolog('data: %s'%data)
+            if int(data[0]['mycount']) > 0:
                 dolog('### Updating Share in db: %s' % mylistpath)
-                DB_Query(db_path=db_social, query="UPDATE shares SET stamp = ? WHERE `path` = ?", values=[localcheck, mylistpath])
+                DB_Query(db_path=db_social, query="UPDATE shares SET `timestamp` = ? WHERE `path` = ?", values=[localcheck, mylistpath])
             else:
                 dolog('### Adding Share to db: %s' % mylistpath)
-                add_specs = {"path":mylistpath,"stamp":localcheck}
+                add_specs = {"path":mylistpath,"timestamp":localcheck}
                 Add_To_Table("shares", add_specs)
         else:
             OK_Dialog(String(30258) % item.capitalize(), String(30259))
-
 
         try:
             scrap,newpath  = fullpath.split('Super Favourites'+os.sep)
@@ -2913,28 +2857,22 @@ def Upload_Share(fullpath='',item=''):
             xml="not a SF"
 
         try:
-            cfgfile=open(os.path.join(fullpath,'folder.cfg'),'r')
-            cfg = cfgfile.read()
-            cfg = cfg.replace('\r','').replace('\n','').replace('\t','')
+            cfgfile  = open(os.path.join(fullpath,'folder.cfg'),'r')
+            cfg_file = cfgfile.read()
+            cfg_raw  = cfg_file.splitlines()
             cfgfile.close()
         except:
-            cfg=''
+            cfg_raw  = ''
+            cfg_file = ''
 
-
-        try:
-            cfgfile=open(os.path.join(fullpath,'folder.cfg'),'r')
-            cfg_raw = cfgfile.read().splitlines()
-            cfgfile.close()
-        except:
-            cfg_raw = ''
-
-        dolog('### RAW CONFIG: %s'%cfg_raw)
         SF_fanart = encryptme('e','None')
         for line in cfg_raw:
             if line.startswith('FANART='):
                 SF_fanart = line.replace('FANART=','').replace('\n','').replace('\t','').replace('\r','')
                 SF_fanart = encryptme('e',SF_fanart)
-        dolog('### SF Fanart: %s' % SF_fanart)
+            if line.startswith('DESC='):
+                desc = line.replace('DESC=','').replace('\n','').replace('\t','').replace('\r','')
+                desc = encryptme('e',desc)
 
         try:
             pluginname=xbmc.getInfoLabel('Container.PluginName')
@@ -2942,24 +2880,15 @@ def Upload_Share(fullpath='',item=''):
         except:
             pluginname='none'
 
-        quit = 0
         if (pluginname == 'plugin.program.super.favourites' and plugin_check) or (not plugin_check):
-# Enable once we have private share options
-#        choice = Select_Dialog('Choose Share Type',['Share publicly','Add to my private share'])
             if xml == "not a SF" or newpath  == "not a SF":
-                OK_Dialog(String(30260), String(30261))
-                quit = 1
-            elif quit != 1:
-                try:
-                    if userid == '':
-                        userid = encryptme('e','None')
-                    sendfaves = Open_URL(timeout=30,post_type='post',url=BASE+'boxer/share_box_live.php?x=%s&z=gs&k=%s&c=%s&p=%s&m=%s&i=%s&f=%s' % (encryptme('e',urlparams), encryptme('e',xml), encryptme('e',cfg), encryptme('e',newpath), master_share, userid, SF_fanart))
-                    if 'success' in sendfaves:
-                        OK_Dialog(String(30262), String(30263) % item)
-                    else:
-                        OK_Dialog(String(30258) % item.capitalize(), String(30259))
-                except:
-                    OK_Dialog(String(30258) % item.capitalize(), String(30256))
+                OK_Dialog(String(30258) % item, String(30254))
+            else:
+                Run_Code(url='boxer/Upload_SF_Share.php', payload={"x":encryptme('e',urlparams),\
+                    "k":encryptme('e',xml),"c":encryptme('e',cfg_file),"p":encryptme('e',newpath),\
+                    "f":SF_fanart,"d":desc})
+                return True
+
         elif pluginname != 'plugin.program.super.favourites' and quit != 1:
             xbmc.executebuiltin('RunScript(special://home/addons/plugin.program.super.favourites/capture.py)')
     else:

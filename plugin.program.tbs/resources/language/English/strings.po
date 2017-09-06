@@ -1063,7 +1063,7 @@ msgid "CONTENT SUBMITTED"
 msgstr ""
 
 msgctxt "#30263"
-msgid "Thank you for sharing with the community. [COLOR=dodgerblue]%s[/COLOR] has now been shared and is publicly available."
+msgid "Thank you for sharing with the community.\n[COLOR=dodgerblue]%s[/COLOR] has now been shared and is publicly available."
 msgstr ""
 
 msgctxt "#30264"
@@ -2276,4 +2276,8 @@ msgstr ""
 
 msgctxt "#30566"
 msgid "[COLOR=gold]REMOVE SOCIAL SHARE[/COLOR]"
+msgstr ""
+
+msgctxt "#30567"
+msgid "[COLOR=gold]Open into root folder[/COLOR]"
 msgstr ""
