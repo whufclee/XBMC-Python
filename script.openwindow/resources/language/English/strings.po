@@ -697,3 +697,11 @@ msgstr ""
 msgctxt "#30171"
 msgid "If you\'re now connected to the internet please click OK to retry setting up this device."
 msgstr ""
+
+msgctxt "#30172"
+msgid "UPDATES COMPLETE"
+msgstr ""
+
+msgctxt "#30173"
+msgid "Social Shares successfully installed"
+msgstr ""

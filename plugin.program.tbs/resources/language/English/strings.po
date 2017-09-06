@@ -2269,3 +2269,11 @@ msgstr ""
 msgctxt "#30564"
 msgid "Our servers do not host any add-ons and the details are pulled from a number of public websites (very similar to using a search engine in your web browser) but unfortunately no download details could be found for the add-ons listed below.\n\nIf you absolutely need these on your system then please have a search online to see if you can find them and then install from zip. If you do find the content please consider updating the team at noobsandnerds.com of where you found the content and they can update their Add-on Portal library accordingly. Anything indexed on their system can be installed so long as the download links are still valid and the original developer hasn't deleted the add-on.\n\n[COLOR gold]ADD-ONS:\n[/COLOR]%s"
 msgstr ""
+
+msgctxt "#30565"
+msgid "[COLOR=steelblue][SHARE][/COLOR] %s"
+msgstr ""
+
+msgctxt "#30566"
+msgid "[COLOR=gold]REMOVE SOCIAL SHARE[/COLOR]"
+msgstr ""

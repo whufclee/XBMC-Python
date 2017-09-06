@@ -19,6 +19,9 @@ import xbmc
 import xbmcaddon
 import xbmcgui
 
+from default import encryptme, Addon_Browser, Install_Addons, Share_Install,\
+                    Share_Removal, Sleep_If_Function_Active, Toggle_Addons
+
 from koding import dolog, converthex, Addon_Setting, Keyboard, String, Text_File
 
 if os.path.exists(xbmc.translatePath('special://home/userdata/addon_data/script.trtv/skip.txt')):
@@ -86,15 +89,12 @@ if mymenu == 'cooking':
     mymenu = 'food'
 if mymenu == 'fitness':
     mymenu = 'health'
-
 # Set the folder path to check
 folderpath = xbmc.translatePath(os.path.join('special://profile/addon_data/plugin.program.super.favourites/Super Favourites/', settings_clean.replace('SUBMENU_','HOME_')))
 #---------------------------------------------------------------------------------------------------
 def Add_Content(id_array):
-    from default import encryptme, Addon_Browser, Install_Addons, Sleep_If_Function_Active, Toggle_Addons
-
     dolog('id_array: %s'%id_array)
-    choice = dialog.select(String(30314),[String(30170),String(30313),String(30323)])
+    choice = dialog.select(String(30314),[String(30170),String(30323),String(30313),String(30354)])
     if choice >= 0:
         my_text = Text_File(redirect_file,'r')
         if choice == 0:
@@ -114,6 +114,8 @@ def Add_Content(id_array):
                         my_text += '\n'
                     my_text += 'addon~%s~%s\n'%(item[0],item[1])
         elif choice == 1:
+            my_text += Favourite_Select(my_text)
+        elif choice == 2:
 # List of QP modes
             full_array = [String(30318),String(30315),String(30319),String(30316),String(30320),String(30321),String(30317),String(30322)]
             qp_dict    = {
@@ -138,9 +140,9 @@ def Add_Content(id_array):
             choice = dialog.select(String(30314),my_array)
             if choice >= 0:
                 my_text += '-exec~%s~%s\n'%(my_array[choice],qp_dict[my_array[choice]])
-        elif choice == 2:
-            my_text += Favourite_Select(my_text)
-
+        elif choice == 3:
+            dolog('%s - running share_install'%settings_clean)
+            Share_Install(settings_clean)
     Text_File(redirect_file,'w',my_text)
 #---------------------------------------------------------------------------------------------------
 def Favourite_Select(installed_content=''):
@@ -170,8 +172,13 @@ def Favourite_Select(installed_content=''):
 #---------------------------------------------------------------------------------------------------
 def Remove_Content(id_array=[]):
     remove_list = []
-    my_text     = Text_File(redirect_file,'r')
 
+# If Super Favourites exist add option to remove a social share
+    sf_path = xbmc.translatePath('special://profile/addon_data/plugin.program.super.favourites/Super Favourites/%s'%settings_clean)
+    if len(os.listdir(sf_path))>0:
+        remove_list.append(String(30354))
+
+    my_text     = Text_File(redirect_file,'r')
     for item in id_array:
         if item[0] == 'apk':
             remove_list.append(String(30304) % item[1])
@@ -181,12 +188,16 @@ def Remove_Content(id_array=[]):
             remove_list.append(item[1])
     choice = dialog.select(String(30307), remove_list)
     if choice >= 0:
-        remove_line  = '%s~%s~%s\n'%(id_array[choice][0], id_array[choice][1], id_array[choice][2])
-        if remove_line in my_text:
-            replace_file = my_text.replace(remove_line,'')
-            Text_File(redirect_file,'w',replace_file)
+        if remove_list[choice]!=String(30354):
+            remove_line  = '%s~%s~%s\n'%(id_array[choice][0], id_array[choice][1], id_array[choice][2])
+            if remove_line in my_text:
+                replace_file = my_text.replace(remove_line,'')
+                Text_File(redirect_file,'w',replace_file)
+            else:
+                dialog.ok('DEFAULT ITEM','It\'s only possible to delete items you\'ve added, you cannot delete default items. If you want to create your own custom list set this menu as a custom list via the main +- button')
+    # Social share removal
         else:
-            dialog.ok('DEFAULT ITEM','It\'s only possible to delete items you\'ve added, you cannot delete default items. If you want to create your own custom list set this menu as a custom list via the main +- button')
+            default.Share_Removal(settings_clean)
 #---------------------------------------------------------------------------------------------------
 def execute(command):
     xbmc.executebuiltin(command)
@@ -199,10 +210,16 @@ def showlist(usenan = False):
     final_array      = []
     genre_array      = []
     id_array         = []
+    
+    sf_path = xbmc.translatePath('special://profile/addon_data/plugin.program.super.favourites/Super Favourites/%s'%settings_clean)
+    for item in os.listdir(sf_path):
+        fullpath = os.path.join(sf_path,item)
+        if os.path.isdir(fullpath):
+            genre_array.append('share~'+item.replace('_',' ')+'~'+item)
 
     if usenan:
         try:
-            addon_list = Addon_Genre(genre=mymenu, custom_url='http://totalrevolution.xyz/addons/addon_list.txt')
+            addon_list = Addon_Genre(genre=mymenu, custom_url=BASE+'addons/addon_list.txt')
         except:
             try:
                 addon_list = Addon_Genre(genre=mymenu)
@@ -230,12 +247,13 @@ def showlist(usenan = False):
             app_id = ''
             for item in raw_split:
                 app_id += item
-            dolog(app_id,2)
-
 
             if app_type == '-exec':
                 final_array.append([app_type, clean_name, app_id])
                 delete_array.append([app_type, clean_name, app_id])
+
+            if app_type == 'share':
+                final_array.append([app_type, clean_name, app_id])
 
             if app_type == '-fav':
                 final_array.append([app_type, clean_name, app_id])
@@ -262,6 +280,8 @@ def showlist(usenan = False):
         for item in final_array:
             if item[0] == 'apk':
                 app_array.append(String(30304) % item[1])
+            elif item[0] == 'share':
+                app_array.append(String(30565) % item[1])
             elif item[0] == 'addon':
                 app_array.append(String(30305) % item[1])
             elif item[0] == '-exec' or item[0] == '-fav':
@@ -282,6 +302,11 @@ def showlist(usenan = False):
             xbmc.executebuiltin('StartAndroidActivity(%s)' % run_app[2])
         elif run_app[0] == 'addon':
             xbmc.executebuiltin('RunAddon(%s)' % run_app[2])
+        elif run_app[0] == 'share':
+            if sys.argv[1] == 'HOME_MUSIC':
+                xbmc.executebuiltin('ActivateWindow(10501,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
+            else:
+                xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)'%(settings_clean,run_app[2]))
         else:
             try:
                 exec(run_app[2])

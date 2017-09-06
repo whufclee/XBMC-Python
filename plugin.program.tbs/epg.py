@@ -17,7 +17,6 @@ import xbmc
 import xbmcgui
 
 from koding import *
-from default import Get_Updates
 
 sys.argv[1]     = sys.argv[1].replace("'",'')
 redirects       = xbmc.translatePath('special://home/userdata/addon_data/plugin.program.tbs/redirects')
@@ -245,7 +244,6 @@ def Reset_Factory(menu_type):
             except:
                 dolog('Failed to remove home_menus')
             Main_Menu_Defaults()
-            Sleep_If_Function_Active(function=Get_Updates,show_busy=True,kill_time=600)
 
 # If submenu or all we remove skinshortucts so they can repopulate
         if menu_type != 'HOME_':

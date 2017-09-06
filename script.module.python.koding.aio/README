@@ -236,7 +236,7 @@ the db is a lot quicker there is no guarantee it won't cause
 severe problems in later versions of Kodi (this was created for v17).
 DO NOT set safe_mode to False unless you 100% understand the consequences!
 
-	CODE:  Toggle_Addons([addon, enable, safe_mode, exclude_list, new_only, refresh])
+	CODE:  Toggle_Addons([addon, enable, safe_mode, exclude_list, new_only, refresh, update_status])
 
 	AVAILABLE PARAMS:
 	    (*) addon  -  This can be a list of addon ids, one single id or
@@ -263,6 +263,13 @@ DO NOT set safe_mode to False unless you 100% understand the consequences!
 	    
 	    refresh  - By default this is set to True, it will refresh the
 	    current container and also force a local update on your add-ons db.
+
+	    update_status  - When running this function it needs to disable the
+	    auto-update of add-ons by Kodi otherwise it risks crashing. This
+	    update_status paramater is the state you want Kodi to revert back to
+	    once the toggle of add-ons has completed. By default this is set to 0
+	    which is auto-update. You can also choose 1 (notify of updates) or 2
+	    (disable auto updates).
 
 	EXAMPLE CODE:
 		from systemtools import Refresh

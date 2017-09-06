@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<coordinates>
-		<posx>240</posx>
-		<posy>60</posy>
+		<posx>190</posx>
+		<posy>35</posy>
 	</coordinates>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
@@ -11,15 +11,15 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>800</width>
-			<height>600</height>
+			<width>900</width>
+			<height>650</height>
 			<texture border="40" colordiffuse="ff000000">DialogBack.png</texture>
 		</control>
 		<control type="image">
 			<description>Dialog Header image</description>
 			<posx>40</posx>
 			<posy>16</posy>
-			<width>720</width>
+			<width>820</width>
 			<height>40</height>
 			<texture>dialogheader.png</texture>
 		</control>
@@ -27,7 +27,7 @@
 			<description>header label</description>
 			<posx>40</posx>
 			<posy>20</posy>
-			<width>720</width>
+			<width>820</width>
 			<height>30</height>
 			<font>font13_title</font>
 			<label>$INFO[Window(Home).Property(PK_Header)]</label>
@@ -58,8 +58,8 @@
 				<description>terms details</description>
 				<posx>30</posx>
 				<posy>75</posy>
-				<width>720</width>
-				<height>430</height>
+				<width>820</width>
+				<height>480</height>
 				<label>$INFO[Window(Home).Property(PK_Main_Text)]</label>
 				<font>font13</font>
 				<align>justify</align>
@@ -71,7 +71,7 @@
 				<posx>scroll_pos</posx>
 				<posy>73</posy>
 				<width>25</width>
-				<height>430</height>
+				<height>480</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -85,8 +85,8 @@
 				<orientation>vertical</orientation>
 			</control>
            <control type="button" id="100">
-                <posx>133</posx>
-                <posy>520</posy>
+                <posx>166</posx>
+                <posy>570</posy>
                 <width>200</width>
                 <height>40</height>
                 <label>Decline</label>
@@ -102,8 +102,8 @@
                 <ondown>99</ondown>
             </control>
            <control type="button" id="101">
-                <posx>466</posx>
-                <posy>520</posy>
+                <posx>532</posx>
+                <posy>570</posy>
                 <width>200</width>
                 <height>40</height>
                 <label>Accept</label>

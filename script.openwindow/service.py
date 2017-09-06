@@ -12,6 +12,11 @@
 import xbmc
 import os
 
+from koding import Addon_Setting
+
+AddonID = 'script.openwindow'
+sleep   =  Addon_Setting('sleep')
+
 autoexec = xbmc.translatePath('special://profile/autoexec.py')
 if os.path.exists(autoexec):
     readfile = open(autoexec,'r')
@@ -21,3 +26,6 @@ if os.path.exists(autoexec):
         os.remove(autoexec)
 
 xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,update)')
+
+if sleep != '':
+    xbmc.executebuiltin('XBMC.AlarmClock(Notifyloop,XBMC.RunScript(special://home/addons/script.openwindow/default.py,update),%s,silent,loop)'%sleep)

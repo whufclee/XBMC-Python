@@ -10,36 +10,17 @@
 # work. If not, see http://creativecommons.org/licenses/by-nc-nd/4.0.
 
 import os
-import re
-import sys
-import time
 import xbmc
-import xbmcaddon
-import xbmcgui
-import xbmcplugin
 
 from koding     import dolog, Addon_Setting, Text_File
-from default    import Sync_Settings, Adult_Filter
 #---------------------------------------------------------------------------------------------------
 AddonID          = 'plugin.program.tbs'
-HOME             =  xbmc.translatePath('special://home/')
-USERDATA         =  xbmc.translatePath('special://profile')
-ADDON_DATA       =  xbmc.translatePath(os.path.join(USERDATA,'addon_data'))
-ADDONS           =  xbmc.translatePath(os.path.join(HOME,'addons'))
-sleeper          =  os.path.join(ADDONS,AddonID,'resources','tmr')
-internetcheck    =  Addon_Setting('internetcheck')
 cachecheck       =  Addon_Setting('cleancache')
 flashsplash      = '/flash/oemsplash.png'
 newsplash        =  xbmc.translatePath('special://home/media/branding/Splash.png')
-install_complete =  os.path.join(ADDON_DATA,'script.openwindow','INSTALL_COMPLETE')
 #---------------------------------------------------------------------------------------------------
-if internetcheck == 'true':
-    xbmc.executebuiltin('XBMC.AlarmClock(internetloop,XBMC.RunScript(special://home/addons/%s/connectivity.py,silent=true),00:01:00,silent,loop)'%AddonID)
-
 if cachecheck == 'true':
     xbmc.executebuiltin('XBMC.AlarmClock(cleancacheloop,XBMC.RunScript(special://home/addons/%s/cleancache.py,silent=true),12:00:00,silent,loop)'%AddonID)
-
-sleep = Text_File(sleeper,'r')
 
 # Update the boot screen splash
 if os.path.exists(flashsplash):
@@ -60,11 +41,6 @@ if flashsize != newsize and newsize != 0 and flashsize != 0:
     except:
         pass
 
-# Check the sleep is not set to a blank string, if it is we set to every 24hrs
-if sleep == '':
-    if os.path.exists(sleeper):
-        Text_File(sleeper,'w','23:59:59')
-
 # Check uploaded shares to see if any have changed locally and need reuploading
 # if not os.path.exists(runwizard):
 #     dolog('### SERVICE - Checking my shares to see if they need updating on server')
@@ -72,7 +48,3 @@ if sleep == '':
 
 # xbmc.executebuiltin('XBMC.AlarmClock(Shareloop,XBMC.RunScript(special://home/addons/%s/checknews.py,shares),12:00:00,silent,loop)'%AddonID)
 # xbmc.log('### SLEEP: %s'%sleep)
-
-# # Set the main timer for regular update checks
-# if sleep != '':
-#     xbmc.executebuiltin('XBMC.AlarmClock(Notifyloop,XBMC.RunScript(special://home/addons/%s/checknews.py,silent),%s,silent,loop)'%(AddonID, sleep))

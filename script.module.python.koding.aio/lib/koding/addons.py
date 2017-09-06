@@ -778,7 +778,7 @@ else:
             pass
 #----------------------------------------------------------------
 # TUTORIAL #
-def Toggle_Addons(addon='all', enable=True, safe_mode=True, exclude_list=[], new_only=True, refresh=True):
+def Toggle_Addons(addon='all', enable=True, safe_mode=True, exclude_list=[], new_only=True, refresh=True, update_status=0):
     """
 Send through either a list of add-on ids or one single add-on id.
 The add-ons sent through will then be added to the addons*.db
@@ -818,6 +818,13 @@ AVAILABLE PARAMS:
     refresh  - By default this is set to True, it will refresh the
     current container and also force a local update on your add-ons db.
 
+    update_status  - When running this function it needs to disable the
+    auto-update of add-ons by Kodi otherwise it risks crashing. This
+    update_status paramater is the state you want Kodi to revert back to
+    once the toggle of add-ons has completed. By default this is set to 0
+    which is auto-update. You can also choose 1 (notify of updates) or 2
+    (disable auto updates).
+
 EXAMPLE CODE:
 from systemtools import Refresh
 xbmc.executebuiltin('ActivateWindow(Videos, addons://sources/video/)')
@@ -835,6 +842,8 @@ koding.Refresh('container')
     from database       import DB_Query
     from systemtools    import Data_Type, Last_Error, Refresh, Set_Setting, Sleep_If_Function_Active, Timestamp
 
+    Set_Setting('general.addonupdates', 'kodi_setting', '2')
+    dolog('disabled auto updates for add-ons')
     kodi_ver        = int(float(xbmc.getInfoLabel("System.BuildVersion")[:2]))
     addons_db       = DB_Path_Check('addons')
     data_type       = Data_Type(addon)
@@ -948,4 +957,5 @@ koding.Refresh('container')
                 dolog('Already enabled, skipping: %s'%my_addon)
     if refresh:
         Refresh(['addons','container'])
+    Set_Setting('general.addonupdates', 'kodi_setting', '%s'%udpate_status)
 #----------------------------------------------------------------

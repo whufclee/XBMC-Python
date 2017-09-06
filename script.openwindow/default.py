@@ -9,11 +9,7 @@
 # You should have received a copy of the license along with this
 # work. If not, see http://creativecommons.org/licenses/by-nc-nd/4.0.
 
-import datetime
-import downloader
-import extract
 import os
-import re
 import shutil
 import sys
 import threading
@@ -26,11 +22,6 @@ import zipfile
 
 from functions import *
 
-try:
-    import json as simplejson 
-except:
-    import simplejson
-
 ADDONID                    = 'script.openwindow'
 ADDON                      =  xbmcaddon.Addon(ADDONID)
 ADDONID2                   = 'plugin.program.tbs'
@@ -39,34 +30,20 @@ try:
 except:
     ADDON2                 = xbmcaddon.Addon(ADDONID)
 HOME                       = xbmc.translatePath('special://home')
-PROFILE                    = xbmc.translatePath('special://profile')
-CACHE                      = xbmc.translatePath('special://temp')
 NATIVE                     = xbmc.translatePath('special://xbmc')
 ADDONS                     = os.path.join(HOME,'addons')
 PACKAGES                   = os.path.join(ADDONS,'packages')
 ADDON_DATA                 = xbmc.translatePath('special://profile/addon_data')
 ADDON_PATH                 = xbmcaddon.Addon(ADDONID).getAddonInfo("path")
-AUTOEXEC                   = xbmc.translatePath('special://home/userdata/autoexec.py')
-AUTOEXEC_PATH              = os.path.join(ADDON_PATH,'resources','autoexec.py')
-LANGUAGE_PATH              = os.path.join(ADDON_PATH,'resources','language')
 OPENWINDOW_DATA            = os.path.join(ADDON_DATA,ADDONID)
-RUN_WIZARD                 = os.path.join(OPENWINDOW_DATA,'RUN_WIZARD')
-RUN_WIZARD_OLD             = os.path.join(PACKAGES,'RUN_WIZARD')
-STARTUP_WIZARD             = os.path.join(OPENWINDOW_DATA,'STARTUP_WIZARD')
 INSTALL_COMPLETE           = os.path.join(OPENWINDOW_DATA,'INSTALL_COMPLETE')
 RUN_SPEEDTEST              = os.path.join(OPENWINDOW_DATA,'RUN_SPEEDTEST')
 NON_REGISTERED             = os.path.join(OPENWINDOW_DATA,'unregistered')
-THUMBNAILS                 = os.path.join(HOME,'userdata','THUMBNAILS')
 TARGET_ZIP                 = os.path.join(PACKAGES,'target.zip')
-KEYWORD_ZIP                = os.path.join(PACKAGES,'keyword.zip')
 TEMP_DL_TIME               = os.path.join(PACKAGES,'dltime')
 XBMC_VERSION               = xbmc.getInfoLabel("System.BuildVersion")[:2]
 IP_ADDRESS                 = xbmc.getIPAddress()
-DIALOG                     = xbmcgui.Dialog()
-dp                         = xbmcgui.DialogProgress()
 CURRENT_SKIN               = xbmc.getSkinDir()
-REGISTRATION_FILE          = os.path.join(OPENWINDOW_DATA,'DO_NOT_DELETE')
-OEM_ID                     = os.path.join(OPENWINDOW_DATA,'id')
 KEYWORD_FILE               = os.path.join(OPENWINDOW_DATA,'keyword')
 INTERNET_ICON              = os.path.join(ADDON_PATH,'resources','images','internet.png')
 BRANDING_VID               = xbmc.translatePath('special://home/media/branding/intro.mp4')
@@ -765,16 +742,16 @@ def Check_Status(extension, email=''):
 #-----------------------------------------------------------------------------
 # Not on system, get user to register at www.totalrevolution.tv
 def Enter_Licence():
-    DIALOG.ok(String(30125),String(30151))
+    OK_Dialog(String(30125),String(30151))
     license = Keyboard(heading=String(30125))
     if len(license)==20 or len(license)==23:
         if license:
-            DIALOG.ok(String(30152),String(30153))
+            OK_Dialog(String(30152),String(30153))
             email = Keyboard(String(30152))
             if email:
                 Check_Status(license, email)
     else:
-        DIALOG.ok(String(30158),String(30160))
+        OK_Dialog(String(30158),String(30160))
 #-----------------------------------------------------------------------------
 # Search for an item on urlshortbot and install it, can switch oems and call the keyword.php file for restoring backups (WIP)
 def Keyword_Search():
@@ -822,9 +799,9 @@ def Set_Language():
             language_array.append(item)
 
     while not choice:
-        country = DIALOG.select(String(30004),language_array)
+        country = Select_Dialog(String(30004),language_array)
         selected_country = language_array[country].replace('[COLOR=dodgerblue]','').replace('[/COLOR]','')
-        choice = DIALOG.yesno(String(30004),String(30144) % selected_country.upper(),'',String(30145))
+        choice = YesNo_Dialog(String(30004),String(30144) % selected_country.upper()+'\n'+String(30145))
     xbmc.executebuiltin('SetGUILanguage(%s)' % selected_country)
 #-----------------------------------------------------------------------------
 # Auto select the relevant third party window to open into
@@ -838,7 +815,7 @@ def TR_Check(mode):
 #-----------------------------------------------------------------------------
 #### TODO - Add option for enabling third party content
 def Third_Party_Choice():
-    choice = DIALOG.yesno(String(30091),String(30092),yeslabel=String(30093),nolabel=String(30094))
+    choice = YesNo_Dialog(String(30091),String(30092),String(30093),String(30094))
     if choice:
         ADDON2.setSetting('thirdparty','true')
     else:
@@ -849,7 +826,7 @@ def Weather_Info():
     current = xbmc.getInfoLabel('Weather.plugin')
     if current == '' or current == None or not os.path.exists(os.path.join(ADDONS,current)):
         installed = Installed_Addons(types='xbmc.python.weather')
-        DIALOG.ok(String(30154),String(30155))
+        OK_Dialog(String(30154),String(30155))
         if int(XBMC_VERSION) <= 16:
             weather_window = 10014
         else:
@@ -904,7 +881,7 @@ if __name__ == '__main__':
                 livestreams = 30103
                 onlinevids = 30104
             if avgspeed != 0:
-                DIALOG.ok(String(30105), String(30106) + String(livestreams),'', String(30107) + String(onlinevids))
+                OK_Dialog( String(30105), '%s\n%s'%( String(30106)+String(livestreams), String(30107)+String(onlinevids)) )
         try:
             os.remove(TEMP_DL_TIME)
         except:
@@ -919,6 +896,8 @@ if __name__ == '__main__':
     elif len(sys.argv)>0 and os.path.exists(INSTALL_COMPLETE):
         if sys.argv[len(sys.argv)-1] == 'update':
             regmode = 3
+        elif sys.argv[len(sys.argv)-1] == 'update_shares':
+            regmode = 4
         else:
             regmode = 2
     Check_Status(regmode)
