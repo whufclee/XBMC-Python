@@ -1179,7 +1179,7 @@ def Install_Addons(url):
     python_max  = encryptme('e',xbmc_python['max'])
     my_download = ''
     try:
-        mycode    = Open_URL(url=BASE+'boxer/addoninstall.php',post_type='post',payload={'a':url,'v':encryptme('e',XBMC_VERSION),'guimin':gui_min,'guimax':gui_max,'pymin':python_min,'pymax':python_max,'ignore':'false'})
+        mycode    = Open_URL(url=BASE+'boxer/Addon_Install.php',post_type='post',payload={'a':url,'v':encryptme('e',XBMC_VERSION),'guimin':gui_min,'guimax':gui_max,'pymin':python_min,'pymax':python_max,'ignore':'false'})
         url_clean = encryptme('d',url)
         exec(mycode)
     except:
