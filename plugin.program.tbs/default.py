@@ -1256,7 +1256,7 @@ def Install_Addons(url):
 def Install_Content():
     if Addon_Setting('userid') != '':
         Add_Dir(String(30099) % encryptme('d',userid),'','',False,'','','')
-    Add_Dir(String(30100),'', 'get_updates',False,'','','')
+    Add_Dir(String(30100),'update', 'get_updates',False,'','','')
     Add_Dir(String(30101),'','keywords',False,'Keywords.png','','')
     Add_Dir(String(30102),'','install_from_zip',False,'','','')
     Add_Dir(String(30103),'','browse_repos',False,'','','')
