@@ -1,3 +1,6 @@
+v.3.0.9:
+- Added some extra default settings for addon/repo install
+
 v.3.0.8:
 - Force update (wipe/restart) option added
 

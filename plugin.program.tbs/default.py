@@ -81,6 +81,7 @@ unknown_icon     =  os.path.join(artpath,'update.png')
 dialog_bg        =  os.path.join(artpath,'background.png')
 black            =  os.path.join(artpath,'black.png')
 db_social        =  xbmc.translatePath('special://profile/addon_data/plugin.program.tbs/database.db')
+zip_path         =  xbmc.translatePath('special://home/addons/packages/~~ZIPS~~')
 usercheck_file   =  os.path.join(ADDON_DATA,AddonID,'usercheck')
 adult_store      =  xbmc.translatePath("special://profile/addon_data/script.module.python.koding.aio/adult_store")
 pos              =  0
@@ -400,10 +401,11 @@ def Categories():
     Add_Dir(String(30033),'','install_content',True,'Search_Addons.png','','')
     Add_Dir(String(30034),'','startup_wizard',False,'Startup_Wizard.png','','')
     Add_Dir(String(30035),'none', 'tools',True,'Additional_Tools.png','','')
+    Add_Dir('SF REPO CHECK','', 'sf_repo_check',False,'Additional_Tools.png','','')
     # Add_Dir('Video Check','none', 'get_video',False,'Additional_Tools.png','','')
     # Add_Dir('folder','Android Apps','', 'android_apps', 'Additional_Tools.png','','','')
 #---------------------------------------------------------------------------------------------------
-# Main category list
+# Change registered email address
 def Change_Email():
     username  = encryptme( 'e',Addon_Setting('username') )
     email     = encryptme( 'e',Addon_Setting('email') )
@@ -412,16 +414,6 @@ def Change_Email():
 
     if email != '' and username != '' and password != '':
         Run_Code( url='boxer/User_Change_Email.php',payload={"x":urlparams,"n":username,"e":email,"p":password,"a":"2"})
-#---------------------------------------------------------------------------------------------------
-@route(mode='change_id')
-def Change_ID():
-    if os.path.exists( os.path.join(TBSDATA,'admin') ):
-        newid = Keyboard(String(30036))
-        if newid != '':
-            ADDON.setSetting('userid', encryptme('e',newid))
-        else:
-            Check_License()
-        Refresh('container')
 #---------------------------------------------------------------------------------------------------
 def Change_XXX_Password():
     password = Addon_Setting('password')
@@ -458,7 +450,7 @@ def Check_My_Shares(url = ''):
     results = koding.Get_All_From_Table("shares")
     for item in results:
         path        = item["path"]
-        oldmd5      = item["stamp"]
+        oldmd5      = item["timestamp"]
         cleanpath   = urllib.unquote(path).upper()
         try:
             dolog('CLEAN PATH: %s'%cleanpath)
@@ -483,6 +475,31 @@ def Check_My_Shares(url = ''):
                 Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e','HOME_'+cleanpath)} )
     if url == 'manual' and message == 0:
         OK_Dialog(String(30249), String(30249))
+#---------------------------------------------------------------------------------------------------
+# Remove any old repos not currently in use
+def Clean_Old_Repos(repo_list):
+    skip_array   = ['repository.q','repository.spartacus']
+    id_disable   = []
+    path_disable = []
+    try:
+        repo_list = encryptme( 'd', repo_list ).split(',')
+    except:
+        repo_list = []
+    installed_repos = Installed_Addons(types='xbmc.addon.repository',properties='path')
+    for item in installed_repos:
+        path    = item["path"].encode('utf-8')
+        addonid = item["addonid"].encode('utf-8')
+        if not addonid in repo_list and not addonid in skip_array:
+            if ADDONS in path and 'repo' in addonid.lower():
+                # id_disable.append(addonid)
+                path_disable.append(path)
+    # Toggle_Addons(addon=id_disable,enable=False)
+    for item in path_disable:
+        try:
+            shutil.rmtree(item)
+        except:
+            dolog('Failed to remove: %s'%item)
+    Refresh(['addons','repos'])
 #---------------------------------------------------------------------------------------------------
 # Function to clear all known cache files
 @route(mode='clear_cache')
@@ -701,12 +718,6 @@ def Delete_Userdata():
     if os.path.exists(zipcheck):
         os.remove(zipcheck)
 #---------------------------------------------------------------------------------------------------
-# Disable the master mode
-@route(mode='disable_master')
-def Disable_Master():
-    ADDON.setSetting('master','false')
-    xbmc.executebuiltin('Container.Refresh')
-#---------------------------------------------------------------------------------------------------
 # Function to pull commands and update
 def DLE(command,repo_link,repo_id):
     check1='DLE'
@@ -862,18 +873,20 @@ def Firmware_Update(url):
 def Force_Update():
     dolog('FORCE UPDATE')
     if YesNo_Dialog('[COLOR=gold]%s[/COLOR]'%String(30501),String(30544)):
-        username = Addon_Setting('script.openwindow','username')
-        password = Addon_Setting('script.openwindow','password')
-        email    = Addon_Setting('script.openwindow','email')
+        username = Addon_Setting('username')
+        password = Addon_Setting('password')
+        email    = Addon_Setting('email')
+        userid   = Addon_Setting('userid')
         shutil.rmtree(TBSDATA)
         shutil.rmtree(SF_ROOT)
         shutil.rmtree(MEDIA)
         Get_Updates('full')
-        Addon_Setting('script.openwindow','username',username)
-        Addon_Setting('script.openwindow','password',password)
-        Addon_Setting('script.openwindow','email',email)
+        Addon_Setting('username',username)
+        Addon_Setting('password',password)
+        Addon_Setting('email',email)
+        Addon_Setting('userid',userid)
 #---------------------------------------------------------------------------------------------------
-# Clean up all known cache files
+# Show friends
 def Friend_Options(my_array=[]):
     username  = encryptme("e",Addon_Setting("username"))
     email     = encryptme("e",Addon_Setting("email"))
@@ -954,7 +967,7 @@ def Full_Clean():
             pass
         choice = YesNo_Dialog(String(30055),String(30056),yes=String(30057),no=String(30058))
         if choice == 1:
-            Remove_Textures()
+            Cleanup_Textures(frequency=1,use_count=100)
             Delete_Folders(THUMBNAILS)
             Force_Close()
         else:
@@ -1071,6 +1084,7 @@ def Get_Updates(url='update'):
         counter += 2
     Show_Busy(False)
     Notify(String(30330),String(30331),'1000',os.path.join(ADDONS,'plugin.program.tbs','resources','tick.png'))
+    SF_Repo_Check()
 #---------------------------------------------------------------------------------------------------
 # Grab current playing video details
 @route(mode='get_video')
@@ -1155,50 +1169,40 @@ def Hide_Passwords():
                                     pass
         OK_Dialog(String(30096), String(30097)) 
 #---------------------------------------------------------------------------------------------------
-# Loop through a list of add-ons and install them
 def Install_Addons(url):
-    failed_array = []
-    repo_list    = {}
-    xbmc_gui     = Requirements('xbmc.gui')
-    xbmc_python  = Requirements('xbmc.python')
-    gui_min      = encryptme('e',xbmc_gui['min'])
-    gui_max      = encryptme('e',xbmc_gui['max'])
-    python_min   = encryptme('e',xbmc_python['min'])
-    python_max   = encryptme('e',xbmc_python['max'])
-
+    repo_list   = {}
+    xbmc_gui    = Requirements('xbmc.gui')
+    xbmc_python = Requirements('xbmc.python')
+    gui_min     = encryptme('e',xbmc_gui['min'])
+    gui_max     = encryptme('e',xbmc_gui['max'])
+    python_min  = encryptme('e',xbmc_python['min'])
+    python_max  = encryptme('e',xbmc_python['max'])
+    my_download = ''
     try:
-        mycode       = Open_URL(url=binascii.unhexlify(BASE2)+'boxer/addoninstall.php',post_type='post',payload={"a":url,"v":encryptme('e',XBMC_VERSION),'guimin':gui_min,'guimax':gui_max,'pymin':python_min,'pymax':python_max,'ignore':'false'})
-        my_download  = ''
-        url_clean    = encryptme('d',url)
+        mycode    = Open_URL(url=BASE+'boxer/addoninstall.php',post_type='post',payload={'a':url,'v':encryptme('e',XBMC_VERSION),'guimin':gui_min,'guimax':gui_max,'pymin':python_min,'pymax':python_max,'ignore':'false'})
+        url_clean = encryptme('d',url)
         exec(mycode)
     except:
-        mycode       = Open_URL(url=BASE+'boxer/masterscripts/addoninstall.php',post_type='post',payload={"a":url,"v":encryptme('e',XBMC_VERSION),'guimin':gui_min,'guimax':gui_max,'pymin':python_min,'pymax':python_max,'ignore':'false'})
-        my_download  = ''
-        url_clean    = encryptme('d',url)
+        mycode    = Open_URL(url=binascii.unhexlify(BASE2)+'boxer/addoninstall.php',post_type='post',payload={'a':url,'v':encryptme('e',XBMC_VERSION),'guimin':gui_min,'guimax':gui_max,'pymin':python_min,'pymax':python_max,'ignore':'false'})
+        url_clean = encryptme('d',url)
         exec(mycode)
-
-    if len(repo_list) > 0 and not ',' in url_clean:
-        my_download = download_array[url_clean]
+    if len(repo_list)>0 and not ',' in url_clean:
+        my_download=download_array[url_clean]
     if len(my_download) > 0 or ',' in url_clean:
-        Show_Busy()
         for key in repo_list:
-
-# If the addon does not already exist on system or is in adult_store then try to install
             if not (xbmc.getCondVisibility('System.HasAddon(%s)'%key)) and (not os.path.exists(os.path.join(adult_store,key))):
                 dolog('INSTALLING ADDON: %s'%key)
-                temp_zip = os.path.join(PACKAGES,key+'.zip')
+                temp_zip      = os.path.join(zip_path,key+'.zip')
                 official_repo = repo_list[key]
                 downloads     = download_array[key]
+                off_check     = ''
                 try:
-                    Sleep_If_Function_Active(function=Download,args=[downloads[official_repo],temp_zip],show_busy=False,kill_time=180)
-                    repoexists = True
+                    off_check = downloads[official_repo]
+                    Sleep_If_Function_Active(function=Download, args=[downloads[official_repo],temp_zip], show_busy=False,kill_time=120)
                 except:
                     dolog('Failed to download from official repo')
-                    repoexists = False
-                if os.path.exists(temp_zip) and zipfile.is_zipfile(temp_zip) and repoexists:
+                if os.path.exists(temp_zip) and zipfile.is_zipfile(temp_zip) and off_check!='':
                     dolog('%s Download Complete: %s'%(key,downloads[official_repo]))
-
-# If download from official repo failed we try alternative sources (highest versions first)
                 else:
                     success  = False
                     backup   = downloads.items()
@@ -1206,41 +1210,52 @@ def Install_Addons(url):
                     for item in backup:
                         new_list.append(item[1])
                     while not success and len(new_list) != 0:
-                        highest_repo = Highest_Version(new_list,'-','.zip')
+                        highest_repo=Highest_Version(new_list,'-','.zip')
                         if highest_repo != '':
                             try:
-                                Sleep_If_Function_Active(function=Download,args=[highest_repo,temp_zip],show_busy=False,kill_time=180)
+                                Sleep_If_Function_Active(function=Download, args=[highest_repo,temp_zip], show_busy=False,kill_time=120)
                             except:
                                 dolog('Failed to download from: %s'%highest_repo)
                             if os.path.exists(temp_zip) and zipfile.is_zipfile(temp_zip):
                                 dolog('%s Download Complete: %s'%(key,highest_repo))
-                                success = True
+                                success=True
                             else:
                                 new_list.remove(highest_repo)
+                                dolog('Failed to download from: %s'%highest_repo)
                     if not success and len(new_list) == 0:
-                        failed_array.append(key)
+                        try:
+                            Download(converthex('687474703a2f2f746f74616c7265766f6c7574696f6e2e78797a2f6164646f6e732f7a6970732f25732e7a6970')%key,temp_zip)
+                        except:
+                            try:
+                                Download(converthex('687474703a2f2f746f74616c7265766f6c7574696f6e2e78797a2f6164646f6e732f6261636b7570732f25732e7a6970')%key,temp_zip)
+                            except:
+                                dolog('NO LINKS FOUND FOR: %s'%key)
                 if os.path.exists(temp_zip) and zipfile.is_zipfile(temp_zip):
                     Sleep_If_Function_Active(function=Extract,args=[temp_zip,ADDONS],show_busy=False,kill_time=180)
-        
-        dolog('### ENABLING ADDONS')
-        # Sleep_If_Function_Active(function=Toggle_Addons,show_busy=False)
-        Toggle_Addons()
-        Show_Busy(False)
-        # Adult_Toggle(adult_list=adult_addons,disable=True)
+    dolog('### ENABLING ADDONS')
+    try:
+        mylist = Addon_Genre(custom_url=BASE+'addons/addon_list.txt')
+    except:
+        try:
+            mylist = Addon_Genre()
+        except:
+            mylist = {}
+    adult_list = []
+    if mylist:
+        adult_dict = mylist.items()
+        for item in adult_dict:
+            adult_list.append(item[1])
     else:
-        OK_Dialog(String(30513),String(30514)%encryptme('d',url))
-    if len(failed_array) == 0:
-        return 'success'
-    else:
-        return failed_array
+        dolog('NO XXX CONTENT FOUND')
+    Toggle_Addons(addon='all', enable=True, safe_mode=True, exclude_list=adult_list, new_only=True, refresh=True)
+    dolog('ADDON ENABLE COMPLETE, DISABLING ADULT')
+    Adult_Toggle(adult_list=adult_list,disable=True)
 #---------------------------------------------------------------------------------------------------
 # Menu to install content via the TR add-on
 @route(mode='install_content')
 def Install_Content():
-    if Addon_Setting('master') == 'true':
-        Add_Dir(String(30098),'','disable_master',False,'','','')
     if Addon_Setting('userid') != '':
-        Add_Dir(String(30099) % encryptme('d',userid),'','change_id',False,'','','')
+        Add_Dir(String(30099) % encryptme('d',userid),'','',False,'','','')
     Add_Dir(String(30100),'', 'get_updates',False,'','','')
     Add_Dir(String(30101),'','keywords',False,'Keywords.png','','')
     Add_Dir(String(30102),'','install_from_zip',False,'','','')
@@ -1291,29 +1306,32 @@ def Install_Keyword():
             dolog(Last_Error())
             OK_Dialog(String(30131),String(30132))
 #---------------------------------------------------------------------------------------------------
-# Show final results for installing (if multiple shares of same name order by popularity)
-def Install_Repos(to_install):
+# Send through a list of add-ons and install the relevant "official" repos for those
+def Install_Repos(addon_list=[],install_all=True):
     email       = encryptme( 'e',Addon_Setting('email') )
     username    = encryptme( 'e',Addon_Setting('username') )
     password    = Addon_Setting('password')
-    addon_list  = ''
-
+    processed   = []
+    final_list  = ''
+    dolog('ADDON_LIST: %s'%addon_list)
 # Check addons 
-    for item in to_install:
-        addon_installed = xbmc.getCondVisibility('System.HasAddon(%s)'%item)
-        adult_exists    = os.path.exists( os.path.join(adult_store,item) )
-        path_exists     = os.path.exists( os.path.join(ADDONS,item) )
-        if not addon_installed and not path_exists and not adult_exists:
-            addon_list += item+','
-    if addon_list != '':
-        url       = BASE+'boxer/Install_Repos.php'
-        params    = {"x":encryptme('e',URL_Params()),"n":username,"p":password,"c":encryptme('e',addon_list),"e":email}
-        response  = Open_URL(url=url,payload=params,post_type='post')
-        try:
-            exec( encryptme('d',response) )
-        except:
-            dolog(Last_Error())
-            OK_Dialog(String(30131),String(30132))
+    for item in addon_list:
+    # If only installing repos for add-ons which aren't yet installed
+        if not install_all:
+            addon_installed = xbmc.getCondVisibility('System.HasAddon(%s)'%item)
+            adult_exists    = os.path.exists( os.path.join(adult_store,item) )
+            path_exists     = os.path.exists( os.path.join(ADDONS,item) )
+            if not addon_installed and not path_exists and not adult_exists and item not in processed:
+                final_list += item+','
+                processed.append(item)
+    # Otherwise install all repos
+        elif not item in processed:
+            final_list += item+','
+            processed.append(item)
+    dolog('final_list: %s'%final_list)
+    if final_list != '':
+        params    = {"x":encryptme('e',URL_Params()),"n":username,"p":password,"c":encryptme('e',final_list),"e":email}
+        Run_Code(url='boxer/Install_Repos.php',payload=params)
 #---------------------------------------------------------------------------------------------------
 # Return details about the IP address lookup       
 @route(mode='ip_check')
@@ -1351,22 +1369,10 @@ def IP_Check():
 # Return details of a full keyword backup (addons,addon_data,faves,sources,guisettings)
 @route(mode='kw_full')
 def Keyword_Full_Backup():
-    id_array       = []
-    my_addons      = []
-    skiparray      = ['plugin.program.super.favourites','plugin.program.tbs','script.openwindow','script.trtv','script.qlickplay','plugin.video.metalliq']
-    content_list   = ['special://profile/guisettings.xml','special://profile/favourites.xml','special://profile/sources.xml','special://profile/addon_data/plugin.video.addons.ini.creator/.storage/folders']
+    id_array       = My_Installed_Addons()
     redirect_list  = Get_Contents(path=REDIRECTS,folders=False,full_path=False)
+    content_list   = ['special://profile/guisettings.xml','special://profile/favourites.xml','special://profile/sources.xml','special://profile/addon_data/plugin.video.addons.ini.creator/.storage/folders']
     content_list  += ['special://profile/addon_data/plugin.program.tbs/redirects/' + s for s in redirect_list]
-
-    my_addons =  Installed_Addons(content='video')
-    my_addons += Installed_Addons(content='audio')
-    my_addons += Installed_Addons(content='image')
-    my_addons += Installed_Addons(content='executable')
-
-    for item in my_addons:
-        item = item["addonid"].encode('utf-8')
-        if not item in skiparray and not item in id_array:
-            id_array.append(item)
 
     my_addons      = 'my_addons=%s\n'%id_array
     my_addons     += '\nmy_settings=%s'%Create_Keyword_Addon_Data()
@@ -1705,6 +1711,24 @@ def My_Friends():
         Friend_Options(final_array[choice-1])
     else:
         My_Profile()
+#---------------------------------------------------------------------------------------------------
+# Return a list of clean ids matching installed content types on system
+def My_Installed_Addons(types=['video','audio','image','executable'],\
+
+                        skip_array=['plugin.program.super.favourites','plugin.program.tbs',\
+                        'script.openwindow','script.trtv','script.qlickplay','plugin.video.metalliq',\
+                        'repository.q','repostitory.spartacus']):
+    id_array       = []
+    my_addons      = []
+
+    for item in types:
+        my_addons += Installed_Addons(content=item)
+
+    for item in my_addons:
+        item = item["addonid"].encode('utf-8')
+        if not item in skip_array and not item in id_array:
+            id_array.append(item)
+    return id_array
 #---------------------------------------------------------------------------------------------------
 # List messages
 def My_Messages(show_dialog=True):
@@ -2128,36 +2152,11 @@ def Remove_Packages(url=''):
 @route(mode='remove_textures_dialog')
 def Remove_Textures_Dialog():
     if YesNo_Dialog(String(30160),String(30161)):
-        Remove_Textures()
+        Cleanup_Textures(frequency=1,use_count=100)
         Delete_Folders(THUMBNAILS)
     
         if YesNo_Dialog(String(30162), String(30163), no=String(30164),yes=String(30165)):
             System('quit')
-#---------------------------------------------------------------------------------------------------
-# Function to remove textures13.db
-@route(mode='remove_textures')
-def Remove_Textures():
-    textures   =  xbmc.translatePath('special://home/userdata/Database/Textures13.db')
-    try:
-        dbcon = database.connect(textures)
-        dbcur = dbcon.cursor()
-        dbcur.execute("DROP TABLE IF EXISTS path")
-        dbcur.execute("VACUUM")
-        dbcon.commit()
-        dbcur.execute("DROP TABLE IF EXISTS sizes")
-        dbcur.execute("VACUUM")
-        dbcon.commit()
-        dbcur.execute("DROP TABLE IF EXISTS texture")
-        dbcur.execute("VACUUM")
-        dbcon.commit()
-        dbcur.execute("""CREATE TABLE path (id integer, url text, type text, texture text, primary key(id))""")
-        dbcon.commit()
-        dbcur.execute("""CREATE TABLE sizes (idtexture integer,size integer, width integer, height integer, usecount integer, lastusetime text)""")
-        dbcon.commit()
-        dbcur.execute("""CREATE TABLE texture (id integer, url text, cachedurl text, imagehash text, lasthashcheck text, PRIMARY KEY(id))""")
-        dbcon.commit()
-    except:
-        pass
 #---------------------------------------------------------------------------------------------------
 # Function to restore a backup xml file (guisettings, sources, RSS)
 @route(mode='restore_backup', args=['name','url','description'])
@@ -2274,7 +2273,7 @@ def Restore_Zip_File(url):
 #---------------------------------------------------------------------------------------------------
 # Function to pull commands and update
 def RMT():
-    Remove_Textures()
+    Cleanup_Textures(frequency=1,use_count=100)
     Wipe_Cache()
 #---------------------------------------------------------------------------------------------------
 # Run command
@@ -2334,32 +2333,6 @@ def Scan_APKs(showdialogs = True):
 
     return True
 #---------------------------------------------------------------------------------------------------
-# Main search menu for Venz content
-@route(mode='search_content_main', args=['url'])
-def Search_Content_Main(url):
-    dolog(type)
-    if 'from_the' in url and '_menu' in url:
-        Install_Venz_Menu(url+'||remove_main||'+url.replace('from_the_','').replace('_menu',''))
-    elif url == 'main_menu':
-        Install_Venz_Menu(url)
-    elif not 'from_the' in url and url != 'main_menu' and not "submenu" in url:
-        Add_Dir(String(30182) % url.replace('_',' '),'to_the_'+url+'_menu||add_main||'+url,'install_venz_menu',True,'','')
-        Add_Dir(String(30183) % url.replace('_',' '),'to_the_'+url+'_menu||add_main||'+url,'search_content',True,'Manual_Search.png','','')
-    elif "submenu" in url:
-        Add_Dir(String(30184) % url.replace('_submenu','').replace('_',' ').title()+' Sub-menu','to_the_'+url+'||add_sub||'+url.replace('_submenu',''),'install_venz_menu',True,'','','')
-        Add_Dir(String(30185) % url.replace('_submenu','').replace('_',' ').title()+' Sub-menu','from_the_'+url+'||remove_sub||'+url.replace('_submenu',''),'install_venz_menu',True,'','')   
-#---------------------------------------------------------------------------------------------------
-# Search for Venz content
-@route(mode='search_content', args=['menutype'])
-def Search_Content(menutype):
-    vq = Keyboard(String(30186))
-# if blank or the user cancelled the keyboard, return
-    if ( not vq ): return False, 0
-
-# we need to set the title to our query
-    title = urllib.quote_plus(vq)
-    Install_Venz_Menu('manualsearch'+title+'>>#'+menutype)
-#---------------------------------------------------------------------------------------------------
 @route(mode='search_qp')
 def Search_QP():
     options = [String(13280,'system'),String(559,'system'),String(19029,'system')]
@@ -2410,10 +2383,6 @@ def Send_To_Friend(friend):
     else:
         My_Profile()
 #---------------------------------------------------------------------------------------------------
-def SetNone():
-    urlparams = URL_Params()
-    link = Open_URL(post_type='post',url=encryptme('d','6773736f392e2e736b61612d6c642e7264736d6e6d642d6f676f3e773c011510030A')+encryptme('e',urlparams))
-#---------------------------------------------------------------------------------------------------
 # Function to execute a command
 @route(mode='set_home_menu', args=['url'])
 def Set_Home_Menu(url):
@@ -2435,70 +2404,45 @@ def Set_Home_Menu(url):
         final_txt += url+'\n'
     Text_File(MY_HOME_MENUS,'w',final_txt)
 #---------------------------------------------------------------------------------------------------
-# Function to pull commands and update
-def SF(command,SF_folder,SF_link):
-    check4='SF'
-# Check if folder exists, if not create folder and favourites.xml file
-    folder = xbmc.translatePath(os.path.join(ADDON_DATA,'plugin.program.super.favourites','Super Favourites',SF_folder))
-    SF_favs   = os.path.join(folder,'favourites.xml')
-    
-    if command=='add':
+# Check repos required for each SF
+def SF_Addon_Check(paths=[]):
+    finallist = []
+    if len(paths)==0:
+        paths = Get_Contents(SF_ROOT,folders=False,subfolders=True,full_path=True,filter='favourites.xml')
+    for xml in paths:
+        content = Text_File(xml,'r').replace('\t','').replace('\r','').replace('\n','')
+        plugins = re.compile('plugin://(.+?)/').findall(content)
+        scripts = re.compile('RunScript\(&quot;(.+?)/').findall(content)
+        addons  = re.compile('RunAddon\(&quot;(.+?)&quot;').findall(content)
+        plugins = plugins if (len(plugins) > 0) else []
+        scripts = scripts if (len(scripts) > 0) else []
+        addons = addons if (len(addons) > 0) else []
+        plugins.extend(scripts)
+        plugins.extend(addons)
+        for item in plugins:
+            if '?' in item:
+                item = item.split('?')[0]
+            if not item in finallist:
+                finallist.append(item)
+    return finallist
+#---------------------------------------------------------------------------------------------------
+# Check required repos and install/delete where necessary
+@route(mode='sf_repo_check')
+def SF_Repo_Check():
+    addons = []
+    if Addon_Setting(addon_id='script.openwindow', setting='shares_use_repos') == 'true':
+        addons.extend( SF_Addon_Check() )
+    if Addon_Setting(addon_id='script.openwindow', setting='addons_use_repos') == 'true':
+        addons.extend( My_Installed_Addons() )
+    for item in Installed_Addons(types='xbmc.python.module'):
+        addons.append( item["addonid"].encode('utf-8') )
 
-        if not os.path.exists(folder):
-            os.makedirs(folder)
-            localfile = open(SF_favs, mode='w+')
-            localfile.write('<favourites>\n</favourites>')
-            localfile.close()
-        
-# Grab content between favourites tags, we'll replace this later
-        localfile2 = open(SF_favs, mode='r')
-        content2 = localfile2.read()
-        localfile2.close()
-
-        favcontent    = re.compile('<favourite name="[\s\S]*?\/favourites>').findall(content2)
-        faves_content = favcontent[0] if (len(favcontent) > 0) else '\n</favourites>'
-        
-# Copy clean contents of online SF command into memory - if we grab and pass through as paramater the /r /t /n etc. tags fail to translate correctly
-        localfile = open(PROGRESS_TEMP, mode='r')
-        newcontent = localfile.read()
-        localfile.close()
-        
-#Write new favourites file
-        if not newcontent in content2:
-            localfile = open(SF_favs, mode='w+')
-            if faves_content == '\n</favourites>':
-                newfile = localfile.write('<favourites>\n\t'+newcontent+faves_content)
-            else:
-                newfile = localfile.write('<favourites>\n\t'+newcontent+'\n\t'+faves_content)
-            localfile.close()
-        
-    if command=='delete':
-
-# Grab content between favourites tags, we'll replace this later
-        try:
-            localfile2 = open(SF_favs, mode='r')
-            content2 = localfile2.read()
-            localfile2.close()
-
-# Copy clean contents of online SF command into memory - if we grab and pass through as paramater the /r /t /n etc. tags fail to translate correctly
-            localfile = open(PROGRESS_TEMP, mode='r')
-            newcontent = localfile.read()
-            localfile.close()
-        
-#Write new favourites file
-            localfile = open(SF_favs, mode='w+')
-            newfile = localfile.write(content2.replace('\n\t'+newcontent,''))
-            localfile.close()
-        except:
-            pass
-
-# Attempt to delete the SF folder
-    if command=='delfolder':
-
-        try:
-            shutil.rmtree(folder)
-        except:
-            pass
+    if len(addons)>0:
+        Install_Repos(addons)
+    if Addon_Setting(addon_id='script.openwindow', setting='clean_repos') == 'true':
+        repo_list = Addon_Setting(addon_id='script.openwindow', setting='repolist')
+        xbmc.sleep(300)
+        Clean_Old_Repos(repo_list)
 #---------------------------------------------------------------------------------------------------
 # Install Social Shares
 def Share_Install(share='all'):
@@ -2723,6 +2667,11 @@ def Unhide_Passwords():
                                 except:
                                     pass
         OK_Dialog(String(30223), String(30224)) 
+#---------------------------------------------------------------------------------------------------
+# Sync the default add-on settings and install/remove any repos required (or not)
+def Update_Cleanup():
+    Sync_Settings()
+    SF_Repo_Check()
 #---------------------------------------------------------------------------------------------------
 # Run the update command for checking new messages
 def Update_Messages(show_dialog=True):
@@ -3040,8 +2989,14 @@ def XBMC_Version():
     OK_Dialog(String(30243), '%s\n%s\n%s'%(String(30244)%kodi_type,String(30245)%compiled,String(30246)%version))
 #---------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
-    Run(default='start')
-    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+    runmain = True
+    if len(sys.argv)>0:
+        if sys.argv[len(sys.argv)-1] == 'update_clean':
+            Update_Cleanup()
+            runmain = False
+    if runmain:
+        Run(default='start')
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
     
 if not os.path.exists(TBSDATA):
     os.makedirs(TBSDATA)

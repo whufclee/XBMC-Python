@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.tbs" name="Maintenance"  provider-name="TotalRevolution" version="4.3.8.8">
+<addon id="plugin.program.tbs" name="Maintenance"  provider-name="TotalRevolution" version="4.3.8.9">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.python.koding.aio" version="0.5"/>
@@ -68,7 +68,7 @@
   </extension>
 </addon>
 
-<addon id="script.openwindow" name="Startup Wizard" version="3.0.8" provider-name="Total Revolution">
+<addon id="script.openwindow" name="Startup Wizard" version="3.0.9" provider-name="Total Revolution">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.python.koding.aio" version="0.5"/>

