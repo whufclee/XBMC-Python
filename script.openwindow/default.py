@@ -51,6 +51,7 @@ LANGUAGE_ART               = os.path.join(ADDON_PATH,'resources','images','langu
 DEBUG                      = Addon_Setting(setting='debug')
 OFFLINE_MODE               = Addon_Setting(setting='offline')
 BASE                       = Addon_Setting(setting='base')
+BASE2                      = '687474703a2f2f6e6f6f6273616e646e657264732e636f6d2f'
 adult_store                = xbmc.translatePath('special://profile/addon_data/script.module.python.koding.aio/adult_store')
 zip_path                   = xbmc.translatePath('special://home/addons/packages/~~ZIPS~~')
 OWSETTINGS                 = xbmc.translatePath('special://profile/addon_data/script.openwindow/settings.xml')

@@ -395,13 +395,13 @@ def Build_Info():
 # Main category list
 @route(mode='start')
 def Categories():
-    if debug == 'true':
-        Add_Dir('Koding','', "tutorials", True,'','','')
+    # if debug == 'true':
+    #     Add_Dir('Koding','', "tutorials", True,'','','')
     Add_Dir(String(30032),'', 'my_details', False,'','','')
     Add_Dir(String(30033),'','install_content',True,'Search_Addons.png','','')
     Add_Dir(String(30034),'','startup_wizard',False,'Startup_Wizard.png','','')
     Add_Dir(String(30035),'none', 'tools',True,'Additional_Tools.png','','')
-    Add_Dir('SF REPO CHECK','', 'sf_repo_check',False,'Additional_Tools.png','','')
+    # Add_Dir('SF REPO CHECK','', 'sf_repo_check',False,'Additional_Tools.png','','')
     # Add_Dir('Video Check','none', 'get_video',False,'Additional_Tools.png','','')
     # Add_Dir('folder','Android Apps','', 'android_apps', 'Additional_Tools.png','','','')
 #---------------------------------------------------------------------------------------------------

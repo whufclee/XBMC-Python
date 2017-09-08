@@ -19,5 +19,5 @@
 	<setting id="ziplist"			type="text"			default="{}"		visible="false"/>	
 	<setting id="repolist"			type="text"			default=""			visible="false"/>	
 	<setting id="sleep"				type="text"			default="01:00:00"	visible="false"/>	
-	<setting id="base"				type="text"			default="http://totalrevolution.tv/"	visible="false"/>
+	<setting id="base"				type="text"			default="http://totalrevolution.xyz/"	visible="false"/>
 </settings>

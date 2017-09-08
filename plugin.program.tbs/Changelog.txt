@@ -1,3 +1,6 @@
+v.4.3.9.0:
+- Removed test folders from Categories function
+
 v.4.3.8.9:
 - SF Shares now install the correct repos automatically
 - Can now set option to auto clean any repos found on system not in use
