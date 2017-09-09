@@ -109,15 +109,12 @@ dp.create('Downloading File','Please Wait')
 koding.Download(src,dst,dp)
 dialog.ok('[COLOR gold]DOWNLOAD COMPLETE[/COLOR]','Your download is complete, please check your home Kodi folder. There should be a new file called remote.pdf - you can delete this if you want.')
 ~"""
-    xbmcgui.Window(10000).setProperty('download_status', 'active')
     status = Validate_Link(url,timeout)
     if status >= 200 and status < 400:
         start_time=time.time()
         urllib.urlretrieve(url, dest, lambda nb, bs, fs: Download_Progress(nb, bs, fs, dp, start_time))
-        xbmcgui.Window(10000).setProperty('download_status', 'complete')
         return True
     else:
-        xbmcgui.Window(10000).setProperty('download_status', 'complete')
         return False
 #----------------------------------------------------------------    
 def Download_Progress(numblocks, blocksize, filesize, dp, start_time):

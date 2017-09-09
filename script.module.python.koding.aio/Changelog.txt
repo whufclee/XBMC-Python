@@ -1,6 +1,5 @@
 v.0.9.8.0:
-- Edited the Browse_To_Folder so doesn't show contents of zips
-- Set download_status and extract_status properties to active if they are currently active (set to 'complete' when finished). These shouldn't be required as you should just be able to use an "if <function> == True:" to pause code but for some reason that wasn't always working on all platforms.
+- Browse_To_Folder no longer shows contents of archives
 
 v.0.9.7.9:
 - Removed dolog import from video.py as was causing problems
