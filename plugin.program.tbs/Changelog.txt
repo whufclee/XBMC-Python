@@ -1,3 +1,6 @@
+v.4.3.9.2:
+- Added new setting for storing default menu items
+
 v.4.3.9.1:
 - Check for updates fixed when calling from Manage section
 

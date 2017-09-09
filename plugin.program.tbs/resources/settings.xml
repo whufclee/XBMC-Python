@@ -69,6 +69,7 @@
 	<setting id="master" type="bool" default="false" visible="false"/>
 	<setting id="userid" type="text" default="" visible="false"/>
 	<setting id="xxxpass" type="text" default="" option="hidden" visible="false"/>
+	<setting id="home_menus" type="text" default="{}" option="hidden" visible="false"/>
 	<setting id="eiu" type="bool" default="false" visible="false"/>
 	<setting id="kw" type="text" default="" visible="false"/>
 	<setting id="kw_date" type="text" default="" visible="false"/>
