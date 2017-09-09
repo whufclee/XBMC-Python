@@ -288,7 +288,7 @@ DO NOT set safe_mode to False unless you 100% understand the consequences!
 ADULT TOGGLE:
 Remove/Enable a list of add-ons, these are put into a containment area until enabled again.
 
-CODE: Adult_Toggle(adult_list, [disable])
+CODE: Adult_Toggle(adult_list, [disable, update_status])
 
 AVAILABLE PARAMS:
             
@@ -296,6 +296,13 @@ AVAILABLE PARAMS:
 
     disable  -  By default this is set to true so any add-ons in the list sent
     through will be disabled. Set to False if you want to enable the hidden add-ons.
+
+    update_status  - When running this function it needs to disable the
+    auto-update of add-ons by Kodi otherwise it risks crashing. This
+    update_status paramater is the state you want Kodi to revert back to
+    once the toggle of add-ons has completed. By default this is set to 0
+    which is auto-update. You can also choose 1 (notify of updates) or 2
+    (disable auto updates).
 
 ------------------------------------------------------------------------------------------
 
