@@ -1,3 +1,6 @@
+v.0.9.8.1:
+- Edited adult toggle to use safe mode and toggle all at once rather than one by one
+
 v.0.9.8.0:
 - Browse_To_Folder no longer shows contents of archives
 

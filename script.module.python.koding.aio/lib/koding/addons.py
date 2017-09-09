@@ -327,7 +327,8 @@ AVAILABLE PARAMS:
 ~"""
     from filetools   import Move_Tree, End_Path
 
-    adult_store = xbmc.translatePath("special://profile/addon_data/script.module.python.koding.aio/adult_store")
+    adult_store  = xbmc.translatePath("special://profile/addon_data/script.module.python.koding.aio/adult_store")
+    disable_list = []
     if not os.path.exists(adult_store):
         os.makedirs(adult_store)
     my_addons = Installed_Addons()
@@ -336,14 +337,17 @@ AVAILABLE PARAMS:
             if item != None:
                 item = item["addonid"]
                 if item in adult_list:
-                    try:
-                        addon_path = xbmcaddon.Addon(id=item).getAddonInfo("path")
-                    except:
-                        addon_path = os.path.join(ADDONS,item)
-                    Toggle_Addons(addon=item, enable=False, safe_mode=False, refresh=True)
-                    path_id = End_Path(addon_path)
-                    if os.path.exists(addon_path):
-                        Move_Tree(addon_path,os.path.join(adult_store,path_id))
+                    disable_list.append(item)
+
+        Toggle_Addons(addon=disable_list, enable=False, safe_mode=True, refresh=False)
+        for item in disable_list:
+            try:
+                addon_path = xbmcaddon.Addon(id=item).getAddonInfo("path")
+            except:
+                addon_path = os.path.join(ADDONS,item)
+            path_id = End_Path(addon_path)
+            if os.path.exists(addon_path):
+                Move_Tree(addon_path,os.path.join(adult_store,path_id))
     else:
         KODI_VER    = int(float(xbmc.getInfoLabel("System.BuildVersion")[:2]))
         addon_vault = []
