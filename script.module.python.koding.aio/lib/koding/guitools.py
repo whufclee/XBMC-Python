@@ -45,7 +45,7 @@ EXAMPLE CODE:
 folder = koding.Browse_To_Folder('Choose a folder you want to use')
 dialog.ok('FOLDER DETAILS','Folder path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
 ~"""    
-    text = dialog.browse(3, header, 'files', '', False, False, path)
+    text = dialog.browse(type=3, heading=header, shares='files', useThumbs=False, treatAsFolder=False, defaultt=path)
     return text
 #----------------------------------------------------------------    
 # TUTORIAL #

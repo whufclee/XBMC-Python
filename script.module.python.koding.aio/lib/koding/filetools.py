@@ -538,6 +538,7 @@ else:
     import xbmcaddon
     import zipfile
 
+    xbmcgui.Window(10000).setProperty('extract_status', 'active')
     module_id   = 'script.module.python.koding.aio'
     this_module = xbmcaddon.Addon(id=module_id)
     nFiles      = 0
@@ -567,18 +568,23 @@ else:
 
                 except:
                     xbmc.log(Last_Error())
+                    xbmcgui.Window(10000).setProperty('download_status', 'complete')
                     return False
             else:
                 try:
                     zin.extractall(_out)
+                    xbmcgui.Window(10000).setProperty('download_status', 'complete')
                     return True
                 except:
                     xbmc.log(Last_Error())
+                    xbmcgui.Window(10000).setProperty('download_status', 'complete')
                     return False
         
         else:
+            xbmcgui.Window(10000).setProperty('download_status', 'complete')
             xbmc.log('NOT A VALID ZIP OR TAR FILE: %s' % _in,2)
     else:
+        xbmcgui.Window(10000).setProperty('download_status', 'complete')
         if show_error:
             dialog.ok(this_module.getLocalizedString(30965),this_module.getLocalizedString(30815) % _in)
 #----------------------------------------------------------------
