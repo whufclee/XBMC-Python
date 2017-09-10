@@ -28,17 +28,17 @@
 <!-- HOME MENUS -->
 	<setting id="HOME_COMEDY" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_COOKING" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_FITNESS" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_FITNESS" type="text" visible="false" default="dialog"/>
 	<setting id="HOME_GAMING" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_KIDS" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_LIVE_TV" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_MOVIES" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_MUSIC" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_NEWS" type="text" visible="false" default=""/>
+	<setting id="HOME_NEWS" type="text" visible="false" default="dialog"/>
 	<setting id="HOME_SPORTS" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_SYSTEM" type="text" visible="false" default="executable"/>
-	<setting id="HOME_TECHNOLOGY" type="text" visible="false" default=""/>
-	<setting id="HOME_TRAVEL" type="text" visible="false" default=""/>
+	<setting id="HOME_TECHNOLOGY" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_TRAVEL" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_TV_SHOWS" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_WORLD" type="text" visible="false" default="super_faves"/>
 	<setting id="HOME_XXX" type="text" visible="false" default="dialog_plus"/>

@@ -63,7 +63,6 @@ PROGRESS_TEMP    =  os.path.join(TBSDATA,   'progresstemp')
 SLEEPER          =  os.path.join(ADDON_PATH,'resources','tmr')
 KEYWORD_CREATE   =  os.path.join(TBSDATA,   'keyword_create.txt')
 MY_HOME_MENUS    =  os.path.join(TBSDATA,   'my_home_menus')
-MAIN_MENUS       =  os.path.join(TBSDATA,   'main_menu_names')
 REDIRECTS        =  os.path.join(TBSDATA,   'redirects')
 SF_ROOT          =  os.path.join(ADDON_DATA,'plugin.program.super.favourites', 'Super Favourites')
 NON_REGISTERED   =  os.path.join(ADDON_DATA,'script.openwindow','unregistered')
@@ -1427,136 +1426,48 @@ def Main_Menu_Defaults():
     urlparams = URL_Params()
     Run_Code(url='boxer/main_menus.php', payload={"x":encryptme('e', urlparams)} )
 #---------------------------------------------------------------------------------------------------
-# Function to enable/disable the main menu items - added due to glitch on server
+# Function to enable/disable the main menu items
 @route(mode='main_menu_install', args=['url'])
 def Main_Menu_Install(url):
-    menu_list = (['Custom6HomeItem.Disable','comedy'],['Custom3HomeItem.Disable','cooking'],['Custom4HomeItem.Disable','fitness'],
-    ['Custom5HomeItem.Disable','gaming'],['FavoritesHomeItem.Disable','kids'],['LiveTVHomeItem.Disable','livetv'],
-    ['MovieHomeItem.Disable','movies'],['MusicHomeItem.Disable','music'],['ProgramsHomeItem.Disable','news'],
-    ['VideosHomeItem.Disable','sports'],['Custom2HomeItem.Disable','technology'],['WeatherHomeItem.Disable','travel'],
-    ['TVShowHomeItem.Disable','tvshows'],['PicturesHomeItem.Disable','world'],['ShutdownHomeItem.Disable','youtube'],
-    ['MusicVideoHomeItem.Disable','xxx'])
-
-    menu_options = []
-
-    if os.path.exists(MAIN_MENUS):
-        main_menu_list = encryptme('d',Text_File(MAIN_MENUS,'r'))
-        main_list = eval(main_menu_list)
-        dolog(main_menu_list)
-        for item in menu_list:
-            try:
-                exec( '%s = "%s"' % (item[1],main_list[item[1]]) )
-                menu_options.append(item[1])
-            except:
-                dolog(Last_Error())
-    else:
-        urlparams       = URL_Params()
-        menu_options    = Open_URL( post_type='post', url=BASE+'boxer/my_details_live.php', payload={"x":encryptme('e', urlparams),"m":"1"} )
-        menu_options    = encryptme('d', menu_options)
-        comedy          = String(30061)
-        cooking         = String(30077)
-        fitness         = String(30062)
-        gaming          = String(30063)
-        kids            = String(30064)
-        livetv          = String(30065)
-        movies          = String(30066)
-        music           = String(30067)
-        news            = String(30068)
-        sports          = String(30069)
-        system          = String(30550)
-        technology      = String(30070)
-        travel          = String(30071)
-        tvshows         = String(30072)
-        world           = String(30073)
-        youtube         = String(30074)
-
     if url == 'add':
-        listcount = Sleep_If_Function_Active(function=Main_Menu_Visibility,args=[menu_list,menu_options,True])
-        if xbmc.getCondVisibility('Skin.String(Custom6HomeItem.Disable)') and 'comedy' in menu_options:
-            Add_Dir('%s %s'%(String(30060),comedy),'Skin.SetString(Custom6HomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_COMEDY/HOME_COMEDY_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(Custom3HomeItem.Disable)') and 'cooking' in menu_options:
-            Add_Dir('%s %s'%(String(30060),cooking),'Skin.SetString(Custom3HomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_COOKING/HOME_COOKING_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(Custom4HomeItem.Disable)') and 'fitness' in menu_options:
-            Add_Dir('%s %s'%(String(30060),fitness),'Skin.SetString(Custom4HomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_FITNESS/HOME_FITNESS_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(Custom5HomeItem.Disable)') and 'gaming' in menu_options:
-            Add_Dir('%s %s'%(String(30060),gaming),'Skin.SetString(Custom5HomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_GAMING/HOME_GAMING_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(FavoritesHomeItem.Disable)') and 'kids' in menu_options:
-            Add_Dir('%s %s'%(String(30060),kids),'Skin.SetString(FavoritesHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_KIDS/HOME_KIDS_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(LiveTVHomeItem.Disable)') and 'livetv' in menu_options:
-            Add_Dir('%s %s'%(String(30060),livetv),'Skin.SetString(LiveTVHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_LIVE_TV/HOME_LIVE_TV_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(MovieHomeItem.Disable)') and 'movies' in menu_options:
-            Add_Dir('%s %s'%(String(30060),movies),'Skin.SetString(MovieHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_MOVIES/HOME_MOVIES_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(MusicHomeItem.Disable)') and 'music' in menu_options:
-            Add_Dir('%s %s'%(String(30060),music),'Skin.SetString(MusicHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_MUSIC/HOME_MUSIC_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(ProgramsHomeItem.Disable)') and 'news' in menu_options:
-            Add_Dir('%s %s'%(String(30060),news),'Skin.SetString(ProgramsHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_NEWS/HOME_NEWS_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(VideosHomeItem.Disable)') and 'sports' in menu_options:
-            Add_Dir('%s %s'%(String(30060),sports),'Skin.SetString(VideosHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_SPORTS/HOME_SPORTS_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(Custom2HomeItem.Disable)') and 'technology' in menu_options:
-            Add_Dir('%s %s'%(String(30060),technology),'Skin.SetString(Custom2HomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_TECHNOLOGY/HOME_TECHNOLOGY_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(WeatherHomeItem.Disable)') and 'travel' in menu_options:
-            Add_Dir('%s %s'%(String(30060),travel),'Skin.SetString(WeatherHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_TRAVEL/HOME_TRAVEL_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(TVShowHomeItem.Disable)') and 'tvshows' in menu_options:
-            Add_Dir('%s %s'%(String(30060),tvshows),'Skin.SetString(TVShowHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_TV_SHOWS/HOME_TV_SHOWS_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(PicturesHomeItem.Disable)') and 'world' in menu_options:
-            Add_Dir('%s %s'%(String(30060),world),'Skin.SetString(PicturesHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_WORLD/HOME_WORLD_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(ShutdownHomeItem.Disable)') and 'youtube' in menu_options:
-            Add_Dir('%s %s'%(String(30060),youtube),'Skin.SetString(ShutdownHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_YOUTUBE/HOME_YOUTUBE_001.jpg','','')
-        if xbmc.getCondVisibility('Skin.String(MusicVideoHomeItem.Disable)') and 'xxx' in menu_options:
-            Add_Dir('%s %s'%(String(30060),xxx),'Skin.SetString(MusicVideoHomeItem.Disable,)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_XXX/HOME_XXX_001.jpg','','')
-        if listcount > 0:
-            OK_Dialog(String(30079),String(30310))
-            xbmc.executebuiltin('ActivateWindow(home)')
-
-    if url == 'remove':
-        listcount = Sleep_If_Function_Active(function=Main_Menu_Visibility,args=[menu_list,'',False])
-        if not xbmc.getCondVisibility('Skin.String(Custom6HomeItem.Disable)') and 'comedy' in menu_options:
-            Add_Dir('%s %s'%(String(30076),comedy),'Skin.SetString(Custom6HomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_COMEDY/HOME_COMEDY_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(Custom3HomeItem.Disable)') and 'cooking' in menu_options:
-            Add_Dir('%s %s'%(String(30076),cooking),'Skin.SetString(Custom3HomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_COOKING/HOME_COOKING_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(Custom4HomeItem.Disable)') and 'fitness' in menu_options:
-            Add_Dir('%s %s'%(String(30076),fitness),'Skin.SetString(Custom4HomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_FITNESS/HOME_FITNESS_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(Custom5HomeItem.Disable)') and 'gaming' in menu_options:
-            Add_Dir('%s %s'%(String(30076),gaming),'Skin.SetString(Custom5HomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_GAMING/HOME_GAMING_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(FavoritesHomeItem.Disable)') and 'kids' in menu_options:
-            Add_Dir('%s %s'%(String(30076),kids),'Skin.SetString(FavoritesHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_KIDS/HOME_KIDS_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(LiveTVHomeItem.Disable)') and 'livetv' in menu_options:
-            Add_Dir('%s %s'%(String(30076),livetv),'Skin.SetString(LiveTVHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_LIVE_TV/HOME_LIVE_TV_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(MovieHomeItem.Disable)') and 'movies' in menu_options:
-            Add_Dir('%s %s'%(String(30076),movies),'Skin.SetString(MovieHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_MOVIES/HOME_MOVIES_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(MusicHomeItem.Disable)') and 'music' in menu_options:
-            Add_Dir('%s %s'%(String(30076),music),'Skin.SetString(MusicHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_MUSIC/HOME_MUSIC_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(ProgramsHomeItem.Disable)') and 'news' in menu_options:
-            Add_Dir('%s %s'%(String(30076),news),'Skin.SetString(ProgramsHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_NEWS/HOME_NEWS_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(VideosHomeItem.Disable)') and 'sports' in menu_options:
-            Add_Dir('%s %s'%(String(30076),sports),'Skin.SetString(VideosHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_SPORTS/HOME_SPORTS_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(Custom2HomeItem.Disable)') and 'technology' in menu_options:
-            Add_Dir('%s %s'%(String(30076),technology),'Skin.SetString(Custom2HomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_TECHNOLOGY/HOME_TECHNOLOGY_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(WeatherHomeItem.Disable)') and 'travel' in menu_options:
-            Add_Dir('%s %s'%(String(30076),travel),'Skin.SetString(WeatherHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_TRAVEL/HOME_TRAVEL_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(TVShowHomeItem.Disable)') and 'tvshows' in menu_options:
-            Add_Dir('%s %s'%(String(30076),tvshows),'Skin.SetString(TVShowHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_TV_SHOWS/HOME_TV_SHOWS_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(PicturesHomeItem.Disable)') and 'world' in menu_options:
-            Add_Dir('%s %s'%(String(30076),world),'Skin.SetString(PicturesHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_WORLD/HOME_WORLD_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(ShutdownHomeItem.Disable)') and 'youtube' in menu_options:
-            Add_Dir('%s %s'%(String(30076),youtube),'Skin.SetString(ShutdownHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_YOUTUBE/HOME_YOUTUBE_001.jpg','','')
-        if not xbmc.getCondVisibility('Skin.String(MusicVideoHomeItem.Disable)') and 'xxx' in menu_options:
-            Add_Dir('%s %s'%(String(30076),xxx),'Skin.SetString(MusicVideoHomeItem.Disable,True)','set_home_menu',False,'special://home/media/branding/backgrounds/HOME_XXX/HOME_XXX_001.jpg','','')
-        if listcount > 0:
-            OK_Dialog(String(30079),String(30311))
-            xbmc.executebuiltin('ActivateWindow(home)')
-#---------------------------------------------------------------------------------------------------
-def Main_Menu_Visibility(menu_list='',menu_options='',enabled=True):
-    listcount = 0
-    if enabled:
-        for item in menu_list:
-            if item[1] in menu_options and xbmc.getCondVisibility('Skin.String(%s)'%item[0]):
-                listcount += 1
+        main_menus = Main_Menu_Visibility('add')
     else:
-        for item in menu_list:
-            if not xbmc.getCondVisibility('Skin.String(%s)'%item[0]):
-                listcount += 1
-    return listcount
+        main_menus = Main_Menu_Visibility('remove')
+    dolog(main_menus)
+    for item in main_menus:
+        eval(item)
+    if len(main_menus) == 0:
+        OK_Dialog(String(30079),String(30310))
+        xbmc.executebuiltin('ActivateWindow(home)')
+#---------------------------------------------------------------------------------------------------
+def Main_Menu_Visibility(url='add'):
+    main_menus = []
+    main_list  = eval(Addon_Setting('home_menus'))
+    for item in main_list.items():
+        if item[1][2] == '1':
+            dolog('default item needs enabling, check user customisations')
+        if item[1][3] != '--':
+            if item[1][0].startswith('String('):
+                name = eval(item[1][0])
+            else:
+                name  = item[1][0]
+            function  = item[1][1]
+            menu_name = Menu_Name(item[0])
+            if url == 'add':
+                setlabel  = 'Skin.SetString(%s%s)'%(function.replace('Disable','Label'),name)
+                if not xbmc.getCondVisibility('Skin.String(%s)'%function):
+                    main_menus.append("Add_Dir('%s %s','Skin.SetString(%s)~%s','set_home_menu',False,'special://home/media/branding/backgrounds/%s/%s_001.jpg','','')"%(String(30060),name,function,setlabel,menu_name,menu_name))
+            if url == 'remove':
+                setlabel  = 'Skin.Reset(%s)'%(function.replace('Disable','Label'))
+                if xbmc.getCondVisibility('Skin.String(%s)'%function):
+                    main_menus.append("Add_Dir('%s %s','Skin.SetString(%sTrue)~%s','set_home_menu',False,'special://home/media/branding/backgrounds/%s/%s_001.jpg','','')"%(String(30076),name,function,setlabel,menu_name,menu_name))
+    return sorted(main_menus)
+#---------------------------------------------------------------------------------------------------
+def Menu_Name(url):
+    if url == 'tvshows': url = 'tv_shows'
+    if url == 'livetv' : url = 'live_tv'
+    name = 'HOME_'+url.upper()
+    return name
 #---------------------------------------------------------------------------------------------------
 # Multiselect Dialog - try the built-in multiselect or fallback to pre-jarvis workaround
 def multidialog(title, mylist, images, description):
@@ -2387,21 +2298,25 @@ def Send_To_Friend(friend):
 @route(mode='set_home_menu', args=['url'])
 def Set_Home_Menu(url):
     my_menus = []
+    url = url.split('~')
+    dolog(url[0])
+    dolog(url[1])
     added    = False
-    xbmc.executebuiltin(url)
+    xbmc.executebuiltin(url[0])
+    xbmc.executebuiltin(url[1])
     xbmc.executebuiltin('Container.Refresh')
     if os.path.exists(MY_HOME_MENUS):
         my_menus  = Text_File(MY_HOME_MENUS,'r').splitlines()
-    clean_cmd = url.replace('True','')
+    clean_cmd = url[0].replace('True','')
     final_txt = ''
     for line in my_menus:
         if not clean_cmd in line:
             final_txt += line+'\n'
         else:
-            final_txt += url+'\n'
+            final_txt += url[0]+'\n'
             added = True
     if not added:
-        final_txt += url+'\n'
+        final_txt += url[0]+'\n'
     Text_File(MY_HOME_MENUS,'w',final_txt)
 #---------------------------------------------------------------------------------------------------
 # Check repos required for each SF

@@ -347,7 +347,7 @@ AVAILABLE PARAMS:
                 if item in adult_list:
                     disable_list.append(item)
 
-        Toggle_Addons(addon=disable_list, enable=False, safe_mode=True, refresh=False, update_status=update_status)
+        Toggle_Addons(addon=disable_list, enable=False, safe_mode=True, refresh=True, update_status=update_status)
         for item in disable_list:
             try:
                 addon_path = xbmcaddon.Addon(id=item).getAddonInfo("path")
