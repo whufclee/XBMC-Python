@@ -1469,6 +1469,32 @@ def Menu_Name(url):
     name = 'HOME_'+url.upper()
     return name
 #---------------------------------------------------------------------------------------------------
+def Main_Menu_Sync():
+    xbmc.log('MAIN MENU SYNC INITIATED',2)
+    main_list    = eval(Addon_Setting('home_menus'))
+    if os.path.exists(MY_HOME_MENUS):
+        my_menus    = Text_File(MY_HOME_MENUS,'r')
+        my_defaults = my_menus.splitlines()
+    for line in my_defaults:
+        xbmc.executebuiltin(line.strip())
+    for item in main_list.items():
+        if item[1][0].startswith('String('):
+            name = eval(item[1][0])
+        else:
+            name  = item[1][0]
+        function = item[1][1]
+        if not function in my_menus:
+            if item[1][2] == '1':
+                    dolog('ENABLING: %s'%name)
+                    setlabel  = 'Skin.SetString(%s%s)'%(function.replace('Disable','Label'),name)
+                    xbmc.executebuiltin("Skin.SetString(%s)"%function)
+                    xbmc.executebuiltin("%s"%setlabel)
+            if item[1][2] == '0':
+                    dolog('DISABLING: %s'%name)
+                    setlabel  = 'Skin.Reset(%s)'%function.replace('Disable','Label')
+                    xbmc.executebuiltin("Skin.SetString(%sTrue)"%function)
+                    xbmc.executebuiltin("%s"%setlabel)
+#---------------------------------------------------------------------------------------------------
 # Multiselect Dialog - try the built-in multiselect or fallback to pre-jarvis workaround
 def multidialog(title, mylist, images, description):
     try:
@@ -2029,27 +2055,6 @@ def Remove_Crash_Logs():
     if YesNo_Dialog(String(30153),String(30154),no=String(30041),yes=String(30042)):
         Delete_Crashlogs()
         OK_Dialog(String(30155),String(30156))
-#-----------------------------------------------------------------------------
-# Remove a path, whether folder or file it will be deleted
-def Remove_Files():
-    remlist = os.path.join(TBSDATA,'remlist')
-    dolog('### Attempting to Remove Files')
-    if os.path.exists(remlist):
-        readfile = open(remlist,'r')
-        content  = readfile.read().splitlines()
-        readfile.close()
-        for item in content:
-            rempath = xbmc.translatePath('special://home')+item
-            if os.path.exists(rempath):
-                try:
-                    os.remove(rempath)
-                    dolog('### Successfully removed file: %s' % rempath)
-                except:
-                    try:
-                        shutil.rmtree(rempath)
-                        dolog('### Successfully removed folder: %s' % rempath)
-                    except:
-                        dolog("### Failed to remove: %s" %rempath)
 #---------------------------------------------------------------------------------------------------
 # Function to clear the packages folder
 @route(mode='remove_packages', args=['url'])
@@ -2297,11 +2302,10 @@ def Send_To_Friend(friend):
 # Function to execute a command
 @route(mode='set_home_menu', args=['url'])
 def Set_Home_Menu(url):
-    my_menus = []
+    my_menus      = []
+    enable_array  = []
+    disable_array = []
     url = url.split('~')
-    dolog(url[0])
-    dolog(url[1])
-    added    = False
     xbmc.executebuiltin(url[0])
     xbmc.executebuiltin(url[1])
     xbmc.executebuiltin('Container.Refresh')
@@ -2309,14 +2313,26 @@ def Set_Home_Menu(url):
         my_menus  = Text_File(MY_HOME_MENUS,'r').splitlines()
     clean_cmd = url[0].replace('True','')
     final_txt = ''
+
+# Re-create list making sure no duplicates exist
     for line in my_menus:
-        if not clean_cmd in line:
-            final_txt += line+'\n'
+        clean = line.replace('True','')
+        if clean not in enable_array and clean not in disable_array:
+            if ',True' in line and clean != clean_cmd:
+                dolog('adding to disable_array: %s'%clean)
+                disable_array.append(clean)
+            elif clean != clean_cmd:
+                dolog('adding to enable_array: %s'%clean)
+                enable_array.append(clean)
+    if not clean_cmd in enable_array and not clean_cmd in disable_array:
+        if ',True' in url[0]:
+            disable_array.append(url[0])
         else:
-            final_txt += url[0]+'\n'
-            added = True
-    if not added:
-        final_txt += url[0]+'\n'
+            enable_array.append(url[0])
+    for item in disable_array:
+        final_txt += item.replace(',)',',True)')+'\n'
+    for item in enable_array:
+        final_txt += item+'\n'
     Text_File(MY_HOME_MENUS,'w',final_txt)
 #---------------------------------------------------------------------------------------------------
 # Check repos required for each SF
@@ -2554,8 +2570,6 @@ def Tools_Clean():
 def Tools_Misc():
     Add_Dir(String(30213), 'none','ip_check',False,'','','')
     Add_Dir(String(30214),'none','xbmcversion',False,'','','')
-    # Add_Dir(String(30215),HOME,'fix_special',False,'','','')
-    # Add_Dir(String(30216),'','ASCII_Check',False,'','','')
     Add_Dir(String(30218),'','kill_xbmc','','','','')
     Add_Dir(String(30219),'none','log',False,'','','')
     Add_Dir(String(30217),'{"value":"false","loadtype":""}','adult_filter',False,'','','')
@@ -2904,10 +2918,25 @@ def XBMC_Version():
     OK_Dialog(String(30243), '%s\n%s\n%s'%(String(30244)%kodi_type,String(30245)%compiled,String(30246)%version))
 #---------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
+
+# create autoexec to re-enable menus on startup
+    autoexec_text = 'import xbmc\nxbmc.executebuiltin("RunScript(special://home/addons/plugin.program.tbs/default.py,update_menus)")\n'
+    autoexec = xbmc.translatePath('special://home/userdata/autoexec.py')
+    if os.path.exists(autoexec):
+        content = Text_File(autoexec,'r')
+        if not autoexec_text in content:
+            autoexec_text += content
+            Text_File(autoexec,'w',autoexec_text)
+    else:
+        Text_File(autoexec,'w',autoexec_text)
+
     runmain = True
     if len(sys.argv)>0:
         if sys.argv[len(sys.argv)-1] == 'update_clean':
             Update_Cleanup()
+            runmain = False
+        if sys.argv[len(sys.argv)-1] == 'update_menus':
+            Main_Menu_Sync()
             runmain = False
     if runmain:
         Run(default='start')

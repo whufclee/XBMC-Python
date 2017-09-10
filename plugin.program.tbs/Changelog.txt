@@ -1,3 +1,6 @@
+v.4.3.9.4:
+- Added autoexec for updating home menus
+
 v.4.3.9.3:
 - Fixed up add/remove menus code so far more optimised and working with new server
 
