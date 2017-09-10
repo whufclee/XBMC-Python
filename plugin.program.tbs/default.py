@@ -1471,7 +1471,9 @@ def Menu_Name(url):
 #---------------------------------------------------------------------------------------------------
 def Main_Menu_Sync():
     xbmc.log('MAIN MENU SYNC INITIATED',2)
-    main_list    = eval(Addon_Setting('home_menus'))
+    my_defaults = []
+    my_menus    = []
+    main_list   = eval(Addon_Setting('home_menus'))
     if os.path.exists(MY_HOME_MENUS):
         my_menus    = Text_File(MY_HOME_MENUS,'r')
         my_defaults = my_menus.splitlines()
