@@ -1,3 +1,6 @@
+v.0.9.8.2:
+- Edited update_screen alignment for text
+
 v.0.9.8.1:
 - Edited adult toggle to use safe mode and toggle all at once rather than one by one
 - Adult_Toggle now requires an update_status to be sent through, if nothing sent through the default status will be set to auto-update once function is complete.

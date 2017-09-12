@@ -847,8 +847,8 @@
 		</control>
 		<control type="label">
 			<description>update header</description>
-			<posx>500</posx>
-			<posy>150</posy>
+			<left>500</left>
+			<top>150</top>
 			<width>550</width>
 			<height>300</height>
 			<font>font13</font>
@@ -858,8 +858,8 @@
 		</control>
 		<control type="label">
 			<description>update text</description>
-			<posx>500</posx>
-			<posy>200</posy>
+			<left>500</left>
+			<top>200</top>
 			<width>550</width>
 			<height>300</height>
 			<font>font13</font>
