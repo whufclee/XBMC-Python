@@ -22,7 +22,7 @@ import xbmcgui
 from default import encryptme, Addon_Browser, Install_Addons, Share_Install,\
                     Share_Removal, Sleep_If_Function_Active, Toggle_Addons
 
-from koding import dolog, converthex, Addon_Setting, Keyboard, String, System, Text_File
+from koding import dolog, converthex, Addon_Genre, Addon_Setting, Keyboard, String, System, Text_File
 
 if os.path.exists(xbmc.translatePath('special://home/userdata/addon_data/script.trtv/skip.txt')):
     tvgskip = 1
@@ -210,7 +210,7 @@ def showlist(usenan = False):
     final_array      = []
     genre_array      = []
     id_array         = []
-    
+
     sf_path = xbmc.translatePath('special://profile/addon_data/plugin.program.super.favourites/Super Favourites/%s'%settings_clean)
     for item in os.listdir(sf_path):
         fullpath = os.path.join(sf_path,item)
@@ -218,6 +218,7 @@ def showlist(usenan = False):
             genre_array.append('share~'+item.replace('_',' ')+'~'+item)
 
     if usenan:
+        dolog('mymenu: %s'%mymenu)
         try:
             addon_list = Addon_Genre(genre=mymenu, custom_url=BASE+'addons/addon_list.txt')
         except:
@@ -225,6 +226,7 @@ def showlist(usenan = False):
                 addon_list = Addon_Genre(genre=mymenu)
             except:
                 addon_list = {}
+        dolog('addon_list: %s'%addon_list)
         for item in addon_list.items():
             name = koding.Cleanup_String(item[0])
             genre_array.append('addon~'+name+'~'+item[1])

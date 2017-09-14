@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.tbs" name="Maintenance"  provider-name="TotalRevolution" version="4.3.9.5">
+<addon id="plugin.program.tbs" name="Maintenance"  provider-name="TotalRevolution" version="4.3.9.6">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.python.koding.aio" version="0.5"/>
