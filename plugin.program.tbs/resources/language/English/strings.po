@@ -335,7 +335,7 @@ msgid "You currently have no content in this section."
 msgstr ""
 
 msgctxt "#30081"
-msgid "Sorry there\'s currently no new content available for this category. If you\'re looking for community social shares you need to enable that feature first via Maintenance>Setup Wizard>Social Shares."
+msgid "Sorry there\'s currently no new content available for this category."
 msgstr ""
 
 msgctxt "#30082"

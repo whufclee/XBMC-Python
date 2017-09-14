@@ -2384,8 +2384,14 @@ def Share_Install(share='all'):
     imagearray   = []
     descarray    = []
     share_list = eval( encryptme('d', Open_URL( url=BASE+'boxer/SF_Install_Shares.php', payload={"x":encryptme('e', URL_Params() )} )))
-    for item in share_list[share]:
-        if item[3]=='1':
+    try:
+        share_list = share_list[share]
+    except:
+        OK_Dialog('[COLOR gold]%s[/COLOR]'%String(30079),String(30081))
+        return
+    for item in share_list:
+        dolog('ITEM: %s'%item)
+        if item[3]=='0':
             contentarray.append(item[0]+' - [COLOR=cyan]%s[/COLOR]'%item[5])
         else:
             contentarray.append(item[0]+' - [COLOR=gold]%s[/COLOR]'%item[5])
@@ -2395,7 +2401,7 @@ def Share_Install(share='all'):
     if choices:
         payload = ''
         for item in choices:
-            payload += str(share_list[share][item][6])+','
+            payload += str(share_list[item][6])+','
         payload = payload[:-1]
         Run_Code( url='boxer/Install_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e',payload)} )
 #---------------------------------------------------------------------------------------------------

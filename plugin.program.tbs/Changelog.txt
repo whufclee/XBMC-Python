@@ -1,3 +1,7 @@
+v.4.3.9.5:
+- Fixed main_menu_sync
+- Fixed install social shares
+
 v.4.3.9.4:
 - Added autoexec for updating home menus
 
