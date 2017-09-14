@@ -49,11 +49,13 @@ dialog.ok('FOLDER DETAILS','Folder path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
     return text
 #----------------------------------------------------------------    
 # TUTORIAL #
-def Browse_To_File(header='Select the file you want to use', path = 'special://home/addons/', extension = ''):
+def Browse_To_File(header='Select the file you want to use', path='special://home/addons/', extension='', browse_in_archives=False):
     """
-Browse to a file and return the path
+This will allow the user to browse to a specific file and return the path.
 
-CODE: koding.Browse_To_File([header, path, extension])
+IMPORTANT: Do not confuse this with the Browse_To_Folder function
+
+CODE: koding.Browse_To_File([header, path, extension, browse_in_archives])
 
 AVAILABLE PARAMS:
 
@@ -66,17 +68,24 @@ AVAILABLE PARAMS:
     extension -  Optionally set extensions to filter by, let's say you only wanted
     zip and txt files to show you would send through '.zip|.txt'
 
+    browse_in_archives -  Set to true if you want to be able to browse inside zips and
+    other archive files. By default this is set to False.
+
 EXAMPLE CODE:
-folder = koding.Browse_To_File(header='Choose a file you want to use', path='special://home/userdata')
-dialog.ok('FOLDER DETAILS','Folder path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
+dialog.ok('[COLOR gold]BROWSE TO FILE 1[/COLOR]','We will now browse to your addons folder with browse_in_archives set to [COLOR dodgerblue]False[/COLOR]. Try clicking on a zip file if you can find one (check packages folder).')
+folder = koding.Browse_To_File(header='Choose a file you want to use', path='special://home/addons')
+dialog.ok('FOLDER DETAILS','File path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
+dialog.ok('[COLOR gold]BROWSE TO FILE 2[/COLOR]','We will now browse to your addons folder with browse_in_archives set to [COLOR dodgerblue]True[/COLOR]. Try clicking on a zip file if you can find one (check packages folder).')
+folder = koding.Browse_To_File(header='Choose a file you want to use', path='special://home/addons', browse_in_archives=True)
+dialog.ok('FOLDER DETAILS','File path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
 ~"""
     if not path.endswith(os.sep):
         path += os.sep
     try:
-        text = dialog.browse(type=1, heading=header, shares='myprograms', mask=extension, useThumbs=False, treatAsFolder=True, defaultt=path)
+        text = dialog.browse(type=1, heading=header, shares='myprograms', mask=extension, useThumbs=False, treatAsFolder=browse_in_archives, defaultt=path)
     except:
         text = dialog.browse(type=1, heading=header, s_shares='myprograms', mask=extension, useThumbs=False,
-                             treatAsFolder=True, defaultt=path)
+                             treatAsFolder=browse_in_archives, defaultt=path)
     return text
 #----------------------------------------------------------------    
 # TUTORIAL #
@@ -616,18 +625,18 @@ AVAILABLE PARAMS:
         counter +=1
 #----------------------------------------------------------------
 # TUTORIAL #
-def Update_Progress(total_items,current_item,update_spinner="false",**kwargs):
+def Update_Progress(total_items,current_item,**kwargs):
     """
 This function is designed for skinners but can be used for general Python too. It will
-work out the current percentage of items that have been processed and update the skin
-string "update_percentbar" accordingly (1-100). You can also send through any properties
+work out the current percentage of items that have been processed and update the
+"update_percent" property accordingly (1-100). You can also send through any properties
 you want updated and it will loop through updating them with the relevant values.
 
 To send through properties just send through the property name as the param and assign to a value.
-Example: Update_Progress(total_items=100,current_item=56,myproperty1='test1',myproperty2='test2')
+Example: Update_Progress( total_items=100,current_item=56, {"myproperty1":"test1","myproperty2":"test2"} )
 
 
-CODE: Text_Box(total_items,current_item,[kwargs])
+CODE: Update_Progress(total_items,current_item,[kwargs])
 
 AVAILABLE PARAMS:
 
@@ -635,19 +644,21 @@ AVAILABLE PARAMS:
 
     (*) current_item -  Current item number that's been processed.
 
-    kwargs  -  Send through any other params and the respective property will be set.colours etc.')
+    kwargs  -  Send through any other params and the respective property will be set.colours etc.
 ~"""
     Reset_Percent()
-    xbmcgui.Window(10000).setProperty('update_spinner',str(update_spinner))
     for item in kwargs:
+        xbmc.log('checking item: %s'%(item),2)
         if item.endswith('color'):
             value = '0xFF'+kwargs[item]
         else:
             value = kwargs[item]
         if value == 'false' or value == '' and not item.endswith('color'):
             xbmcgui.Window(10000).clearProperty(item)
+            xbmc.log('clearing item: %s'%(item),2)
         elif value:
             xbmcgui.Window(10000).setProperty(item, value)
+            xbmc.log('setting item: %s - value: %s'%(item,value),2)
     percent = 100*(current_item/(total_items*1.0))
     newpercent=int(percent)
     if (newpercent % 1 == 0) and (newpercent <=100):
@@ -662,6 +673,7 @@ def Update_Screen(disable_quit=False, auto_close=True):
 This will create a full screen overlay showing progress of updates. You'll need to
 use this in conjunction with the Update_Progress function.
 
+CODE: Update_Screen([disable_quit, auto_close))
 
 AVAILABLE PARAMS:
 
@@ -682,6 +694,7 @@ mykwargs = {
                          "depending on your internet speed this could take anything from 2 to 10 minutes.\n\n"\
                          "Once downloaded the system will start to install the updates.",\
     "update_bar_color" : "4e91cf",\
+    "update_icon"      : "special://home/addons/script.module.python.koding.aio/resources/skins/Default/media/update.png",\
     "update_spinner"   : "true"}
 Update_Screen()
 counter = 1

@@ -830,9 +830,10 @@ This will allow the user to browse to a specific file and return the path.
 
 IMPORTANT: Do not confuse this with the Browse_To_Folder function
 
-	CODE: Browse_To_File([header, path, extension])
+	CODE: koding.Browse_To_File([header, path, extension, browse_in_archives])
 
 	AVAILABLE PARAMS:
+
 	    header    -  As the name suggests this is a string to be used for the header/title
 	    of the window. The default is "Select the file you want to use".
 
@@ -842,9 +843,16 @@ IMPORTANT: Do not confuse this with the Browse_To_Folder function
 	    extension -  Optionally set extensions to filter by, let's say you only wanted
 	    zip and txt files to show you would send through '.zip|.txt'
 
+	    browse_in_archives -  Set to true if you want to be able to browse inside zips and
+	    other archive files. By default this is set to False.
+
 	EXAMPLE CODE:
-		folder = koding.Browse_To_File(header='Choose a file you want to use', path='special://home/userdata')
-		dialog.ok('FOLDER DETAILS','Folder path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
+		dialog.ok('[COLOR gold]BROWSE TO FILE 1[/COLOR]','We will now browse to your addons folder with browse_in_archives set to [COLOR dodgerblue]False[/COLOR]. Try clicking on a zip file if you can find one (check packages folder).')
+		folder = koding.Browse_To_File(header='Choose a file you want to use', path='special://home/addons')
+		dialog.ok('FOLDER DETAILS','File path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
+		dialog.ok('[COLOR gold]BROWSE TO FILE 2[/COLOR]','We will now browse to your addons folder with browse_in_archives set to [COLOR dodgerblue]True[/COLOR]. Try clicking on a zip file if you can find one (check packages folder).')
+		folder = koding.Browse_To_File(header='Choose a file you want to use', path='special://home/addons', browse_in_archives=True)
+		dialog.ok('FOLDER DETAILS','File path: [COLOR=dodgerblue]%s[/COLOR]'%folder)
 
 ------------------------------------------------------------------------------------------
 
@@ -1144,6 +1152,77 @@ This will allow you to open a blank window and fill it with some text.
 
 	EXAMPLE CODE:
 		koding.Text_Box('TEST HEADER','Just some random text[CR][CR]Use kodi tags for new lines, colours etc.')
+
+------------------------------------------------------------------------------------------
+
+UPDATE PROGRESS:
+This function is designed for skinners but can be used for general Python too. It will
+work out the current percentage of items that have been processed and update the
+"update_percent" property accordingly (1-100). You can also send through any properties
+you want updated and it will loop through updating them with the relevant values.
+
+To send through properties just send through the property name as the param and assign to a value.
+Example: Update_Progress( total_items=100,current_item=56, {"myproperty1":"test1","myproperty2":"test2"} )
+
+
+	CODE: Update_Progress(total_items,current_item,[kwargs])
+
+	AVAILABLE PARAMS:
+
+	    (*) total_items  -  Total amount of items in your list you're processing
+
+	    (*) current_item -  Current item number that's been processed.
+
+	    kwargs  -  Send through any other params and the respective property will be set.colours etc.
+
+------------------------------------------------------------------------------------------
+
+UPDATE SCREEN:
+This will create a full screen overlay showing progress of updates. You'll need to
+use this in conjunction with the Update_Progress function.
+
+
+	CODE: Update_Screen([disable_quit, auto_close))
+
+	AVAILABLE PARAMS:
+
+	    disable_quit  -  By default this is set to False and pressing the parent directory
+	    button (generally esc) will allow you to close the window. Setting this to True
+	    will mean it's not possible to close the window manually.
+
+	    auto_close  -  By default this is set to true and when the percentage hits 100
+	    the window will close. If you intend on then sending through some more commands
+	    you might want to consider leaving this window open in which case you'd set this
+	    to false. Bare in mind if you go this route the window will stay active until
+	    you send through the kill command which is: xbmc.executebuiltin('Action(firstpage)')
+
+	EXAMPLE CODE:
+	mykwargs = {
+	    "update_header"    : "Downloading latest updates",\
+	    "update_main_text" : "Your device is now downloading all the latest updates.\nThis shouldn\'t take too long, "\
+	                         "depending on your internet speed this could take anything from 2 to 10 minutes.\n\n"\
+	                         "Once downloaded the system will start to install the updates.",\
+	    "update_bar_color" : "4e91cf",\
+	    "update_icon"      : "special://home/addons/script.module.python.koding.aio/resources/skins/Default/media/update.png",\
+	    "update_spinner"   : "true"}
+	Update_Screen()
+	counter = 1
+	while counter <= 60:
+	    xbmc.sleep(300)
+	    Update_Progress(total_items=60,current_item=counter,**mykwargs)
+	    if counter == 30:
+	        mykwargs = {
+	            "update_header"        : "Halfway there!",\
+	            "update_main_text"     : "We just updated the properties to show how you can change things on the fly "\
+	                                     "simply by sending through some different properties. Both the icon and the "\
+	                                     "background images you see here are being pulled from online.",\
+	            "update_header_color"  : "4e91cf",\
+	            "update_percent_color" : "4e91cf",\
+	            "update_bar_color"     : "4e91cf",\
+	            "update_background"    : "http://www.planwallpaper.com/static/images/518164-backgrounds.jpg",\
+	            "update_icon"          : "http://totalrevolution.tv/img/tr_small_black_bg.jpg",\
+	            "update_spinner"       : "false"}
+	    counter += 1
 
 ------------------------------------------------------------------------------------------
 

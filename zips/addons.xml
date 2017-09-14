@@ -46,7 +46,7 @@
 
 <addon id="script.module.python.koding.aio"
    name="Python Koding AIO"
-   version="0.9.8.2"
+   version="0.9.8.3"
    provider-name="Total Revolution, noobsandnerds">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>

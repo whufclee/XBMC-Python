@@ -854,6 +854,7 @@
 			<font>font13</font>
 			<label>$INFO[Window(Home).Property(update_header)]</label>
 			<align>left</align>
+			<aligny>top</aligny>
 			<textcolor>$INFO[Window(Home).Property(update_header_color)]</textcolor>
 		</control>
 		<control type="label">
@@ -865,6 +866,7 @@
 			<font>font13</font>
 			<label>$INFO[Window(Home).Property(update_main_text)]</label>
 			<align>left</align>
+			<aligny>top</aligny>
 			<wrapmultiline>true</wrapmultiline>
 			<textcolor>$INFO[Window(Home).Property(update_main_color)]</textcolor>
 		</control>

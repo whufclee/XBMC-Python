@@ -1,3 +1,8 @@
+v.0.9.8.3:
+- Added option to browse into zips when using Browse_To_File, default is False
+- Fixed the update spinner in Update Screen, wasn't able to disable
+- Fixed alignment of text in Update Screen, was showing oddly on some skins
+
 v.0.9.8.2:
 - Edited update_screen alignment for text
 
