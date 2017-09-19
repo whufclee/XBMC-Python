@@ -1,3 +1,6 @@
+v.4.3.9.8:
+- Added setProperty of Menu_Running while running the Main_Menu_Sync
+
 v.4.3.9.7:
 - Added setProperty of Clean_Running while running the Repo Cleaner
 

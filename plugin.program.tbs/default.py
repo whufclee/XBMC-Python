@@ -1470,6 +1470,7 @@ def Menu_Name(url):
     return name
 #---------------------------------------------------------------------------------------------------
 def Main_Menu_Sync():
+    xbmcgui.Window(10000).setProperty('Menu_Running', 'true')
     xbmc.log('MAIN MENU SYNC INITIATED',2)
     my_defaults = []
     my_menus    = []
@@ -1496,6 +1497,7 @@ def Main_Menu_Sync():
                     setlabel  = 'Skin.Reset(%s)'%function.replace('Disable','Label')
                     xbmc.executebuiltin("Skin.SetString(%sTrue)"%function)
                     xbmc.executebuiltin("%s"%setlabel)
+    xbmcgui.Window(10000).clearProperty('Menu_Running')
 #---------------------------------------------------------------------------------------------------
 # Multiselect Dialog - try the built-in multiselect or fallback to pre-jarvis workaround
 def multidialog(title, mylist, images, description):
