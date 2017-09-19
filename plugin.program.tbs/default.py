@@ -1081,9 +1081,9 @@ def Get_Updates(url='update'):
         updates_running = xbmcgui.Window(10000).getProperty('TBS_Running')
         dolog('### TBS_RUNNING: %ss'%counter)
         counter += 2
+    SF_Repo_Check()
     Show_Busy(False)
     Notify(String(30330),String(30331),'1000',os.path.join(ADDONS,'plugin.program.tbs','resources','tick.png'))
-    SF_Repo_Check()
 #---------------------------------------------------------------------------------------------------
 # Grab current playing video details
 @route(mode='get_video')
@@ -2607,8 +2607,10 @@ def Unhide_Passwords():
 #---------------------------------------------------------------------------------------------------
 # Sync the default add-on settings and install/remove any repos required (or not)
 def Update_Cleanup():
+    xbmcgui.Window(10000).setProperty('Clean_Running', 'true')
     Sync_Settings()
-    SF_Repo_Check()
+    Sleep_If_Function_Active(function=SF_Repo_Check)
+    xbmcgui.Window(10000).clearProperty('Clean_Running')
 #---------------------------------------------------------------------------------------------------
 # Run the update command for checking new messages
 def Update_Messages(show_dialog=True):

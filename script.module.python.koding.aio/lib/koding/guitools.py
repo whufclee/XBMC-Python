@@ -648,17 +648,14 @@ AVAILABLE PARAMS:
 ~"""
     Reset_Percent()
     for item in kwargs:
-        xbmc.log('checking item: %s'%(item),2)
         if item.endswith('color'):
             value = '0xFF'+kwargs[item]
         else:
             value = kwargs[item]
         if value == 'false' or value == '' and not item.endswith('color'):
             xbmcgui.Window(10000).clearProperty(item)
-            xbmc.log('clearing item: %s'%(item),2)
         elif value:
             xbmcgui.Window(10000).setProperty(item, value)
-            xbmc.log('setting item: %s - value: %s'%(item,value),2)
     percent = 100*(current_item/(total_items*1.0))
     newpercent=int(percent)
     if (newpercent % 1 == 0) and (newpercent <=100):

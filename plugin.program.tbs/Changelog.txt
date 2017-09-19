@@ -1,3 +1,6 @@
+v.4.3.9.7:
+- Added setProperty of Clean_Running while running the Repo Cleaner
+
 v.4.3.9.6:
 - Fixed genre filtering for menus
 
