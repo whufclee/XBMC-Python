@@ -73,5 +73,15 @@
 	<setting id="eiu" type="bool" default="false" visible="false"/>
 	<setting id="kw" type="text" default="" visible="false"/>
 	<setting id="kw_date" type="text" default="" visible="false"/>
+	<setting id="repolist" type="text" default="" visible="false"/>	
+
+<!-- Install the relevant repos when installing Super Favourite Shares 
+ 	(opposed to auto installing - providing disclaimer has been agreed) -->
+	<setting id="shares_use_repos"	type="bool"			default="true"	visible="false"/>
+<!-- Install the relevant repo when installing add-ons (rather than auto update via TRMC system) -->
+	<setting id="addons_use_repos"	type="bool"			default="true"	visible="false"/>
+<!-- Remove repos not being used -->
+	<setting id="clean_repos"		type="bool"			default="true"	visible="false"/>
+
 
 </settings>
