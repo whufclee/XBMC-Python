@@ -1,3 +1,6 @@
+v.4.3.9.9:
+- DEV RELEASE - adding checking for settings
+
 v.4.3.9.8:
 - Added setProperty of Menu_Running while running the Main_Menu_Sync
 

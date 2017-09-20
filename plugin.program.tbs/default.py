@@ -1472,9 +1472,10 @@ def Menu_Name(url):
 def Main_Menu_Sync():
     xbmcgui.Window(10000).setProperty('Menu_Running', 'true')
     xbmc.log('MAIN MENU SYNC INITIATED',2)
+    OK_Dialog('UPDATING MENUS','Check settings now then immediately after pressing OK.')
     my_defaults = []
     my_menus    = []
-    main_list   = eval(Addon_Setting('home_menus'))
+    main_list   = eval(Addon_Setting(setting='home_menus',addon_id='plugin.program.tbs'))
     if os.path.exists(MY_HOME_MENUS):
         my_menus    = Text_File(MY_HOME_MENUS,'r')
         my_defaults = my_menus.splitlines()
@@ -2365,8 +2366,10 @@ def SF_Addon_Check(paths=[]):
 @route(mode='sf_repo_check')
 def SF_Repo_Check():
     addons = []
+    OK_Dialog('SF REPO CHECK','Checking shares_use_repos - check settings')
     if Addon_Setting(addon_id='script.openwindow', setting='shares_use_repos') == 'true':
         addons.extend( SF_Addon_Check() )
+    OK_Dialog('SF REPO CHECK','Checking addons_use_repos - check settings')
     if Addon_Setting(addon_id='script.openwindow', setting='addons_use_repos') == 'true':
         addons.extend( My_Installed_Addons() )
     for item in Installed_Addons(types='xbmc.python.module'):
@@ -2374,7 +2377,9 @@ def SF_Repo_Check():
 
     if len(addons)>0:
         Install_Repos(addons)
+    OK_Dialog('SF REPO CHECK','Checking clean_repos - check settings')
     if Addon_Setting(addon_id='script.openwindow', setting='clean_repos') == 'true':
+        OK_Dialog('SF REPO CHECK','Checking repolist - check settings')
         repo_list = Addon_Setting(addon_id='script.openwindow', setting='repolist')
         xbmc.sleep(300)
         Clean_Old_Repos(repo_list)
