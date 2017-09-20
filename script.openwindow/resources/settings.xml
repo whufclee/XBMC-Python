@@ -2,14 +2,6 @@
 <!-- Set default to false if you don't want to allow the unit to boot up in offline mode -->
 	<setting id="offline"			type="bool"			default="true"	visible="false"/>
 
-<!-- Install the relevant repos when installing Super Favourite Shares 
- 	(opposed to auto installing - providing disclaimer has been agreed) -->
-	<setting id="shares_use_repos"	type="bool"			default="true"	visible="false"/>
-<!-- Install the relevant repo when installing add-ons (rather than auto update via TRMC system) -->
-	<setting id="addons_use_repos"	type="bool"			default="true"	visible="false"/>
-<!-- Remove repos not being used -->
-	<setting id="clean_repos"		type="bool"			default="true"	visible="false"/>
-
 <!--  Main visible settings -->
 	<setting id="debug"				type="bool"			default="true"		visible="true"	label="Enable debug mode"/>
 
@@ -17,7 +9,6 @@
 	<setting id="autoupdate"		type="bool"			default="true"		visible="false"	label="Auto Update Add-ons"/>
 	<setting id="addonlist"			type="text"			default="{}"		visible="false"/>
 	<setting id="ziplist"			type="text"			default="{}"		visible="false"/>	
-	<setting id="repolist"			type="text"			default=""			visible="false"/>	
 	<setting id="sleep"				type="text"			default="01:00:00"	visible="false"/>	
 	<setting id="base"				type="text"			default="http://totalrevolution.xyz/"	visible="false"/>
 </settings>
