@@ -1,3 +1,6 @@
+v.4.4.1:
+- Removed a bunch of old debug logging
+
 v.4.4.0:
 - Moved settings out of openwindow into tbs to try and stop corruption
 

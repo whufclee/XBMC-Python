@@ -786,7 +786,6 @@ def Set_Language():
     fanart_window.show()
     current_language = xbmc.getInfoLabel('System.Language')
     language_array = ['[COLOR=dodgerblue]%s[/COLOR]' % current_language]
-    dolog(str(language_array))
     full_language_array = ['Afrikaans','Albanian','Amharic','Arabic','Armenian','Azerbaijani','Basque','Belarusian','Bosnian','Bulgarian','Burmese','Catalan','Chinese (Simple)',
         'Chinese (Traditional)','Croatian','Czech','Danish','Dutch','English','English (Australia)','English (New Zealand)','English (US)','Esperanto','Estonian','Faroese','Finnish','French',
         'French (Canada)','Galician','German','Greek','Hebrew','Hindi (Devanagiri)','Hungarian','Icelandic','Indonesian','Italian','Japanese','Korean','Latvian','Lithuanian',
@@ -804,6 +803,10 @@ def Set_Language():
         selected_country = language_array[country].replace('[COLOR=dodgerblue]','').replace('[/COLOR]','')
         choice = YesNo_Dialog(String(30004),String(30144) % selected_country.upper()+'\n'+String(30145))
     xbmc.executebuiltin('SetGUILanguage(%s)' % selected_country)
+#-----------------------------------------------------------------------------
+# Not registered, show details of how to register
+def Show_Registration():
+    OK_Dialog( String(30125),'%s\n%s'%(String(30126),String(30127)) )
 #-----------------------------------------------------------------------------
 # Auto select the relevant third party window to open into
 def TR_Check(mode):

@@ -154,7 +154,6 @@ def Addon_Removal_Menu(removal_types='all'):
     my_addons = []
 
     currently_installed = Get_Contents(ADDONS,['packages','temp'])
-    dolog(repr(currently_installed))
     if removal_types == 'all' or 'video' in removal_types:
         my_addons = Installed_Addons(content='video', properties='name,path,description,thumbnail')
     if removal_types == 'all' or 'audio' in removal_types:
@@ -280,7 +279,6 @@ def Adult_Filter(value, loadtype = ''):
             xbmc.executebuiltin('HOME')
         else:
             success = 1
-    dolog('ADULT ADDONS: %s'%adult_addons)
     if value == 'false':
         filter_type = 'disabled'
         Adult_Toggle(adult_list=adult_addons,disable=True)
@@ -452,24 +450,17 @@ def Check_My_Shares(url = ''):
         oldmd5      = item["timestamp"]
         cleanpath   = urllib.unquote(path).upper()
         try:
-            dolog('CLEAN PATH: %s'%cleanpath)
             section,share = cleanpath.split('/')
         except:
             section = False
-        dolog('Path: %s'%path)
-        dolog('md5: %s'%oldmd5)
         local_path = os.path.join(SF_ROOT, 'HOME_'+urllib.unquote(path), 'favourites.xml')
         if os.path.exists(local_path):
-            dolog('LOCAL PATH: %s'%local_path)
             localcheck = md5_check(local_path)
-            dolog('new: %s'%localcheck)
             if oldmd5 != localcheck:
                 message     = 1
                 if YesNo_Dialog(String(30247), String(30248) % cleanpath):
                     Upload_Share(fullpath=os.path.join(SF_ROOT, 'HOME_'+path),item=share)
         elif section:
-            dolog('String1: %s'%String(30351))
-            dolog('String2: %s'%String(30352))
             if YesNo_Dialog(String(30351),String(30352)%cleanpath):
                 Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e','HOME_'+cleanpath)} )
     if url == 'manual' and message == 0:
@@ -497,8 +488,8 @@ def Clean_Old_Repos(repo_list):
         try:
             shutil.rmtree(item)
         except:
-            dolog('Failed to remove: %s'%item)
-    Refresh(['addons','repos'])
+            pass
+    Refresh()
 #---------------------------------------------------------------------------------------------------
 # Function to clear all known cache files
 @route(mode='clear_cache')
@@ -1312,7 +1303,6 @@ def Install_Repos(addon_list=[],install_all=True):
     password    = Addon_Setting('password')
     processed   = []
     final_list  = ''
-    dolog('ADDON_LIST: %s'%addon_list)
 # Check addons 
     for item in addon_list:
     # If only installing repos for add-ons which aren't yet installed
@@ -1327,7 +1317,6 @@ def Install_Repos(addon_list=[],install_all=True):
         elif not item in processed:
             final_list += item+','
             processed.append(item)
-    dolog('final_list: %s'%final_list)
     if final_list != '':
         params    = {"x":encryptme('e',URL_Params()),"n":username,"p":password,"c":encryptme('e',final_list),"e":email}
         Run_Code(url='boxer/Install_Repos.php',payload=params)
@@ -1433,7 +1422,6 @@ def Main_Menu_Install(url):
         main_menus = Main_Menu_Visibility('add')
     else:
         main_menus = Main_Menu_Visibility('remove')
-    dolog(main_menus)
     for item in main_menus:
         eval(item)
     if len(main_menus) == 0:
@@ -2323,10 +2311,8 @@ def Set_Home_Menu(url):
         clean = line.replace('True','')
         if clean not in enable_array and clean not in disable_array:
             if ',True' in line and clean != clean_cmd:
-                dolog('adding to disable_array: %s'%clean)
                 disable_array.append(clean)
             elif clean != clean_cmd:
-                dolog('adding to enable_array: %s'%clean)
                 enable_array.append(clean)
     if not clean_cmd in enable_array and not clean_cmd in disable_array:
         if ',True' in url[0]:
@@ -2392,7 +2378,6 @@ def Share_Install(share='all'):
         OK_Dialog('[COLOR gold]%s[/COLOR]'%String(30079),String(30081))
         return
     for item in share_list:
-        dolog('ITEM: %s'%item)
         if item[3]=='0':
             contentarray.append(item[0]+' - [COLOR=cyan]%s[/COLOR]'%item[5])
         else:
@@ -2494,7 +2479,6 @@ def Sync_Settings():
     from koding import End_Path, Find_In_Text
     path = os.path.join(ADDON_DATA,AddonID,'settings')
     contents = Get_Contents(path=path,folders=False, subfolders=True, filter='.xml')
-    dolog('Settings files found: '+repr(contents))
     for item in contents:
         temp_path    = item.replace(End_Path(item),'')
         plugin       = End_Path(temp_path)
@@ -2510,13 +2494,10 @@ def Sync_Settings():
                 setting = setting[0] if (setting != None) else setting
                 value   = Find_In_Text(content=line,start='value="',end='"',show_errors=False)
                 value   = value[0] if (value != None) else value
-                dolog('SETTING:%s~'%setting)
-                dolog('VALUE:%s~'%value)
                 if setting != None:
                     if plugin == 'plugin.program.tbs':
                         cur_set = Addon_Setting(setting=setting,addon_id=plugin)
                         if not cur_set.endswith('user') and setting.startswith('HOME_'):
-                            dolog( 'No custom user setting for %s, setting to: %s' % (setting,value) )
                             Addon_Setting(setting=setting,value=value,addon_id=plugin)
                     counter = 0
                     for res_line in res_lines:
@@ -2530,8 +2511,6 @@ def Sync_Settings():
                                     new_line = res_line.replace('default="%s"'%current_value, 'default="%s"'%value)
                                 else:
                                     new_line = res_line.replace(r'/>',' default="%s"'%value+r'/>')
-                                dolog('ORIG: %s'%res_line)  
-                                dolog('NEW: %s'%new_line)  
                                 res_contents = res_contents.replace(res_line,new_line)
                                 break
             Text_File(resources,'w',res_contents)
@@ -2719,11 +2698,8 @@ def Upload_Share(fullpath='',item=''):
             if fullpath.endswith(os.sep):
                 fullpath = fullpath[:-1]
             localcheck = md5_check(os.path.join(fullpath,'favourites.xml'))
-            dolog('local check: %s'%localcheck)
             mylistpath = urllib.quote(fullpath.split("HOME_",1)[1], safe='')
-            dolog('mylistpath: %s'%mylistpath)
             data = DB_Query(db_path=db_social, query='SELECT COUNT(*) as mycount from shares WHERE `path` = ?', values=[mylistpath])
-            dolog('data: %s'%data)
             if int(data[0]['mycount']) > 0:
                 dolog('### Updating Share in db: %s' % mylistpath)
                 DB_Query(db_path=db_social, query="UPDATE shares SET `timestamp` = ? WHERE `path` = ?", values=[localcheck, mylistpath])
@@ -2810,10 +2786,8 @@ def URL_Params():
 
     if ethmac != 'Unknown' and wifimac != 'Unknown':
         return (wifimac+'&'+cpu+'&'+build+'&'+ethmac).replace(' ','%20')
-        dolog('### maintenance: '+(wifimac+'&'+cpu+'&'+build+'&'+ethmac).replace(' ','%20'))
     else:
         return 'Unknown'
-        dolog("### BUILD:"+build)
 #---------------------------------------------------------------------------------------------------
 # Wipe known cache locations
 def Wipe_Cache():
