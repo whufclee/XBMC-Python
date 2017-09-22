@@ -1,3 +1,6 @@
+v.4.4.2:
+- Removed autoexec creation, shouldn't be needed now and was causing startup wizard to appear on every boot on LE
+
 v.4.4.1:
 - Removed a bunch of old debug logging
 

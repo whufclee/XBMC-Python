@@ -2904,18 +2904,6 @@ def XBMC_Version():
     OK_Dialog(String(30243), '%s\n%s\n%s'%(String(30244)%kodi_type,String(30245)%compiled,String(30246)%version))
 #---------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
-
-# create autoexec to re-enable menus on startup
-    autoexec_text = 'import xbmc\nxbmc.executebuiltin("RunScript(special://home/addons/plugin.program.tbs/default.py,update_menus)")\n'
-    autoexec = xbmc.translatePath('special://home/userdata/autoexec.py')
-    if os.path.exists(autoexec):
-        content = Text_File(autoexec,'r')
-        if not autoexec_text in content:
-            autoexec_text += content
-            Text_File(autoexec,'w',autoexec_text)
-    else:
-        Text_File(autoexec,'w',autoexec_text)
-
     runmain = True
     if len(sys.argv)>0:
         if sys.argv[len(sys.argv)-1] == 'update_clean':

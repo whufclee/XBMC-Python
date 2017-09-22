@@ -10,5 +10,6 @@
 	<setting id="addonlist"			type="text"			default="{}"		visible="false"/>
 	<setting id="ziplist"			type="text"			default="{}"		visible="false"/>	
 	<setting id="sleep"				type="text"			default="01:00:00"	visible="false"/>	
+	<setting id="firstrun"			type="bool"			default="false"		visible="false" />
 	<setting id="base"				type="text"			default="http://totalrevolution.xyz/"	visible="false"/>
 </settings>
