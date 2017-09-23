@@ -16,6 +16,7 @@ from koding import Addon_Setting
 
 AddonID = 'script.openwindow'
 sleep   =  Addon_Setting('sleep')
+Addon_Setting(addon_id='script.openwindow',setting='base',value='http://totalrevolution.xyz/')
 
 autoexec = xbmc.translatePath('special://profile/autoexec.py')
 if os.path.exists(autoexec):
