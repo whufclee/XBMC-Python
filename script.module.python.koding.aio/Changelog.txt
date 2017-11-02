@@ -1,3 +1,22 @@
+v.0.9.8.9:
+- Removed debugging info in sleep functions.
+
+v.0.9.8.8:
+- Added check on web based functions, attempt to auto change url's to http instead of https if Python version is lower than 2.7
+- Added new option to dolog function which can show line number and file where the dolog command was called from. Thanks to OptimusGreen for the suggestion and line number code.
+- Removed some unnecessary logging from the Add_Dir command.
+
+v.0.9.8.7:
+- Added new Python_Version function to return current running version of Python
+- Added beautifulsoup to addon.xml as dependency
+
+v.0.9.8.6:
+- Improved Fresh_Install function, now multi-platform and can add paths/addons to ignore
+- Fixed the Delete_Folders function, was removing sub-folders from items in ignore list
+
+v.0.9.8.4:
+- Re-done the Compress function as shutil.make_archive doesn't work on python 2.6 so now using tarfile and zipfile.
+
 v.0.9.8.3:
 - Added option to browse into zips when using Browse_To_File, default is False
 - Fixed the update spinner in Update Screen, wasn't able to disable

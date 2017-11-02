@@ -388,7 +388,7 @@ AVAILABLE PARAMS:
         
         'addons': Return a list of all add-on id's called to get to this function.
         
-        'path'  : Return the full path to the script which called this funciton.
+        'path'  : Return the full path to the script which called this function.
         
         'paths' : Return a list of paths which have been called to get to this
         final function.
