@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>+-</label>
+		<label2>Video Add-On</label2>
+		<icon>DefaultAddonProgram.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_LIVE_TV%2fHOME_LIVE_TV_001.jpg/</thumb>
+		<action>RunScript(&quot;special://home/addons/plugin.program.tbs/epg.py&quot;,'live_tv')</action>
+	</shortcut>
+</shortcuts>

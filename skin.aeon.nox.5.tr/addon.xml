@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+	id="skin.aeon.nox.5.tr"
+	version="5.7.4"
+	name="Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod"
+	provider-name="[COLOR=dodgerblue]TR[/COLOR]ev Mod, original work by BigNoid">
+	<requires>
+		<import addon="xbmc.gui" version="5.9.0"/>
+	</requires>
+	<extension
+		point="xbmc.gui.skin"
+		debugging="false"
+		effectslowdown="0.75">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="el">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="en">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="en_AU">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="en_NZ">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="en_US">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="es">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="fi">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="fr">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="fr_CA">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="gl">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="he">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="hu">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="is">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="it">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="ko">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="lt">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="ms">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="nl">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="no">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="pl">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="pt">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="pt_BR">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="ro">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="ru">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="sk">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="sv">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="th">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<summary lang="vi">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod - Sự trở về</summary>
+		<summary lang="zh">Aeon Nox - [COLOR=dodgerblue]TR[/COLOR]ev Mod</summary>
+		<description lang="de">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Komplett neu designed für ein modernes Aussehen und das klassische Aeon-Feeling beizubehalten.</description>
+		<description lang="el">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Πλήρως επανασχεδιασμένο για να προσφέρει μια μοντέρνα αισθητική, διατηρώντας ταυτόχρονα την κλασική ομορφιά του Aeon.</description>
+		<description lang="en">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_AU">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_NZ">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_US">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="es">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Completamente rediseñado para crear un aspecto moderno, pero conservando el toque clásico Aeon.</description>
+		<description lang="fi">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Täysin uudelleensuunniteltu moderni ulkoasu, kuitenkin tuntuen klassiselta Aeon:lta.</description>
+		<description lang="fr">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Totalement revu pour créer un look moderne, en gardant l'expérience Aeon.</description>
+		<description lang="fr_CA">[COLOR=dodgerblue]TR[/COLOR]ev Mod : complètement remanié pour créer une apparence moderne, tout en conservant l'esprit classique d'Aeon.</description>
+		<description lang="he">[COLOR=dodgerblue]TR[/COLOR]ev Mod: עיצוב חדש היוצר מראה מודרני אך משמר את ההרגשה של Aeon הקלאסי.</description>
+		<description lang="hr">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Potpuno preoblikovan moderan izgled, uz zadržani klasični Aeon osjećaj.</description>
+		<description lang="hu">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Teljesen áttervezett modern kinézet, de megtartva a klasszikus Aeon érzetet.</description>
+		<description lang="is">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Endurhannað nútímalegt útlit í anda Aeon.</description>
+		<description lang="it">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Completamente ridisegnato per creare un look moderno, mantenendo la consueta qualità Aeon.</description>
+		<description lang="ko">[COLOR=dodgerblue]TR[/COLOR]ev Mod: 고전적인 Aeon 느낌을 유지하면서 현대적인 모습으로 완전히 다시 디자인하여 만들었습니다.</description>
+		<description lang="lt">[COLOR=dodgerblue]TR[/COLOR]ev Mod: pilnai atnaujinta, kad sukurtų modernią išvaizdą, išlaikant klasikinio Aeon pojūtį.</description>
+		<description lang="ms">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Direka semula sepenuhnya untuk hasilkan penampilan modern, tetapi masih mengekalkan penampilan Aeon klasik.</description>
+		<description lang="nl">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Volledig opnieuw ontworpen om een ​​moderne look te creëren, met behoud van het klassieke Aeon gevoel.</description>
+		<description lang="no">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Helt redesignet for å gi deg en moderne utforming, samtidig som man beholder den klassiske Aeon følelsen.</description>
+		<description lang="pl">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Całkowicie przeprojektowana skóra Aeon, o nowoczesnym wyglądzie, zachowując klasyczny układ skóry Aeon.</description>
+		<description lang="pt">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Completamente redesenhado para criar um visual moderno enquanto retém o toque clássico Aeon.</description>
+		<description lang="pt_BR">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Design completamente novo para criar um look moderno, mantendo o feeling do Aeon Clássico.</description>
+		<description lang="ru">[COLOR=dodgerblue]TR[/COLOR]ev Mod: полностью переделенная, модернизированная классическая обложка Aeon.</description>
+		<description lang="sk">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Kompletne prepracovaný dizajn s moderným vzhľadom pri zachovaní klasického štýlu Aeon.</description>
+		<description lang="sv">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Totalt omarbetad för att skapa ett modernt utseende, samtidigt som man behåller den klassiska Aeon-känslan.</description>
+		<description lang="th">[COLOR=dodgerblue]TR[/COLOR]ev Mod: การออกแบบใหม่หมดจด เพื่อสร้างรูปลักษณ์ทันสมัย, ​​ขณะที่ยังคงความรู้สึกคลาสสิคของ Aeon.</description>
+		<description lang="vi">[COLOR=dodgerblue]TR[/COLOR]ev Mod: Thiết kế lại hoàn toàn để tạo nên một phong cách hiện đại, trong khi đó vẫn duy trì một cảm giác Aeon cổ điển.</description>
+		<platform>all</platform>
+	</extension>
+</addon>

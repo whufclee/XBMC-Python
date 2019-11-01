@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Maintenance">
+		<setting type="lsep" label="Backup Details"/>
+        <setting id="zip" type="folder" label="Choose Backup Storage Location" default=""/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to check download path[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.nan.maintenance/checkPath.py)" option="close"/>
+		<setting type="lsep" label="[COLOR=gold]---------------------------------------------------------------[/COLOR]"/>
+		<setting type="lsep" label="IP Lookup"/>
+		<setting id="ip_site" label="Site to use for IP lookups" type="labelenum" default="whatismyipaddress.com" values="iplocation.net|whatismyipaddress.com" visible="true"/>
+		<setting type="lsep" label="[COLOR=gold]---------------------------------------------------------------[/COLOR]"/>
+		<setting type="lsep" label="Automatically Clean Cache"/>
+		<setting id="cleancache" type="bool" label="Enable service to periodically wipe unused cache" default="false"/>
+		<setting type="lsep" label="[COLOR=gold]---------------------------------------------------------------[/COLOR]"/>
+		<setting type="lsep" label="Log Uploader"/>
+    	<setting id="email" type="text" label="E-Mail Address (used for log uploader)"/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to upload a log[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.nan.maintenance/uploadLog.py)" option="close"/>
+    </category>
+</settings>

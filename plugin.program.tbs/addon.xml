@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.tbs" name="Maintenance"  provider-name="TotalRevolution" version="4.4.2">
+<addon id="plugin.program.tbs" name="Maintenance" version="4.5.1" provider-name="Total Revolution">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.python.koding.aio" version="0.5"/>
+		<import addon="repository.spartacus" version="1.0"/>
 		<import addon="plugin.program.super.favourites" version="1.0.43" optional="true"/>
 	</requires>
-		<extension point="xbmc.python.library"      library="default.py" />
-		<extension point="xbmc.python.pluginsource" library="default.py">
-			<provides>video audio image executable</provides>
+	<extension point="xbmc.python.library" library="default.py"/>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video audio executable</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.service" library="service.py" start="[login|startup]" />
 	<extension point="kodi.context.item" library="context.py">
 		<item>
 			<label>Share...</label>
@@ -17,9 +18,9 @@
 		</item>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Maintenance - powered by TotalRevolution</summary>
-		<description>Your one stop add-on for everything you could possibly need.</description>
+		<summary lang="en">Maintenance - powered by Total Revolution</summary>
+		<description lang="en">Your one stop add-on for everything you could possibly need.</description>
 		<platform>all</platform>
-		<news>New keyword backup system</news>
+		<news>Bug fixes to custom lists inc. speed improvements on loading times of menus</news>
 	</extension>
 </addon>

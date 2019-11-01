@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1125" type="window">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="label">
+			<posx>100</posx>
+			<posy>50</posy>
+			<width>350</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Weather Section</label>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>100</posy>
+			<width>350</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Fully customise your Weather section.[CR]</label>
+		</control>
+		<control type="label">
+			<posx>500</posx>
+			<posy>50</posy>
+			<width>200</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Shortcuts</label>
+			<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+		</control>				
+		<control type="label">
+			<posx>500</posx>
+			<posy>100</posy>
+			<width>250</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Select the shortcut set to use.[CR]</label>
+			<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+		</control>
+		<control type="label">
+			<posx>825</posx>
+			<posy>50</posy>
+			<width>200</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Sub-Menu</label>
+			<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+		</control>				
+		<control type="label">
+			<posx>825</posx>
+			<posy>100</posy>
+			<width>250</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Select the Sub-Menu set to use.[CR]</label>
+			<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+		</control>
+
+<!-- Shortcuts Section -->
+		<control type="group">
+			<control type="grouplist" id="9001" description="Weather Sub-Menu Options">
+				<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				<posx>500</posx>
+				<posy>130</posy>
+				<width>300</width>
+				<height>391</height>
+				<onleft>9000</onleft>
+				<onright>9002</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>280</scrolltime>
+				<control type="button" id="100">
+					<description>Show Shortcuts</description>
+					<width>275</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=lime]Shortcuts ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherShortcuts)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</visible>
+				</control>
+				<control type="button" id="101">
+					<description>Show Shortcuts</description>
+					<width>275	</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherShortcuts)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoWeatherShortcuts)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherShortcuts)</visible>
+				</control>
+				<control type="radiobutton" id="118" description="Android">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Android</label>
+					<onclick>Skin.SetString(WeatherShortcut,Android)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Android)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="radiobutton" id="108" description="Favourites">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Favourites</label>
+					<onclick>Skin.SetString(WeatherShortcut,Favourites)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Favourites)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="102" description="Gaming">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Gaming</label>
+					<onclick>Skin.SetString(WeatherShortcut,Gaming)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Gaming)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="103" description="Live TV">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Live TV</label>
+					<onclick>Skin.SetString(WeatherShortcut,Live TV)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Live TV)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="104" description="Movies">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Movies</label>
+					<onclick>Skin.SetString(WeatherShortcut,Movies)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Movies)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="105" description="Music">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Music</label>
+					<onclick>Skin.SetString(WeatherShortcut,Music)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Music)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="106" description="Pictures">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Pictures</label>
+					<onclick>Skin.SetString(WeatherShortcut,Pictures)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Pictures)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="107" description="Programs">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Programs</label>
+					<onclick>Skin.SetString(WeatherShortcut,Programs)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Programs)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="117" description="System">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>System</label>
+					<onclick>Skin.SetString(WeatherShortcut,System)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),System)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="109" description="TV Shows">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>TV Shows</label>
+					<onclick>Skin.SetString(WeatherShortcut,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),TV Shows)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="110" description="Videos">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Videos</label>
+					<onclick>Skin.SetString(WeatherShortcut,Videos)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Videos)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="118" description="Weather">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Weather</label>
+					<onclick>Skin.SetString(WeatherShortcut,Weather)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),Weather) | IsEmpty(Skin.String(WeatherShortcut))</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="111" description="Custom1">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 1</label>
+					<onclick>Skin.SetString(WeatherShortcut,CF1)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),CF1)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="112" description="Custom2">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 2</label>
+					<onclick>Skin.SetString(WeatherShortcut,CF2)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),CF2)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="113" description="Custom3">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 3</label>
+					<onclick>Skin.SetString(WeatherShortcut,CF3)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),CF3)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="114" description="Custom4">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 4</label>
+					<onclick>Skin.SetString(WeatherShortcut,CF4)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),CF4)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="115" description="Custom5">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 5</label>
+					<onclick>Skin.SetString(WeatherShortcut,CF5)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),CF5)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="116" description="Custom6">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 6</label>
+					<onclick>Skin.SetString(WeatherShortcut,CF6)</onclick>
+					<selected>StringCompare(Skin.String(WeatherShortcut),CF6)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoWeatherShortcuts)</enable>
+				</control>
+			</control>
+		</control>
+<!-- Sub Menu Section -->
+		<control type="group">
+			<control type="grouplist" id="9002" description="Weather Sub-Menu Options">
+				<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				<posx>825</posx>
+				<posy>130</posy>
+				<width>300</width>
+				<height>391</height>
+				<onleft>9001</onleft>
+				<onright>9000</onright>
+				<onup>9002</onup>
+				<ondown>9002</ondown>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>280</scrolltime>
+				<control type="button" id="200">
+					<description>Show Sub-Menus</description>
+					<width>275</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=lime]Sub-Menus ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherSubMenus)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</visible>
+				</control>
+				<control type="button" id="201">
+					<description>Show SubMenus</description>
+					<width>275	</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherSubMenus)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoWeatherSubMenus)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoWeatherSubMenus)</visible>
+				</control>
+				<control type="radiobutton" id="218" description="Android">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Andoroid</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Android)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Android)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="radiobutton" id="208" description="Favourites">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Favourites</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Favourites)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Favourites)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="202" description="Gaming">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Gaming</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Gaming)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Gaming)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="203" description="Live TV">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Live TV</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Live TV)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Live TV)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="204" description="Movies">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Movies</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Movies)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Movies)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="205" description="Music">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Music</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Music)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Music)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="206" description="Pictures">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Pictures</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Pictures)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Pictures)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="207" description="Programs">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Programs</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Programs)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Programs)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="217" description="System">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>System</label>
+					<onclick>Skin.SetString(WeatherSubMenu,System)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),System)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="209" description="TV Shows">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>TV Shows</label>
+					<onclick>Skin.SetString(WeatherSubMenu,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),TV Shows)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="210" description="Videos">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Videos</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Videos)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Videos)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="218" description="Weather">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Weather</label>
+					<onclick>Skin.SetString(WeatherSubMenu,Weather)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),Weather) | IsEmpty(Skin.String(WeatherSubMenu))</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="211" description="Custom1">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 1</label>
+					<onclick>Skin.SetString(WeatherSubMenu,CF1)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),CF1)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="212" description="Custom2">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 2</label>
+					<onclick>Skin.SetString(WeatherSubMenu,CF2)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),CF2)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="213" description="Custom3">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 3</label>
+					<onclick>Skin.SetString(WeatherSubMenu,CF3)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),CF3)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="214" description="Custom4">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 4</label>
+					<onclick>Skin.SetString(WeatherSubMenu,CF4)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),CF4)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="215" description="Custom5">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 5</label>
+					<onclick>Skin.SetString(WeatherSubMenu,CF5)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),CF5)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="216" description="Custom6">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 6</label>
+					<onclick>Skin.SetString(WeatherSubMenu,CF6)</onclick>
+					<selected>StringCompare(Skin.String(WeatherSubMenu),CF6)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoWeatherSubMenus)</enable>
+				</control>
+			</control>
+		</control>		
+<!-- Main Weather Section -->
+		<control type="group">
+			<control type="grouplist" id="9000">
+				<left>100</left>
+				<top>130</top>
+				<width>350</width>
+				<height>391</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<onleft>9002</onleft>
+				<onright>9001</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				
+<!--Enable Weather on Nav Bar-->
+				<control type="button" id="1">
+					<description>Show Weather Button</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>[COLOR=lime]WEATHER Section ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="button" id="2">
+					<description>Show Weather Button</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="radiobutton" id="3">
+					<description>Use Custom Weather Link</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Use Custom Weather Link</label>
+					<onclick>Skin.ToggleSetting(UseDefaultWeather)</onclick>
+					<selected>Skin.HasSetting(UseDefaultWeather)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="button" id="4">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- Set Weather Favourite</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(HomeCustomWeather.Label)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=HomeCustomWeather)</onclick>
+					<enable>Skin.HasSetting(UseDefaultWeather)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="radiobutton" id="5">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>31109</label>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.ToggleSetting(UseWeatherCustomBackground)</onclick>
+					<selected>Skin.HasSetting(UseWeatherCustomBackground)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="button" id="6">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- $LOCALIZE[31110]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(CustomWeatherBackgroundPath)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.SetImage(CustomWeatherBackgroundPath)</onclick>
+					<enable>Skin.HasSetting(UseWeatherCustomBackground)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="radiobutton" id="7">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>Enable Custom Icon Overlay</label>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.ToggleSetting(UseCustomWeatherIcon)</onclick>
+					<selected>Skin.HasSetting(UseCustomWeatherIcon)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="button" id="8">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- Custom Weather Icon</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(CustomWeatherPath)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.SetImage(CustomWeatherPath)</onclick>
+					<enable>Skin.HasSetting(UseCustomWeatherIcon)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="radiobutton" id="9">
+					<description>Show Recently added info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show Recently Added Info</label>
+					<onclick>Skin.ToggleSetting(WeatherRecentlyAdded)</onclick>
+					<selected>Skin.HasSetting(WeatherRecentlyAdded)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="radiobutton" id="10">
+					<description>Show Recently added Movies info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show recently added Movies</label>
+					<onclick>Skin.ToggleSetting(WeatherRecentlyAddedMovies)</onclick>
+					<onclick>Skin.SetString(WeatherRA,Movies)</onclick>
+					<selected>StringCompare(Skin.String(WeatherRA),Movies)</selected>
+					<selected>Skin.HasSetting(WeatherRecentlyAddedMovies)</selected>
+					<enable>Skin.HasSetting(WeatherRecentlyAdded)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="radiobutton" id="12">
+					<description>Show Recently added TV Shows info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show recently added TV Shows</label>
+					<onclick>Skin.ToggleSetting(WeatherRecentlyAddedTVShows)</onclick>
+					<onclick>Skin.SetString(WeatherRA,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(WeatherRA),TV Shows)</selected>
+					<selected>Skin.HasSetting(WeatherRecentlyAddedTVShows)</selected>
+					<enable>Skin.HasSetting(WeatherRecentlyAdded)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+				<control type="radiobutton" id="11">
+					<description>Show Recently added music info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show Recently added Music</label>
+					<onclick>Skin.ToggleSetting(WeatherRecentlyAddedMusic)</onclick>
+					<onclick>Skin.SetString(WeatherRA,Music)</onclick>
+					<selected>StringCompare(Skin.String(WeatherRA),Music)</selected>
+					<selected>Skin.HasSetting(WeatherRecentlyAddedMusic)</selected>
+					<enable>Skin.HasSetting(WeatherRecentlyAdded)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+				</control>
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include condition="!Skin.HasSetting(EnableClock)">Clock</include>
+	</controls>
+</window>

@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1120" type="window">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="label">
+			<posx>100</posx>
+			<posy>50</posy>
+			<width>350</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Movies Section</label>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>100</posy>
+			<width>350</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Fully customise your Movies section.[CR]</label>
+		</control>
+		<control type="label">
+			<posx>500</posx>
+			<posy>50</posy>
+			<width>200</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Shortcuts</label>
+			<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+		</control>				
+		<control type="label">
+			<posx>500</posx>
+			<posy>100</posy>
+			<width>250</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Select the shortcut set to use.[CR]</label>
+			<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+		</control>
+		<control type="label">
+			<posx>825</posx>
+			<posy>50</posy>
+			<width>200</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Sub-Menu</label>
+			<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+		</control>				
+		<control type="label">
+			<posx>825</posx>
+			<posy>100</posy>
+			<width>250</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Select the Sub-Menu set to use.[CR]</label>
+			<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+		</control>
+
+<!-- Shortcuts Section -->
+		<control type="group">
+			<control type="grouplist" id="9001" description="Movies Sub-Menu Options">
+				<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				<posx>500</posx>
+				<posy>130</posy>
+				<width>300</width>
+				<height>391</height>
+				<onleft>9000</onleft>
+				<onright>9002</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>280</scrolltime>
+				<control type="button" id="100">
+					<description>Show Shortcuts</description>
+					<width>275</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=lime]Shortcuts ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesShortcuts)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</visible>
+				</control>
+				<control type="button" id="101">
+					<description>Show Shortcuts</description>
+					<width>275	</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesShortcuts)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoMoviesShortcuts)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesShortcuts)</visible>
+				</control>
+				<control type="radiobutton" id="118" description="Android">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Android</label>
+					<onclick>Skin.SetString(MoviesShortcut,Android)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Android)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="radiobutton" id="108" description="Favourites">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Favourites</label>
+					<onclick>Skin.SetString(MoviesShortcut,Favourites)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Favourites)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="102" description="Gaming">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Gaming</label>
+					<onclick>Skin.SetString(MoviesShortcut,Gaming)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Gaming)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="103" description="Live TV">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Live TV</label>
+					<onclick>Skin.SetString(MoviesShortcut,Live TV)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Live TV)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="104" description="Movies">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Movies</label>
+					<onclick>Skin.SetString(MoviesShortcut,Movies)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Movies) | IsEmpty(Skin.String(MoviesShortcut))</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="105" description="Music">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Music</label>
+					<onclick>Skin.SetString(MoviesShortcut,Music)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Music)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="106" description="Pictures">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Pictures</label>
+					<onclick>Skin.SetString(MoviesShortcut,Pictures)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Pictures)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="107" description="Programs">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Programs</label>
+					<onclick>Skin.SetString(MoviesShortcut,Programs)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Programs)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="117" description="System">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>System</label>
+					<onclick>Skin.SetString(MoviesShortcut,System)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),System)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="109" description="TV Shows">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>TV Shows</label>
+					<onclick>Skin.SetString(MoviesShortcut,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),TV Shows)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="110" description="Videos">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Videos</label>
+					<onclick>Skin.SetString(MoviesShortcut,Videos)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),Videos)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="111" description="Custom1">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 1</label>
+					<onclick>Skin.SetString(MoviesShortcut,CF1)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),CF1)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="112" description="Custom2">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 2</label>
+					<onclick>Skin.SetString(MoviesShortcut,CF2)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),CF2)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="113" description="Custom3">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 3</label>
+					<onclick>Skin.SetString(MoviesShortcut,CF3)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),CF3)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="114" description="Custom4">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 4</label>
+					<onclick>Skin.SetString(MoviesShortcut,CF4)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),CF4)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="115" description="Custom5">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 5</label>
+					<onclick>Skin.SetString(MoviesShortcut,CF5)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),CF5)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="116" description="Custom6">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 6</label>
+					<onclick>Skin.SetString(MoviesShortcut,CF6)</onclick>
+					<selected>StringCompare(Skin.String(MoviesShortcut),CF6)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoMoviesShortcuts)</enable>
+				</control>
+			</control>
+		</control>
+<!-- Sub Menu Section -->
+		<control type="group">
+			<control type="grouplist" id="9002" description="Movies Sub-Menu Options">
+				<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				<posx>825</posx>
+				<posy>130</posy>
+				<width>300</width>
+				<height>391</height>
+				<onleft>9001</onleft>
+				<onright>9000</onright>
+				<onup>9002</onup>
+				<ondown>9002</ondown>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>280</scrolltime>
+				<control type="button" id="200">
+					<description>Show Sub-Menus</description>
+					<width>275</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=lime]Sub-Menus ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesSubMenus)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</visible>
+				</control>
+				<control type="button" id="201">
+					<description>Show SubMenus</description>
+					<width>275	</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesSubMenus)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoMoviesSubMenus)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoMoviesSubMenus)</visible>
+				</control>
+				<control type="radiobutton" id="218" description="Android">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Andoroid</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Android)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Android)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="radiobutton" id="208" description="Favourites">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Favourites</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Favourites)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Favourites)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="202" description="Gaming">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Gaming</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Gaming)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Gaming)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="203" description="Live TV">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Live TV</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Live TV)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Live TV)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="204" description="Movies">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Movies</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Movies)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Movies) | IsEmpty(Skin.String(MoviesSubMenu))</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="205" description="Music">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Music</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Music)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Music)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="206" description="Pictures">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Pictures</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Pictures)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Pictures)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="207" description="Programs">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Programs</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Programs)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Programs)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="217" description="System">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>System</label>
+					<onclick>Skin.SetString(MoviesSubMenu,System)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),System)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="209" description="TV Shows">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>TV Shows</label>
+					<onclick>Skin.SetString(MoviesSubMenu,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),TV Shows)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="210" description="Videos">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Videos</label>
+					<onclick>Skin.SetString(MoviesSubMenu,Videos)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),Videos)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="211" description="Custom1">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 1</label>
+					<onclick>Skin.SetString(MoviesSubMenu,CF1)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),CF1)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="212" description="Custom2">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 2</label>
+					<onclick>Skin.SetString(MoviesSubMenu,CF2)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),CF2)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="213" description="Custom3">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 3</label>
+					<onclick>Skin.SetString(MoviesSubMenu,CF3)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),CF3)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="214" description="Custom4">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 4</label>
+					<onclick>Skin.SetString(MoviesSubMenu,CF4)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),CF4)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="215" description="Custom5">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 5</label>
+					<onclick>Skin.SetString(MoviesSubMenu,CF5)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),CF5)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="216" description="Custom6">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 6</label>
+					<onclick>Skin.SetString(MoviesSubMenu,CF6)</onclick>
+					<selected>StringCompare(Skin.String(MoviesSubMenu),CF6)</selected>
+					<enable>!Skin.HasSetting(HomeMenuNoMoviesSubMenus)</enable>
+				</control>
+			</control>
+		</control>		
+<!-- Main Movies Section -->
+		<control type="group">
+			<control type="grouplist" id="9000">
+				<left>100</left>
+				<top>130</top>
+				<width>350</width>
+				<height>391</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<onleft>9002</onleft>
+				<onright>9001</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				
+<!--Enable Movies on Nav Bar-->
+				<control type="button" id="1">
+					<description>Show Live TV Button</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>[COLOR=lime]MOVIES Section ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="button" id="2">
+					<description>Show Movies Button</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="radiobutton" id="3">
+					<description>Use Custom Movies Link</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Use Custom Movies Link</label>
+					<onclick>Skin.ToggleSetting(UseDefaultMovies)</onclick>
+					<selected>Skin.HasSetting(UseDefaultMovies)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="button" id="4">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- Set Movies Favourite</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(HomeCustomMovies.Label)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=HomeCustomMovies)</onclick>
+					<enable>Skin.HasSetting(UseDefaultMovies)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="radiobutton" id="5">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>31109</label>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.ToggleSetting(UseMoviesCustomBackground)</onclick>
+					<selected>Skin.HasSetting(UseMoviesCustomBackground)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="button" id="6">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- $LOCALIZE[31110]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(CustomMoviesBackgroundPath)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.SetImage(CustomMoviesBackgroundPath)</onclick>
+					<enable>Skin.HasSetting(UseMoviesCustomBackground)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="radiobutton" id="7">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>Enable Custom Icon Overlay</label>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.ToggleSetting(UseCustomMoviesIcon)</onclick>
+					<selected>Skin.HasSetting(UseCustomMoviesIcon)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="button" id="8">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- Custom Movies Icon</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(CustomMoviesPath)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.SetImage(CustomMoviesPath)</onclick>
+					<enable>Skin.HasSetting(UseCustomMoviesIcon)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="radiobutton" id="9">
+					<description>Show Recently added info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show Recently Added Info</label>
+					<onclick>Skin.ToggleSetting(MoviesRecentlyAdded)</onclick>
+					<selected>Skin.HasSetting(MoviesRecentlyAdded)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="radiobutton" id="10">
+					<description>Show Recently added Movies info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show recently added Movies</label>
+					<onclick>Skin.ToggleSetting(MoviesRecentlyAddedMovies)</onclick>
+					<onclick>Skin.SetString(MoviesRA,Movies)</onclick>
+					<selected>StringCompare(Skin.String(MoviesRA),Movies)</selected>
+					<selected>Skin.HasSetting(MoviesRecentlyAddedMovies)</selected>
+					<enable>Skin.HasSetting(MoviesRecentlyAdded)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="radiobutton" id="12">
+					<description>Show Recently added TV Shows info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show recently added TV Shows</label>
+					<onclick>Skin.ToggleSetting(MoviesRecentlyAddedTVShows)</onclick>
+					<onclick>Skin.SetString(MoviesRA,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(MoviesRA),TV Shows)</selected>
+					<selected>Skin.HasSetting(MoviesRecentlyAddedTVShows)</selected>
+					<enable>Skin.HasSetting(MoviesRecentlyAdded)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+				<control type="radiobutton" id="11">
+					<description>Show Recently added music info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show Recently added Music</label>
+					<onclick>Skin.ToggleSetting(MoviesRecentlyAddedMusic)</onclick>
+					<onclick>Skin.SetString(MoviesRA,Music)</onclick>
+					<selected>StringCompare(Skin.String(MoviesRA),Music)</selected>
+					<selected>Skin.HasSetting(MoviesRecentlyAddedMusic)</selected>
+					<enable>Skin.HasSetting(MoviesRecentlyAdded)</enable>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+				</control>
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include condition="!Skin.HasSetting(EnableClock)">Clock</include>
+	</controls>
+</window>

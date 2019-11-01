@@ -1,0 +1,1392 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<includes>
+	<include name="skinshortcuts-mainmenu" />
+	<include />
+	<include name="skinshortcuts-submenu">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_NEWS%2fHOME_NEWS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'news')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'news')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'news')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
+			<property name="group">x1</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_SPORTS%2fHOME_SPORTS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'sports')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'sports')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'sports')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+			<property name="group">x2</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[359]</label>
+			<label2>item</label2>
+			<icon>DefaultMusicRecentlyAdded.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID">359</property>
+			<property name="defaultID">359</property>
+			<visible>[[Library.HasContent(Music)] + [Library.HasContent(music)]] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+			<onclick>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</onclick>
+			<property name="path">ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</property>
+			<property name="list">musicdb://recentlyaddedalbums/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'music')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'music')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'music')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>item</label2>
+			<icon>DefaultMusicArtists.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<visible>[[Library.HasContent(Music)] + [Library.HasContent(music)]] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+			<onclick>ActivateWindow(Music,musicdb://artists/,return)</onclick>
+			<property name="path">ActivateWindow(Music,musicdb://artists/,return)</property>
+			<property name="list">musicdb://artists/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_WORLD%2fHOME_WORLD_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'world')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'world')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'world')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x4)</visible>
+			<property name="group">x4</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[13200]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13200</property>
+			<property name="defaultID">13200</property>
+			<onclick>ActivateWindow(Profiles)</onclick>
+			<property name="path">ActivateWindow(Profiles)</property>
+			<property name="list">Profiles</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[20077]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">20077</property>
+			<property name="defaultID">20077</property>
+			<onclick>ActivateWindow(SkinSettings)</onclick>
+			<property name="path">ActivateWindow(SkinSettings)</property>
+			<property name="list">SkinSettings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[5]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">5</property>
+			<property name="defaultID">5</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[7]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">7</property>
+			<property name="defaultID">7</property>
+			<onclick>ActivateWindow(FileManager)</onclick>
+			<property name="path">ActivateWindow(FileManager)</property>
+			<property name="list">FileManager</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[130]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">130</property>
+			<property name="defaultID">130</property>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+			<property name="path">ActivateWindow(SystemInfo)</property>
+			<property name="list">SystemInfo</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>WebViewer</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">script.web.viewer</property>
+			<property name="defaultID">WebViewer</property>
+			<onclick>RunScript(script.web.viewer)</onclick>
+			<property name="path">RunScript(script.web.viewer)</property>
+			<property name="list">RunScript(script.web.viewer)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32229]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32225-addon-script-qlickplay32229</property>
+			<property name="defaultID">Browse Youtube Channels</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=channel)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=channel)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=channel)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32231]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32225-addon-script-qlickplay32231</property>
+			<property name="defaultID">Browse Youtube Videos</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=playlist)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=playlist)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=playlist)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'youtube')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'youtube')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'youtube')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32231]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32226-addon-script-qlickplay32231</property>
+			<property name="defaultID">Search Youtube Videos</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32229]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32226-addon-script-qlickplay32229</property>
+			<property name="defaultID">Search Youtube Channels</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=channel,query=qqq)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=channel,query=qqq)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=channel,query=qqq)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TRAVEL%2fHOME_TRAVEL_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'travel')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'travel')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'travel')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x7)</visible>
+			<property name="group">x7</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_KIDS%2fHOME_KIDS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'kids')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'kids')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'kids')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x8)</visible>
+			<property name="group">x8</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'movies')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'movies')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'movies')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
+			<property name="group">x10</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'tv_shows')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'tv_shows')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'tv_shows')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
+			<property name="group">x11</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_LIVE_TV%2fHOME_LIVE_TV_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'live_tv')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'live_tv')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'live_tv')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
+			<property name="group">x12</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_XXX%2fHOME_XXX_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'xxx')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'xxx')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'xxx')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
+			<property name="group">x13</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_EDIT%2fHOME_EDIT_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D",return)</property>
+			<property name="list">plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x101)</visible>
+			<property name="group">x101</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TECHNOLOGY%2fHOME_TECHNOLOGY_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'technology')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'technology')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'technology')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x202)</visible>
+			<property name="group">x202</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_COOKING%2fHOME_COOKING_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'cooking')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'cooking')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'cooking')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_FITNESS%2fHOME_FITNESS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'fitness')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'fitness')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'fitness')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x404)</visible>
+			<property name="group">x404</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_GAMING%2fHOME_GAMING_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'gaming')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'gaming')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'gaming')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x505)</visible>
+			<property name="group">x505</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_COMEDY%2fHOME_COMEDY_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'comedy')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'comedy')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'comedy')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x606)</visible>
+			<property name="group">x606</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x1">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_NEWS%2fHOME_NEWS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'news')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'news')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'news')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x1</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x1">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_NEWS%2fHOME_NEWS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'news')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'news')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'news')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x1)</visible>
+			<property name="group">x1</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x2">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_SPORTS%2fHOME_SPORTS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'sports')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'sports')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'sports')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x2</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x2">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_SPORTS%2fHOME_SPORTS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'sports')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'sports')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'sports')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x2)</visible>
+			<property name="group">x2</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x3">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[359]</label>
+			<label2>item</label2>
+			<icon>DefaultMusicRecentlyAdded.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID">359</property>
+			<property name="defaultID">359</property>
+			<visible>[Library.HasContent(Music)] + [Library.HasContent(music)]</visible>
+			<onclick>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</onclick>
+			<property name="path">ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</property>
+			<property name="list">musicdb://recentlyaddedalbums/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'music')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'music')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'music')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>item</label2>
+			<icon>DefaultMusicArtists.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<visible>[Library.HasContent(Music)] + [Library.HasContent(music)]</visible>
+			<onclick>ActivateWindow(Music,musicdb://artists/,return)</onclick>
+			<property name="path">ActivateWindow(Music,musicdb://artists/,return)</property>
+			<property name="list">musicdb://artists/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x3">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[359]</label>
+			<label2>item</label2>
+			<icon>DefaultMusicRecentlyAdded.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID">359</property>
+			<property name="defaultID">359</property>
+			<visible>[[Library.HasContent(Music)] + [Library.HasContent(music)]] + StringCompare(Window(10000).Property(submenuVisibility),x3)</visible>
+			<onclick>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</onclick>
+			<property name="path">ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</property>
+			<property name="list">musicdb://recentlyaddedalbums/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'music')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'music')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'music')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>item</label2>
+			<icon>DefaultMusicArtists.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<visible>[[Library.HasContent(Music)] + [Library.HasContent(music)]] + StringCompare(Window(10000).Property(submenuVisibility),x3)</visible>
+			<onclick>ActivateWindow(Music,musicdb://artists/,return)</onclick>
+			<property name="path">ActivateWindow(Music,musicdb://artists/,return)</property>
+			<property name="list">musicdb://artists/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x4">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_WORLD%2fHOME_WORLD_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'world')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'world')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'world')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x4</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x4">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_WORLD%2fHOME_WORLD_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'world')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'world')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'world')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x4)</visible>
+			<property name="group">x4</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x5">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[13200]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13200</property>
+			<property name="defaultID">13200</property>
+			<onclick>ActivateWindow(Profiles)</onclick>
+			<property name="path">ActivateWindow(Profiles)</property>
+			<property name="list">Profiles</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[20077]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">20077</property>
+			<property name="defaultID">20077</property>
+			<onclick>ActivateWindow(SkinSettings)</onclick>
+			<property name="path">ActivateWindow(SkinSettings)</property>
+			<property name="list">SkinSettings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[5]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">5</property>
+			<property name="defaultID">5</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[7]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">7</property>
+			<property name="defaultID">7</property>
+			<onclick>ActivateWindow(FileManager)</onclick>
+			<property name="path">ActivateWindow(FileManager)</property>
+			<property name="list">FileManager</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[130]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">130</property>
+			<property name="defaultID">130</property>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+			<property name="path">ActivateWindow(SystemInfo)</property>
+			<property name="list">SystemInfo</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>WebViewer</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">script.web.viewer</property>
+			<property name="defaultID">WebViewer</property>
+			<onclick>RunScript(script.web.viewer)</onclick>
+			<property name="path">RunScript(script.web.viewer)</property>
+			<property name="list">RunScript(script.web.viewer)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x5">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[13200]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13200</property>
+			<property name="defaultID">13200</property>
+			<onclick>ActivateWindow(Profiles)</onclick>
+			<property name="path">ActivateWindow(Profiles)</property>
+			<property name="list">Profiles</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[20077]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">20077</property>
+			<property name="defaultID">20077</property>
+			<onclick>ActivateWindow(SkinSettings)</onclick>
+			<property name="path">ActivateWindow(SkinSettings)</property>
+			<property name="list">SkinSettings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[5]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">5</property>
+			<property name="defaultID">5</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[7]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">7</property>
+			<property name="defaultID">7</property>
+			<onclick>ActivateWindow(FileManager)</onclick>
+			<property name="path">ActivateWindow(FileManager)</property>
+			<property name="list">FileManager</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[130]</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">130</property>
+			<property name="defaultID">130</property>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+			<property name="path">ActivateWindow(SystemInfo)</property>
+			<property name="list">SystemInfo</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>WebViewer</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">script.web.viewer</property>
+			<property name="defaultID">WebViewer</property>
+			<onclick>RunScript(script.web.viewer)</onclick>
+			<property name="path">RunScript(script.web.viewer)</property>
+			<property name="list">RunScript(script.web.viewer)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x5)</visible>
+			<property name="group">x5</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x6">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32229]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32225-addon-script-qlickplay32229</property>
+			<property name="defaultID">Browse Youtube Channels</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=channel)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=channel)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=channel)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32231]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32225-addon-script-qlickplay32231</property>
+			<property name="defaultID">Browse Youtube Videos</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=playlist)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=playlist)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=playlist)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'youtube')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'youtube')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'youtube')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32231]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32226-addon-script-qlickplay32231</property>
+			<property name="defaultID">Search Youtube Videos</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32229]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32226-addon-script-qlickplay32229</property>
+			<property name="defaultID">Search Youtube Channels</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=channel,query=qqq)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=channel,query=qqq)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=channel,query=qqq)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x6">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32229]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32225-addon-script-qlickplay32229</property>
+			<property name="defaultID">Browse Youtube Channels</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=channel)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=channel)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=channel)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32231]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32225-addon-script-qlickplay32231</property>
+			<property name="defaultID">Browse Youtube Videos</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=playlist)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=playlist)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=playlist)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'youtube')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'youtube')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'youtube')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32231]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32226-addon-script-qlickplay32231</property>
+			<property name="defaultID">Search Youtube Videos</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32229]</label>
+			<label2>folder</label2>
+			<icon>DefaultYoutube.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+			<property name="labelID">addon-script-qlickplay32226-addon-script-qlickplay32229</property>
+			<property name="defaultID">Search Youtube Channels</property>
+			<onclick>RunScript(script.qlickplay,info=list,type=channel,query=qqq)</onclick>
+			<property name="path">RunScript(script.qlickplay,info=list,type=channel,query=qqq)</property>
+			<property name="list">RunScript(script.qlickplay,info=list,type=channel,query=qqq)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x6)</visible>
+			<property name="group">x6</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x7">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TRAVEL%2fHOME_TRAVEL_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'travel')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'travel')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'travel')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x7</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x7">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TRAVEL%2fHOME_TRAVEL_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'travel')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'travel')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'travel')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x7)</visible>
+			<property name="group">x7</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x8">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_KIDS%2fHOME_KIDS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'kids')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'kids')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'kids')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x8</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x8">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_KIDS%2fHOME_KIDS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'kids')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'kids')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'kids')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x8)</visible>
+			<property name="group">x8</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x9" />
+	<include name="skinshortcuts-group-alt-x9" />
+	<include name="skinshortcuts-group-x10">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'movies')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'movies')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'movies')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x10</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x10">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'movies')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'movies')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'movies')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x10)</visible>
+			<property name="group">x10</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x11">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'tv_shows')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'tv_shows')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'tv_shows')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x11</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x11">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'tv_shows')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'tv_shows')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'tv_shows')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x11)</visible>
+			<property name="group">x11</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x12">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_LIVE_TV%2fHOME_LIVE_TV_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'live_tv')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'live_tv')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'live_tv')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x12</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x12">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_LIVE_TV%2fHOME_LIVE_TV_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'live_tv')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'live_tv')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'live_tv')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x12)</visible>
+			<property name="group">x12</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x13">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_XXX%2fHOME_XXX_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'xxx')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'xxx')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'xxx')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x13</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x13">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_XXX%2fHOME_XXX_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'xxx')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'xxx')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'xxx')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x13)</visible>
+			<property name="group">x13</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x101">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_EDIT%2fHOME_EDIT_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D",return)</property>
+			<property name="list">plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x101</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x101">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_EDIT%2fHOME_EDIT_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D",return)</property>
+			<property name="list">plugin://plugin.program.super.favourites/?folder=HOME_SYSTEM%2FEDIT%2F%2B%2D</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x101)</visible>
+			<property name="group">x101</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x202">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TECHNOLOGY%2fHOME_TECHNOLOGY_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'technology')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'technology')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'technology')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x202</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x202">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TECHNOLOGY%2fHOME_TECHNOLOGY_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'technology')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'technology')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'technology')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x202)</visible>
+			<property name="group">x202</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x303">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_COOKING%2fHOME_COOKING_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'cooking')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'cooking')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'cooking')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x303">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_COOKING%2fHOME_COOKING_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'cooking')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'cooking')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'cooking')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x404">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_FITNESS%2fHOME_FITNESS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'fitness')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'fitness')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'fitness')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x404</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x404">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_FITNESS%2fHOME_FITNESS_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'fitness')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'fitness')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'fitness')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x404)</visible>
+			<property name="group">x404</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x505">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_GAMING%2fHOME_GAMING_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'gaming')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'gaming')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'gaming')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x505</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x505">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_GAMING%2fHOME_GAMING_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'gaming')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'gaming')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'gaming')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x505)</visible>
+			<property name="group">x505</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-x606">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_COMEDY%2fHOME_COMEDY_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'comedy')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'comedy')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'comedy')</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">x606</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-x606">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>+-</label>
+			<label2>Video Add-On</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_COMEDY%2fHOME_COMEDY_001.jpg/</thumb>
+			<property name="labelID" />
+			<property name="defaultID" />
+			<onclick>RunScript("special://home/addons/plugin.program.tbs/epg.py",'comedy')</onclick>
+			<property name="path">RunScript("special://home/addons/plugin.program.tbs/epg.py",'comedy')</property>
+			<property name="list">RunScript(special://home/addons/plugin.program.tbs/epg.py,'comedy')</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),x606)</visible>
+			<property name="group">x606</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+</includes>

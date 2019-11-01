@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1137" type="window">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="label">
+			<left>240</left>
+			<top>10</top>
+			<width>680</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>System Shortcuts</label>
+		</control>
+		<control type="textbox">
+			<left>240</left>
+			<top>60</top>
+			<width>680</width>
+			<height>250</height>
+			<font>font14</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<label>To add shortcuts you will first need to add the relevant content to your favourites. The best method is to add as a super favourite first and then add that super favourite as a XBMC/Kodi favourite. This will ensure the item loads correctly</label>
+		</control>
+				<control type="group">
+					<control type="grouplist" id="9000">
+						<left>240</left>
+						<top>200</top>
+						<width>750</width>
+						<height>430</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9005</onup>
+						<ondown>9005</ondown>
+<!--Super Favourites shortcuts-->
+						<control type="radiobutton" id="441">
+							<description>Enable Custom Favourite 1</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 1</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem1)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem1)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="541">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 1</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem1.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem1)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem1)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem1)</visible>					
+						</control>
+						<control type="button" id="641">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem1.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem1Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem1Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem1)</visible>
+						</control>
+						<control type="radiobutton" id="442">
+							<description>Enable Custom Favourite 2</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 2</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem2)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem2)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="542">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 2</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem2.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem2)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem2)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem2)</visible>					
+						</control>
+						<control type="button" id="642">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem2.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem2Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem2Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem2)</visible>
+						</control>
+						<control type="radiobutton" id="443">
+							<description>Enable Custom Favourite 3</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 3</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem3)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem3)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="543">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 3</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem3.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem3)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem3)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem3)</visible>					
+						</control>
+						<control type="button" id="643">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem3.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem3Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem3Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem3)</visible>
+						</control>
+						<control type="radiobutton" id="444">
+							<description>Enable Custom Favourite 4</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 4</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem4)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem4)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="544">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 4</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem4.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem4)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem4)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem4)</visible>					
+						</control>
+						<control type="button" id="644">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem4.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem4Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem4Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem4)</visible>
+						</control>
+						<control type="radiobutton" id="445">
+							<description>Enable Custom Favourite 5</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 5</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem5)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem5)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="545">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 5</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem5.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem5)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem5)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem5)</visible>					
+						</control>
+						<control type="button" id="645">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem5.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem5Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem5Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem5)</visible>
+						</control>
+						<control type="radiobutton" id="446">
+							<description>Enable Custom Favourite 6</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 6</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem6)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem6)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="546">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 6</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem6.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem6)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem6)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem6)</visible>					
+						</control>
+						<control type="button" id="646">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem6.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem6Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem6Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem6)</visible>
+						</control>
+						<control type="radiobutton" id="447">
+							<description>Enable Custom Favourite 7</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 7</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem7)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem7)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="547">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 7</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem7.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem7)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem7)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem7)</visible>					
+						</control>
+						<control type="button" id="647">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem7.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem7Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem7Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem7)</visible>
+						</control>
+						<control type="radiobutton" id="448">
+							<description>Enable Custom Favourite 8</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 8</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem8)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem8)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="548">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 8</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem8.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem8)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem8)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem8)</visible>					
+						</control>
+						<control type="button" id="648">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem8.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem8Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem8Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem8)</visible>
+						</control>
+						<control type="radiobutton" id="449">
+							<description>Enable Custom Favourite 9</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 9</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem9)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem9)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="549">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 9</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem9.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem9)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem9)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem9)</visible>					
+						</control>
+						<control type="button" id="649">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem9.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem9Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem9Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem9)</visible>
+						</control>
+						<control type="radiobutton" id="450">
+							<description>Enable Custom Favourite 10</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 10</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem10)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem10)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="550">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 10</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem10.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem10)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem10)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem10)</visible>					
+						</control>
+						<control type="button" id="650">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem10.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem10Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem10Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem10)</visible>
+						</control>
+						<control type="radiobutton" id="451">
+							<description>Enable Custom Favourite 11</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 11</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem11)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem11)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="551">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 11</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem11.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem11)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem11)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem11)</visible>					
+						</control>
+						<control type="button" id="651">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem11.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem11Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem11Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem11)</visible>
+						</control>
+						<control type="radiobutton" id="452">
+							<description>Enable Custom Favourite 12</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 12</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem12)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem12)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="552">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 12</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem12.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem12)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem12)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem12)</visible>					
+						</control>
+						<control type="button" id="652">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem12.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem12Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem12Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem12)</visible>
+						</control>
+						<control type="radiobutton" id="453">
+							<description>Enable Custom Favourite 13</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 13</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem13)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem13)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="553">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 13</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem13.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem13)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem13)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem13)</visible>					
+						</control>
+						<control type="button" id="653">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem13.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem13Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem13Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem13)</visible>
+						</control>
+						<control type="radiobutton" id="454">
+							<description>Enable Custom Favourite 14</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 14</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem14)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem14)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="554">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 14</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem14.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem14)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem14)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem14)</visible>					
+						</control>
+						<control type="button" id="654">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem14.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem14Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem14Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem14)</visible>
+						</control>
+						<control type="radiobutton" id="455">
+							<description>Enable Custom Favourite 15</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 15</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem15)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem15)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="555">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 15</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem15.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem15)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem15)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem15)</visible>					
+						</control>
+						<control type="button" id="655">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem15.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem15Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem15Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem15)</visible>
+						</control>
+						<control type="radiobutton" id="456">
+							<description>Enable Custom Favourite 16</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 16</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem16)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem16)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="556">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 16</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem16.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem16)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem16)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem16)</visible>					
+						</control>
+						<control type="button" id="656">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem16.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem16Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem16Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem16)</visible>
+						</control>
+						<control type="radiobutton" id="457">
+							<description>Enable Custom Favourite 17</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 17</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem17)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem17)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="557">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 17</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem17.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem17)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem17)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem17)</visible>					
+						</control>
+						<control type="button" id="657">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem17.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem17Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem17Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem17)</visible>
+						</control>
+						<control type="radiobutton" id="458">
+							<description>Enable Custom Favourite 18</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 18</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem18)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem18)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="558">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 18</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem18.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem18)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem18)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem18)</visible>					
+						</control>
+						<control type="button" id="658">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem18.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem18Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem18Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem18)</visible>
+						</control>
+						<control type="radiobutton" id="459">
+							<description>Enable Custom Favourite 19</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 19</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem19)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem19)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="559">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 19</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem19.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem19)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem19)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem19)</visible>					
+						</control>
+						<control type="button" id="659">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem19.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem19Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem19Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem19)</visible>
+						</control>
+						<control type="radiobutton" id="460">
+							<description>Enable Custom Favourite 20</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Enable - Custom Favourite 20</label>
+							<onclick>Skin.ToggleSetting(HomeMenuCFSystem20)</onclick>
+							<selected>Skin.HasSetting(HomeMenuCFSystem20)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="button" id="560">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set Custom Favourite 20</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(SFSystem20.Label)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SFSystem20)</onclick>
+							<enable>Skin.HasSetting(HomeMenuCFSystem20)</enable>
+							<visible>Skin.HasSetting(HomeMenuCFSystem20)</visible>					
+						</control>
+						<control type="button" id="660">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- Set [COLOR=blue]$INFO[Skin.String(SFSystem20.Label)][/COLOR] Icon</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(CFSystem20Icon)][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetImage(CFSystem20Icon)</onclick>
+							<visible>Skin.HasSetting(HomeMenuCFSystem20)</visible>
+						</control>
+					</control>
+				</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include condition="!Skin.HasSetting(EnableClock)">Clock</include>
+	</controls>
+</window>

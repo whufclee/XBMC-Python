@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="noobsandnerds login">
+        <setting id="login" label="Use noobsandnerds login (unlock features)" type="bool" default="false"/>
+    	<setting id="username" type="text" label="Username"/>
+    	<setting id="password" type="text" label="Password"/>
+		<setting type="lsep" label="[CR]If you don't already have an account you can register for free."/>
+		<setting type="lsep" label="Adding login info will unlock all the latest features!"/>
+		<setting type="lsep" label="[CR]Visit www.noobsandnerds.com and click on the forum link."/>
+   	</category>
+
+	<category label="Show/Hide Content">
+		<setting id="addonportal" type="bool" label="Add-On Portal Section[CR]" default="true"/>
+		<setting id="communitybuilds" type="bool" label="Community Builds Section" default="true"/>
+        <setting id="private" type="bool" label="- Show private content" default="false"/>
+		<setting id="hardwareportal" type="bool" label="Hardware Reviews Section[CR]" default="true"/>
+		<setting id="latestnews" type="bool" label="Latest News Section[CR]" default="true"/>
+		<setting id="maintenance" type="bool" label="Maintenance Section[CR]" default="true"/>
+		<setting id="tutorialportal" type="bool" label="Tutorials Section[CR]" default="true"/>
+		<setting id="showall" type="bool" label="Show ALL add-ons (some may be unlawful in your region)[CR]" default="false"/>
+		<setting id="adult" type="bool" label="Enable XXX Content[CR]" default="false"/>
+	</category>
+
+	<category label="Tutorials">
+		<setting id="tutorial_manual_search" type="bool" label="Tutorials - Enable Manual Search" default="true"/>
+		<setting id="tutorial_all" type="bool" label="Tutorials - Enable All Guides" default="true"/>
+		<setting id="tutorial_kodi" type="bool" label="Tutorials - Enable Kodi Specific" default="false"/>
+		<setting id="tutorial_xbmc4xbox" type="bool" label="Tutorials - Enable XBMC4Xbox Specific" default="true"/>
+		<setting id="tutorial_android" type="bool" label="Tutorials - Enable Android" default="false"/>
+		<setting id="tutorial_atv" type="bool" label="Tutorials - Enable ATV" default="false"/>
+		<setting id="tutorial_ios" type="bool" label="Tutorials - Enable ATV2/iOS" default="false"/>
+		<setting id="tutorial_linux" type="bool" label="Tutorials - Enable Linux" default="false"/>
+		<setting id="tutorial_pure_linux" type="bool" label="Tutorials - Enable Pure Linux" default="false"/>
+		<setting id="tutorial_openelec" type="bool" label="Tutorials - Enable OpenELEC" default="false"/>
+		<setting id="tutorial_osmc" type="bool" label="Tutorials - Enable OSMC" default="false"/>
+		<setting id="tutorial_osx" type="bool" label="Tutorials - Enable OSX" default="false"/>
+		<setting id="tutorial_raspbmc" type="bool" label="Tutorials - Enable Raspbmc" default="false"/>
+		<setting id="tutorial_windows" type="bool" label="Tutorials - Enable Windows" default="false"/>
+		<setting id="tutorial_allwinner" type="bool" label="Tutorials - Enable Allwinner Devices" default="false"/>
+		<setting id="tutorial_aftv" type="bool" label="Tutorials - Enable Amazon Fire TV Devices" default="false"/>
+		<setting id="tutorial_amlogic" type="bool" label="Tutorials - Enable AMLogic Devices" default="false"/>
+		<setting id="tutorial_boxee" type="bool" label="Tutorials - Enable Boxee" default="false"/>
+		<setting id="tutorial_intel" type="bool" label="Tutorials - Enable Intel Devices" default="false"/>
+		<setting id="tutorial_rpi" type="bool" label="Tutorials - Enable Raspberry Pi" default="false"/>
+		<setting id="tutorial_rockchip" type="bool" label="Tutorials - Enable Rockchip" default="false"/>
+		<setting id="tutorial_xbox" type="bool" label="Tutorials - Enable Xbox" default="true"/>
+	</category>
+
+    <category label="Community Builds">
+		<setting type="lsep" label="Backup/Download Details"/>
+        <setting id="zip" type="folder" label="Choose Backup Storage Location"/>
+        <setting id="xbmcdir" type="folder" label="Set XBMC Install Directory"/>
+		<setting type="lsep" label="[CR]"/>
+		<setting type="lsep" label="The XBMC install directory must be set to a ROOT directory such as Apps[CR]and NOT your existing XBMC directory. If you set it to that[CR]you could brick your xbox!"/>
+	</category>
+
+    <category label="Maintenance">
+    	<setting id="email" type="text" label="E-Mail Address (used for log uploader)"/>
+		<setting type="lsep" label="[CR][CR]"/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to upload a log[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.totalinstaller4xbox/uploadLog.py)" option="close"/>
+		<setting type="lsep" label="Once your log is uploaded you will receive an email with the link."/>
+		<setting type="lsep" label="[CR][CR]"/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to reset your add-on[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.totalinstaller4xbox/resetAddon.py)" option="close"/>
+		<setting type="lsep" label="Use this option if you're encountering problems with the add-on not"/>
+		<setting type="lsep" label="loading correctly (script errors)."/>
+    </category>
+
+</settings>

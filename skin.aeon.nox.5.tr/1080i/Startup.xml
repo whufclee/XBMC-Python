@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<onload condition="!Skin.HasSetting(NoIntroVideo)">PlayMedia(special://home/media/branding/intro.mp4)</onload>
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<controls />
+</window>

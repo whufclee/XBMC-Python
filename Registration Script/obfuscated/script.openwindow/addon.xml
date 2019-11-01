@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.openwindow" name="Startup Wizard" version="1.0.3.1" provider-name="TotalRevolution">
+  <requires>
+	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py" >
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+    <language>en</language>
+    <license>Creative Commons 4.0-NC-ND</license>
+	<ref>f3eadd2bb0aab21ef6c0aa90c8573f2f</ref>
+  </extension>
+</addon>

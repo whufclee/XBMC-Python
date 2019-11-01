@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+<!--	<shortcut>
+		<defaultID>Browse TVShows</defaultID>
+		<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32228]</label>
+		<label2>folder</label2>
+		<icon>DefaultTVShows.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+		<action>RunScript(&quot;script.qlickplay&quot;,info=list,type=tv)</action>
+	</shortcut>-->
+	<shortcut>
+		<visible>Library.HasContent(tvshows)</visible>
+		<defaultID>My TVShows</defaultID>
+		<label>My TVShows</label>
+		<label2>folder</label2>
+		<icon>DefaultTVShows.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+		<action>ActivateWindow(10025,videodb://tvshows/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>+-</label>
+		<label2>Video Add-On</label2>
+		<icon>DefaultAddonProgram.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+		<action>RunScript(&quot;special://home/addons/plugin.program.tbs/epg.py&quot;,'tv_shows')</action>
+	</shortcut>
+<!--	<shortcut>
+		<visible>Library.HasContent(tvshows)</visible>
+		<defaultID>My TVShows</defaultID>
+		<label>My Recent Episodes</label>
+		<label2>folder</label2>
+		<icon>DefaultTVShows.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+		<action>ActivateWindow(10025,videodb://recentlyaddedepisodes/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Search TVShows</defaultID>
+		<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32228]</label>
+		<label2>folder</label2>
+		<icon>DefaultTVShows.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_TV_SHOWS%2fHOME_TV_SHOWS_001.jpg/</thumb>
+		<action>RunScript(&quot;script.qlickplay&quot;,info=list,type=tv,query=qqq)</action>
+	</shortcut>-->
+</shortcuts>

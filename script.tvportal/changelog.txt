@@ -1,0 +1,100 @@
+v.2.0.3:
+- New startup options, a great setup solution for noobs who don't venture into the settings.
+- Better integration with MetalliQ, should no longer be any crashes.
+- Fixed UK listings and added Irish to the options.
+- Fixed the scanning of online and local xml files, now works with webgrab++, zap2xml and mc2xml.
+
+v.2.0:
+
+- Auto grabbing of channel data now available to NaN members (US & UK currently very good and well organised)
+- Added back the option for ini file downloads as we have a great idea for that coming up :)
+
+- Added brand new awesome metalliq functions:
+--- First of all make sure you already have your channels scanned in
+--- Open Metalliq add-on (min. v1.5) and install the relevant players via the totalsetup.
+--- Go to TVP settings and login with your NaN login details
+--- Enable the ini sync option
+--- In the Super Favourite section (next tab) choose the SF folder you want to use for your live tv
+--- Make sure the metalliq option is ticked (it's on by default) then press the option to scan in your content.
+    This will scan what channels you have and create folders for them. You'll have the normal SF folders for each channel
+    and if you want to continue using this method you can - just disable the metalliq option. However the metalliq option
+    really is awesome... It creates a SF folder for each of your channels and populates those SF folders with links to
+    each of the players you have installed for metalliq live tv. Click on one and if it fails to play you'll get a red cross
+    to signify that player didn't work last time you tried, if it works you'll get a green + sign.
+
+-- New donator option, a little gift for users that have made donations on the NaN forum. You can now run a second instance of TVP which has all the latest development updates.
+   The donator versions are bleeding edge so there may well be some bugs, however you can switch between test version and stable version at the click of a button (in settings).
+
+-- Scanning of XML files now done using RegEx rather than Elementtree, surprisingly it's MUCH faster and should also work on all platforms.
+-- Added support for more XML compatibility, not found any online sources that fail to import on this update.
+-- Far better meta and metaliq integration which allows for catchup or live options - will search your addons for the program title or the channel name.
+-- Option to automatically add any SF folders that have a valid favourites.xml even if you have no EPG data. These will be added as dummy channels at the bottom of the EPG but can be moved.
+-- Added option in settings to create a SYNC backup. This is used for the sync feature so you can synchronise multiple installs.
+-- Scanning listings now adds a country code and cleans up the channel names. No more duplicate channels for different countries (MTV as an example).
+-- Logos can now be automatically renamed using TVP tools, you only need one logo for each channel regardless of country.
+-- Fixed touch screen setting, now only shows program/channel art if touch settings are off. If they are enabled the touch controls appear instead.
+-- Re-written a lot of the startup code, it's now much faster at loading
+-- (Hopefully) fixed problem with losing customisations after new listing import
+-- Changed the misleading default message from "Listings coming soon" to "No information available"
+-- Skin update, old ones will most likely not work - ask on forum if you need help with skinning
+-- Included more icons (many need renaming). Thanks to jj_jake and icannuck.
+-- Option in settings to use the nan categories and also the nan channel ordering. This will copy over the cats.xml and chan.xml files that we have been maintaining.
+
+
+
+v.1.1.2:
+- Added fix for launching from outside programs menu, will now physically open to programs and open TVP from there.
+- Added option to clear cookies
+
+v.1.1.1:
+- Added "development" test versions for donators on noobsandnerds forum (see forum for details on changelog)
+- Added back the ini files
+- Updated more logos
+
+v.1.1:
+- Now any new items added to your SF folder that you don't have listings for will be auto added to the EPG as dummy channels.
+- Added compatibility for meta integration (login required in add-on).
+- Added ability to use online XML files.
+- Auto update of listings, they update as and when your local or web files change.
+- The vast majority of XML files should now work regardless of which grabber was used.
+- Ability to add up to 5 different XML files all with optional timezone offsets.
+- Auto cleansing of old listings from db, the db will now only store up to 12 hrs in the past.
+- Added option to ignore ini files and open direct into SF folders. This currently will disable channel surfing though.
+- Much simpler setup, everything is set in addon settings - no yes/no dialogs when updating listings.
+- Auto update of logo pack so it syncs with the NaN master one (optional, requires login).
+- Removed initial popup promoting OTTV (at the request of DixieDean).
+
+v.1.0.6:
+- Hopefully final fix for using special path for SF folders
+- Fixed issues with login, new url and bug fix for not registered.
+
+v.1.0.5:
+- Fixed bug with SF folder creation, the special path can now be used
+- Updated some logging methods
+
+v.1.0.4:
+- Added basic adult filter for categories, channels still show but not in cats
+- Improved the login functionlity
+
+v.1.0.3:
+- Improved the import function, now much better error checking
+- updated the cats.xml and chan.xml files to work with UK (Atlas), USA (DISH) & Canada (Vmedia)
+
+v.1.0.2:
+- Fixed glitch with resetting channels, wasn't removing the chanchk file
+
+v.1.0.1:
+- Changed initial boot message to a tidier one
+- Updated artwork
+
+v.1.0:
+- Initial fork of script.tvguidedixie v3.3.3 (Feb-28-16)
+- Changed login to noobsandnerds
+- Added option to bring up categories when clicking left in guide
+- Added option to only show channels that have populated SF folders
+- Added SF folder generator which setup up blank folders to fill up with faves
+- Changed wording to maintenance tab in addon settings as it was confusing for users
+- Added XML importer so users can import their own listings created by mc2xml
+- Added remote share option so users can sync with their main server for addon_data
+- Added check to see if db is empty. If it is then don't continue
+- Added new import method for logos, skins and ini files

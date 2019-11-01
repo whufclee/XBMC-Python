@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.tvportal" name="TV Portal" version="2.0.4" provider-name="whufclee, DixieDean, Spoyser">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.3.0"/>
+        <import addon="script.module.simplejson" version="2.0.10"/>
+        <import addon="script.module.elementtree" version="1.2.7"/>
+        <import addon="repository.noobsandnerds" version="0.0.0.1"/>
+        <import addon="plugin.program.super.favourites" version="0.0.0.1"/>
+        <import addon="plugin.video.metalliq" version="1.0.5"/>
+        <import addon="script.tvportal.tools" version="1.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="addon.py" />
+    <extension point="xbmc.service" library="service.py" start="login" />
+    <extension point="xbmc.addon.metadata">
+   <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+  </extension>
+        <summary>TV Portal EPG</summary>
+        <description>Much more than just an EPG. The aim of the project is to create something as feature rich as possible but at the same time offer a fully automated solution which requires very little configuration by the end user. With the community giving feedback and ideas as well as submitting artwork/listings for others to use it's really made this EPG stand out from the crowd. If you want innovating features then TV Portal is where you'll find them first! Development is VERY active at noobsandnerds.com</description>
+        <platform>all</platform>
+        <language></language>
+        <license>GPLv2</license>
+        <disclaimer>Thanks to the On-Tapp.TV team for the original code this was forked from. That was used as a base as it was the best EPG solution available at the time, the code has now been hugely improved upon and has gone in a very different direction to the OTTV project.</disclaimer>
+        <ref>a8fb1a1917f6c1c706ff4e8ef0fe0a93</ref>
+        <video_guide></video_guide>
+        <video_preview>WdKIzajiBBI</video_preview>
+    </extension>
+
+	<extension point="kodi.context.item" library="osd.py">        
+      <item>
+        <label>TV Portal Mini-Guide</label>
+        <visible>true</visible>
+      </item>
+	</extension>
+</addon>

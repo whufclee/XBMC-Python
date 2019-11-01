@@ -1,0 +1,23 @@
+v.1.0:
+- Initial version
+
+Instructions:
+Go to your kodi folder and remove anything you don't want to include in the keyword.
+We recommend deleting packages, addon_data (unless your planning on using it for addon fixes),
+thumbnails and databases are useless and can certainly come out too.
+
+Once you're happy with the contents of your kodi folder you can zip up the CONTENTS of the
+kodi folder (not the actual folder itself but the contents) and then upload to somewhere like
+copy.com or archive.org.
+
+Once uploaded grab the final resolved download URL, this URL must start immediately downloading
+if you enter it into a web browser. If there are any buttons you need to press to start the
+download then right click on these and copy the link from the relevant download button.
+
+Go to http://urlshortbot.com
+Paste your download URL you just copied
+In the keyword section type noobs<your_keyword>
+
+As an example if you wanted to create a keyword for a disney artwork pack you could do:
+noobsdisney
+With the above keyword the end user would just type in disney, the noobs part is not used in kodi.

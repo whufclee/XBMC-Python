@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.community.portal" name=" NaN Community Portal" version="1.0.4" provider-name="Spoyser, DixieDean, noobsandnerds">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.3.0"/>	
+    </requires>	
+    <extension point="xbmc.python.script" library="default.py" />
+<!--	<extension point="xbmc.service" library="service.py" start="login" />-->
+    <extension point="xbmc.addon.metadata">
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio executable image</provides>
+    </extension>
+		<summary lang="en">Community Portal</summary>
+		<description lang="en">Your main hub for everything Kodi. Add all your favourite content in here and create your very own easy to use setup.</description>
+		<platform>all</platform>
+  </extension>
+</addon>

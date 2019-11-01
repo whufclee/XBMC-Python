@@ -1,0 +1,1122 @@
+# XBMC Media Center language file
+# Addon Name: TV Guide
+# Addon id: script.tvportal
+# Addon Provider: twinther [tommy@winther.nu]
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: XBMC Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "No description"
+msgstr ""
+
+msgctxt "#30001"
+msgid "[B]Loading EPG.[/B]"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Please wait..."
+msgstr ""
+
+msgctxt "#30003"
+msgid "Approximately %d seconds left..."
+msgstr ""
+
+msgctxt "#30004"
+msgid "Loading in progress..."
+msgstr ""
+
+msgctxt "#30005"
+msgid "Mouse control"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Now"
+msgstr ""
+
+msgctxt "#30007"
+msgid "[B]Tip![/B] You can also use the scroll wheel"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30009"
+msgid "No information available"
+msgstr ""
+
+#empty strings from id 30010 to 30099
+
+msgctxt "#30100"
+msgid "General"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Main Settings"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Show channels from category"
+msgstr ""
+
+msgctxt "#30103"
+msgid "XMLTV file"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Clear cache..."
+msgstr ""
+
+msgctxt "#30105"
+msgid "Done!"
+msgstr ""
+
+msgctxt "#30106"
+msgid "Show notification before selected programs start"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Use program image as background"
+msgstr ""
+
+msgctxt "#30108"
+msgid "Clear all reminders..."
+msgstr ""
+
+msgctxt "#30109"
+msgid "Remember to clear the cache when you change source"
+msgstr ""
+
+msgctxt "#30110"
+msgid "Update program information on XBMC startup"
+msgstr ""
+
+msgctxt "#30111"
+msgid "Play channels using the YouSee web-tv addon"
+msgstr ""
+
+msgctxt "#30112"
+msgid "Notifications"
+msgstr ""
+
+msgctxt "#30113"
+msgid "Play channels using the Danish Live TV addon"
+msgstr ""
+
+msgctxt "#30114"
+msgid "Extra Features"
+msgstr ""
+
+msgctxt "#30115"
+msgid "- clear cache first"
+msgstr ""
+
+msgctxt "#30116"
+msgid "Search for channel logos in"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Dixie URL"
+msgstr ""
+
+msgctxt "#30118"
+msgid "Enable OSD menu"
+msgstr ""
+
+msgctxt "#30119"
+msgid "Disabling the OSD menu may fix video stuttering."
+msgstr ""
+
+msgctxt "#30120"
+msgid "Use alternate streaming method (required for some addons)"
+msgstr ""
+
+msgctxt "#30121"
+msgid "Alternative streaming is not compatible with OSD menu"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Back Up"
+msgstr ""
+
+msgctxt "#30123"
+msgid "Enable Touch Screen"
+msgstr ""
+
+msgctxt "#30124"
+msgid "Global Timezone offset - use if listings are out of sync on all channels."
+msgstr ""
+
+msgctxt "#30125"
+msgid "Maintenance"
+msgstr ""
+
+msgctxt "#30126"
+msgid "Wipe listings but keep channel info - removes the db file."
+msgstr ""
+
+msgctxt "#30127"
+msgid "Reset channel mappings to defaults - will wipe all channel customisations"
+msgstr ""
+
+msgctxt "#30128"
+msgid "Choose Back Up Location..."
+msgstr ""
+
+msgctxt "#30129"
+msgid "Back Up"
+msgstr ""
+
+msgctxt "#30130"
+msgid "Restore"
+msgstr ""
+
+msgctxt "#30131"
+msgid "Rollback to previous channel list - may bring back old customisations"
+msgstr ""
+
+msgctxt "#30132"
+msgid "Click to - Fully Reset TV Portal. ALL settings will be lost inc. user/pass."
+msgstr ""
+
+#empty strings from id 30133 to 30149
+
+msgctxt "#30150"
+msgid "ERROR -  Possible unicode text error."
+msgstr ""
+
+msgctxt "#30151"
+msgid "There was a problem loading the listings."
+msgstr ""
+
+msgctxt "#30152"
+msgid "Please contact support."
+msgstr ""
+
+msgctxt "#30153"
+msgid "because the settings are invalid!"
+msgstr ""
+
+msgctxt "#30154"
+msgid "It looks like your current skin has a special"
+msgstr ""
+
+msgctxt "#30155"
+msgid "version of the TV Guide skin that is not up-to-date."
+msgstr ""
+
+msgctxt "#30156"
+msgid "Please try with a different skin..."
+msgstr ""
+
+msgctxt "#30157"
+msgid "It looks like the TV Guide database is broken."
+msgstr ""
+
+msgctxt "#30158"
+msgid "The database will be deleted and recreated."
+msgstr ""
+
+msgctxt "#30159"
+msgid "Channel configuration, etc. is unfortunately lost."
+msgstr ""
+
+msgctxt "#30160"
+msgid "Please check your account or the Add-on settings."
+msgstr ""
+
+#empty strings from id 30160 to 30199
+
+msgctxt "#30200"
+msgid "on [B]%s[/B] in 5 minutes..."
+msgstr ""
+
+msgctxt "#30201"
+msgid "on [B]%s[/B] is starting now..."
+msgstr ""
+
+#empty strings from id 30202 to 30299
+
+msgctxt "#30300"
+msgid "Watch %s"
+msgstr ""
+
+msgctxt "#30301"
+msgid "Remind"
+msgstr ""
+
+msgctxt "#30302"
+msgid "Don't remind"
+msgstr ""
+
+msgctxt "#30303"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30304"
+msgid "Choose Stream"
+msgstr ""
+
+msgctxt "#30305"
+msgid "Enable login"
+msgstr ""
+
+msgctxt "#30306"
+msgid "Remove Stream"
+msgstr ""
+
+msgctxt "#30307"
+msgid "Channels"
+msgstr ""
+
+msgctxt "#30308"
+msgid "Close Menu"
+msgstr ""
+
+msgctxt "#30309"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#30310"
+msgid "Choose a category from the list."
+msgstr ""
+
+msgctxt "#30311"
+msgid "Save"
+msgstr ""
+
+msgctxt "#30312"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30313"
+msgid "Settings"
+msgstr ""
+
+msgctxt "#30314"
+msgid "iPlayer"
+msgstr ""
+
+msgctxt "#30315"
+msgid "Super Search"
+msgstr ""
+
+msgctxt "#30316"
+msgid "ITV Player"
+msgstr ""
+
+msgctxt "#30317"
+msgid "Super Favourites"
+msgstr ""
+
+msgctxt "#30318"
+msgid "VPN"
+msgstr ""
+
+msgctxt "#30319"
+msgid "My Recordings"
+msgstr ""
+
+msgctxt "#30320"
+msgid "TV Portal Tools"
+msgstr ""
+
+#empty strings from id 30321 to 30499
+
+msgctxt "#30500"
+msgid "[B]Edit channel order and visibility[/B]"
+msgstr ""
+
+msgctxt "#30501"
+msgid "Move up and down to change the position of[CR]the channel. Select or navigate left to accept[CR]the position."
+msgstr ""
+
+msgctxt "#30502"
+msgid "Save"
+msgstr ""
+
+msgctxt "#30503"
+msgid "Cancel"
+msgstr ""
+
+#empty strings from id 30504 to 30599
+
+msgctxt "#30600"
+msgid "[B]Setup stream[/B]"
+msgstr ""
+
+msgctxt "#30601"
+msgid "Playlist or .strm"
+msgstr ""
+
+msgctxt "#30602"
+msgid "Favourites"
+msgstr ""
+
+msgctxt "#30603"
+msgid "Addons"
+msgstr ""
+
+msgctxt "#30604"
+msgid "Preview stream"
+msgstr ""
+
+msgctxt "#30605"
+msgid "Save"
+msgstr ""
+
+msgctxt "#30606"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30607"
+msgid "Stop preview"
+msgstr ""
+
+msgctxt "#30608"
+msgid "Super Favourites"
+msgstr ""
+
+msgctxt "#30609"
+msgid "IPTV PlayList"
+msgstr ""
+
+
+msgctxt "#30610"
+msgid "Browse..."
+msgstr ""
+
+msgctxt "#30611"
+msgid "Click Browse... below and navigate to your stream file. When you have chosen your file you can preview the stream to test if it works in XBMC."
+msgstr ""
+
+#empty strings from id 30612 to 30619
+
+msgctxt "#30620"
+msgid "Choose a favourite below."
+msgstr ""
+
+msgctxt "#30621"
+msgid "Choose a channel below."
+msgstr ""
+
+
+msgctxt "#30622"
+msgid "Click Browse... below and navigate to your Super Favourite. When you have chosen it you can preview the stream to test if it works in TV Portal."
+msgstr ""
+
+#empty strings from id 30623 to 30699
+
+msgctxt "#30700"
+msgid "Multiple addons provide this channels.[CR]Choose one to watch the stream."
+msgstr ""
+
+#empty strings from id 30701 to 30799
+#weeb.tv mod
+
+msgctxt "#30800"
+msgid "JSON-EPG URL"
+msgstr ""
+
+msgctxt "#30801"
+msgid "Play channels using the Weeb.Tv addon"
+msgstr ""
+
+msgctxt "#30802"
+msgid "TV Guide is configured to stream using Weeb.Tv"
+msgstr ""
+
+msgctxt "#30803"
+msgid "addon which is not installed."
+msgstr ""
+
+msgctxt "#30804"
+msgid "Streaming using that addon is now disabled."
+msgstr ""
+
+msgctxt "#30805"
+msgid "Support The Original Devs"
+msgstr ""
+
+msgctxt "#30806"
+msgid "This addon is based on the original work from On-Tapp.TV[CR]If you want reliable listings you may want to consider subscribing to their service. For more details visit [COLOR=dodgerblue]www.on-tapp.tv[/COLOR]"
+msgstr ""
+
+msgctxt "#30807"
+msgid "Please wait..."
+msgstr ""
+
+msgctxt "#30808"
+msgid "Checking login details and update files"
+msgstr ""
+
+msgctxt "#30809"
+msgid "SF Folders Creation Complete"
+msgstr ""
+
+msgctxt "#30810"
+msgid "Your Super Favourites path has now been updated. Channels will only show if they have at least one favourite added."
+msgstr ""
+
+msgctxt "#30811"
+msgid "Creating list of channels, this should only take a minute or so"
+msgstr ""
+
+msgctxt "#30812"
+msgid "Please be patient - this may take quite some time!"
+msgstr ""
+
+msgctxt "#30813"
+msgid "Database is locked"
+msgstr ""
+
+msgctxt "#30814"
+msgid "Unable to create a new database at this time as it's currently in use. Please restart and try again."
+msgstr ""
+
+msgctxt "#30815"
+msgid "Please wait, scanning listings..."
+msgstr ""
+
+msgctxt "#30816"
+msgid "Total Channels Found: "
+msgstr ""
+
+msgctxt "#30817"
+msgid "Now scanning listings..."
+msgstr ""
+
+msgctxt "#30818"
+msgid "Listings found "
+msgstr ""
+
+msgctxt "#30819"
+msgid "TV Portal Import Complete"
+msgstr ""
+
+msgctxt "#30820"
+msgid "The import of TV channels is now complete, would you like to open the EPG now?"
+msgstr ""
+
+msgctxt "#30821"
+msgid "Is the XML import in progress?"
+msgstr ""
+
+msgctxt "#30822"
+msgid "It looks like something is already using the database, are you sure you want to continue? If you're currently importing an XML DO NOT click yes!"
+msgstr ""
+
+msgctxt "#30823"
+msgid "No Listings Found"
+msgstr ""
+
+msgctxt "#30824"
+msgid "To use this add-on you need to either import your channel listings or create your own dummy channels using the TV Portal Tools."
+msgstr ""
+
+msgctxt "#30825"
+msgid "Wrong Password"
+msgstr ""
+
+msgctxt "#30826"
+msgid "You have entered an incorrect password for this account, please check settings and try again."
+msgstr ""
+
+msgctxt "#30827"
+msgid "Wrong Username"
+msgstr ""
+
+msgctxt "#30828"
+msgid "You have not entered a valid username, please either correct your login details or register for FREE at www.noobsandnerds.com."
+msgstr ""
+
+msgctxt "#30829"
+msgid "Account Restricted"
+msgstr ""
+
+msgctxt "#30830"
+msgid "There is a ban on your account, the most likely cause for this is account sharing. Please make sure you haven\'t accidentally left your login details on a shared computer."
+msgstr ""
+
+msgctxt "#30831"
+msgid "Re-Activate Account"
+msgstr ""
+
+msgctxt "#30832"
+msgid "You need to re-activate your account on the new forum. Simply visit the forum at www.noobsandnerds.com and login with your existing credentials."
+msgstr ""
+
+msgctxt "#30833"
+msgid "Servers Busy"
+msgstr ""
+
+msgctxt "#30834"
+msgid "Sorry the servers appear to be struggling with demand, please try again. Sorry for any inconvenience, we are currently working on improving the speeds."
+msgstr ""
+
+msgctxt "#30835"
+msgid "No Login Details"
+msgstr ""
+
+msgctxt "#30836"
+msgid "You have enabled the login feature but not entered any details. Please add your login details or disable the option."
+msgstr ""
+
+msgctxt "#30837"
+msgid "Updating TVP database"
+msgstr ""
+
+msgctxt "#30838"
+msgid "DO NOT close Kodi at this point"
+msgstr ""
+
+msgctxt "#30839"
+msgid "TVP Updates Complete"
+msgstr ""
+
+msgctxt "#30840"
+msgid "All database files updated successfully"
+msgstr ""
+
+msgctxt "#30841"
+msgid "Use NaN channel ordering"
+msgstr ""
+
+msgctxt "#30842"
+msgid "Premium Features"
+msgstr ""
+
+msgctxt "#30843"
+msgid "Unlock Features with noobsandnerds login"
+msgstr ""
+
+msgctxt "#30844"
+msgid "Forum to use for login"
+msgstr ""
+
+msgctxt "#30845"
+msgid "Username"
+msgstr ""
+
+msgctxt "#30846"
+msgid "Password"
+msgstr ""
+
+msgctxt "#30847"
+msgid "Use a remote share for addon data"
+msgstr ""
+
+msgctxt "#30848"
+msgid "Enter location for shared addon data"
+msgstr ""
+
+msgctxt "#30849"
+msgid "Sync with online ini files"
+msgstr ""
+
+msgctxt "#30850"
+msgid "Sync with NaN master logo pack"
+msgstr ""
+
+msgctxt "#30851"
+msgid "Show the XXX category"
+msgstr ""
+
+msgctxt "#30852"
+msgid "TV mini guide - bring up the tv guide from anywhere in Kodi"
+msgstr ""
+
+msgctxt "#30853"
+msgid "[B]Click to program Mini-Guide Hot Key[/B]"
+msgstr ""
+
+msgctxt "#30854"
+msgid "Super Favourite / MetalliQ Integration"
+msgstr ""
+
+msgctxt "#30855"
+msgid "Only show my Super Favourite Channels"
+msgstr ""
+
+msgctxt "#30856"
+msgid "Auto Play SF items (Experimental)"
+msgstr ""
+
+msgctxt "#30857"
+msgid "SF Channel Folder"
+msgstr ""
+
+msgctxt "#30858"
+msgid "[COLOR=gold]Create SF Channel Folders in path above[/COLOR]"
+msgstr ""
+
+msgctxt "#30859"
+msgid "This helps with dead links that need relinking"
+msgstr ""
+
+msgctxt "#30860"
+msgid "Always Offer To Choose Stream"
+msgstr ""
+
+msgctxt "#30861"
+msgid "Easy access to categories list - disables ability to look back in time."
+msgstr ""
+
+msgctxt "#30862"
+msgid "Show Categories On Left Click"
+msgstr ""
+
+msgctxt "#30863"
+msgid "Not based in UK? You may need to change this option"
+msgstr ""
+
+msgctxt "#30864"
+msgid "Choose Film-On UK TV Links"
+msgstr ""
+
+msgctxt "#30865"
+msgid "Allow Enhanced Add-on Linking"
+msgstr ""
+
+msgctxt "#30866"
+msgid "Do not enable unless you absolutely need touchscreen support"
+msgstr ""
+
+msgctxt "#30867"
+msgid "Boot directly into the EPG on startup of Kodi"
+msgstr ""
+
+msgctxt "#30868"
+msgid "Start Automatically (requires reboot)"
+msgstr ""
+
+msgctxt "#30869"
+msgid "Worried you may leave the TV streaming content? Set a timer here"
+msgstr ""
+
+msgctxt "#30870"
+msgid "Quit Stream If Idle For"
+msgstr ""
+
+msgctxt "#30871"
+msgid "Stop accidental backing out of the EPG - this gives a yes/no dialog"
+msgstr ""
+
+msgctxt "#30872"
+msgid "Confirm Exit From TV Portal"
+msgstr ""
+
+msgctxt "#30873"
+msgid "Set the global timezone offset"
+msgstr ""
+
+msgctxt "#30874"
+msgid "Use NaN category mapping"
+msgstr ""
+
+msgctxt "#30875"
+msgid "Use NaN configs - see forum for full details"
+msgstr ""
+
+msgctxt "#30876"
+msgid "Synchronise with NaN categories"
+msgstr ""
+
+msgctxt "#30877"
+msgid "Synchronise with NaN channel ordering (experimental)"
+msgstr ""
+
+msgctxt "#30878"
+msgid "[B]Click to reset Mini-Guide Hot Key[/B]"
+msgstr ""
+
+msgctxt "#30879"
+msgid "Current LogoPack"
+msgstr ""
+
+msgctxt "#30880"
+msgid "Previous LogoPack"
+msgstr ""
+
+msgctxt "#30881"
+msgid "FIRSTRUN"
+msgstr ""
+
+msgctxt "#30882"
+msgid "Mini-Guide Installed"
+msgstr ""
+
+msgctxt "#30883"
+msgid "Previous GMT"
+msgstr ""
+
+msgctxt "#30884"
+msgid "categories"
+msgstr ""
+
+msgctxt "#30885"
+msgid "Current Version"
+msgstr ""
+
+msgctxt "#30886"
+msgid "Skin Version"
+msgstr ""
+
+msgctxt "#30887"
+msgid "Logo Version"
+msgstr ""
+
+msgctxt "#30888"
+msgid "ini Version"
+msgstr ""
+
+msgctxt "#30889"
+msgid "SF Folder Count"
+msgstr ""
+
+msgctxt "#30890"
+msgid "Update EPG Date"
+msgstr ""
+
+msgctxt "#30891"
+msgid "Current Channels"
+msgstr ""
+
+msgctxt "#30892"
+msgid "Updated Channels"
+msgstr ""
+
+msgctxt "#30893"
+msgid "messageID"
+msgstr ""
+
+msgctxt "#30894"
+msgid "login"
+msgstr ""
+
+msgctxt "#30895"
+msgid "Add SF folders channels even if I have no EPG data scanned"
+msgstr ""
+
+msgctxt "#30896"
+msgid "Ignore ini files and open SF folder - Disables channel surfing ability"
+msgstr ""
+
+msgctxt "#30897"
+msgid "[COLOR=gold]----------------------------------------------------[/COLOR]"
+msgstr ""
+
+msgctxt "#30898"
+msgid "Choose to watch the live channel or search for movie/show via add-ons"
+msgstr ""
+
+msgctxt "#30899"
+msgid "Give the option of watching live or catchup"
+msgstr ""
+
+msgctxt "#30900"
+msgid "[COLOR=gold]Use latest test version (donators only)[/COLOR]"
+msgstr ""
+
+msgctxt "#30901"
+msgid "Check Login Details"
+msgstr ""
+
+msgctxt "#30902"
+msgid "Please double check your login credentials, once entered correctly try running the add-on to activate the test version then come back and try again."
+msgstr ""
+
+msgctxt "#30903"
+msgid "Log Options - Add an email to receive a link to your log"
+msgstr ""
+
+msgctxt "#30904"
+msgid "Enable Debug Mode (enable if asking for help on forum)"
+msgstr ""
+
+msgctxt "#30905"
+msgid "Always skip Kodi.old.log (log from previous run)"
+msgstr ""
+
+msgctxt "#30906"
+msgid "Email address"
+msgstr ""
+
+msgctxt "#30907"
+msgid "[COLOR=gold]Click to upload log[/COLOR]"
+msgstr ""
+
+msgctxt "#30908"
+msgid "Backup/Restore Channel Data"
+msgstr ""
+
+msgctxt "#30909"
+msgid "Create a FULL backup - Can restore on this device"
+msgstr ""
+
+msgctxt "#30910"
+msgid "Create a SYNC backup - Synchronise multiple installs"
+msgstr ""
+
+msgctxt "#30911"
+msgid "Fixes"
+msgstr ""
+
+msgctxt "#30912"
+msgid "Update listings - rescan XML files for updates"
+msgstr ""
+
+msgctxt "#30913"
+msgid "Force listings update - only use if the option above doesn't work"
+msgstr ""
+
+msgctxt "#30914"
+msgid "Choose USTV Catch Up"
+msgstr ""
+
+msgctxt "#30915"
+msgid "Choose Trailers Add-on"
+msgstr ""
+
+msgctxt "#30916"
+msgid "Appearance - set your skin and logo pack"
+msgstr ""
+
+msgctxt "#30917"
+msgid "Choose Skin Style"
+msgstr ""
+
+msgctxt "#30918"
+msgid "Channel Settings"
+msgstr ""
+
+msgctxt "#30919"
+msgid "Custom Channel Folder"
+msgstr ""
+
+msgctxt "#30920"
+msgid "Logo Pack Settings"
+msgstr ""
+
+msgctxt "#30921"
+msgid "Choose Custom Logo Pack"
+msgstr ""
+
+msgctxt "#30922"
+msgid "Choose Built-in Logo Pack"
+msgstr ""
+
+msgctxt "#30923"
+msgid "Add a custom IPTV Playlist - easy integration for online and local playlists"
+msgstr ""
+
+msgctxt "#30924"
+msgid "IPTV Playlist"
+msgstr ""
+
+msgctxt "#30925"
+msgid "File"
+msgstr ""
+
+msgctxt "#30926"
+msgid "URL"
+msgstr ""
+
+msgctxt "#30927"
+msgid "Add my own channels - create your own XML file and scan into db here"
+msgstr ""
+
+msgctxt "#30928"
+msgid "TVXML 1 Type"
+msgstr ""
+
+msgctxt "#30929"
+msgid "Choose Local File for XML 1"
+msgstr ""
+
+msgctxt "#30930"
+msgid "Enter URL Location for XML 1"
+msgstr ""
+
+msgctxt "#30931"
+msgid "Set Country for this XML (recommended)"
+msgstr ""
+
+msgctxt "#30932"
+msgid "Choose Country"
+msgstr ""
+
+msgctxt "#30933"
+msgid "-- Open Test Settings"
+msgstr ""
+
+msgctxt "#30934"
+msgid "Offset listings - set offset (in hours) for listings in wrong timezone"
+msgstr ""
+
+msgctxt "#30935"
+msgid "TVXML 2 Type"
+msgstr ""
+
+msgctxt "#30936"
+msgid "Choose Local File for XML 2"
+msgstr ""
+
+msgctxt "#30937"
+msgid "Enter URL Location for XML 2"
+msgstr ""
+
+msgctxt "#30938"
+msgid "TVXML 3 Type"
+msgstr ""
+
+msgctxt "#30939"
+msgid "Choose Local File for XML 3"
+msgstr ""
+
+msgctxt "#30940"
+msgid "Enter URL Location for XML 3"
+msgstr ""
+
+msgctxt "#30941"
+msgid "TVXML 4 Type"
+msgstr ""
+
+msgctxt "#30942"
+msgid "Choose Local File for XML 4"
+msgstr ""
+
+msgctxt "#30943"
+msgid "Enter URL Location for XML 4"
+msgstr ""
+
+msgctxt "#30944"
+msgid "TVXML 5 Type"
+msgstr ""
+
+msgctxt "#30945"
+msgid "Choose Local File for XML 5"
+msgstr ""
+
+msgctxt "#30946"
+msgid "Enter URL Location for XML 5"
+msgstr ""
+
+msgctxt "#30947"
+msgid "TVXML 6 Type"
+msgstr ""
+
+msgctxt "#30948"
+msgid "Choose Local File for XML 6"
+msgstr ""
+
+msgctxt "#30949"
+msgid "Enter URL Location for XML 6"
+msgstr ""
+
+msgctxt "#30950"
+msgid "TVXML 7 Type"
+msgstr ""
+
+msgctxt "#30951"
+msgid "Choose Local File for XML 7"
+msgstr ""
+
+msgctxt "#30952"
+msgid "Enter URL Location for XML 7"
+msgstr ""
+
+msgctxt "#30953"
+msgid "TVXML 8 Type"
+msgstr ""
+
+msgctxt "#30954"
+msgid "Choose Local File for XML 8"
+msgstr ""
+
+msgctxt "#30955"
+msgid "Enter URL Location for XML 8"
+msgstr ""
+
+msgctxt "#30956"
+msgid "TVXML 9 Type"
+msgstr ""
+
+msgctxt "#30957"
+msgid "Choose Local File for XML 9"
+msgstr ""
+
+msgctxt "#30958"
+msgid "Enter URL Location for XML 9"
+msgstr ""
+
+msgctxt "#30959"
+msgid "TVXML 10 Type"
+msgstr ""
+
+msgctxt "#30960"
+msgid "Choose Local File for XML 10"
+msgstr ""
+
+msgctxt "#30961"
+msgid "Enter URL Location for XML 10"
+msgstr ""
+
+msgctxt "#30962"
+msgid "You need to enable the login option to use the test version. This feature is only available to members who have donated towards the noobsandnerds development fund. You can disable this option to continue using the standard version."
+msgstr ""
+
+msgctxt "#30963"
+msgid "No test version available"
+msgstr ""
+
+msgctxt "#30964"
+msgid "There is no test version available for this add-on at this time."
+msgstr ""
+
+msgctxt "#30965"
+msgid "Error"
+msgstr ""
+
+msgctxt "#30966"
+msgid "Sorry there was an error trying to retrieve the latest test version, the developer may be working on pushing a new update."
+msgstr ""
+
+msgctxt "#30967"
+msgid "Use SF MetalliQ links (recommended)"
+msgstr ""
+
+msgctxt "#30968"
+msgid "Use Community XML Files"
+msgstr ""
+
+msgctxt "#30969"
+msgid "[COLOR=gold]Scan in XML File - this can take a long time![/COLOR]"
+msgstr ""
+
+msgctxt "#30970"
+msgid "Both your standard SF folders and Metalliq SF folders have been created.  Super Favourites will only show as options in the EPG if you actually add a favourite to one or more of the folders."
+msgstr ""
+
+msgctxt "#30971"
+msgid "Clear Cookies - use if having problems with login."
+msgstr ""
+
+msgctxt "#30972"
+msgid "Update SF folders on every start"
+msgstr ""
+
+msgctxt "#30973"
+msgid "Enable All MetalliQ Players"
+msgstr ""

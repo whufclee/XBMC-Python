@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1114" type="window">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="label">
+			<posx>100</posx>
+			<posy>50</posy>
+			<width>350</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Gaming Section</label>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>100</posy>
+			<width>350</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Fully customise your gaming section.[CR]</label>
+		</control>
+		<control type="label">
+			<posx>500</posx>
+			<posy>50</posy>
+			<width>200</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Shortcuts</label>
+			<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+		</control>				
+		<control type="label">
+			<posx>500</posx>
+			<posy>100</posy>
+			<width>250</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Select the shortcut set to use.[CR]</label>
+			<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+		</control>
+		<control type="label">
+			<posx>825</posx>
+			<posy>50</posy>
+			<width>200</width>
+			<height>60</height>
+			<font>font35_title</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Sub-Menu</label>
+			<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+		</control>				
+		<control type="label">
+			<posx>825</posx>
+			<posy>100</posy>
+			<width>250</width>
+			<height>40</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>Select the Sub-Menu set to use.[CR]</label>
+			<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+		</control>
+
+<!-- Shortcuts Section -->
+		<control type="group">
+			<control type="grouplist" id="9001" description="Gamimg Sub-Menu Options">
+				<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				<posx>500</posx>
+				<posy>130</posy>
+				<width>300</width>
+				<height>391</height>
+				<onleft>9000</onleft>
+				<onright>9002</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>280</scrolltime>
+				<control type="button" id="100">
+					<description>Show Shortcuts</description>
+					<width>275</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=lime]Shortcuts ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoGamingShortcuts)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoGamingShortcuts)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoGamingShortcuts)</visible>
+				</control>
+				<control type="button" id="101">
+					<description>Show Shortcuts</description>
+					<width>275	</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoGamingShortcuts)</onclick>
+					<onclick>Skin.SetString(GamingShortcut,Gaming)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoGamingShortcuts)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoGamingShortcuts)</visible>
+				</control>
+				<control type="radiobutton" id="118" description="Android">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Android</label>
+					<onclick>Skin.SetString(GamingShortcut,Android)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Android)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="radiobutton" id="108" description="Favourites">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Favourites</label>
+					<onclick>Skin.SetString(GamingShortcut,Favourites)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Favourites)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="102" description="Gaming">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Gaming</label>
+					<onclick>Skin.SetString(GamingShortcut,Gaming)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Gaming) | IsEmpty(Skin.String(GamingShortcut))</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="103" description="Live TV">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Live TV</label>
+					<onclick>Skin.SetString(GamingShortcut,Live TV)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Live TV)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="104" description="Movies">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Movies</label>
+					<onclick>Skin.SetString(GamingShortcut,Movies)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Movies)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="105" description="Music">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Music</label>
+					<onclick>Skin.SetString(GamingShortcut,Music)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Music)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="106" description="Pictures">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Pictures</label>
+					<onclick>Skin.SetString(GamingShortcut,Pictures)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Pictures)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="107" description="Programs">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Programs</label>
+					<onclick>Skin.SetString(GamingShortcut,Programs)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Programs)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="117" description="System">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>System</label>
+					<onclick>Skin.SetString(GamingShortcut,System)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),System)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="109" description="TV Shows">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>TV Shows</label>
+					<onclick>Skin.SetString(GamingShortcut,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),TV Shows)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="110" description="Videos">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Videos</label>
+					<onclick>Skin.SetString(GamingShortcut,Videos)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),Videos)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="111" description="Custom1">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 1</label>
+					<onclick>Skin.SetString(GamingShortcut,CF1)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),CF1)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="112" description="Custom2">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 2</label>
+					<onclick>Skin.SetString(GamingShortcut,CF2)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),CF2)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="113" description="Custom3">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 3</label>
+					<onclick>Skin.SetString(GamingShortcut,CF3)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),CF3)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="114" description="Custom4">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 4</label>
+					<onclick>Skin.SetString(GamingShortcut,CF4)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),CF4)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="115" description="Custom5">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 5</label>
+					<onclick>Skin.SetString(GamingShortcut,CF5)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),CF5)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+				<control type="radiobutton" id="116" description="Custom6">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 6</label>
+					<onclick>Skin.SetString(GamingShortcut,CF6)</onclick>
+					<selected>StringCompare(Skin.String(GamingShortcut),CF6)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingShortcuts)</enable>
+				</control>
+			</control>
+		</control>
+<!-- Sub Menu Section -->
+		<control type="group">
+			<control type="grouplist" id="9002" description="Gaming Sub-Menu Options">
+				<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				<posx>825</posx>
+				<posy>130</posy>
+				<width>300</width>
+				<height>391</height>
+				<onleft>9001</onleft>
+				<onright>9000</onright>
+				<onup>9002</onup>
+				<ondown>9002</ondown>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>280</scrolltime>
+				<control type="button" id="200">
+					<description>Show Sub-Menus</description>
+					<width>275</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=lime]Sub-Menus ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoGamingSubMenus)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoGamingSubMenus)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoGamingSubMenus)</visible>
+				</control>
+				<control type="button" id="201">
+					<description>Show SubMenus</description>
+					<width>275	</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoGamingSubMenus)</onclick>
+					<onclick>Skin.SetString(GamingSubMenu,Gaming)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoGamingSubMenus)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoGamingSubMenus)</visible>
+				</control>
+				<control type="radiobutton" id="218" description="Android">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Andoroid</label>
+					<onclick>Skin.SetString(GamingSubMenu,Android)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Android)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+					<visible>System.Platform.Android</visible>
+				</control>
+				<control type="radiobutton" id="208" description="Favourites">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Favourites</label>
+					<onclick>Skin.SetString(GamingSubMenu,Favourites)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Favourites)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="202" description="Gaming">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Gaming</label>
+					<onclick>Skin.SetString(GamingSubMenu,Gaming)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Gaming) | IsEmpty(Skin.String(GamingSubMenu))</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="203" description="Live TV">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Live TV</label>
+					<onclick>Skin.SetString(GamingSubMenu,Live TV)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Live TV)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="204" description="Movies">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Movies</label>
+					<onclick>Skin.SetString(GamingSubMenu,Movies)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Movies)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="205" description="Music">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Music</label>
+					<onclick>Skin.SetString(GamingSubMenu,Music)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Music)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="206" description="Pictures">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Pictures</label>
+					<onclick>Skin.SetString(GamingSubMenu,Pictures)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Pictures)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="207" description="Programs">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Programs</label>
+					<onclick>Skin.SetString(GamingSubMenu,Programs)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Programs)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="217" description="System">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>System</label>
+					<onclick>Skin.SetString(GamingSubMenu,System)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),System)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="209" description="TV Shows">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>TV Shows</label>
+					<onclick>Skin.SetString(GamingSubMenu,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),TV Shows)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="210" description="Videos">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Videos</label>
+					<onclick>Skin.SetString(GamingSubMenu,Videos)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),Videos)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="211" description="Custom1">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 1</label>
+					<onclick>Skin.SetString(GamingSubMenu,CF1)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),CF1)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="212" description="Custom2">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 2</label>
+					<onclick>Skin.SetString(GamingSubMenu,CF2)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),CF2)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="213" description="Custom3">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 3</label>
+					<onclick>Skin.SetString(GamingSubMenu,CF3)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),CF3)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="214" description="Custom4">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 4</label>
+					<onclick>Skin.SetString(GamingSubMenu,CF4)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),CF4)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="215" description="Custom5">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 5</label>
+					<onclick>Skin.SetString(GamingSubMenu,CF5)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),CF5)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+				<control type="radiobutton" id="216" description="Custom6">
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<width>275</width>
+					<label>Custom Favourites 6</label>
+					<onclick>Skin.SetString(GamingSubMenu,CF6)</onclick>
+					<selected>StringCompare(Skin.String(GamingSubMenu),CF6)</selected>
+					<enable>Skin.HasSetting(HomeMenuNoGamingSubMenus)</enable>
+				</control>
+			</control>
+		</control>		
+<!-- Main Gaming Section -->
+		<control type="group">
+			<control type="grouplist" id="9000">
+				<left>100</left>
+				<top>130</top>
+				<width>350</width>
+				<height>391</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<onleft>9002</onleft>
+				<onright>9001</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				
+<!--Enable Gaming on Nav Bar-->
+				<control type="button" id="1">
+					<description>Show Gaming Button</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>[COLOR=lime]GAMING Section ENABLED[/COLOR]</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoGamingButton)</onclick>
+					<selected>Skin.HasSetting(HomeMenuNoGamingButton)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="button" id="2">
+					<description>Show Gaming Button</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>[COLOR=red]DISABLED[/COLOR] - Click to enable</label>
+					<onclick>Skin.ToggleSetting(HomeMenuNoGamingButton)</onclick>
+					<selected>!Skin.HasSetting(HomeMenuNoGamingButton)</selected>
+					<visible>!Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="radiobutton" id="3">
+					<description>Use Custom Gaming Link</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Use Custom Gaming Link</label>
+					<onclick>Skin.ToggleSetting(UseDefaultGaming)</onclick>
+					<selected>Skin.HasSetting(UseDefaultGaming)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="button" id="4">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- Set Gaming Favourite</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(HomeCustomGaming.Label)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=HomeCustomGaming)</onclick>
+					<enable>Skin.HasSetting(UseDefaultGaming)</enable>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="radiobutton" id="5">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>31109</label>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.ToggleSetting(UseGamingCustomBackground)</onclick>
+					<selected>Skin.HasSetting(UseGamingCustomBackground)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="button" id="6">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- $LOCALIZE[31110]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(CustomGamingBackgroundPath)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.SetImage(CustomGamingBackgroundPath)</onclick>
+					<enable>Skin.HasSetting(UseGamingCustomBackground)</enable>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="radiobutton" id="7">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>Enable Custom Icon Overlay</label>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.ToggleSetting(UseCustomGamingIcon)</onclick>
+					<selected>Skin.HasSetting(UseCustomGamingIcon)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="button" id="8">
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>- Custom Videos Icon</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(CustomGamingPath)][/COLOR]</label2>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>Skin.SetImage(CustomGamingPath)</onclick>
+					<enable>Skin.HasSetting(UseCustomGamingIcon)</enable>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="radiobutton" id="9">
+					<description>Show Recently added info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show Recently Added Info</label>
+					<onclick>Skin.ToggleSetting(GamingRecentlyAdded)</onclick>
+					<selected>Skin.HasSetting(GamingRecentlyAdded)</selected>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="radiobutton" id="10">
+					<description>Show Recently added Movies info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show recently added Movies</label>
+					<onclick>Skin.ToggleSetting(GamingRecentlyAddedMovies)</onclick>
+					<onclick>Skin.SetString(GamingRA,Movies)</onclick>
+					<selected>StringCompare(Skin.String(GamingRA),Movies)</selected>
+					<selected>Skin.HasSetting(GamingRecentlyAddedMovies)</selected>
+					<enable>Skin.HasSetting(GamingRecentlyAdded)</enable>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="radiobutton" id="12">
+					<description>Show Recently added TV Shows info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show recently added TV Shows</label>
+					<onclick>Skin.ToggleSetting(GamingRecentlyAddedTVShows)</onclick>
+					<onclick>Skin.SetString(GamingRA,TV Shows)</onclick>
+					<selected>StringCompare(Skin.String(GamingRA),TV Shows)</selected>
+					<selected>Skin.HasSetting(GamingRecentlyAddedTVShows)</selected>
+					<enable>Skin.HasSetting(GamingRecentlyAdded)</enable>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+				<control type="radiobutton" id="11">
+					<description>Show Recently added music info</description>
+					<width>350</width>
+					<height>40</height>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>Show Recently added Music</label>
+					<onclick>Skin.ToggleSetting(GamingRecentlyAddedMusic)</onclick>
+					<onclick>Skin.SetString(GamingRA,Music)</onclick>
+					<selected>StringCompare(Skin.String(GamingRA),Music)</selected>
+					<selected>Skin.HasSetting(GamingRecentlyAddedMusic)</selected>
+					<enable>Skin.HasSetting(GamingRecentlyAdded)</enable>
+					<visible>Skin.HasSetting(HomeMenuNoGamingButton)</visible>
+				</control>
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include condition="Skin.HasSetting(EnableClock)">Clock</include>
+	</controls>
+</window>

@@ -1,0 +1,7 @@
+<settings>
+
+<category label="Backup Server">
+	<setting id="testdebug" type="bool" label="Use Backup Server" default="false" visible="true"/>
+</category>
+
+</settings>

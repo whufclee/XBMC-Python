@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language locale="eu">
+  <regions>
+    <region name="Euskal Herria" locale="EU">
+      <dateshort>YYYY/MM/DD</dateshort>
+      <datelong>DDDD, YYYY(e)ko MMMMren DDa</datelong>
+      <time symbolAM="AM" symbolPM="PM">H:mm:ss</time>
+      <tempunit>C</tempunit>
+      <speedunit>kmh</speedunit>
+    </region>
+  </regions>
+</language>﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language locale="eu">
+  <regions>
+    <region name="Euskal Herria" locale="EU">
+      <dateshort>YYYY/MM/DD</dateshort>
+      <datelong>DDDD, YYYY(e)ko MMMMren DDa</datelong>
+      <time symbolAM="AM" symbolPM="PM">H:mm:ss</time>
+      <tempunit>C</tempunit>
+      <speedunit>kmh</speedunit>
+    </region>
+  </regions>
+</language>

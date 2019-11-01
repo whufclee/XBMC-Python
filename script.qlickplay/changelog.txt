@@ -1,0 +1,14 @@
+v5.0.0
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Forked from Extended Info Script by phil65
+- Integrated [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR] for playback & library
+- Changed layout to show seasons/sets first
+- Edited layout so now users can move from top to bottom and vice versa
+- Added info=pathplay and set that to be path for all movies, episodes & videos
+- Added parameters to pathplay that are changeable on the fly and can be overridden
+- Added themecolors
+- Added setion to the plugin-entry (tvtotal & yt: videos, playlist & channels )
+- Trakt: changed airing to aired yesterday
+- Trakt: changed premiered to premiered last week
+- Rotten tomatoes: added high resolution posters
+- Rotten tomatoes: added fanart

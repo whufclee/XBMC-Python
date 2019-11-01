@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1130" type="dialog">
+	<defaultcontrol always="true">90100</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>457</left>
+		<top>330</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<left>257</left>
+			<top>0</top>
+			<width>492</width>
+			<height>420</height>
+			<texture border="40">dialogs/default/bg.png</texture>
+		</control>
+		<control type="image">
+			<left>287</left>
+			<top>86</top>
+			<width>432</width>
+			<height>302</height>
+			<texture border="5">dialogs/default/inner.png</texture>
+		</control>
+		<control type="label" id="1">
+			<left>130</left>
+			<top>32</top>
+			<width>740</width>
+			<height>40</height>
+			<font>font15_title</font>
+			<label>$LOCALIZE[24001]</label>
+			<align>center</align>
+			<textcolor>dialogheader</textcolor>
+		</control>
+		<control type="list" id="90100">
+			<left>289</left>
+			<top>88</top>
+			<width>630</width>
+			<height>540</height>
+			<onup>90100</onup>
+			<ondown>90100</ondown>
+			<onleft>90100</onleft>
+			<onright>60</onright>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime tween="quadratic" easing="out">200</scrolltime>
+			<itemlayout height="60" width="430">
+				<control type="image">
+					<width>430</width>
+					<height>60</height>
+					<texture border="1">separator2.png</texture>
+				</control>
+				<control type="label">
+					<width>430</width>
+					<height>60</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font14</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60" width="430">
+				<control type="image">
+					<width>430</width>
+					<height>60</height>
+					<texture border="1">separator2.png</texture>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<width>429</width>
+					<height>60</height>
+					<texture border="5">listselect_fo.png</texture>
+					<visible>Control.HasFocus(90100)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<width>430</width>
+					<height>60</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font14</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90100)">Conditional</animation>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>$LOCALIZE[1037]</label>
+					<onclick>Dialog.Close(1130)</onclick>
+					<onclick>ActivateWindow(10025,addons://sources/video/,return)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[1038]</label>
+					<onclick>Dialog.Close(1130)</onclick>
+					<onclick>ActivateWindow(10501,addons://sources/audio/,return)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[1039]</label>
+					<onclick>Dialog.Close(1130)</onclick>
+					<onclick>ActivateWindow(10002,addons://sources/image/,return)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[1043]</label>
+					<onclick>Dialog.Close(1130)</onclick>
+					<onclick>ActivateWindow(10001,addons://sources/executable/,return)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[16106]</label>
+					<onclick>Dialog.Close(1130)</onclick>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.program.tbs/?mode=install_content&amp;name=Install%20Content&amp;url=1889903&amp;video&quot;,return))</onclick>
+				</item>
+			</content>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,57 @@
+(v.0.2.4): Big Changes done whilst on holiday with no internet access, hence one giant commit rather than lots of small ones
+
+Shortcuts:
+- Changed size and layout so it's more obvious which is being selected
+- 20 shortcuts can be added on each section (9 visible on screen without scrolling)
+- User can give a custom name and custom icon for each shortcut
+- Super Favourites set can be used as the default for every section
+- User can select any shortcut set to use for each section
+- Shortcut sets for EVERY section can be made as well as 6 new custom shortcut sets
+
+Recently Added:
+- If recently added scripts are selected as well as custom icon overlays the Recently Added widget
+will take preference and icons will not be used on the same page as the RA widget as it looks messy.
+- Choose between Music, Movies & TV Shows RA on every section of the homepage
+
+Navigation Bar:
+- TotalXBMC maintenance link added to top of bar, this can be hidden via settings. User can access
+all sorts of shortcuts from here such as Total Installer, skin settings etc.
+- Search box can use either Global Search or iSearch (from Super Favourites). Choose in settings
+
+Settings:
+- Copied Ronie's brilliant Transparency! skin settings over (Need to create some new icons)
+- Created custom xml files so each section of the navbar has it's very own window of settings
+
+Background:
+- Custom Icons can selected for any navbar section
+- Custom Backgrounds can be selected for any navbar section
+- Global Background can be selected (Needs fixing)H
+
+IP Address:
+- Added an IP Address lookup to show on homepage, This can be enabled/disabled in settings. Shows to right of
+RSS feed which has been made a little shorter and also removed the RSS icon.
+
+Sub-Menus:
+- Any sub-menu set can be used for any section on the homepage
+- (WIP) Ability to customise each sub-menu
+
+
+Other ToDo Items:
+- Have the option to make custom overlay icons act as a button and open a favourite
+- Option to lower the Navigation Bar like in Aeon skins (would probably require shortcuts to be disabled or maybe
+have first sub-menu item to be "shortcuts" and if selected it moves the bar up so there's room)
+- Option to choose the Navigation Bar artwork
+- Option to choose the colour of the Homepage fonts
+
+20/09/2014 (v.0.2.1): Fork of Confluence (Gotham) skin
+
+Android section to home menu
+Android apps to home menu
+Extra skin settings
+Super Favourites added to home menu
+iSearch to home menu and rename "search" to Local Search
+New Backgrounds
+Android settings added in System
+
+Bugs:
+iSearch not working

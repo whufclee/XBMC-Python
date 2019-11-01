@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Login">
+		<setting id="username"          label="Username"      type="text"   default="" visible="true" />
+		<setting id="password"          label="Password"      type="text"   default="" visible="true" />
+        <setting id="dummy"             label="[COLOR orange]Click here to check login credentials[/COLOR]"    type="action"    option="close"    action="XBMC.RunScript(special://home/addons/script.community.portal/verify.py)"/>
+		<setting type="lsep" label="[CR]If you don't already have an account you can register for free."/>
+		<setting type="lsep" label="[CR]Visit www.noobsandnerds.com and click on the forum link."/>
+	</category>
+    <category label="31000">
+        <setting id="ADDONS"     type="text"      label="Addons"            default=""      visible="false"/>
+        <setting id="FIRSTRUN"   type="bool"      label="FIRSTRUN"          default="false" visible="false" />
+        
+        <setting id="tvp.url"    type="labelenum" label="TVP URL" values="kodi|other" default="kodi" visible="false" />
+        
+        <setting id="SKIN"       type="select" label="31004" source="../../userdata/addon_data/script.community.portal/skins/" mask="/" default="noobs-blue"/>
+        
+		<setting id="autoStart"  type="bool"   label="Start Automatically (requires reboot)"     default="false" visible="true"/>
+        <setting id="KodiLib"    type="bool"   label="Use SF Folders for movie/tv rather than library"          default="false" visible="true"/>
+		
+		<setting id="ADDMORE"   type="enum"   label="31006" lvalues="31007|31008|31009" default="2" visible="false"/>
+		 
+        <!-- <setting                 type="lsep"   label=""      visible="true" /> -->
+        <setting id="KIOSKMODE"  type="bool"   label="Kiosk Mode" default="false" visible="false"/>
+ 		<setting id="confirm.exit" label="Confirm Exit From Community Portal home page" type="bool" default="true" visible="true" />
+        <setting id="PLAYBACK"   type="enum"   label="31001" lvalues="31002|31003" default="1"/>
+    </category>
+    <category label="Show/Hide">
+        <setting id="showaddons"       type="bool"   label="Show Addon Portal"              default="true" visible="true"/>
+        <setting id="showbuilds"       type="bool"   label="Show Community Builds"   default="true" visible="true"/>
+        <setting id="showdownloads"    type="bool"   label="Show Downloads"          default="true" visible="true"/>
+        <setting id="showhardware"     type="bool"   label="Show Hardware Reviews"           default="true" visible="true"/>
+        <setting id="showkeywords"     type="bool"   label="Show Keyword Installer"          default="true" visible="true"/>
+        <setting id="showtutorials"    type="bool"   label="Show Tutorials"          default="true" visible="true"/>
+        <setting id="showepg"          type="bool"   label="Show TV Guide"           default="true" visible="true"/>
+        <setting id="showmaintenance"  type="bool"   label="Show Maintenance"        default="true" visible="true"/>
+        <setting id="showtv"           type="bool"   label="Show TV Shows"           default="true" visible="true"/>
+        <setting id="showmovies"       type="bool"   label="Show Movies"             default="true" visible="true"/>
+        <setting id="showsearch"       type="bool"   label="Show Search"             default="true" visible="true"/>
+        <setting id="showfaves"        type="bool"   label="Show Favourites"         default="true" visible="true"/>
+    </category>
+
+</settings>

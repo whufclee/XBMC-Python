@@ -1,0 +1,19 @@
+version 10.0
+- Removed provides tag so stays hidden
+- Skips any bad links which no longer exist without failing
+
+Version 0.0.5
+- Search
+
+Version 0.0.4
+- better pvr:// links
+
+Version 0.0.3
+- direct pvr:// links
+- sorted output
+
+Version 0.0.2
+- pvr support
+
+Version 0.0.1
+- first release

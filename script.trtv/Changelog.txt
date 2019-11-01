@@ -1,0 +1,64 @@
+v.1.4.5:
+- Check in place to notify user if custom url is set but no provider is available
+- Tidied up code in addon.py to koding specs.
+
+v.1.4.4:
+- Added ability to show categories and tools menu in quit dialog.
+- Added ability to set a URL containing links of online xml files.
+- Improved the playback check by using Python Koding module.
+- Removed a lot of unused settings.
+
+v.1.4.3:
+- Added ability to download and extract zips.
+- Cleaned up some old unused code.
+
+v.1.4.2:
+- Can now open the openSettings module from a sub-menu.
+- Made a start on making exceptions for scanner failing if no db exists.
+
+v.1.4.1:
+- Fixed bug where multiple sources being returned were not displaying/playing
+- Stopped the annoying notification every 12hrs for ini update, now runs silently
+
+- * Added ini creator section to the settings menu
+- * Tidied up the settings menu section with new wording and better formatting
+- * Added background wallpaper to the stream setup menu.
+
+* = New skin zip uploaded to server but clients are required to re-upload to their oems if they want to use the new features and override any customisations they have made.
+
+
+v.1.4.0:
+- Bug fix for bad import no longer required (getini)
+
+v.1.3.9:
+- Added option to auto-remove streams from ini files if unsuccessful playback
+- Fixed bug with catchup movies not playing
+- Fixed non ascii encoding when pulling from ini files - was causing some streams to fail
+- Fixed bug where not all channels without streams were being correctly filtered out
+
+v.1.3.8:
+- Fixed bug with pressing 1 showing add/remove even if disabled in settings
+- Can now filter by only channels that have matching streams found
+- Escaping out of dialog select for catchup/live menu no longer opens into live
+- Removed some old unwanted code
+
+v.1.3.7:
+- Option added in settings to auto update the ini file (if ini creator is setup).
+- Removed experimental MetalliQ SF integration option as no longer required.
+- Recoded the playback routines, now fails gracefully and no need for double playback.
+- General code changes which should result in far less lockups.
+- Fixed the catchup options for MetalliQ integration.
+- Added ability to automatically detect if item is show or movie (EPG grab dependant)
+- Added option to do a full wipe of channels and db with no dialogs (for submenu items).
+- Added new catgories and channels xml files for support with more add-ons.
+- Fixed service, wasn't running due to badly formatted xml.
+
+v.1.3.5:
+- Cleaned up titles in EPG grid, ampersands were showing as url encoded.
+- Added support for many more channels, new artwork uploaded.
+- Added new option in settings to only show channels with EPG data.
+- Fixed bug where artwork wasn't showing with any channels using asterix in name.
+
+v.1.3.1:
+- Changed MetalliQ integration to dedicated guide paths so users can keep their preferred player settings
+- Several other tweaks and fixes

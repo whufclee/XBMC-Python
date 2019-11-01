@@ -1,0 +1,2 @@
+Compile all files to pyo:
+python -O -m compileall /path/to/your/files

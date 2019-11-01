@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.trtv" name="TV Guide" version="1.4.5" provider-name="TotalRevolution">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.requests" version="2.9.1"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+		<import addon="script.module.elementtree" version="1.2.8"/>
+		<import addon="repository.spartacus" version="1.3"/>
+		<import addon="plugin.program.super.favourites" version="1.0.43"/>
+		<import addon="plugin.video.metalliq" version="1.1.5"/>
+		<import addon="script.module.python.koding.aio" version="0.5"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login|startup" />
+	<extension point="kodi.context.item" library="osd.py">
+		<item>
+			<label>TV Mini Guide</label>
+			<visible>true</visible>
+		</item>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Watch live tv and catchup with a EPG integration</summary>
+		<description>A very powerful EPG (TV Guide). This allows you to access onine streams, catchup tv and even hook into your own cable/satellite/antenna and watch via Kodi.</description>
+		<platform>all</platform>
+		<language></language>
+		<license>GPLv2</license>
+		<disclaimer>To be able to stream from your cable/satellite/antenna you will require extra hardware. This option is not for anyone who struggles with technology - setting up a PVR system can be quite complex!</disclaimer>
+	</extension>
+</addon>

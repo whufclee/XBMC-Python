@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+<!--	<shortcut>
+		<defaultID>Browse Movies</defaultID>
+		<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32227]</label>
+		<label2>folder</label2>
+		<icon>DefaultMovies.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+		<action>RunScript(&quot;script.qlickplay&quot;,info=list,type=movie)</action>
+	</shortcut>-->
+	<shortcut>
+		<visible>Library.HasContent(movies)</visible>
+		<defaultID>My Movies</defaultID>
+		<label>My Movies</label>
+		<label2>folder</label2>
+		<icon>DefaultMovies.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+		<action>ActivateWindow(10025,videodb://movies/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>+-</label>
+		<label2>Video Add-On</label2>
+		<icon>DefaultAddonProgram.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+		<action>RunScript(&quot;special://home/addons/plugin.program.tbs/epg.py&quot;,'movies')</action>
+	</shortcut>
+<!--	<shortcut>
+		<visible>Library.HasContent(movies)</visible>
+		<defaultID>My Recent Movies</defaultID>
+		<label>My Recent Movies</label>
+		<label2>folder</label2>
+		<icon>DefaultMovies.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+		<action>ActivateWindow(10025,videodb://recentlyaddedmovies/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Search Movies</defaultID>
+		<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32227]</label>
+		<label2>folder</label2>
+		<icon>DefaultMovies.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MOVIES%2fHOME_MOVIES_001.jpg/</thumb>
+		<action>RunScript(&quot;script.qlickplay&quot;,info=list,type=movie,query=qqq)</action>
+	</shortcut>-->
+</shortcuts>

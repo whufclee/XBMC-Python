@@ -1,0 +1,2 @@
+# script.openwindow
+registration script

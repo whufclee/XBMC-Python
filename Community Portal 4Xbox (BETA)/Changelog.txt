@@ -1,0 +1,17 @@
+v.0.1: Initial public release - VERY MUCH A BETA!
+- This has WIP stuff and really isn't ready for public release but if I don't release now I'll keep forgetting!
+- Installation of addons appears to be working pretty well
+- Backup of build working well
+- Reinstall of build working well
+
+Known bugs:
+- None of the text boxes work, either xbmc4xbox needs to add ActivateWindow(textboxes) to main code or I need to knock up a script.
+- YouTube videos not playing, they are trying to play in HD - need to somehow force to use SD only.
+- There is some WIP stuff I was messing around with in the Maintenance section. I was mucking around with Dans
+brilliant Notepad plugin trying to get the text boxes to work in a similar way. Just ignore the edit a text file option
+as it's not yet working, use the excellent Notepad plugin from Dan instead.
+
+NOTICE TO DEVS: ANY HELP YOU CAN GIVE ON THIS WILL BE VERY MUCH APPRECIATED!
+I am extremely busy with other projects so only get to this as and when I can free up a few hours.
+The code is all open for you to edit, if you make changes please let me know so I can add them into
+future public releases. whufclee

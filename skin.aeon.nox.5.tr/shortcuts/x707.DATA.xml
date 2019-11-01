@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>plugin.video.9gagtv</defaultID>
+		<label>9GAG.TV</label>
+		<label2>$LOCALIZE[291] $LOCALIZE[24000]</label2>
+		<icon>special://home/addons/plugin.video.9gagtv/icon.png</icon>
+		<thumb>image://special://home/addons/plugin.video.9gagtv/fanart.jpg</thumb>
+		<action>ActivateWindow(10025,plugin://plugin.video.9gagtv,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>plugin.video.break_com</defaultID>
+		<label>Break Videos</label>
+		<label2>$LOCALIZE[291] $LOCALIZE[24000]</label2>
+		<icon>special://home/addons/plugin.video.break_com/icon.png</icon>
+		<thumb>image://special://home/addons/plugin.video.break_com/fanart.jpg</thumb>
+		<action>ActivateWindow(10025,plugin://plugin.video.break_com,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>plugin.video.dump</defaultID>
+		<label>Dump.com</label>
+		<label2>$LOCALIZE[291] $LOCALIZE[24000]</label2>
+		<icon>special://home/addons/plugin.video.dump/icon.png</icon>
+		<thumb>image://special://home/addons/plugin.video.dump/fanart.jpg</thumb>
+		<action>ActivateWindow(10025,plugin://plugin.video.dump,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>plugin.video.roosterteeth</defaultID>
+		<label>Rooster Teeth</label>
+		<label2>$LOCALIZE[291] $LOCALIZE[24000]</label2>
+		<icon>special://home/addons/plugin.video.roosterteeth/icon.png</icon>
+		<thumb>image://special://home/addons/plugin.video.roosterteeth/fanart.jpg</thumb>
+		<action>ActivateWindow(10025,plugin://plugin.video.roosterteeth,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>plugin.video.videobash_com</defaultID>
+		<label>videobash</label>
+		<label2>$LOCALIZE[291] $LOCALIZE[24000]</label2>
+		<icon>special://home/addons/plugin.video.videobash_com/icon.png</icon>
+		<thumb>image://special://home/addons/plugin.video.videobash_com/fanart.jpg</thumb>
+		<action>ActivateWindow(10025,plugin://plugin.video.videobash_com,return)</action>
+	</shortcut>
+</shortcuts>

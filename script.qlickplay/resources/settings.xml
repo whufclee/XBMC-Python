@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <category label="Qustomize">
+        <setting label="Advanced Mode" type="bool"   id="mode_advanced" default="false"                                                               visible="false" />
+        <setting label="Expert Mode"   type="bool"   id="mode_expert"   default="false"                                                               visible="eq(-1,true)" />
+        <setting label="Players"       type="lsep"                                                                                                    visible="!eq(-1,false) | !eq(-2,false)" />
+        <setting label="[COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR] Player"   type="select" id="player_main"   default="library"   values="select|default|library|context" />
+        <setting label="Alt. Player"   type="select" id="player_alt"    default="context"   values="select|default|library|context"                   visible="!eq(-3,false) | !eq(-4,false)" />
+        <setting label="Movies"        type="lsep"                                                                                                    visible="!eq(-4,false) | !eq(-5,false)" />
+        <setting label="Movie Qlick"   type="select" id="qlick_movie"   default="info"      values="info|play|search|youtube" />
+        <setting label="Movie Action"  type="select" id="action_movie"  default="runplugin" values="runplugin|runscript|activatewindow|replacewindow" visible="!eq(-6,false) | !eq(-7,false)" />
+        <setting label="Movie Player"  type="select" id="player_movie"  default="default"   values="select|default|library|context"                   visible="!eq(-7,false)"                   enable="eq(-2,play) + !eq(-1,runscript)" />
+        <setting label="Movie Window"  type="select" id="window_movie"  default="video"     values="programs|pictures|music|video"                    visible="!eq(-8,false)"                   enable="!eq(-2,runplugin) + !eq(-2,runscript)" />
+        <setting label="TVShows"       type="lsep"                                                                                                    visible="!eq(-9,false) | !eq(-10,false)" />
+        <setting label="TVShow Qlick"  type="select" id="qlick_tv"      default="info"      values="info|play|search|youtube" />
+        <setting label="TVShow Action" type="select" id="action_tv"     default="runplugin" values="runplugin|runscript|activatewindow|replacewindow" visible="!eq(-11,false) | !eq(-12,false)" />
+        <setting label="TVShow Player" type="select" id="player_tv"     default="default"   values="select|default|library|context"                   visible="!eq(-12,false)"                  enable="eq(-2,play) + !eq(-1,runscript)" />
+        <setting label="TVShow Window" type="select" id="window_tv"     default="video"     values="programs|pictures|music|video"                    visible="!eq(-13,false)"                  enable="!eq(-2,runplugin) + !eq(-2,runscript)" />
+        <setting label="Play Pilots"   type="select" id="pilots"        default="first"     values="first|last|smart|lazy"                            visible="false"                           enable="eq(-4,play))" />
+        <setting label="Music"         type="lsep"                                                                                                    visible="!eq(-15,false) | !eq(-16,false)" />
+        <setting label="Music Qlick"   type="select" id="qlick_music"   default="info"      values="info|play|search|youtube" />
+        <setting label="Music Action"  type="select" id="action_music"  default="runplugin" values="runplugin|runscript|activatewindow|replacewindow" visible="!eq(-17,false) | !eq(-18,false)" />
+        <setting label="Music Player"  type="select" id="player_music"  default="default"   values="select|default|library|context"                   visible="!eq(-18,false)"                  enable="eq(-2,play) + !eq(-1,runscript)" />
+        <setting label="Toggle Advanced Settings"  type="action" id="toggle_advanced"  action="RunPlugin(plugin://script.qlickplay/?info=toggleadvanced)" />
+    </category>
+    <!--<category label="32170">
+        <setting label="32171" type="labelenum" id="AddOrPlayMovie" values="play|add" default="play" />
+        <setting label="32172" type="bool" id="AutoAddMovie" default="false" enable="eq(-1,0)" />
+        <setting label="32189" type="select" id="LibraryAddonMovie" values="1Channel|iSTREAM|Quasar|SALTS|Salts HD Lite|Salts RD Lite|Specto" default="SALTS" />
+        <setting label="32173" type="select" id="MainAddonMovie" values="1Channel|Exodus|iSearch|iSTREAM|Phoenix|Pulsar|Quasar|SALTS|Salts HD Lite|Salts RD Lite|Specto|The Royal We|UMP|Trailer" default="Exodus" />
+        <setting label="32174" type="select" id="AlternateAddonMovie" values="1Channel|Exodus|iSearch|iSTREAM|Online Movies Pro|Phoenix|Pulsar|Quasar|SALTS|Salts HD Lite|Salts RD Lite|Specto|The Royal We|UMP|What the Furk|Yify Movies HD|Trailer" default="iSTREAM" />
+        <setting label="32175" type="bool" id="AutoPlayAlternateMovie" default="true" />
+        <setting label="32176" type="labelenum" id="PulsarModeMovie" values="links|play" default="play" />
+        <setting label="Use custom iSearch (Movie)" type="bool" id="CustomIsearchMovie" default="true" />
+        <setting label="Extended Youtube (Movie)" type="bool" id="ExtendedYoutubeMovie" default="true" />
+    </category>
+    <category label="32177">
+        <setting label="32178" type="labelenum" id="AddOrPlayTVShow" values="play|add" default="add" />
+        <setting label="32179" type="bool" id="AutoAddTVShow" default="false" enable="eq(-1,0)"/>
+        <setting label="32190" type="select" id="LibraryAddonTVShow" values="1Channel|iSTREAM|Quasar|SALTS|Salts HD Lite|Salts RD Lite|Specto" default="SALTS" />
+        <setting label="32180" type="select" id="MainAddonTVShow" values="1Channel|Exodus|iSearch|iSTREAM|Phoenix|Pulsar|Quasar|SALTS|Salts HD Lite|Salts RD Lite|Specto|The Royal We|UMP|Trailer" default="Exodus" />
+        <setting label="32181" type="select" id="AlternateAddonTVShow" values="1Channel|Exodus|iSearch|iSTREAM|Phoenix|Pulsar|Quasar|SALTS|Salts HD Lite|Salts RD Lite|Specto|The Royal We|TV4ME|UMP|What the Furk|Trailer" default="iSTREAM" />
+        <setting label="32182" type="bool" id="AutoPlayAlternateTVShow" default="true" />
+        <setting label="32183" type="labelenum" id="PulsarModeTVShow" values="links|play" default="play" />
+        <setting label="Use custom iSearch (Show)" type="bool" id="CustomIsearchShow" default="true" />
+        <setting label="Extended Youtube (Show)" type="bool" id="ExtendedYoutubeShow" default="true" />
+    </category>-->
+    <category label="128">
+        <setting label="32164" type="action" action="RunScript(script.qlickplay,info=deletecache)"/>
+        <setting label="32163" type="bool" id="infodialog_onclick" default="true"/>
+        <setting label="32005" type="bool" id="window_mode" default="false"/>
+        <setting label="32084" type="bool" id="classic_search" default="true"/>
+        <setting label="32085" type="text" id="colormain" default="ff000000"/>
+        <setting label="32086" type="text" id="colorthemed" default="ff0084ff"/>
+        <setting label="32004" type="select" values="google|youtube|local" id="autocomplete_provider" default="youtube"/>
+        <setting label="32003" visible="!eq(-1,local)" type="select" values="bg|cs|da|de|el|en|es|fi|fr|he|hr|hu|it|ja|ko|nl|no|pl|pt|ru|sl|sv|tr|zh" id="autocomplete_lang" default="en"/>
+        <setting label="32003" visible="eq(-2,local)" type="select" values="en|de|fr|nl" id="autocomplete_lang_local" default="en"/>
+    </category>
+    <category label="TheMovieDB">
+        <setting label="32079" type="bool" id="alt_browser_layout"/>
+        <setting label="32080" type="bool" id="force_native_layout"/>
+        <setting label="32159" type="select" values="bg|cs|da|de|el|en|es|fi|fr|he|hr|hu|it|ja|ko|nl|no|pl|pt|ru|sl|sv|tr|zh" id="LanguageID" default="en"/>
+        <setting label="32160" type="text" id="tmdb_username" />
+        <setting label="32161" type="text" id="tmdb_password" option="hidden"/>
+        <setting label="32162" type="bool" id="include_adults"/>
+    </category>
+</settings>

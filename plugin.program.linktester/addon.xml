@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.linktester" name="SF Link Tester"  provider-name="whufclee" version="0.2">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" version="2.3.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Security Shield</summary>
+	<description>Run this add-on to loop through all the SF live tv entries and attempt to play them</description>
+    <platform>all</platform>
+	<genre>devtools, other</genre>
+	<video_guide>HsiXVi-sKxA</video_guide>
+  </extension>
+</addon>

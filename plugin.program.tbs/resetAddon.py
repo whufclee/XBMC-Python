@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # plugin.program.tbs
-# Total Revolution Maintenance (c) by whufclee (info@totalrevolution.tv)
+# Total Revolution Maintenance (c) by Total Revolution support@trmc.freshdesk.com)
 
 # Total Revolution Maintenance is licensed under a
 # Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.

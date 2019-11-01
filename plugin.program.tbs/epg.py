@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # plugin.program.tbs
-# Total Revolution Maintenance (c) by whufclee (info@totalrevolution.tv)
+# Total Revolution Maintenance (c) by TOTALREVOLUTION LTD (support@trmc.freshdesk.com)
 
 # Total Revolution Maintenance is licensed under a
 # Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
@@ -143,10 +143,10 @@ def Configure_Menus(menutype='HOME_'):
                                     os.remove(delete_path)
                                 except:
                                     dolog('FAILED TO REMOVE: %s'%delete_path)
-                        if os.path.exists(xbmc.translatePath('special://home/addons/script.openwindow/functions.py')):
-                            xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/functions.py)')
-                        elif os.path.exists(xbmc.translatePath('special://xbmc/addons/script.openwindow/functions.py')):
-                            xbmc.executebuiltin('RunScript(special://xbmc/addons/script.openwindow/functions.py)')
+                        if os.path.exists(xbmc.translatePath('special://home/addons/script.openwindow/default.py')):
+                            xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,update_shares)')
+                        elif os.path.exists(xbmc.translatePath('xbmc://home/addons/script.openwindow/default.py')):
+                            xbmc.executebuiltin('RunScript(xbmc://home/addons/script.openwindow/default.py,update_shares)')
 
                     else:
                         try:
@@ -194,7 +194,6 @@ def Folder_Check():
 #----------------------------------------------------------------
 # Reset the menus back to their factory defaults
 def Reset_Factory(menu_type):
-    from default import Main_Menu_Defaults
     menu_list = ['Custom6HomeItem.Disable','Custom3HomeItem.Disable','Custom4HomeItem.Disable','Custom5HomeItem.Disable',
     'FavoritesHomeItem.Disable','LiveTVHomeItem.Disable','MovieHomeItem.Disable','MusicHomeItem.Disable',
     'ProgramsHomeItem.Disable','VideosHomeItem.Disable','Custom2HomeItem.Disable','WeatherHomeItem.Disable',
@@ -209,12 +208,11 @@ def Reset_Factory(menu_type):
             dolog('New menu type: %s'%menu_type)
             for file in os.listdir(redirects):
                 path = os.path.join(redirects,file)
-                if file.endswith('_USER'):
-                    if ( file.startswith(menu_type) ):
-                        try:
-                            os.remove(path)
-                        except:
-                            dolog(Last_Error())
+                if ( file.startswith(menu_type) ):
+                    try:
+                        os.remove(path)
+                    except:
+                        dolog(Last_Error())
         else:
             try:
                 shutil.rmtree(redirects)
@@ -238,12 +236,10 @@ def Reset_Factory(menu_type):
                 xbmc.executebuiltin('Skin.SetString(%s,True)'%item)
 
     # If we're changing all home to defaults we check for updates
-        if menu_type == 'ALL':
             try:
                 os.remove(home_menus)
             except:
                 dolog('Failed to remove home_menus')
-            Main_Menu_Defaults()
 
     # If submenu or all we remove skinshortucts so they can repopulate
         if menu_type != 'HOME_':
@@ -254,6 +250,17 @@ def Reset_Factory(menu_type):
                 dolog(Last_Error())
             if menu_type != 'ALL':
                 Refresh('skin')
+
+    # If SF items exist ask user if they want to also remove all SF Shares
+        if dialog.yesno( String(30568),String(30569) ):
+            delpath = xbmc.translatePath('special://profile/addon_data/plugin.program.super.favourites/Super Favourites/')
+            shutil.rmtree(delpath)
+            try:
+                os.makedirs(delpath)
+            except:
+                pass
+
+        xbmc.executebuiltin('RunScript(special://home/addons/script.openwindow/default.py,update_shares)')
 #----------------------------------------------------------------
 def Main_Menu_Check():
 # Standard social sharing style menus

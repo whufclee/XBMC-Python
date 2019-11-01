@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="HomeSubMenuVideos">
+		<control type="image" id="90101">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90102">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>342</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+		</control>
+		<control type="button" id="90103">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20343</label>
+			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
+			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+		</control>
+		<control type="button" id="90104">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20389</label>
+			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+			<visible>Library.HasContent(MusicVideos)</visible>
+		</control>
+		<control type="button" id="90105">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>744</label>
+			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+		</control>
+		<control type="button" id="90106">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14022</label>
+			<onclick>ActivateWindow(Videos,Root)</onclick>
+			<visible>Library.HasContent(Video)</visible>
+		</control>
+		<control type="button" id="90107">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+		<control type="image" id="90108">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMovies">
+		<control type="image" id="90161">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90162">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+		</control>
+		<control type="button" id="90163">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20434</label>
+			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+			<visible>Library.HasContent(MovieSets)</visible>
+		</control>
+		<control type="button" id="90164">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+		</control>
+		<control type="button" id="90165">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,MovieGenres,return)</onclick>
+		</control>
+		<control type="button" id="90166">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>652</label>
+			<onclick>ActivateWindow(Videos,MovieYears,return)</onclick>
+		</control>
+		<control type="button" id="90167">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>344</label>
+			<onclick>ActivateWindow(Videos,MovieActors,return)</onclick>
+		</control>
+		<control type="image" id="90168">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuTVShows">
+		<control type="image" id="90171">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90172">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+		</control>
+		<control type="button" id="90173">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+		</control>
+		<control type="button" id="90174">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
+		</control>
+		<control type="button" id="90175">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>652</label>
+			<onclick>ActivateWindow(Videos,TVShowYears,return)</onclick>
+		</control>
+		<control type="button" id="90176">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>344</label>
+			<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
+		</control>
+		<control type="image" id="90177">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMusic">
+		<control type="image" id="90111">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90112">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>133</label>
+			<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90113">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>132</label>
+			<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90114">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>134</label>
+			<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90115">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>744</label>
+			<onclick>ActivateWindow(MusicFiles)</onclick>
+		</control>
+		<control type="button" id="90116">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14022</label>
+			<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90117">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90118">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+			<visible>!Library.HasContent(Music)</visible>
+		</control>
+		<control type="image" id="90119">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuSystem">
+		<control type="image" id="90121">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90122">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Maintenance</label>
+			<onclick>RunAddon(plugin.totalsettings)</onclick>
+		</control>
+		<control type="button" id="90123">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>7</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+		</control>
+		<control type="button" id="90124">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+		</control>
+		<control type="button" id="90125">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>130</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+		</control>
+		<control type="image" id="90126">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPlayDisc">
+		<control type="image" id="90131">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90132">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13391</label>
+			<onclick>SetFocus(9000)</onclick>
+			<onclick>EjectTray()</onclick>
+		</control>
+		<control type="image" id="90126">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPictures">
+		<control type="image" id="90147">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90148">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		</control>
+		<control type="image" id="90149">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuLiveTV">
+		<control type="image" id="90141">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+<!--			<visible>System.GetBool(pvrmanager.enabled)</visible>-->
+		</control>
+		<control type="button" id="90142">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19023</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90143">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19024</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 33,0, 12,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90144">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19069</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90145">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19163</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90146">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19040</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90148">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Setup Live TV PVR</label>
+			<onclick>ActivateWindow(pvrsettings)</onclick>
+			<visible>!System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="image" id="90147">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+<!--			<visible>System.GetBool(pvrmanager.enabled)</visible>-->
+		</control>
+	</include>
+	<include name="HomeSubMenuAndroid">
+		<control type="image" id="90150">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90151">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31964</label>
+			<onclick>StartAndroidActivity(&quot;com.android.vending&quot;)</onclick>
+		</control>
+		<control type="image" id="90152">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPrograms">
+		<control type="image" id="90155">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90156">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Android Apps</label>
+			<onclick>ReplaceWindow(10001,&quot;androidapp://sources/apps/&quot;,return)</onclick>
+			<visible>System.Platform.Android</visible>
+		</control>
+		<control type="button" id="90157">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Total Installer</label>
+			<onclick>RunAddon(plugin.program.totalinstaller)</onclick>
+		</control>
+		<control type="button" id="90158">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Program Add-ons</label>
+			<onclick>StartAndroidActivity(&quot;com.android.vending&quot;)</onclick>
+			<visible>System.Platform.Android</visible>
+		</control>
+		<control type="image" id="90159">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+
+<!--Call Favourites Shortcuts-->
+	<include name="HomeAddonItemsFavourites">
+		<item>
+			<label>$INFO[Skin.String(SF1.Label)]</label>
+			<onclick>$INFO[Skin.String(SF1.Path)]</onclick>
+			<icon fallback="special://skin/backgrounds/tv.jpg">$INFO[Skin.String(CF1Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF1)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF2.Label)]</label>
+			<onclick>$INFO[Skin.String(SF2.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF2Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF2)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF3.Label)]</label>
+			<onclick>$INFO[Skin.String(SF3.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF3Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF3)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF4.Label)]</label>
+			<onclick>$INFO[Skin.String(SF4.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF4Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF4)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF5.Label)]</label>
+			<onclick>$INFO[Skin.String(SF5.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF5Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF5)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF6.Label)]</label>
+			<onclick>$INFO[Skin.String(SF6.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF6Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF6)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF7.Label)]</label>
+			<onclick>$INFO[Skin.String(SF7.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF7Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF7)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF8.Label)]</label>
+			<onclick>$INFO[Skin.String(SF8.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF8Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF8)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF9.Label)]</label>
+			<onclick>$INFO[Skin.String(SF9.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF9Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF9)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF10.Label)]</label>
+			<onclick>$INFO[Skin.String(SF10.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF10Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF10)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF11.Label)]</label>
+			<onclick>$INFO[Skin.String(SF11.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF11Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF11)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF12.Label)]</label>
+			<onclick>$INFO[Skin.String(SF12.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF12Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF12)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF13.Label)]</label>
+			<onclick>$INFO[Skin.String(SF13.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF13Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF13)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF14.Label)]</label>
+			<onclick>$INFO[Skin.String(SF14.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF14Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF14)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF15.Label)]</label>
+			<onclick>$INFO[Skin.String(SF15.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF15Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF15)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF16.Label)]</label>
+			<onclick>$INFO[Skin.String(SF16.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF16Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF16)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF17.Label)]</label>
+			<onclick>$INFO[Skin.String(SF17.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF17Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF17)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF18.Label)]</label>
+			<onclick>$INFO[Skin.String(SF18.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF18Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF18)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF19.Label)]</label>
+			<onclick>$INFO[Skin.String(SF19.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF19Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF19)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SF20.Label)]</label>
+			<onclick>$INFO[Skin.String(SF20.Path)]</onclick>
+			<icon>$INFO[Skin.String(CF20Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCF20)</visible>
+		</item>
+	</include>
+
+<!--Call Video Shortcuts-->
+	<include name="HomeAddonItemsVideos">
+		<item>
+			<label>$INFO[Skin.String(SFVids1.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids1.Path)]</onclick>
+			<icon fallback="special://skin/backgrounds/tv.jpg">$INFO[Skin.String(CFVids1Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids1)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids2.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids2.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids2Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids2)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids3.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids3.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids3Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids3)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids4.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids4.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids4Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids4)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids5.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids5.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids5Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids5)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids6.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids6.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids6Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids6)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids7.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids7.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids7Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids7)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids8.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids8.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids8Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids8)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids9.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids9.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids9Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids9)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids10.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids10.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids10Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids10)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids11.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids11.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids11Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids11)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids12.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids12.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids12Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids12)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids13.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids13.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids13Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids13)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids14.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids14.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids14Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids14)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids15.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids15.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids15Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids15)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids16.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids16.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids16Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids16)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids17.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids17.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids17Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids17)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids18.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids18.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids18Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids18)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids19.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids19.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids19Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids19)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(SFVids20.Label)]</label>
+			<onclick>$INFO[Skin.String(SFVids20.Path)]</onclick>
+			<icon>$INFO[Skin.String(CFVids20Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuCFVids20)</visible>
+		</item>
+	</include>
+
+<!--Call Music Shortcuts-->
+	<include name="HomeAddonItemsMusic">
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut1.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut1.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut1Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut1)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut2.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut2.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut2Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut2)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut3.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut3.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut3Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut3)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut4.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut4.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut4Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut4)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut5.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut5.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut5Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut5)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut6.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut6.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut6Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut6)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut7.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut7.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut7Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut7)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut8.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut8.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut8Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut8)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut9.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut9.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut9Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut9)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(MusicShortcut10.Label)]</label>
+			<onclick>$INFO[Skin.String(MusicShortcut10.Path)]</onclick>
+			<icon>$INFO[Skin.String(MusicShortcut10Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuMusicShortcut10)</visible>
+		</item>
+	</include>
+	
+<!--Call Android Shortcuts-->
+	<include name="HomeAddonItemsAndroid">
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut1.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut1.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut1Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut1)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut2.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut2.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut2Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut2)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut3.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut3.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut3Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut3)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut4.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut4.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut4Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut4)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut5.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut5.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut5Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut5)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut6.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut6.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut6Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut6)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut7.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut7.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut7Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut7)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut8.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut8.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut8Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut8)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut9.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut9.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut9Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut9)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(AndroidShortcut10.Label)]</label>
+			<onclick>$INFO[Skin.String(AndroidShortcut10.Path)]</onclick>
+			<icon>$INFO[Skin.String(AndroidShortcut10Icon)]</icon>
+			<thumb>-</thumb>
+			<visible>Skin.HasSetting(HomeMenuAndroidShortcut10)</visible>
+		</item>
+	</include>
+</includes>
+

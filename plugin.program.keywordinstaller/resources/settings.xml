@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="My own keyword">
+		<setting id="enablekeyword" type="bool" label="Enable my own keyword[CR]" default="false"/>
+		<setting id="keywordname" label="Keyword Name" type="text" default="" visible="true"  enable="!eq(-1,false)"/>
+		<setting id="keywordpath" label="Keyword URL (e.g.http://urlshortbot.com/noobs)" type="text" default="" visible="true"   enable="!eq(-2,false)"/>
+	</category>
+</settings>

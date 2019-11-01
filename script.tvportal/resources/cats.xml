@@ -1,0 +1,2276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+<!-- UK Channels -->
+ <cats>
+    <category>Entertainment|Drama|Sports|(Region) UK</category>
+    <channel>BBC ONE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|Sports|(Region) UK</category>
+    <channel>ITV 1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|(Region) UK</category>
+    <channel>CHANNEL 4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|(Region) UK</category>
+    <channel>FIVE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|Comedy|(Region) UK</category>
+    <channel>GOLD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|Comedy|(Region) UK</category>
+    <channel>SKY TWO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>LIVING+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>ITV ENCORE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Gameshow|(Region) UK</category>
+    <channel>CHALLENGE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Educational|(Region) UK</category>
+    <channel>TLC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|(Region) UK</category>
+    <channel>COMEDY CENTRAL+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|(Region) UK</category>
+    <channel>COMEDY CENTRAL EXTRA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|(Region) UK</category>
+    <channel>ITV1+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|Comedy|(Region) UK</category>
+    <channel>GOLD+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>S4C (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>CHANNEL 4+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>E4+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Reality|(Region) UK</category>
+    <channel>MORE 4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Reality|(Region) UK</category>
+    <channel>MORE 4+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Reality|(Region) UK</category>
+    <channel>4SEVEN (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|(Region) UK</category>
+    <channel>DMAX (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|Reality|(Region) UK</category>
+    <channel>CBS REALITY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Drama|Reality|(Region) UK</category>
+    <channel>CBS REALITY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>CBS ACTION (GB)</channel>
+ </cats>
+ <cats>
+    <category>Drama|Entertainment|(Region) UK</category>
+    <channel>CBS DRAMA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>UNIVERSAL CHANNEL+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>PICK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>PICK+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|(Region) UK</category>
+    <channel>QUEST (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>WATCH+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>LIFETIME (GB)</channel>
+ </cats>
+ <cats>
+    <category>Drama|Comedy|Entertainment|(Region) UK</category>
+    <channel>SET (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|Motors|Entertainment|(Region) UK</category>
+    <channel>DAVE JA VU (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>SPIKE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Gameshow|(Region) UK</category>
+    <channel>CHALLENGE +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Crime|Comedy|Entertainment|(Region) UK</category>
+    <channel>FOX+2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>PBS AMERICA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|(Region) UK</category>
+    <channel>QUEST+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>BBC ALBA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>SKY ONE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>SKY ONE+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>SKY ATLANTIC+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|Crime|(Region) UK</category>
+    <channel>5 USA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>CHANNEL 5+24 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Crime|(Region) UK</category>
+    <channel>5* (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>CHANNEL 5+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>ITVBE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Reality|Comedy|Gameshow|Entertainment|(Region) UK</category>
+    <channel>ITV2+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Drama|Comedy|Entertainment|(Region) UK</category>
+    <channel>SET+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Drama|(Region) UK</category>
+    <channel>TRUE ENTERTAINMENT (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) African|(Region) UK</category>
+    <channel>BEN (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) African|(Region) UK</category>
+    <channel>AIT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>MORE MOVIES (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>MORE MOVIES +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) African|Entertainment|(Region) UK</category>
+    <channel>BET (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Crime|Comedy|(Region) UK</category>
+    <channel>FOX (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) Chinese|(Region) UK</category>
+    <channel>PROPELLER TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) African|Entertainment|(Region) UK</category>
+    <channel>BET +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Community|(Region) UK</category>
+    <channel>SHOWCASE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Community|(Region) UK</category>
+    <channel>SHOWCASE 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) African|(Region) UK</category>
+    <channel>HITV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>ITV3+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>SYFY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>ALIBI+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>LIFETIME+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>HORROR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Community|(Region) UK</category>
+    <channel>SUMO TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) African|Reality|Talkshow|(Region) UK</category>
+    <channel>OHTV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Talkshow|(Region) UK</category>
+    <channel>CONTROVERSIAL TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>SYFY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|Entertainment|(Region) UK</category>
+    <channel>E4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Community|(Region) UK</category>
+    <channel>MY TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>UNIVERSAL CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|(Region) UK</category>
+    <channel>COMEDY CENTRAL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>ITV4+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Talkshow|Comedy|Reality|(Region) UK</category>
+    <channel>ITV 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Drama|(Region) UK</category>
+    <channel>ITV3 (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) African|(Region) UK</category>
+    <channel>THE AFRICA CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) African|(Region) UK</category>
+    <channel>AFRICA CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>History|Documentary|(Region) UK</category>
+    <channel>BBC FOUR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Community|(Region) UK</category>
+    <channel>INFORMATION TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|Motors|Entertainment|(Region) UK</category>
+    <channel>DAVE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Documentary|Reality|(Region) UK</category>
+    <channel>WATCH (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>SKY 3D (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) African|(Region) UK</category>
+    <channel>VOX AFRICA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Crime|Entertainment|(Region) UK</category>
+    <channel>5USA +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Drama|(Region) UK</category>
+    <channel>SKY ARTS 1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Reality|(Region) UK</category>
+    <channel>LIVINGIT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Reality|(Region) UK</category>
+    <channel>LIVINGIT+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|Documentary|Reality|Comedy|(Region) UK</category>
+    <channel>ITV4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>ALIBI (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>SKY ATLANTIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) African|(Region) UK</category>
+    <channel>AFRICA CHANNEL +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Chinese|(Region) UK</category>
+    <channel>KLEAR TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Showbiz|(Region) UK</category>
+    <channel>E! ENTERTAINMENT (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) UK</category>
+    <channel>DIVERSE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Crime|Entertainment|(Region) UK</category>
+    <channel>LIVING (GB)</channel>
+ </cats>
+ <cats>
+    <category>DIY|Reality|Documentary|(Region) UK</category>
+    <channel>DISCOVERY SHED (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>REALLY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>HOME (GB)</channel>
+ </cats>
+ <cats>
+    <category>Food|(Region) UK</category>
+    <channel>FOOD NETWORK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>HOME+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Food|(Region) UK</category>
+    <channel>GOOD FOOD+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Travel|(Region) UK</category>
+    <channel>TRAVEL UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Travel|(Region) UK</category>
+    <channel>TRAVEL CHANNEL + 1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>DISC HOME AND HEALTH (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>DISCOVERY HOME AND H (GB)</channel>
+ </cats>
+ <cats>
+    <category>Drama|(Region) UK</category>
+    <channel>SKY ARTS 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Food|(Region) UK</category>
+    <channel>FOOD NETWORK +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Reality|(Region) UK</category>
+    <channel>WEDDING TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) UK</category>
+    <channel>QMARK TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Reality|Documentary|(Region) UK</category>
+    <channel>HORSE AND COUNTRY TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|Reality|(Region) UK</category>
+    <channel>THE ACTIVE CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|Reality|(Region) UK</category>
+    <channel>FITNESS TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Food|(Region) UK</category>
+    <channel>GOOD FOOD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Travel|(Region) UK</category>
+    <channel>HOLIDAY &amp; CRUISE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Drama|(Region) UK</category>
+    <channel>DRAMA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES PREMIERE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES SHOWCASE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>FILM4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>FILM4+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>TCM+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>HORROR CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>HORROR CHANNEL+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>TRUE MOVIES (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>TRUE MOVIES 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SONY MOVIES (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SONY MOVIES +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>MOVIES 4 MEN (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>MOVIES4MEN+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>MOVIES 24 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>MOVIES 24+ (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>NOLLYWOOD MOVIES (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|Comedy|(Region) UK</category>
+    <channel>SKY MOVIES COMEDY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES ACT/THR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|Kids|(Region) UK</category>
+    <channel>SKY MOVIES FAMILY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|Crime|(Region) UK</category>
+    <channel>SKY MOVIES CRIME (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|Drama|(Region) UK</category>
+    <channel>SKY MOVIES DRAMA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES SCI/HORR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES GREATS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES SELECT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|Kids|(Region) UK</category>
+    <channel>SKY MOVIES DISNEY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>TCM (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV MUSIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV BASE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV HITS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV DANCE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV ROCKS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV CLASSIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>VH1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>VIVA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>THE BOX (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>4MUSIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>KISS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>SMASH HITS! (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MAGIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>HEAT TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>CHARTSHOW (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>VAULT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>FLAVA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>KERRANG! (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>VINTAGE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>CHANNEL AKA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>STARZ TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>BLISS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>SCUZZ (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>CHART SHOW DANCE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>GREATEST HITS TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>BUZMUZIK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>CLUBLAND TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MASSIVE R&amp;B (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>MTV LIVE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>HEART TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>PSYCHIC TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPORTS1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPORTS2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPORTS 3 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPORTS 4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>MUTV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPORTS 1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>EUROSPORT UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>ATTHERACES (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPORTS 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>EXTREME SPORTS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>CHELSEA TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>ESPN CLASSIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>BT SPORT 1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>BT SPORT 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>RACING WORLD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>LFC TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>MSK EXTRA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>RACING UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>ESPN (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPTS EXTRA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>BOX NATION (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPTS NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|Motors|(Region) UK</category>
+    <channel>SKY SPORTS F1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>TRACE SPORTS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>BRITISH EUROSPORT 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>PRIME TIME (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>BLOOMBERG (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>BBC PARLIAMENT (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>CNBC (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>CNNI (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>NHK WORLD TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>EURONEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>FOX NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>CCTV NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>NDTV 24X7 (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>RT ENGLISH (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) French|(Region) UK</category>
+    <channel>FRANCE 24 (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) Arabic|(Region) UK</category>
+    <channel>AL JAZEERA (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>CNC WORLD (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>SKY NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) African|(Region) UK</category>
+    <channel>ENCA AFRICA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|(Region) UK</category>
+    <channel>DISC CHANNEL+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|History|(Region) UK</category>
+    <channel>DISCOVERY HISTORY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Motors|(Region) UK</category>
+    <channel>DISC TURBO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|(Region) UK</category>
+    <channel>DISC SCIENCE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Wildlife|(Region) UK</category>
+    <channel>NATIONAL GEO+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>History|Documentary|(Region) UK</category>
+    <channel>HISTORY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>History|Documentary|(Region) UK</category>
+    <channel>H2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>EDEN+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Reality|(Region) UK</category>
+    <channel>EDEN (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Wildlife|(Region) UK</category>
+    <channel>ANIMALPLAN1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|(Region) UK</category>
+    <channel>DISCOVERY CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>History|Documentary|(Region) UK</category>
+    <channel>YESTERDAY (GB)</channel>
+ </cats>
+ <cats>
+    <category>History|Documentary|(Region) UK</category>
+    <channel>YESTERDAY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Community|(Region) UK</category>
+    <channel>COMMUNITY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Wildlife|(Region) UK</category>
+    <channel>NATIONAL GEOGRAPHIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Wildlife|(Region) UK</category>
+    <channel>NAT GEO WILD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|History|(Region) UK</category>
+    <channel>HISTORY CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|(Region) UK</category>
+    <channel>DISCOVERY SCIENCE+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Crime|Documentary|(Region) UK</category>
+    <channel>INVESTIGATION DISCOV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Crime|Documentary|(Region) UK</category>
+    <channel>CI+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Crime|Documentary|(Region) UK</category>
+    <channel>CI (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|History|(Region) UK</category>
+    <channel>DISCOVERY HISTORY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Wildlife|(Region) UK</category>
+    <channel>ANIMAL PLANET (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) UK</category>
+    <channel>BBC NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>GOD CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>REVELATION (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>TBNEUROPE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>DAYSTAR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>UCB TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>LOVE WORLD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>INI (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>GOSPEL CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>EWTN CATHOLIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>WORD NETWORK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>FAITH WORLD TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>KICC TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>BELIEVE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>OLIVE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>PRAISE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Religion|(Region) UK</category>
+    <channel>SONLIFE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CARTOON NET TOO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>BOOMERANG (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>NICK+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>NICK TOONS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY XD+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY CHAN+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY JUNIOR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY JUNIOR+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>NICK JR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>POP (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>TINY POP (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>BOOMERANG+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CARTOONITO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>NICK JR 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CITV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY XD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>BABY TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CBEEBIES (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>TINY POP+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>POP GIRL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>KIX (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>POP GIRL +1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>NICK TOONSTERS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>NICKELODEON (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CBBC CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CARTOON NETW D (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>QVC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>JML DIRECT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>ARGOS TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>TV SHOP (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>IDEAL WORLD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>PRICE-DROP TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>PITCH TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>RETAIL THERAPY TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>HIGH STREET TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>BEST DIRECT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>TJC CHOICE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>IDEAL EXTRA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|Jewellery|(Region) UK</category>
+    <channel>GEMS TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|DIY|(Region) UK</category>
+    <channel>JML HOME &amp; DIY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>BID TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|Jewellery|(Region) UK</category>
+    <channel>JEWELLERY MAKER (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|Jewellery|(Region) UK</category>
+    <channel>GEMSTV 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>PITCH WORLD (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>QVC BEAUTY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>PAVERSSHOESTV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>THANE DIRECT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>V CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>SCREENSHOP (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|Jewellery|(Region) UK</category>
+    <channel>ROCKS &amp; CO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|Food|(Region) UK</category>
+    <channel>JML COOKSHOP (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>DEAL CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>CREATECRAF (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>CELEBRITY SHOP (GB)</channel>
+ </cats>
+ <cats>
+    <category>Shopping|(Region) UK</category>
+    <channel>THE DEPT STORE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SBOPREVIEW (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY BOX OFFICE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY BOX OFFICE1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY BOX OFFICE2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|Movies|(Region) UK</category>
+    <channel>B4U MOVIES (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|Music|(Region) UK</category>
+    <channel>B4U MUSIC (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>STAR LIFE OK (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>PHOENIX CNE (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>BANGLA TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>MTA INTER (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ZEE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ZING (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|Movies|(Region) UK</category>
+    <channel>ZEE CINEMA (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ARY DIGITAL (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>PRIME TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>MATV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ABU DHABI TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|Movies|(Region) UK</category>
+    <channel>UMP MOVIES (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ZEE CAFE (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>TV5 (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>SET MAX (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>RECORD TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>DM DIGITAL (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>HIDAYAT (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ARY QTV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>VENUS TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|News|(Region) UK</category>
+    <channel>ARY NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>STAR JALSHA (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|News|(Region) UK</category>
+    <channel>ABP NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>STAR GOLD (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>PTV GLOBAL (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ISLAM CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>CHANNEL S (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>GEO UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>SAB TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>SAHARA ONE (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>AAJ TAK (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>NOOR TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|Religion|(Region) UK</category>
+    <channel>PEACE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|Music|(Region) UK</category>
+    <channel>MUSIC INDIA (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|Kids|(Region) UK</category>
+    <channel>AL JAZEERA CHILDREN (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>AAG TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|News|(Region) UK</category>
+    <channel>GEO NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>IQRA (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ATN BANGLA (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>UMMAH CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>COLORS TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>SUNRISE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>RISHTEY (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>GLORY TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>BRIT ASIA TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>CHANNEL 9 UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>AHLEBAIT TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>MADANI TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>SIKH CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>PEACE TV URDU (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>AHLULBAYT TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>UCTV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>CHANNEL I (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>TAKBEER TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>ALPHA TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>SANGAT (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>AASTHA TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>9XM (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>NTV UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>UMP STARS (GB)</channel>
+ </cats>
+ <cats>
+    <category>(Region) Indian|(Region) Asian|(Region) UK</category>
+    <channel>STAR PLUS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Betting|(Region) UK</category>
+    <channel>SKY POKER (GB)</channel>
+ </cats>
+ <cats>
+    <category>Betting|(Region) UK</category>
+    <channel>SUPERCASINO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Betting|(Region) UK</category>
+    <channel>SMART LIVE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Dating|(Region) UK</category>
+    <channel>DATING CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Dating|(Region) UK</category>
+    <channel>GAYXCHANGE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Dating|(Region) UK</category>
+    <channel>GAY NETWORK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Chat|Dating|(Region) UK</category>
+    <channel>CHATBOX (GB)</channel>
+ </cats>
+ <cats>
+    <category>Chat|(Region) UK</category>
+    <channel>PUB (GB)</channel>
+ </cats>
+ <cats>
+    <category>Motors|(Region) UK</category>
+    <channel>RENAULT TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>PAUL RAYMOND TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>ADULT CHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>PLAYBOY TV CHAT (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>TVX / REDHOT (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>RED HOT AMATEUR (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>RED HOT MUMS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>BABENATION (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>RED HOT 18S (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>GET LUCKY TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>LUCKY STAR (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>RED LIGHT 1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>TVX BRITS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>ELITE TV 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>CLIMAX3 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>EXTREME (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>TOP SHELF TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>CHEEKY CHAT (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>FILTH (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>CREAM (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>DIRTY TALK (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>BLUE TUBE (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>UK SWINGERS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>VIEWERS WIVES (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>XXXCESS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>PLAYBOY LOVERS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>XXX 18 &amp; DIRTY (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>XXX MUMS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>ELITE TV 4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>FLIRT TV 2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>ADULTXXXFIRSTTIMERS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>XXX GAY TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>XXXPANDED TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>RED LIGHT 3 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>RED LIGHT 4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>RED LIGHT RIO (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>NORTHERN BIRDS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>ESSEX BABES (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>GIRLGIRL (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>ELITE TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>STORM (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>SPORT XXX GIRLS (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>ELITE TV 3 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>LIVE XXX BABES (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>BABE GUIDE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>CHALLENGE+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>QUEST+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>SKY ONE+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>SKY ATLANTIC+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>CHANNEL 5+24 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>CHANNEL 5+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>ITV2+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>SYFY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>ALIBI+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>LIFETIME+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>HOME+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Food|(Region) UK</category>
+    <channel>GOOD FOOD+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Travel|(Region) UK</category>
+    <channel>TRAVEL CHANNEL+ 1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>TCM+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>HORROR CHANNEL+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>MOVIES4MEN+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES ACTTHR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY MOVIES SCIHORR (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Educational|(Region) UK</category>
+    <channel>DISC CHANNEL+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Educational|(Region) UK</category>
+    <channel>NATIONAL GEO+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>History|Documentary|Educational|(Region) UK</category>
+    <channel>HISTORY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>EDEN+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>History|Documentary|Educational|(Region) UK</category>
+    <channel>DISCOVERY HISTORY+1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>XXX|(Region) UK</category>
+    <channel>TVX  REDHOT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Sports|Drama|Comedy|Region (UK)</category>
+    <channel>BBC TWO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>USA NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|(Region) USA</category>
+    <channel>COMEDY CENTRAL (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>LIFETIME (US)</channel>
+ </cats>
+ <cats>
+    <category>Food|(Region) USA</category>
+    <channel>FOOD NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Reality|Educational|(Region) USA</category>
+    <channel>DO IT YOURSELF NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Food|(Region) USA</category>
+    <channel>THE COOKING CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|News|(Region) USA</category>
+    <channel>E! (US)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Documentary|History|(Region) USA</category>
+    <channel>HISTORY (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>SYFY (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>BET (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>FXX (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>OXYGEN (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>BRAVO (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>AMC (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>FX (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>TNT (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>TBS (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>ESPN (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>ESPNU (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>ESPN NEWS (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>ESPN2 (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>FOX SPORTS 2 (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>FOX SPORTS 1 (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>MLB NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>THE NFL NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>NFL REDZONE (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>NBA TV (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>NHL NETWORK US (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>CBS SPORTS NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) USA</category>
+    <channel>NBCSN (US)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) USA</category>
+    <channel>MTV (US)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) USA</category>
+    <channel>MTV2 (US)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) USA</category>
+    <channel>VH1 (US)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) USA</category>
+    <channel>VH1 CLASSIC (US)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>CMT (US)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) USA</category>
+    <channel>NICK JR (US)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) USA</category>
+    <channel>NICKELODEON (US)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) USA</category>
+    <channel>THE DISNEY CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) USA</category>
+    <channel>DISNEY XD (US)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) USA</category>
+    <channel>BOOMERANG (US)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) USA</category>
+    <channel>CARTOON NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Educational|(Region) USA</category>
+    <channel>DISCOVERY FAMILY CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|(Region) USA</category>
+    <channel>THE DISCOVERY CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Educational|Wildlife|(Region) USA</category>
+    <channel>ANIMAL PLANET (US)</channel>
+ </cats>
+ <cats>
+    <category>Movies|Entertainment|(Region) USA</category>
+    <channel>HALLMARK CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Educational|(Region) USA</category>
+    <channel>NATIONAL GEOGRAPHIC CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Talkshow|(Region) USA</category>
+    <channel>THE OPRAH WINFREY NETWORK (US)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Educational|Wildlife|(Region) USA</category>
+    <channel>NATGEO WILD (US)</channel>
+ </cats>
+ <cats>
+    <category>Travel|(Region) USA</category>
+    <channel>DESTINATION AMERICA (US)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) USA</category>
+    <channel>BLOOMBERG IN (US)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) USA</category>
+    <channel>BLOOMBERG TV (US)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) USA</category>
+    <channel>FOX NEWS CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>News|Sports|(Region) USA</category>
+    <channel>MSNBC (US)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) USA</category>
+    <channel>THE WEATHER CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>SPIKE TV (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) USA</category>
+    <channel>TRUTV (US)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) USA</category>
+    <channel>HBO (US)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) USA</category>
+    <channel>CINEMAX (US)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) USA</category>
+    <channel>SHOWTIME (US)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) USA</category>
+    <channel>THE MOVIE CHANNEL (US)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) USA</category>
+    <channel>STARZ (US)</channel>
+ </cats>
+ <cats>
+    <category>Sports</category>
+    <channel>BEIN SPORTS (US)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|Sports|(Region) UK</category>
+    <channel>ITV1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>CHANNEL 5 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>SKY1 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|Drama|(Region) UK</category>
+    <channel>SKY LIVING (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|(Region) UK</category>
+    <channel>BBC THREE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Talkshow|(Region) UK</category>
+    <channel>ITV2 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>MORE4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Crime|(Region) UK|(Region) USA</category>
+    <channel>5USA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Comedy|(Region) UK</category>
+    <channel>LONDON LIVE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CBBC (GB)</channel>
+ </cats>
+ <cats>
+    <category>Music|(Region) UK</category>
+    <channel>CAPITAL TV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Comedy|(Region) UK</category>
+    <channel>COMEDY CENTRAL UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>SYFY UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>FOX UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) UK</category>
+    <channel>E! (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>HORRORCHANNEL (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Documentary|Drama|(Region) UK</category>
+    <channel>BBC ONE SCOTLAND (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Documentary|Drama|(Region) UK|(Region) Irish</category>
+    <channel>BBC ONE NORTHERN IRELAND (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>CARTOON NETWORK UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>NICKELODEON UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK</category>
+    <channel>DISNEY JUNIOR UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|(Region) Irish</category>
+    <channel>RTE ONE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) Irish</category>
+    <channel>RTE TWO (GB)</channel>
+ </cats>
+ <cats>
+    <category>Entertainment|Reality|(Region) Irish</category>
+    <channel>TV3 (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) Irish</category>
+    <channel>TG4 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) Irish|(Region) UK</category>
+    <channel>3E (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) Irish</category>
+    <channel>UTV (GB)</channel>
+ </cats>
+ <cats>
+    <category>Kids|(Region) UK|(Region) Irish</category>
+    <channel>RTE JUNIOR (GB)</channel>
+ </cats>
+ <cats>
+    <category>News|(Region) Irish</category>
+    <channel>RTE NEWS NOW (GB)</channel>
+ </cats>
+ <cats>
+    <category>Documentary|(Region) UK</category>
+    <channel>DISCOVERY UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Wildlife|(Region) UK</category>
+    <channel>ANIMAL PLANET UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Educational|Wildlife|(Region) UK</category>
+    <channel>NAT GEO UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Uncategorised</category>
+    <channel>HISTORY UK (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY PREMIERE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY SHOWCASE (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY GREATS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY DISNEY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY FAMILY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY ACTION (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY COMEDY (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY DRAMA (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY SCI-FI (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY SELECT (GB)</channel>
+ </cats>
+ <cats>
+    <category>Movies|(Region) UK</category>
+    <channel>SKY THRILLER (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>SKY SPORTS 5 (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|News|(Region) UK</category>
+    <channel>SKY SPORTS NEWS (GB)</channel>
+ </cats>
+ <cats>
+    <category>Sports|(Region) UK</category>
+    <channel>BRITISH EUROSPORT (GB)</channel>
+ </cats>
+</Document>

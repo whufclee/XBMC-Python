@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>Browse Youtube Channels</defaultID>
+		<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32229]</label>
+		<label2>folder</label2>
+		<icon>DefaultYoutube.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+		<action>RunScript(script.qlickplay,info=list,type=channel)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Browse Youtube Videos</defaultID>
+		<label>$ADDON[script.qlickplay 32225] $ADDON[script.qlickplay 32231]</label>
+		<label2>folder</label2>
+		<icon>DefaultYoutube.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+		<action>RunScript(script.qlickplay,info=list,type=playlist)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>+-</label>
+		<label2>Video Add-On</label2>
+		<icon>DefaultAddonProgram.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+		<action>RunScript(&quot;special://home/addons/plugin.program.tbs/epg.py&quot;,'youtube')</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Search Youtube Videos</defaultID>
+		<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32231]</label>
+		<label2>folder</label2>
+		<icon>DefaultYoutube.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+		<action>RunScript(script.qlickplay,info=list,type=playlist,query=qqq)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Search Youtube Channels</defaultID>
+		<label>$ADDON[script.qlickplay 32226] $ADDON[script.qlickplay 32229]</label>
+		<label2>folder</label2>
+		<icon>DefaultYoutube.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_YOUTUBE%2fHOME_YOUTUBE_001.jpg/</thumb>
+		<action>RunScript(script.qlickplay,info=list,type=channel,query=qqq)</action>
+	</shortcut>
+</shortcuts>

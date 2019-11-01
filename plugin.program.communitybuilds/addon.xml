@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.communitybuilds" name=" [COLOR=orange]N[/COLOR]a[COLOR=orange]N[/COLOR] [COLOR=orange]C[/COLOR]ommunity [COLOR=orange]B[/COLOR]uilds" version="0.1" provider-name="noobsandnerds.com">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Community Builds</summary>
+	<description>Community Portal Simplified. This add-on gives easy access to the Community Builds from noobsandnerds.com</description>
+    <ref>c82a0bf4b0debf0c8884bc9993585e39</ref>
+    <platform>all</platform>
+  </extension>
+</addon>

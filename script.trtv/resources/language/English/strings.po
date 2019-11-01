@@ -1,0 +1,1208 @@
+# XBMC Media Center language file
+# Addon Name: TV Guide
+# Addon id: script.trtv
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "No description"
+msgstr ""
+
+msgctxt "#30001"
+msgid "[B]Loading EPG.[/B]"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Please wait..."
+msgstr ""
+
+msgctxt "#30003"
+msgid "Approximately %d seconds left..."
+msgstr ""
+
+msgctxt "#30004"
+msgid "Loading in progress..."
+msgstr ""
+
+msgctxt "#30005"
+msgid "Mouse control"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Now"
+msgstr ""
+
+msgctxt "#30007"
+msgid "[B]Tip![/B] You can also use the scroll wheel"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30009"
+msgid "No information available"
+msgstr ""
+
+#empty strings from id 30010 to 30099
+
+msgctxt "#30100"
+msgid "General"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Main Settings"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Show channels from category"
+msgstr ""
+
+msgctxt "#30103"
+msgid "XMLTV file"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Clear cache..."
+msgstr ""
+
+msgctxt "#30105"
+msgid "Done!"
+msgstr ""
+
+msgctxt "#30106"
+msgid "Show notification before selected programs start"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Use program image as background"
+msgstr ""
+
+msgctxt "#30108"
+msgid "Clear all reminders..."
+msgstr ""
+
+msgctxt "#30109"
+msgid "Remember to clear the cache when you change source"
+msgstr ""
+
+msgctxt "#30110"
+msgid "Update program information on startup"
+msgstr ""
+
+msgctxt "#30111"
+msgid "Play channels using the YouSee web-tv addon"
+msgstr ""
+
+msgctxt "#30112"
+msgid "Notifications"
+msgstr ""
+
+msgctxt "#30113"
+msgid "Play channels using the Danish Live TV addon"
+msgstr ""
+
+msgctxt "#30114"
+msgid "Extra Features"
+msgstr ""
+
+msgctxt "#30115"
+msgid "- clear cache first"
+msgstr ""
+
+msgctxt "#30116"
+msgid "Search for channel logos in"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Dixie URL"
+msgstr ""
+
+msgctxt "#30118"
+msgid "Enable OSD menu"
+msgstr ""
+
+msgctxt "#30119"
+msgid "Disabling the OSD menu may fix video stuttering."
+msgstr ""
+
+msgctxt "#30120"
+msgid "Use alternate streaming method (required for some addons)"
+msgstr ""
+
+msgctxt "#30121"
+msgid "Alternative streaming is not compatible with OSD menu"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Back Up"
+msgstr ""
+
+msgctxt "#30123"
+msgid "Enable Touch Screen"
+msgstr ""
+
+msgctxt "#30124"
+msgid "Global Timezone offset - use if listings are out of sync on all channels."
+msgstr ""
+
+msgctxt "#30125"
+msgid "Maintenance"
+msgstr ""
+
+msgctxt "#30126"
+msgid "Wipe listings"
+msgstr ""
+
+msgctxt "#30127"
+msgid "Reset channel mappings to defaults - will wipe all channel customisations"
+msgstr ""
+
+msgctxt "#30128"
+msgid "Choose Back Up Location..."
+msgstr ""
+
+msgctxt "#30129"
+msgid "Back Up"
+msgstr ""
+
+msgctxt "#30130"
+msgid "Restore"
+msgstr ""
+
+msgctxt "#30131"
+msgid "Rollback to previous channel list - may bring back old customisations"
+msgstr ""
+
+msgctxt "#30132"
+msgid "[COLOR=gold]Full Reset:[/COLOR] [COLOR=dodgerblue]ALL settings will be lost.[/COLOR]"
+msgstr ""
+
+#empty strings from id 30133 to 30149
+
+msgctxt "#30150"
+msgid "ERROR -  Possible unicode text error."
+msgstr ""
+
+msgctxt "#30151"
+msgid "There was a problem loading the listings."
+msgstr ""
+
+msgctxt "#30152"
+msgid "Please contact support."
+msgstr ""
+
+msgctxt "#30153"
+msgid "because the settings are invalid!"
+msgstr ""
+
+msgctxt "#30154"
+msgid "It looks like your current skin has a special"
+msgstr ""
+
+msgctxt "#30155"
+msgid "version of the TV Guide skin that is not up-to-date."
+msgstr ""
+
+msgctxt "#30156"
+msgid "Please try with a different skin..."
+msgstr ""
+
+msgctxt "#30157"
+msgid "It looks like the TV Guide database is broken."
+msgstr ""
+
+msgctxt "#30158"
+msgid "The database will be deleted and recreated."
+msgstr ""
+
+msgctxt "#30159"
+msgid "Channel configuration, etc. is unfortunately lost."
+msgstr ""
+
+msgctxt "#30160"
+msgid "Please check your account or the Add-on settings."
+msgstr ""
+
+#empty strings from id 30160 to 30199
+
+msgctxt "#30200"
+msgid "on [B]%s[/B] in 5 minutes..."
+msgstr ""
+
+msgctxt "#30201"
+msgid "on [B]%s[/B] is starting now..."
+msgstr ""
+
+#empty strings from id 30202 to 30299
+
+msgctxt "#30300"
+msgid "Watch %s"
+msgstr ""
+
+msgctxt "#30301"
+msgid "Remind"
+msgstr ""
+
+msgctxt "#30302"
+msgid "Don't remind"
+msgstr ""
+
+msgctxt "#30303"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30304"
+msgid "Choose Stream"
+msgstr ""
+
+msgctxt "#30305"
+msgid "Enable login"
+msgstr ""
+
+msgctxt "#30306"
+msgid "Remove Stream"
+msgstr ""
+
+msgctxt "#30307"
+msgid "Channels"
+msgstr ""
+
+msgctxt "#30308"
+msgid "Close Menu"
+msgstr ""
+
+msgctxt "#30309"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#30310"
+msgid "Choose a category from the list."
+msgstr ""
+
+msgctxt "#30311"
+msgid "Save"
+msgstr ""
+
+msgctxt "#30312"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30313"
+msgid "Settings"
+msgstr ""
+
+msgctxt "#30314"
+msgid "iPlayer"
+msgstr ""
+
+msgctxt "#30315"
+msgid "Super Search"
+msgstr ""
+
+msgctxt "#30316"
+msgid "ITV Player"
+msgstr ""
+
+msgctxt "#30317"
+msgid "Super Favourites"
+msgstr ""
+
+msgctxt "#30318"
+msgid "VPN"
+msgstr ""
+
+msgctxt "#30319"
+msgid "My Recordings"
+msgstr ""
+
+msgctxt "#30320"
+msgid "TV Guide Tools"
+msgstr ""
+
+msgctxt "#30321"
+msgid "Add-on Scanner"
+msgstr ""
+
+msgctxt "#30322"
+msgid "Choose the sections of add-ons you want the guide to scan when grabbing streams.[CR][CR]Please make sure the sections you choose do actually contain channel names, the scanner will NOT scan through sub-directories.[CR][CR][COLOR=gold]WARNING:[/COLOR] THE MORE SECTIONS YOU ADD THE LONGER THE SCAN TAKES!!!"
+msgstr ""
+
+msgctxt "#30323"
+msgid "Open the main TV Guide settings. In here you can edit all the advanced features such as adding your own channel listings.[CR][CR]The guide is very customisable and some features are very advanced, however don't worry if you break something - you can always use the Reset option to revert back to stock factory settings."
+msgstr ""
+
+msgctxt "#30324"
+msgid "This will allow you to filter channels by category. Only want sports, or maybe a combination of comedy, kids & entertainment? Simply tick the ones you want to appear in the guide and watch as the other channels magically disappear![CR][CR]You can also bring up this option by pressing left in the guide."
+msgstr ""
+
+msgctxt "#30325"
+msgid "Disable the channels you want to permanantly hide. You can also edit the positioning of where the channels appear in the guide here too.[CR][CR]To change a channel position just navigate down so you're highlighting the channel then click left. Move up/down until you're at the desired position then click right."
+msgstr ""
+
+#empty strings from id 30326 to 30499
+
+msgctxt "#30500"
+msgid "[B]Edit channel order and visibility[/B]"
+msgstr ""
+
+msgctxt "#30501"
+msgid "Move up and down to change the position of[CR]the channel. Select or navigate left to accept[CR]the position."
+msgstr ""
+
+msgctxt "#30502"
+msgid "Save"
+msgstr ""
+
+msgctxt "#30503"
+msgid "Cancel"
+msgstr ""
+
+#empty strings from id 30504 to 30599
+
+msgctxt "#30600"
+msgid "[B]Setup stream[/B]"
+msgstr ""
+
+msgctxt "#30601"
+msgid "Playlist or .strm"
+msgstr ""
+
+msgctxt "#30602"
+msgid "Favourites"
+msgstr ""
+
+msgctxt "#30603"
+msgid "Addons"
+msgstr ""
+
+msgctxt "#30604"
+msgid "Preview stream"
+msgstr ""
+
+msgctxt "#30605"
+msgid "Save"
+msgstr ""
+
+msgctxt "#30606"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30607"
+msgid "Stop preview"
+msgstr ""
+
+msgctxt "#30608"
+msgid "Super Favourites"
+msgstr ""
+
+msgctxt "#30609"
+msgid "IPTV PlayList"
+msgstr ""
+
+
+msgctxt "#30610"
+msgid "Browse..."
+msgstr ""
+
+msgctxt "#30611"
+msgid "Click Browse... below and navigate to your stream file. When you have chosen your file you can preview the stream to test if it works."
+msgstr ""
+
+#empty strings from id 30612 to 30619
+
+msgctxt "#30620"
+msgid "Choose a favourite below."
+msgstr ""
+
+msgctxt "#30621"
+msgid "Choose a channel below."
+msgstr ""
+
+
+msgctxt "#30622"
+msgid "Click Browse... below and navigate to your Super Favourite. When you have chosen it you can preview the stream to test if it works in this guide."
+msgstr ""
+
+#empty strings from id 30623 to 30699
+
+msgctxt "#30700"
+msgid "Multiple addons provide this channel.[CR]Choose one to watch the stream."
+msgstr ""
+
+msgctxt "#30800"
+msgid "JSON-EPG URL"
+msgstr ""
+
+msgctxt "#30801"
+msgid "Enable Config Menu Tools"
+msgstr ""
+
+msgctxt "#30802"
+msgid "URL for XML selector list:"
+msgstr ""
+
+msgctxt "#30803"
+msgid "addon which is not installed."
+msgstr ""
+
+msgctxt "#30804"
+msgid "Streaming using that addon is now disabled."
+msgstr ""
+
+msgctxt "#30805"
+msgid "EPG Config Tools Menu"
+msgstr ""
+
+msgctxt "#30806"
+msgid "[COLOR=gold]OPEN CONFIG MENU[/COLOR]"
+msgstr ""
+
+msgctxt "#30807"
+msgid "Please wait..."
+msgstr ""
+
+msgctxt "#30808"
+msgid "Checking login details and update files"
+msgstr ""
+
+msgctxt "#30809"
+msgid "SF Folders Creation Complete"
+msgstr ""
+
+msgctxt "#30810"
+msgid "Your Super Favourites path has now been updated. Channels will only show if they have at least one favourite added."
+msgstr ""
+
+msgctxt "#30811"
+msgid "Creating list of channels, this should only take a minute or so"
+msgstr ""
+
+msgctxt "#30812"
+msgid "Please be patient - this may take quite some time!"
+msgstr ""
+
+msgctxt "#30813"
+msgid "Database is locked"
+msgstr ""
+
+msgctxt "#30814"
+msgid "Unable to create a new database at this time as it's currently in use. Please restart and try again."
+msgstr ""
+
+msgctxt "#30815"
+msgid "Please wait, scanning listings..."
+msgstr ""
+
+msgctxt "#30816"
+msgid "Total Channels Found: "
+msgstr ""
+
+msgctxt "#30817"
+msgid "Now scanning listings..."
+msgstr ""
+
+msgctxt "#30818"
+msgid "Listings found "
+msgstr ""
+
+msgctxt "#30819"
+msgid "Import Complete"
+msgstr ""
+
+msgctxt "#30820"
+msgid "The import of TV channels is now complete, would you like to open the EPG now?"
+msgstr ""
+
+msgctxt "#30821"
+msgid "Is the XML import in progress?"
+msgstr ""
+
+msgctxt "#30822"
+msgid "It looks like something is already using the database, are you sure you want to continue? If you're currently importing an XML DO NOT click yes!"
+msgstr ""
+
+msgctxt "#30823"
+msgid "No Listings Found"
+msgstr ""
+
+msgctxt "#30824"
+msgid "To use this add-on you need to either import your channel listings or create your own dummy channels using the TV Guide Tools."
+msgstr ""
+
+msgctxt "#30825"
+msgid "Add-on Scanner - update links"
+msgstr ""
+
+msgctxt "#30826"
+msgid "Add-on Scanner - configure"
+msgstr ""
+
+msgctxt "#30827"
+msgid "Reset EPG"
+msgstr ""
+
+msgctxt "#30828"
+msgid "EPG Settings"
+msgstr ""
+
+msgctxt "#30829"
+msgid "Select Listings Provider"
+msgstr ""
+
+msgctxt "#30830"
+msgid "PLEASE CONFIGURE YOUR MENU"
+msgstr ""
+
+msgctxt "#30831"
+msgid "You have clicked on the EPG Tools option but it hasn't yet been configured. Press OK to be taken to your EPG Tools config settings."
+msgstr ""
+
+msgctxt "#30832"
+msgid "Sync with online icons"
+msgstr ""
+
+msgctxt "#30833"
+msgid "Servers Busy"
+msgstr ""
+
+msgctxt "#30834"
+msgid "Sorry the servers appear to be struggling with demand, please try again. Sorry for any inconvenience, we are currently working on improving the speeds."
+msgstr ""
+
+msgctxt "#30835"
+msgid "No Login Details"
+msgstr ""
+
+msgctxt "#30836"
+msgid "Are you sure you wish to quit?"
+msgstr ""
+
+msgctxt "#30837"
+msgid "Updating database"
+msgstr ""
+
+msgctxt "#30838"
+msgid "DO NOT exit the system at this point"
+msgstr ""
+
+msgctxt "#30839"
+msgid "Updates Complete"
+msgstr ""
+
+msgctxt "#30840"
+msgid "All database files updated successfully"
+msgstr ""
+
+msgctxt "#30841"
+msgid "Exit TV Guide"
+msgstr ""
+
+msgctxt "#30842"
+msgid "[COLOR=dodgerblue]VPN - Switch Location[/COLOR]"
+msgstr ""
+
+msgctxt "#30843"
+msgid "VPN Manager"
+msgstr ""
+
+msgctxt "#30844"
+msgid ""
+msgstr ""
+
+msgctxt "#30845"
+msgid ""
+msgstr ""
+
+msgctxt "#30846"
+msgid ""
+msgstr ""
+
+msgctxt "#30847"
+msgid "Use a remote share for addon data"
+msgstr ""
+
+msgctxt "#30848"
+msgid "Enter location for shared addon data"
+msgstr ""
+
+msgctxt "#30849"
+msgid "Filter channels by category"
+msgstr ""
+
+msgctxt "#30850"
+msgid ""
+msgstr ""
+
+msgctxt "#30851"
+msgid "Show the XXX category"
+msgstr ""
+
+msgctxt "#30852"
+msgid "TV mini guide - bring up the tv guide from anywhere on the system"
+msgstr ""
+
+msgctxt "#30853"
+msgid "[B]Click to program Mini-Guide Hot Key[/B]"
+msgstr ""
+
+msgctxt "#30854"
+msgid "Super Favourite / MetalliQ Integration"
+msgstr ""
+
+msgctxt "#30855"
+msgid "Only show my installed Social Shares"
+msgstr ""
+
+msgctxt "#30856"
+msgid "Auto Play SF items (Experimental)"
+msgstr ""
+
+msgctxt "#30857"
+msgid "SF Channel Folder"
+msgstr ""
+
+msgctxt "#30858"
+msgid "[COLOR=gold]Create SF Channel Folders in path above[/COLOR]"
+msgstr ""
+
+msgctxt "#30859"
+msgid "This helps with dead links that need relinking"
+msgstr ""
+
+msgctxt "#30860"
+msgid "Always Offer To Choose Stream"
+msgstr ""
+
+msgctxt "#30861"
+msgid "Easy access to categories list - disables ability to look back in time."
+msgstr ""
+
+msgctxt "#30862"
+msgid "Show Categories On Left Click"
+msgstr ""
+
+msgctxt "#30863"
+msgid "Not based in UK? You may need to change this option"
+msgstr ""
+
+msgctxt "#30864"
+msgid "Choose Film-On UK TV Links"
+msgstr ""
+
+msgctxt "#30865"
+msgid "Allow Enhanced Add-on Linking"
+msgstr ""
+
+msgctxt "#30866"
+msgid "Do not enable unless you absolutely need touchscreen support"
+msgstr ""
+
+msgctxt "#30867"
+msgid "Boot directly into the EPG on startup"
+msgstr ""
+
+msgctxt "#30868"
+msgid "Start Automatically (requires reboot)"
+msgstr ""
+
+msgctxt "#30869"
+msgid "Worried you may leave the TV streaming content? Set a timer here"
+msgstr ""
+
+msgctxt "#30870"
+msgid "Quit Stream If Idle For"
+msgstr ""
+
+msgctxt "#30871"
+msgid "Stop accidental backing out of the EPG - this gives a yes/no dialog"
+msgstr ""
+
+msgctxt "#30872"
+msgid "Confirm Exit From EPG"
+msgstr ""
+
+msgctxt "#30873"
+msgid "Set the global timezone offset"
+msgstr ""
+
+msgctxt "#30874"
+msgid ""
+msgstr ""
+
+msgctxt "#30875"
+msgid ""
+msgstr ""
+
+msgctxt "#30876"
+msgid ""
+msgstr ""
+
+msgctxt "#30877"
+msgid ""
+msgstr ""
+
+msgctxt "#30878"
+msgid "[B]Click to reset Mini-Guide Hot Key[/B]"
+msgstr ""
+
+msgctxt "#30879"
+msgid "Current LogoPack"
+msgstr ""
+
+msgctxt "#30880"
+msgid "Previous LogoPack"
+msgstr ""
+
+msgctxt "#30881"
+msgid "FIRSTRUN"
+msgstr ""
+
+msgctxt "#30882"
+msgid "Mini-Guide Installed"
+msgstr ""
+
+msgctxt "#30883"
+msgid "Previous GMT"
+msgstr ""
+
+msgctxt "#30884"
+msgid "categories"
+msgstr ""
+
+msgctxt "#30885"
+msgid "Current Version"
+msgstr ""
+
+msgctxt "#30886"
+msgid "Skin Version"
+msgstr ""
+
+msgctxt "#30887"
+msgid "Logo Version"
+msgstr ""
+
+msgctxt "#30888"
+msgid "ini Version"
+msgstr ""
+
+msgctxt "#30889"
+msgid "SF Folder Count"
+msgstr ""
+
+msgctxt "#30890"
+msgid "Update EPG Date"
+msgstr ""
+
+msgctxt "#30891"
+msgid "Current Channels"
+msgstr ""
+
+msgctxt "#30892"
+msgid "Updated Channels"
+msgstr ""
+
+msgctxt "#30894"
+msgid "login"
+msgstr ""
+
+msgctxt "#30895"
+msgid "Add SF folders channels even if I have no EPG data scanned"
+msgstr ""
+
+msgctxt "#30896"
+msgid "Open Direct into SF folder - Disables channel surfing ability"
+msgstr ""
+
+msgctxt "#30897"
+msgid "[COLOR=gold]----------------------------------------------------[/COLOR]"
+msgstr ""
+
+msgctxt "#30898"
+msgid "Choose to watch the live channel or search for movie/show via add-ons"
+msgstr ""
+
+msgctxt "#30899"
+msgid "Give the option of watching live or catchup"
+msgstr ""
+
+msgctxt "#30900"
+msgid ""
+msgstr ""
+
+msgctxt "#30901"
+msgid ""
+msgstr ""
+
+msgctxt "#30902"
+msgid ""
+msgstr ""
+
+msgctxt "#30903"
+msgid "Log Options - Add an email to receive a link to your log"
+msgstr ""
+
+msgctxt "#30904"
+msgid "Enable Debug Mode (enable if asking for help on forum)"
+msgstr ""
+
+msgctxt "#30905"
+msgid "Always skip old.log (log from previous run)"
+msgstr ""
+
+msgctxt "#30906"
+msgid "Email address"
+msgstr ""
+
+msgctxt "#30907"
+msgid "[COLOR=gold]Click to upload log[/COLOR]"
+msgstr ""
+
+msgctxt "#30908"
+msgid "Backup/Restore Channel Data"
+msgstr ""
+
+msgctxt "#30909"
+msgid "Create a FULL backup - Can restore on this device"
+msgstr ""
+
+msgctxt "#30910"
+msgid "Create a SYNC backup - Synchronise multiple installs"
+msgstr ""
+
+msgctxt "#30911"
+msgid "Fixes"
+msgstr ""
+
+msgctxt "#30912"
+msgid "Update listings - rescan XML files for updates"
+msgstr ""
+
+msgctxt "#30913"
+msgid "Force listings update - only use if the option above doesn't work"
+msgstr ""
+
+msgctxt "#30914"
+msgid "Choose USTV Catch Up"
+msgstr ""
+
+msgctxt "#30915"
+msgid "Choose Trailers Add-on"
+msgstr ""
+
+msgctxt "#30916"
+msgid "Appearance - set your skin and logo pack"
+msgstr ""
+
+msgctxt "#30917"
+msgid "Choose Skin"
+msgstr ""
+
+msgctxt "#30918"
+msgid "Channel Settings"
+msgstr ""
+
+msgctxt "#30919"
+msgid "Custom Channel Folder"
+msgstr ""
+
+msgctxt "#30920"
+msgid "Logo Pack Settings"
+msgstr ""
+
+msgctxt "#30921"
+msgid "Choose Custom Logo Pack"
+msgstr ""
+
+msgctxt "#30922"
+msgid "Choose Built-in Logo Pack"
+msgstr ""
+
+msgctxt "#30923"
+msgid "IPTV playlist integration"
+msgstr ""
+
+msgctxt "#30924"
+msgid "IPTV Playlist"
+msgstr ""
+
+msgctxt "#30925"
+msgid "File"
+msgstr ""
+
+msgctxt "#30926"
+msgid "URL"
+msgstr ""
+
+msgctxt "#30927"
+msgid "XML TV Guide data sources"
+msgstr ""
+
+msgctxt "#30928"
+msgid "TVXML 1 Type"
+msgstr ""
+
+msgctxt "#30929"
+msgid "Choose file location for XML 1"
+msgstr ""
+
+msgctxt "#30930"
+msgid "Enter URL Location for XML 1"
+msgstr ""
+
+msgctxt "#30931"
+msgid "Set Country for this XML (recommended)"
+msgstr ""
+
+msgctxt "#30932"
+msgid "Choose Country"
+msgstr ""
+
+msgctxt "#30933"
+msgid ""
+msgstr ""
+
+msgctxt "#30934"
+msgid "Offset listings - set offset (in hours) for listings in wrong timezone"
+msgstr ""
+
+msgctxt "#30935"
+msgid "TVXML 2 Type"
+msgstr ""
+
+msgctxt "#30936"
+msgid "Choose file location for XML 2"
+msgstr ""
+
+msgctxt "#30937"
+msgid "Enter URL Location for XML 2"
+msgstr ""
+
+msgctxt "#30938"
+msgid "TVXML 3 Type"
+msgstr ""
+
+msgctxt "#30939"
+msgid "Choose file location for XML 3"
+msgstr ""
+
+msgctxt "#30940"
+msgid "Enter URL Location for XML 3"
+msgstr ""
+
+msgctxt "#30941"
+msgid "TVXML 4 Type"
+msgstr ""
+
+msgctxt "#30942"
+msgid "Choose file location for XML 4"
+msgstr ""
+
+msgctxt "#30943"
+msgid "Enter URL Location for XML 4"
+msgstr ""
+
+msgctxt "#30944"
+msgid "TVXML 5 Type"
+msgstr ""
+
+msgctxt "#30945"
+msgid "Choose file location for XML 5"
+msgstr ""
+
+msgctxt "#30946"
+msgid "Enter URL Location for XML 5"
+msgstr ""
+
+msgctxt "#30947"
+msgid "TVXML 6 Type"
+msgstr ""
+
+msgctxt "#30948"
+msgid "Choose file location for XML 6"
+msgstr ""
+
+msgctxt "#30949"
+msgid "Enter URL Location for XML 6"
+msgstr ""
+
+msgctxt "#30950"
+msgid "TVXML 7 Type"
+msgstr ""
+
+msgctxt "#30951"
+msgid "Choose file location for XML 7"
+msgstr ""
+
+msgctxt "#30952"
+msgid "Enter URL Location for XML 7"
+msgstr ""
+
+msgctxt "#30953"
+msgid "TVXML 8 Type"
+msgstr ""
+
+msgctxt "#30954"
+msgid "Choose file location for XML 8"
+msgstr ""
+
+msgctxt "#30955"
+msgid "Enter URL Location for XML 8"
+msgstr ""
+
+msgctxt "#30956"
+msgid "TVXML 9 Type"
+msgstr ""
+
+msgctxt "#30957"
+msgid "Choose file location for XML 9"
+msgstr ""
+
+msgctxt "#30958"
+msgid "Enter URL Location for XML 9"
+msgstr ""
+
+msgctxt "#30959"
+msgid "TVXML 10 Type"
+msgstr ""
+
+msgctxt "#30960"
+msgid "Choose file location for XML 10"
+msgstr ""
+
+msgctxt "#30961"
+msgid "Enter URL Location for XML 10"
+msgstr ""
+
+msgctxt "#30962"
+msgid ""
+msgstr ""
+
+msgctxt "#30963"
+msgid ""
+msgstr ""
+
+msgctxt "#30964"
+msgid ""
+msgstr ""
+
+msgctxt "#30965"
+msgid "Error"
+msgstr ""
+
+msgctxt "#30966"
+msgid ""
+msgstr ""
+
+msgctxt "#30967"
+msgid "Use SF MetalliQ links - EXPERIMENTAL"
+msgstr ""
+
+msgctxt "#30968"
+msgid ""
+msgstr ""
+
+msgctxt "#30969"
+msgid "[COLOR=gold]Scan in XML files[/COLOR]"
+msgstr ""
+
+msgctxt "#30970"
+msgid "Your Metalliq SF folders have been created."
+msgstr ""
+
+msgctxt "#30971"
+msgid "Clear Cookies - use if having problems with login."
+msgstr ""
+
+msgctxt "#30972"
+msgid "Update SF folders on every start"
+msgstr ""
+
+msgctxt "#30973"
+msgid "Enable All MetalliQ Players"
+msgstr ""
+
+msgctxt "#30974"
+msgid "CATCH-UP OR LIVE?"
+msgstr ""
+
+msgctxt "#30975"
+msgid "Watch this channel LIVE"
+msgstr ""
+
+msgctxt "#30976"
+msgid "Watch with no adverts"
+msgstr ""
+
+msgctxt "#30977"
+msgid "Watch previous episodes"
+msgstr ""
+
+msgctxt "#30978"
+msgid "MOVIE OR TV SHOW?"
+msgstr ""
+
+msgctxt "#30979"
+msgid "Is this a movie or a tv show?"
+msgstr ""
+
+msgctxt "#30980"
+msgid "MOVIE"
+msgstr ""
+
+msgctxt "#30981"
+msgid "TV SHOW"
+msgstr ""
+
+msgctxt "#30982"
+msgid "Enable Social Share Add/Remove Channel"
+msgstr ""
+
+msgctxt "#30983"
+msgid "Only show channels with EPG data"
+msgstr ""
+
+msgctxt "#30984"
+msgid "UPDATING LISTINGS"
+msgstr ""
+
+msgctxt "#30985"
+msgid "PLAYBACK FAILED"
+msgstr ""
+
+msgctxt "#30986"
+msgid "If no progress dialog box appears when you press OK please try a different source. If none work you might want to consider updating your links."
+msgstr ""
+
+msgctxt "#30987"
+msgid "Update links every 12hrs"
+msgstr ""
+
+msgctxt "#30988"
+msgid "Run the ini creator every 12hrs to regenerate the links"
+msgstr ""
+
+msgctxt "#30989"
+msgid "Only show channels that have valid streams available"
+msgstr ""
+
+msgctxt "#30990"
+msgid "Channels only with valid ini entries"
+msgstr ""
+
+msgctxt "#30991"
+msgid "Remove streams on unsuccessful playback"
+msgstr ""
+
+msgctxt "#30992"
+msgid "Remove from ini files if unplayable"
+msgstr ""
+
+msgctxt "#30993"
+msgid "[COLOR=gold]TV GUIDE[/COLOR]"
+msgstr ""

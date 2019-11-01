@@ -1,7 +1,7 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # plugin.program.tbs
-# Total Revolution Maintenance (c) by whufclee (info@totalrevolution.tv)
+# Total Revolution Maintenance (c) by TOTALREVOLUTION LTD (support@trmc.freshdesk.com)
 
 # Total Revolution Maintenance is licensed under a
 # Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
@@ -93,16 +93,9 @@ ACTION_MOVE_UP   =  3
 ACTION_MOVE_DOWN =  4
 
 try:
-    adult_list = Addon_Genre(custom_url='http://totalrevolution.xyz/addons/addon_list.txt').items()
+    adult_addons = List_From_Dict(Addon_Genre(custom_url='http://totalrevolution.xyz/addons/addon_list_new.txt'))
 except:
-    try:
-        adult_list = Addon_Genre().items()
-    except:
-        adult_list = []
-
-adult_addons = []
-for item in adult_list:
-    adult_addons.append(item[1])
+    adult_addons = []
 
 if os.path.exists(BRANDART):
     FANART = BRANDART
@@ -149,7 +142,7 @@ def Addon_Removal_Menu(removal_types='all'):
     descarray = []
     patharray = []
     finalpath = []
-    Adult_Toggle(adult_list=adult_addons,disable=False)
+    Adult_Toggle(adult_list=adult_addons,disable=False, update_status=int(Addon_Setting(addon_id='plugin.program.tbs', setting='general.addonupdates')))
     Refresh('addons')
     my_addons = []
 
@@ -178,6 +171,118 @@ def Addon_Removal_Menu(removal_types='all'):
         finalpath.append([newname,newpath])
     if len(finalpath) > 0:
         Remove_Addons(finalpath)
+#---------------------------------------------------------------------------------------------------
+# Function to browse and launch the installed add-ons
+@route(mode='addon_launcher')
+def Addon_Launcher():
+    addon_list = {}
+    my_addons = Get_Contents(path=ADDONS, exclude_list=['packages','temp'],full_path=False)
+    buttons = [String(518,'system'),String(24020,'system'),String(222,'system')]
+    realname = Addon_Setting('script.openwindow','realname')
+    # Create full genre lists of all known addons
+    genres = {
+                'adult'         : 30075,
+                'anime'         : 30578,
+                'audiobooks'    : 30579,
+                'comedy'        : 30061,
+                'comics'        : 30580,
+                'documentary'   : 30581,
+                'food'          : 30582,
+                'gaming'        : 30063,
+                'health'        : 30583,
+                'howto'         : 30572,
+                'kids'          : 30064,
+                'livetv'        : 30065,
+                'movies'        : 30066,
+                'music'         : 30067,
+                'news'          : 30584,
+                'podcasts'      : 30585,
+                'radio'         : 30586,
+                'religion'      : 30587,
+                'space'         : 30588,
+                'sports'        : 30069,
+                'subscription'  : 30589,
+                'tech'          : 30070,
+                'trailers'      : 30590,
+                'tvshows'       : 30072,
+                'world'         : 30073
+            }
+    for genre in List_From_Dict(genres):
+        exec ('%s = List_From_Dict(Addon_Genre("%s"))'%(genre,genre))
+        exec ('%s_installed = []'%genre)
+
+    # Loop through the installed add-ons and add to relevant lists
+    for item in my_addons:
+        try:
+            addon_id = Get_Addon_ID(item)
+            addon_type = Addon_Info(id='type',addon_id=addon_id)
+            type_list = {'xbmc.python.pluginsource':'Plugin','xbmc.python.script':String(24009,'system')}
+            if addon_type in ['xbmc.python.pluginsource','xbmc.python.script']:
+                name = Addon_Info(id='name',addon_id=addon_id)
+                description = Addon_Info(id='description',addon_id=addon_id)
+                addon_type = Addon_Info(id='type',addon_id=addon_id)
+                author = Addon_Info(id='author',addon_id=addon_id)
+                version = Addon_Info(id='version',addon_id=addon_id)
+                icon = Addon_Info(id='icon',addon_id=addon_id)
+                fanart = Addon_Info(id='fanart',addon_id=addon_id)
+                addon_type = type_list[addon_type]
+                addon_list[addon_id] = [name,description,author,version,icon,fanart,addon_type]
+                for genre in List_From_Dict(genres):
+                    if addon_id in eval(genre):
+                        exec('%s_installed.append("%s")'%(genre,addon_id))
+        except:
+            dolog(Last_Error())
+
+    # Create a final list to show to the user
+    clean_list = []
+    final_list = {}
+    for genre in List_From_Dict(genres):
+        if len(eval('%s_installed'%genre)) > 0:
+            clean_list.append(String(genres[genre]))
+            final_list[String(genres[genre])] = eval('%s_installed'%genre)
+    clean_list = sorted(clean_list)
+
+    success = False
+    while not success:
+        new_list = []
+        choice = Select_Dialog('ADD-ON LAUNCHER',clean_list)
+        if choice > -1:
+            final_choice_list = final_list[clean_list[choice]]
+            for item in final_choice_list:
+
+                # Need to edit the else so it creates a list using the custom names from genre list
+                if realname == 'true':
+                    new_list.append(addon_list[item][0])
+                else:
+                    new_list.append(addon_list[item][0])
+
+            new_list.append('------------------------------')
+            new_list.append(String(30301))
+            choice2 = Select_Dialog(clean_list[choice],new_list)
+            if choice2 > -1:
+                if new_list[choice2] == '------------------------------':
+                    pass
+                elif new_list[choice2] == String(30301):
+                    Addon_Install_Menu()
+                    success = True
+                else:
+                    addon_id = final_choice_list[choice2]
+                    addon_name = addon_list[addon_id][0]
+                    description = '[COLOR dodgerblue]Add-on ID:[/COLOR] %s[CR][COLOR dodgerblue]Version:[/COLOR] %s[CR]'\
+                    '[COLOR dodgerblue]Author(s):[/COLOR] %s[CR][COLOR dodgerblue]Type:[/COLOR] %s[CR][CR][CR][CR][COLOR dodgerblue]Description:[/COLOR] %s'\
+                    %(addon_id,addon_list[addon_id][3],addon_list[addon_id][2],addon_list[addon_id][6],addon_list[addon_id][1])
+                    icon = addon_list[addon_id][4]
+                    fanart = addon_list[addon_id][5]
+
+                    choice3 = Custom_Dialog(header=addon_name, main_content=description,buttons=buttons, icon=icon)
+                    if choice3 == 0:
+                        xbmc.executebuiltin('RunAddon(%s)'%final_choice_list[choice2])
+                        success = True
+                    elif choice3 == 1:
+                        Open_Settings(addon_id)
+                        success = True
+        else:
+            success = True
 #---------------------------------------------------------------------------------------------------
 # Function to browse the userdata/addon_data folder
 @route(mode='addon_browser', args=['browser_type','header','skiparray','addons'])
@@ -281,13 +386,19 @@ def Adult_Filter(value, loadtype = ''):
             success = 1
     if value == 'false':
         filter_type = 'disabled'
-        Adult_Toggle(adult_list=adult_addons,disable=True)
+        Adult_Toggle(adult_list=adult_addons,disable=True, update_status=int(Addon_Setting(addon_id='plugin.program.tbs', setting='general.addonupdates')))
     else:
         filter_type = 'enabled'
-        Sleep_If_Function_Active(function=Adult_Toggle, args=[adult_addons,False])
+        Sleep_If_Function_Active(function=Adult_Toggle, args=[adult_addons,False, int( Addon_Setting(addon_id='plugin.program.tbs', setting='general.addonupdates') )])
     if loadtype != 'menu' and loadtype != 'startup':
         OK_Dialog(String(30003) % filter_type.upper(), String(30004) % filter_type)
+    Set_Setting('general.addonnotifications','kodi_setting',Addon_Setting(addon_id='plugin.program.tbs',setting='general.addonnotifications'))
+    Set_Setting('general.addonupdates','kodi_setting',Addon_Setting(addon_id='plugin.program.tbs',setting='general.addonupdates'))
     return success
+#---------------------------------------------------------------------------------------------------
+# Check for storage location on android
+def Addon_Install_Menu():
+    xbmc.log('Show a custom_dialog for genres and manual search',2)
 #---------------------------------------------------------------------------------------------------
 # Check for storage location on android
 def Android_Path_Check():
@@ -392,13 +503,13 @@ def Build_Info():
 # Main category list
 @route(mode='start')
 def Categories():
-    # if debug == 'true':
-    #     Add_Dir('Koding','', "tutorials", True,'','','')
+    if debug == 'true':
+        Add_Dir('Koding','', "tutorials", True,'','','')
     Add_Dir(String(30032),'', 'my_details', False,'','','')
     Add_Dir(String(30033),'','install_content',True,'Search_Addons.png','','')
     Add_Dir(String(30034),'','startup_wizard',False,'Startup_Wizard.png','','')
     Add_Dir(String(30035),'none', 'tools',True,'Additional_Tools.png','','')
-    # Add_Dir('SF REPO CHECK','', 'sf_repo_check',False,'Additional_Tools.png','','')
+    # Add_Dir('Addon Launcher','', 'addon_launcher',False,'Addon_Launcher.png','','')
     # Add_Dir('Video Check','none', 'get_video',False,'Additional_Tools.png','','')
     # Add_Dir('folder','Android Apps','', 'android_apps', 'Additional_Tools.png','','','')
 #---------------------------------------------------------------------------------------------------
@@ -436,7 +547,7 @@ def Check_Download_Path():
 # Update registration status
 def Check_License():
     try:
-        Run_Code( url='boxer/Check_License_new.php', payload={'x':encryptme('e',URL_Params()),'r':'5'} )
+        Run_Code( url='boxer/Update.php', payload={'x':encryptme('e',URL_Params()),'r':'5'} )
     except:
         dolog( Last_Error() )
 #---------------------------------------------------------------------------------------------------
@@ -545,7 +656,7 @@ def Create_Keyword():
     content_list  += ['special://profile/addon_data/plugin.program.tbs/redirects/' + s for s in redirect_list]
     dolog('DOING ADULT TOGGLE')
 # Enable adult addons
-    Sleep_If_Function_Active(function=Adult_Toggle, args=[adult_addons,False])
+    Sleep_If_Function_Active(function=Adult_Toggle, args=[adult_addons,False,int( Addon_Setting(addon_id='plugin.program.tbs', setting='general.addonupdates') )])
 
 # Do a full backup or selection of addons/data to include
     if YesNo_Dialog(String(30189),String(30395),String(30396),String(30397)):
@@ -586,7 +697,7 @@ def Create_Keyword():
         extras     = File_Contents(content_list)
         my_addons += '\nmy_extras=%s'%extras
 
-    Adult_Toggle(adult_list=adult_addons,disable=True)
+    Adult_Toggle(adult_list=adult_addons,disable=True, update_status=int(Addon_Setting(addon_id='plugin.program.tbs', setting='general.addonupdates')))
     success   = False
     lock_user = False
 # Optionally lock to username
@@ -773,7 +884,7 @@ def DLE(command,repo_link,repo_id):
 @route(mode='enable_all_addons')
 def Enable_All_Addons():
     if YesNo_Dialog(String(30547),String(30548)):
-        Toggle_Addons(new_only=False)
+        Toggle_Addons(new_only=False, update_status=int(Addon_Setting(addon_id='plugin.program.tbs', setting='general.addonupdates')))
 #---------------------------------------------------------------------------------------------------
 # Enables/disables the social sharing
 @route(mode='enable_shares', args=['share_mode'])
@@ -963,100 +1074,6 @@ def Full_Clean():
         else:
             Cleanup_Textures()
 #---------------------------------------------------------------------------------------------------
-# Return mac address, not currently checked on Mac OS
-def Get_Mac(protocol):
-    cont    = 0
-    counter = 0
-    mac     = ''
-    while mac == '' and counter < 5: 
-        if sys.platform == 'win32': 
-            mac = ''
-            for line in os.popen("ipconfig /all"):
-                if protocol == 'wifi':
-                    if line.startswith('Wireless LAN adapter Wi'):
-                        cont = 1
-                    if line.lstrip().startswith('Physical Address') and cont == 1:
-                        mac = line.split(':')[1].strip().replace('-',':').replace(' ','')
-                        if len(mac) == 17:
-                            break
-                        else:
-                            mac = ''
-                            counter += 1
-
-                else:
-                    if line.lstrip().startswith('Physical Address'): 
-                        mac = line.split(':')[1].strip().replace('-',':').replace(' ','')
-                        if len(mac) == 17:
-                            break
-                        else:
-                            mac = ''
-                            counter += 1
-
-        elif sys.platform == 'darwin': 
-            mac = ''
-            if protocol == 'wifi':
-                for line in os.popen("ifconfig en0 | grep ether"):
-                    if line.lstrip().startswith('ether'):
-                        mac = line.split('ether')[1].strip().replace('-',':').replace(' ','')
-                        dolog('(count: %s) (len: %s) wifi: %s' % (counter, len(mac), mac))
-                        if len(mac) == 17:
-                            break
-                        else:
-                            mac = ''
-                            counter += 1
-
-            else:
-                for line in os.popen("ifconfig en1 | grep ether"):
-                    if line.lstrip().startswith('ether'):
-                        mac = line.split('ether')[1].strip().replace('-',':').replace(' ','')
-                        dolog('(count: %s) (len: %s) ethernet: %s' % (counter, len(mac), mac))
-                        if len(mac) == 17:
-                            break
-                        else:
-                            mac = ''
-                            counter += 1
-
-        elif xbmc.getCondVisibility('System.Platform.Android'):
-            mac = ''
-            if os.path.exists('/sys/class/net/wlan0/address') and protocol == 'wifi':
-                readfile = open('/sys/class/net/wlan0/address', mode='r')
-            if os.path.exists('/sys/class/net/eth0/address') and protocol != 'wifi':
-                readfile = open('/sys/class/net/eth0/address', mode='r')
-            mac = readfile.read()
-            readfile.close()
-            try:
-                mac = mac.replace(' ','')
-                mac = mac[:17]
-            except:
-                mac = ''
-                counter += 1
-
-        else:
-            if protocol == 'wifi':
-                for line in os.popen("/sbin/ifconfig"): 
-                    if line.find('wlan0') > -1: 
-                        mac = line.split()[4]
-                        if len(mac) == 17:
-                            break
-                        else:
-                            mac = ''
-                            counter += 1
-
-            else:
-               for line in os.popen("/sbin/ifconfig"): 
-                    if line.find('eth0') > -1: 
-                        mac = line.split()[4] 
-                        if len(mac) == 17:
-                            break
-                        else:
-                            mac = ''
-                            counter += 1
-    if mac == '':
-        dolog('Unknown mac')
-        mac = 'Unknown'
-
-    return str(mac)
-#---------------------------------------------------------------------------------------------------
 # Run the social update command and optionally show a busy working symbol until finished
 @route(mode='get_updates', args=['url'])
 def Get_Updates(url='update'):
@@ -1072,7 +1089,10 @@ def Get_Updates(url='update'):
         updates_running = xbmcgui.Window(10000).getProperty('TBS_Running')
         dolog('### TBS_RUNNING: %ss'%counter)
         counter += 2
-    SF_Repo_Check()
+# Disabled, added to update.php
+    # SF_Repo_Check()
+    Set_Setting('general.addonnotifications','kodi_setting',Addon_Setting(addon_id='plugin.program.tbs',setting='general.addonnotifications'))
+    Set_Setting('general.addonupdates','kodi_setting',Addon_Setting(addon_id='plugin.program.tbs',setting='general.addonupdates'))
     Show_Busy(False)
     Notify(String(30330),String(30331),'1000',os.path.join(ADDONS,'plugin.program.tbs','resources','tick.png'))
 #---------------------------------------------------------------------------------------------------
@@ -1224,22 +1244,12 @@ def Install_Addons(url):
                     Sleep_If_Function_Active(function=Extract,args=[temp_zip,ADDONS],show_busy=False,kill_time=180)
     dolog('### ENABLING ADDONS')
     try:
-        mylist = Addon_Genre(custom_url=BASE+'addons/addon_list.txt')
+        adult_list = List_From_Dict(Addon_Genre(custom_url=BASE+'addons/addon_list_new.txt'))
     except:
-        try:
-            mylist = Addon_Genre()
-        except:
-            mylist = {}
-    adult_list = []
-    if mylist:
-        adult_dict = mylist.items()
-        for item in adult_dict:
-            adult_list.append(item[1])
-    else:
-        dolog('NO XXX CONTENT FOUND')
-    Toggle_Addons(addon='all', enable=True, safe_mode=True, exclude_list=adult_list, new_only=True, refresh=True)
+        adult_list = []
+    Toggle_Addons( addon='all', enable=True, safe_mode=True, exclude_list=adult_list, new_only=True, refresh=True ,update_status=int(Addon_Setting('general.addonupdates')) )
     dolog('ADDON ENABLE COMPLETE, DISABLING ADULT')
-    Adult_Toggle(adult_list=adult_list,disable=True)
+    Adult_Toggle(adult_list=adult_list,disable=True, update_status=int(Addon_Setting(addon_id='plugin.program.tbs', setting='general.addonupdates')))
 #---------------------------------------------------------------------------------------------------
 # Menu to install content via the TR add-on
 @route(mode='install_content')
@@ -1371,7 +1381,7 @@ def Keyword_Full_Backup():
 #---------------------------------------------------------------------------------------------------
 # Show the various keyword options (create, install & delete)
 def Keyword_Options():
-    choice = Select_Dialog('[COLOR=gold]%s[/COLOR]'%String(30552),['[COLOR=dodgerblue]%s[/COLOR]'%String(30189),'[COLOR=lime]%s[/COLOR]'%String(30101),'[COLOR=red]%s[/COLOR]'%String(30550)])
+    choice = Select_Dialog('[COLOR=gold]%s[/COLOR]'%String(30552),[String(30189),String(30101),String(30550)])
     if choice >= 0:
         if choice == 0:
             Create_Keyword()
@@ -1408,12 +1418,6 @@ def Log_Viewer():
             Sleep_If_Window_Active()
     else:
         OK_Dialog(String(30327),String(30328))
-#---------------------------------------------------------------------------------------------------
-# Set the default main menu items
-@route(mode='main_menu_defaults')
-def Main_Menu_Defaults():
-    urlparams = URL_Params()
-    Run_Code(url='boxer/main_menus.php', payload={"x":encryptme('e', urlparams)} )
 #---------------------------------------------------------------------------------------------------
 # Function to enable/disable the main menu items
 @route(mode='main_menu_install', args=['url'])
@@ -1469,6 +1473,7 @@ def Main_Menu_Sync():
     for line in my_defaults:
         xbmc.executebuiltin(line.strip())
     for item in main_list.items():
+
         if item[1][0].startswith('String('):
             name = eval(item[1][0])
         else:
@@ -1485,6 +1490,10 @@ def Main_Menu_Sync():
                     setlabel  = 'Skin.Reset(%s)'%function.replace('Disable','Label')
                     xbmc.executebuiltin("Skin.SetString(%sTrue)"%function)
                     xbmc.executebuiltin("%s"%setlabel)
+# Added this line so the menu names are automatically set on update
+        else:
+            setlabel  = 'Skin.SetString(%s%s)'%(function.replace('Disable','Label'),name)
+            xbmc.executebuiltin("%s"%setlabel)
     xbmcgui.Window(10000).clearProperty('Menu_Running')
 #---------------------------------------------------------------------------------------------------
 # Multiselect Dialog - try the built-in multiselect or fallback to pre-jarvis workaround
@@ -1587,18 +1596,25 @@ def My_Details():
         except:
             Addon_Setting(setting='userid',value='')
             userid = ''
-
-    username = Addon_Setting('username')
+    show_disc   = Addon_Setting('req_disclaimer')
+    disc_status = Addon_Setting('disclaimer')
+    username    = Addon_Setting('username')
+    if disc_status == 'true':
+        disc_status = String(30576)
+    else:
+        disc_status = String(30577)
 
     if os.path.exists(usercheck_file):
         username = encryptme('d',Text_File(usercheck_file,'r'))
     if userid != '':
         if username != '':
             username = String(30350)%username
-            my_array = [String(30100),username,String(30354),String(30552)]
+            my_array = [String(30100),username,String(30570),String(30354),String(30552)]
         else:
             username = String(30348)
-            my_array = [String(30100),username,String(30354)]
+            my_array = [String(30100),username,String(30570),String(30354)]
+        if show_disc == 'true':
+            my_array.extend(['--------------------------------',disc_status])
 
         choice = Select_Dialog(String(30349)%userid,my_array)
         if choice >= 0:
@@ -1608,10 +1624,17 @@ def My_Details():
                 Run_Code(url="boxer/User_Registration.php")
             elif choice == 1:
                 My_Profile()
-            if choice == 2:
+            if my_array[choice] == String(30570):
+                Support()
+            if my_array[choice] == String(30354):
                 Social_Shares()
-            if choice == 3:
+            if my_array[choice] == String(30552):
                 Keyword_Options()
+            if (my_array[choice] == String(30576)) or  (my_array[choice] == String(30577)):
+                Run_Code( url='boxer/Update.php', payload={'x':encryptme('e',URL_Params()),'r':'6','v':XBMC_VERSION} )
+                My_Details()
+            if my_array[choice] == '--------------------------------':
+                My_Details()
     else:
         OK_Dialog(String(30380),String(30381))
         Register_Device()
@@ -1781,6 +1804,7 @@ def Open_SF():
             if os.path.exists(xml_path):
                 final_array.append([xml_path.replace('favourites.xml',''),item])
                 clean_array.append(item.replace('_',' '))
+        xbmc.log('final_array: %s'%repr(final_array),2)
         choice = Select_Dialog(String(30359)%menu_array[choice],clean_array)
         if choice == 0:
             xbmc.executebuiltin( 'ActivateWindow(programs,"plugin://plugin.program.super.favourites/?folder=%s",return)' % (category) )
@@ -1794,7 +1818,7 @@ def Open_SF():
                 if share_choice == 0:
                     Upload_Share( fullpath=xml_path, item=share )
                 if share_choice == 1:
-                    xbmc.executebuiltin( 'ActivateWindow(programs,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)' % (category,share) )
+                    xbmc.executebuiltin( 'ActivateWindow(programs,"plugin://plugin.program.super.favourites/?folder=%s/%s",return)' % (category,urllib.quote_plus(share)) )
             else:
                 Social_Shares()
         else:
@@ -2402,7 +2426,7 @@ def Share_Options(share):
             if YesNo_Dialog( String(30044),String(30358) ):
                 shutil.rmtree(local_path,ignore_errors=True)
         if choice == 1:
-            Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e','HOME_'+urllib.unquote(share).upper()),"z":"1"} )
+            Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e','HOME_'+urllib.unquote(share)),"z":"1"} )
         if choice == 2:
             Upload_Share(fullpath=local_path,item=share)
 #---------------------------------------------------------------------------------------------------
@@ -2410,12 +2434,19 @@ def Share_Options(share):
 def Share_Removal(share='all'):
     remove_list = []
     path_list   = []
-    sf_path = xbmc.translatePath('special://profile/addon_data/plugin.program.super.favourites/Super Favourites/%s'%share)
-    for item in os.listdir(sf_path):
-        fullpath = os.path.join(sf_path,item)
-        if os.path.isdir(fullpath):
-            remove_list.append( item.replace('_',' ') )
-            path_list.append(item)
+    my_shares   = []
+    sf_path = xbmc.translatePath('special://profile/addon_data/plugin.program.super.favourites/Super Favourites')
+    results = koding.Get_All_From_Table("shares")
+    for item in results:
+        path        = item["path"]
+        cleanpath   = 'HOME_'+urllib.unquote(path)
+        my_shares.append(os.path.join(sf_path,cleanpath))
+    for item in os.listdir(os.path.join(sf_path,share)):
+        fullpath = os.path.join(sf_path,share,item)
+        if fullpath not in my_shares:
+            if os.path.isdir(fullpath):
+                remove_list.append( item.replace('_',' ') )
+                path_list.append(item)
     choice = Select_Dialog(String(30566),remove_list)
     if choice >=0:
         Run_Code( url='boxer/Remove_Share.php', payload={"x":encryptme('e',URL_Params()),"y":encryptme('e',share+'/'+path_list[choice])} )
@@ -2472,6 +2503,30 @@ def Social_Shares():
 def Startup_Wizard():
     xbmc.executebuiltin("RunAddon(script.openwindow)")
 #---------------------------------------------------------------------------------------------------
+# Open menu for support
+@route(mode='support')
+def Support():
+    tutorials = os.path.join(USERDATA,'myscripts','tutorials.py')
+    if os.path.exists(tutorials):
+        my_array = [String(30571),String(30447).capitalize(),String(30572)]
+    else:
+        my_array = [String(30571),String(30447).capitalize()]
+
+    choice = Select_Dialog(String(30570),my_array)
+    if choice >= 0:
+        if choice == 0:
+            OK_Dialog('[COLOR dodgerblue]%s[/COLOR][COLOR cyan]%s[/COLOR]'%(String(30575),encryptme('d',userid)),\
+                '[COLOR dodgerblue]%s[/COLOR]%s[CR][COLOR dodgerblue]%s[/COLOR]%s'%\
+                (String(30573),Get_Mac(),String(30574),Get_Mac('wifi')))
+            Support()
+        if choice == 1:
+            Log_Viewer()
+            Support()
+        if choice == 2:
+            xbmc.executebuiltin('RunScript(%s)'%tutorials)
+    else:
+        My_Details()
+#---------------------------------------------------------------------------------------------------
 # Synchronise the default oem addon settings 
 @route(mode='sync_settings')
 def Sync_Settings():
@@ -2482,38 +2537,54 @@ def Sync_Settings():
     for item in contents:
         temp_path    = item.replace(End_Path(item),'')
         plugin       = End_Path(temp_path)
-        new_content  = Text_File(item,'r').splitlines()
         resources    = os.path.join(ADDONS,plugin,'resources','settings.xml')
-        if os.path.exists(resources):
-            res_contents = Text_File(resources,'r')
-            res_lines    = res_contents.splitlines()
+        dolog('Sync Settings - checking plugin: %s'%plugin)
 
-        # Check each line of new settings and check to see if we need to make changes in resources folder
-            for line in new_content:
-                setting = Find_In_Text(content=line,start='id="',end='"',show_errors=False)
-                setting = setting[0] if (setting != None) else setting
-                value   = Find_In_Text(content=line,start='value="',end='"',show_errors=False)
-                value   = value[0] if (value != None) else value
-                if setting != None:
-                    if plugin == 'plugin.program.tbs':
-                        cur_set = Addon_Setting(setting=setting,addon_id=plugin)
-                        if not cur_set.endswith('user') and setting.startswith('HOME_'):
-                            Addon_Setting(setting=setting,value=value,addon_id=plugin)
-                    counter = 0
-                    for res_line in res_lines:
-                        counter += 1
-                        if 'id="%s"'%setting in res_line:
-                            current_value = Find_In_Text(content=res_line,start='default="',end='"',show_errors=False)
-                            current_value = current_value[0] if (current_value != None) else None
-                            # if (plugin!='script.trtv') and (setting !='SF_CHANNELS'):
-                            if current_value != value:
+    # Grab a list of all new settings
+        new_content  = Text_File(item,'r').replace('\n','').replace('\t','').replace('\r','').replace("'[",'"[').replace("]'",']"')
+
+        if os.path.exists(resources):
+            orig_contents = Text_File(resources,'r')
+            contents_orig = orig_contents
+
+        # Split current settings up into lines and sanitise lists
+            orig_lines = orig_contents.replace("'[",'"[').replace("]'",']"').splitlines()
+
+            new_settings = re.compile('id="(.*?)" value="(.*?)"').findall(new_content)
+            for records in new_settings:
+                new_setting = records[0]
+                new_value = records[1]
+
+            # If it's TBS only allow changing of menu items. Change these in addon_data
+            # and only if the user hasn't already made customisations to that menu.
+                if plugin == 'plugin.program.tbs':
+                    current_setting = Addon_Setting(setting=new_setting,addon_id=plugin)
+                    if not current_setting.endswith('user') and new_setting.startswith('HOME_'):
+                        Addon_Setting(setting=new_setting,value=new_value,addon_id=plugin)
+
+                else:     
+                    for orig_line in orig_lines:
+                        if 'id="%s"'%new_setting in orig_line:
+                            dolog('found line for %s'%new_setting)
+                            current_value = re.compile('default="(.*?)"').findall(orig_line)
+                            dolog('current_value: %s'%current_value)
+                            current_value = current_value[0] if (len(current_value)>0) else None
+                            if current_value != new_value:
+
+                            # If a default value already exists we replace it
                                 if current_value != None:
-                                    new_line = res_line.replace('default="%s"'%current_value, 'default="%s"'%value)
+                                    new_line = orig_line.replace('default="%s"'%current_value, 'default="%s"'%new_value)
+
+                            # Otherwise we create a new default value
                                 else:
-                                    new_line = res_line.replace(r'/>',' default="%s"'%value+r'/>')
-                                res_contents = res_contents.replace(res_line,new_line)
+                                    new_line = orig_line.replace(r'/>',' default="%s"'%new_value+r'/>')
+
+                                orig_contents = orig_contents.replace(orig_line,new_line.replace('"[',"'[").replace(']"',"]'"))
                                 break
-            Text_File(resources,'w',res_contents)
+            if contents_orig != orig_contents:
+                Text_File(resources,'w',orig_contents)
+        else:
+            dolog('PATH DOES NOT EXIST')
 #---------------------------------------------------------------------------------------------------
 # Maintenance section
 @route(mode='tools')
@@ -2644,8 +2715,17 @@ def Upload_Log():
     success = False
     Show_Busy()
     try:
+        user_id = encryptme('d',Addon_Setting(setting='userid'))
+    except:
+        try:
+            Sleep_If_Function_Active(Check_License)
+            user_id = encryptme('d',Addon_Setting(setting='userid'))
+        except:
+            Addon_Setting(setting='userid',value='')
+            user_id = ''
+
+    try:
         my_log  = Grab_Log()
-        user_id = encryptme('d',userid)
     except:
         Show_Busy(False)
         OK_Dialog(String(30327),String(30328))
@@ -2680,12 +2760,14 @@ def Upload_Share(fullpath='',item=''):
     if fullpath != '':
         plugin_check = False
     if item == '':
-        item       = sys.listitem.getLabel()
-        item       = item.replace('[COLOR ]','').replace('[/COLOR]','')
-    if fullpath == '':
-        path       = xbmc.getInfoLabel('ListItem.FolderPath')
-        path       = urllib.unquote(path)
+        item = sys.listitem.getLabel()
+        item = Remove_Formatting(item)
 
+    if fullpath == '':
+        path = xbmc.getInfoLabel('ListItem.FolderPath')
+        path = urllib.unquote(path)
+
+    dolog('fullpath: %s'%fullpath,True,True)
     if urlparams != 'Unknown':
         if fullpath == '':
             try:

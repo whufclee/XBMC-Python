@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>13200</defaultID>
+		<label>13200</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Profiles)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>20077</defaultID>
+		<label>20077</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(SkinSettings)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>5</defaultID>
+		<label>5</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>7</defaultID>
+		<label>7</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(FileManager)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>130</defaultID>
+		<label>130</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(SystemInfo)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>WebViewer</defaultID>
+		<label>WebViewer</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>RunScript(script.web.viewer)</action>
+	</shortcut>
+</shortcuts>

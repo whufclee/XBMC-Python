@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<visible>Library.HasContent(music)</visible>
+		<defaultID>359</defaultID>
+		<label>359</label>
+		<label2>item</label2>
+		<icon>DefaultMusicRecentlyAdded.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+		<action>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>+-</label>
+		<label2>Video Add-On</label2>
+		<icon>DefaultAddonProgram.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+		<action>RunScript(&quot;special://home/addons/plugin.program.tbs/epg.py&quot;,'music')</action>
+	</shortcut>
+	<shortcut>
+		<visible>Library.HasContent(music)</visible>
+		<defaultID>133</defaultID>
+		<label>133</label>
+		<label2>item</label2>
+		<icon>DefaultMusicArtists.png</icon>
+		<thumb>image://special%3A%2F%2F.kodi%2fhome%2fmedia%2fbranding%2fbackgrounds%2fHOME_MUSIC%2fHOME_MUSIC_001.jpg/</thumb>
+		<action>ActivateWindow(Music,musicdb://artists/,return)</action>
+	</shortcut>
+</shortcuts>

@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv>
+  <channel id="- ADD OR REMOVE CHANNELS">
+    <display-name lang="en">- ADD OR REMOVE CHANNELS</display-name>
+  </channel>
+  <channel id="BBC ONE (GB)">
+    <display-name lang="en">BBC ONE (GB)</display-name>
+  </channel>
+  <channel id="BBC ONE">
+    <display-name lang="en">BBC ONE</display-name>
+  </channel>
+  <channel id="BBC TWO (GB)">
+    <display-name lang="en">BBC TWO (GB)</display-name>
+  </channel>  
+  <channel id="BBC TWO">
+    <display-name lang="en">BBC TWO</display-name>
+  </channel>
+  <channel id="ITV 1 (GB)">
+    <display-name lang="en">ITV 1 (GB)</display-name>
+  </channel>
+  <channel id="ITV 1">
+    <display-name lang="en">ITV 1</display-name>
+  </channel>
+  <channel id="CHANNEL 4 (GB)">
+    <display-name lang="en">CHANNEL 4 (GB)</display-name>
+  </channel>
+  <channel id="CHANNEL 4">
+    <display-name lang="en">CHANNEL 4</display-name>
+  </channel>
+  <channel id="CHANNEL 5 (GB)">
+    <display-name lang="en">CHANNEL 5 (GB)</display-name>
+  </channel>
+  <channel id="CHANNEL 5">
+    <display-name lang="en">CHANNEL 5</display-name>
+  </channel>
+  <channel id="FIVE (GB)">
+    <display-name lang="en">FIVE (GB)</display-name>
+  </channel>
+  <channel id="BBC ALBA (GB)">
+    <display-name lang="en">BBC ALBA (GB)</display-name>
+  </channel>
+  <channel id="BBC FOUR (GB)">
+    <display-name lang="en">BBC FOUR (GB)</display-name>
+  </channel>
+  <channel id="BBC FOUR">
+    <display-name lang="en">BBC FOUR</display-name>
+  </channel>
+  <channel id="ITV ENCORE (GB)">
+    <display-name lang="en">ITV ENCORE (GB)</display-name>
+  </channel>
+  <channel id="ITV1+1 (GB)">
+    <display-name lang="en">ITV1+1 (GB)</display-name>
+  </channel>
+  <channel id="ITV 1 PLUS1 (GB)">
+    <display-name lang="en">ITV 1 PLUS1 (GB)</display-name>
+  </channel>
+  <channel id="ITV 2 (GB)">
+    <display-name lang="en">ITV 2 (GB)</display-name>
+  </channel>
+  <channel id="ITV2">
+    <display-name lang="en">ITV2</display-name>
+  </channel>
+  <channel id="ITV3">
+    <display-name lang="en">ITV3</display-name>
+  </channel>
+    <display-name lang="en">ITV2+1 (GB)</display-name>
+  </channel>
+  <channel id="ITV 2 PLUS1 (GB)">
+    <display-name lang="en">ITV 2 PLUS1 (GB)</display-name>
+  </channel>
+  <channel id="ITV3 (GB)">
+    <display-name lang="en">ITV3 (GB)</display-name>
+  </channel>
+  <channel id="ITV3">
+    <display-name lang="en">ITV3</display-name>
+  </channel>
+  <channel id="ITV3+1 (GB)">
+    <display-name lang="en">ITV3+1 (GB)</display-name>
+  </channel>
+  <channel id="ITV4 (GB)">
+    <display-name lang="en">ITV4 (GB)</display-name>
+  </channel>
+  <channel id="ITV4">
+    <display-name lang="en">ITV4</display-name>
+  </channel>
+  <channel id="ITV4+1 (GB)">
+    <display-name lang="en">ITV4+1 (GB)</display-name>
+  </channel>
+  <channel id="ITVBE (GB)">
+    <display-name lang="en">ITVBE (GB)</display-name>
+  </channel>
+  <channel id="ITV BE">
+    <display-name lang="en">ITV BE</display-name>
+  </channel>
+  <channel id="4SEVEN">
+    <display-name lang="en">4SEVEN</display-name>
+  </channel>
+  <channel id="CHANNEL 4+1 (GB)">
+    <display-name lang="en">CHANNEL 4+1 (GB)</display-name>
+  </channel>
+  <channel id="MORE 4 (GB)">
+    <display-name lang="en">MORE 4 (GB)</display-name>
+  </channel>
+  <channel id="MORE 4">
+    <display-name lang="en">MORE 4</display-name>
+  </channel>
+  <channel id="MORE 4+1 (GB)">
+    <display-name lang="en">MORE 4+1 (GB)</display-name>
+  </channel>
+  <channel id="E!">
+    <display-name lang="en">E!</display-name>
+  </channel>
+  <channel id="E4 (GB)">
+    <display-name lang="en">E4 (GB)</display-name>
+  </channel>
+  <channel id="E4">
+    <display-name lang="en">E4</display-name>
+  </channel>
+  <channel id="E4+1 (GB)">
+    <display-name lang="en">E4+1 (GB)</display-name>
+  </channel>
+  <channel id="5 STAR (GB)">
+    <display-name lang="en">5 STAR (GB)</display-name>
+  </channel>
+  <channel id="5 STAR">
+    <display-name lang="en">5 STAR</display-name>
+  </channel>
+  <channel id="5 USA (GB)">
+    <display-name lang="en">5 USA (GB)</display-name>
+  </channel>
+  <channel id="5 USA">
+    <display-name lang="en">5 USA</display-name>
+  </channel>
+  <channel id="CHANNEL 5+1 (GB)">
+    <display-name lang="en">CHANNEL 5+1 (GB)</display-name>
+  </channel>
+  <channel id="CHANNEL 5+24 (GB)">
+    <display-name lang="en">CHANNEL 5+24 (GB)</display-name>
+  </channel>  <channel id="A AND E">
+    <display-name lang="en">A AND E</display-name>
+  </channel>
+  <channel id="3E">
+    <display-name lang="en">3E</display-name>
+  </channel>
+  <channel id="ABC (US)">
+    <display-name lang="en">ABC (US)</display-name>
+  </channel>
+  <channel id="ABC">
+    <display-name lang="en">ABC</display-name>
+  </channel>
+  <channel id="ALIBI (GB)">
+    <display-name lang="en">ALIBI (GB)</display-name>
+  </channel>
+  <channel id="ALIBI">
+    <display-name lang="en">ALIBI</display-name>
+  </channel>
+  <channel id="ALIBI+1 (GB)">
+    <display-name lang="en">ALIBI+1 (GB)</display-name>
+  </channel>
+  <channel id="ALPHA TV (GB)">
+    <display-name lang="en">ALPHA TV (GB)</display-name>
+  </channel>
+  <channel id="AMC">
+    <display-name lang="en">AMC</display-name>
+  </channel>
+  <channel id="ARY DIGITAL (GB)">
+    <display-name lang="en">ARY DIGITAL (GB)</display-name>
+  </channel>
+  <channel id="BET (GB)">
+    <display-name lang="en">BET (GB)</display-name>
+  </channel>
+  <channel id="BRAVO">
+    <display-name lang="en">BRAVO</display-name>
+  </channel>
+  <channel id="CBC">
+    <display-name lang="en">CBC</display-name>
+  </channel>
+  <channel id="CBS">
+    <display-name lang="en">CBS</display-name>
+  </channel>
+  <channel id="CBS ACTION (GB)">
+    <display-name lang="en">CBS ACTION (GB)</display-name>
+  </channel>
+  <channel id="CBS ACTION">
+    <display-name lang="en">CBS ACTION</display-name>
+  </channel>
+  <channel id="CBS DRAMA (GB)">
+    <display-name lang="en">CBS DRAMA (GB)</display-name>
+  </channel>
+  <channel id="CBS DRAMA">
+    <display-name lang="en">CBS DRAMA</display-name>
+  </channel>
+  <channel id="CBS REALITY (GB)">
+    <display-name lang="en">CBS REALITY (GB)</display-name>
+  </channel>
+  <channel id="CBS REALITY">
+    <display-name lang="en">CBS REALITY</display-name>
+  </channel>
+  <channel id="CBS REALITY+1 (GB)">
+    <display-name lang="en">CBS REALITY+1 (GB)</display-name>
+  </channel>
+  <channel id="CBS REALITY PLUS1 (GB)">
+    <display-name lang="en">CBS REALITY PLUS1 (GB)</display-name>
+  </channel>
+  <channel id="CHALLENGE TV (GB)">
+    <display-name lang="en">CHALLENGE TV (GB)</display-name>
+  </channel>
+  <channel id="CHALLENGE">
+    <display-name lang="en">CHALLENGE</display-name>
+  </channel>
+  <channel id="CHALLENGE+1 (GB)">
+    <display-name lang="en">CHALLENGE+1 (GB)</display-name>
+  </channel>
+  <channel id="CHEER CHANNEL (US)">
+    <display-name lang="en">CHEER CHANNEL (US)</display-name>
+  </channel>
+  <channel id="CI (GB)">
+    <display-name lang="en">CI (GB)</display-name>
+  </channel>
+  <channel id="COLORS TV (GB)">
+    <display-name lang="en">COLORS TV (GB)</display-name>
+  </channel>
+  <channel id="COMEDY CENTRAL (GB)">
+    <display-name lang="en">COMEDY CENTRAL (GB)</display-name>
+  </channel>
+  <channel id="COMEDY CENTRAL GB">
+    <display-name lang="en">COMEDY CENTRAL GB</display-name>
+  </channel>
+  <channel id="COMEDY CENTRAL US">
+    <display-name lang="en">COMEDY CENTRAL US</display-name>
+  </channel>
+  <channel id="COMEDY CENTRAL+1 (GB)">
+    <display-name lang="en">COMEDY CENTRAL+1 (GB)</display-name>
+  </channel>
+  <channel id="COMEDY CENTRAL EXTRA (GB)">
+    <display-name lang="en">COMEDY CENTRAL EXTRA (GB)</display-name>
+  </channel>
+  <channel id="COMEDY CENTRAL EXTRA">
+    <display-name lang="en">COMEDY CENTRAL EXTRA</display-name>
+  </channel>
+  <channel id="CTV">
+    <display-name lang="en">CTV</display-name>
+  </channel>
+  <channel id="THE CW (US)">
+    <display-name lang="en">THE CW (US)</display-name>
+  </channel>
+  <channel id="CW">
+    <display-name lang="en">CW</display-name>
+  </channel>
+  <channel id="DAVE (GB)">
+    <display-name lang="en">DAVE (GB)</display-name>
+  </channel>
+  <channel id="DAVE">
+    <display-name lang="en">DAVE</display-name>
+  </channel>
+  <channel id="DAVE JA VU (GB)">
+    <display-name lang="en">DAVE JA VU (GB)</display-name>
+  </channel>
+  <channel id="DAVEJAVU">
+    <display-name lang="en">DAVEJAVU</display-name>
+  </channel>
+  <channel id="DRAMA (GB)">
+    <display-name lang="en">DRAMA (GB)</display-name>
+  </channel>
+  <channel id="DMAX (GB)">
+    <display-name lang="en">DMAX (GB)</display-name>
+  </channel>
+  <channel id="DRTV (US)">
+    <display-name lang="en">DRTV (US)</display-name>
+  </channel>
+  <channel id="DVIDS TV (US)">
+    <display-name lang="en">DVIDS TV (US)</display-name>
+  </channel>
+  <channel id="DW (GB)">
+    <display-name lang="en">DW (GB)</display-name>
+  </channel>
+  <channel id="E! ENTERTAINMENT (GB)">
+    <display-name lang="en">E! ENTERTAINMENT (GB)</display-name>
+  </channel>
+  <channel id="EDEN">
+    <display-name lang="en">EDEN</display-name>
+  </channel>
+  <channel id="EIC TV (US)">
+    <display-name lang="en">EIC TV (US)</display-name>
+  </channel>
+  <channel id="FOX (GB)">
+    <display-name lang="en">FOX (GB)</display-name>
+  </channel>
+  <channel id="FOX GB">
+    <display-name lang="en">FOX GB</display-name>
+  </channel>
+  <channel id="FOX US">
+    <display-name lang="en">FOX US</display-name>
+  </channel>
+  <channel id="FOX+2 (GB)">
+    <display-name lang="en">FOX+2 (GB)</display-name>
+  </channel>
+  <channel id="FREEFORM">
+    <display-name lang="en">FREEFORM</display-name>
+  </channel>
+  <channel id="FUSION PLUS TV (GB)">
+    <display-name lang="en">FUSION PLUS TV (GB)</display-name>
+  </channel>
+  <channel id="FX">
+    <display-name lang="en">FX</display-name>
+  </channel>
+  <channel id="GOLD (GB)">
+    <display-name lang="en">GOLD (GB)</display-name>
+  </channel>
+  <channel id="UK GOLD">
+    <display-name lang="en">UK GOLD</display-name>
+  </channel>
+  <channel id="GOLD+1 (GB)">
+    <display-name lang="en">GOLD+1 (GB)</display-name>
+  </channel>
+  <channel id="HALLMARK">
+    <display-name lang="en">HALLMARK</display-name>
+  </channel>
+  <channel id="HORROR CHANNEL (GB)">
+    <display-name lang="en">HORROR CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="HORROR CHANNEL+1 (GB)">
+    <display-name lang="en">HORROR CHANNEL+1 (GB)</display-name>
+  </channel>
+ <channel id="INSIDER EXCLUSIVE TV (US)">
+    <display-name lang="en">INSIDER EXCLUSIVE TV (US)</display-name>
+  </channel>
+  <channel id="IRELANDS COUNTRY (IE)">
+    <display-name lang="en">IRELANDS COUNTRY (IE)</display-name>
+  </channel>
+  <channel id="JOB CHANNEL NETWORK (US)">
+    <display-name lang="en">JOB CHANNEL NETWORK (US)</display-name>
+  </channel>
+  <channel id="LIFETIME (GB)">
+    <display-name lang="en">LIFETIME (GB)</display-name>
+  </channel>
+  <channel id="LIFETIME+1 (GB)">
+    <display-name lang="en">LIFETIME+1 (GB)</display-name>
+  </channel>
+  <channel id="LIVING (GB)">
+    <display-name lang="en">LIVING (GB)</display-name>
+  </channel>
+  <channel id="SKY LIVING">
+    <display-name lang="en">SKY LIVING</display-name>
+  </channel>
+  <channel id="LIVING+1 (GB)">
+    <display-name lang="en">LIVING+1 (GB)</display-name>
+  </channel>
+  <channel id="LIVINGIT (GB)">
+    <display-name lang="en">LIVINGIT (GB)</display-name>
+  </channel>
+  <channel id="LIVINGIT+1 (GB)">
+    <display-name lang="en">LIVINGIT+1 (GB)</display-name>
+  </channel>
+   <channel id="MY9 (US)">
+    <display-name lang="en">MY9 (US)</display-name>
+  </channel>
+  <channel id="MY FACE MY BODY (GB)">
+    <display-name lang="en">MY FACE MY BODY (GB)</display-name>
+  </channel>
+  <channel id="NBC (US)">
+    <display-name lang="en">NBC (US)</display-name>
+  </channel>
+  <channel id="NBC">
+    <display-name lang="en">NBC</display-name>
+  </channel>
+  <channel id="OWN">
+    <display-name lang="en">OWN</display-name>
+  </channel>
+  <channel id="PBS (US)">
+    <display-name lang="en">PBS (US)</display-name>
+  </channel>
+  <channel id="PBS AMERICA (GB)">
+    <display-name lang="en">PBS AMERICA (GB)</display-name>
+  </channel>
+  <channel id="PBS">
+    <display-name lang="en">PBS</display-name>
+  </channel>
+  <channel id="PHOENIX CNE (GB)">
+    <display-name lang="en">PHOENIX CNE (GB)</display-name>
+  </channel>
+  <channel id="PICK (GB)">
+    <display-name lang="en">PICK (GB)</display-name>
+  </channel>
+  <channel id="PICK+1 (GB)">
+    <display-name lang="en">PICK+1 (GB)</display-name>
+  </channel>
+  <channel id="PICK TV (GB)">
+    <display-name lang="en">PICK TV (GB)</display-name>
+  </channel>
+  <channel id="POKER CENTRAL (US)">
+    <display-name lang="en">POKER CENTRAL (US)</display-name>
+  </channel>
+  <channel id="PRESS TV (GB)">
+    <display-name lang="en">PRESS TV (GB)</display-name>
+  </channel>
+  <channel id="PRIME TV (GB)">
+    <display-name lang="en">PRIME TV (GB)</display-name>
+  </channel>  
+  <channel id="PSYCHIC TODAY (GB)">
+    <display-name lang="en">PSYCHIC TODAY (GB)</display-name>
+  </channel>
+  <channel id="PUGILISM TV (US)">
+    <display-name lang="en">PUGILISM TV (US)</display-name>
+  </channel>
+  <channel id="QUEST (GB)">
+    <display-name lang="en">QUEST (GB)</display-name>
+  </channel>
+  <channel id="QUEST">
+    <display-name lang="en">QUEST</display-name>
+  </channel>
+  <channel id="QUEST+1 (GB)">
+    <display-name lang="en">QUEST+1 (GB)</display-name>
+  </channel>
+  <channel id="QVC (GB)">
+    <display-name lang="en">QVC (GB)</display-name>
+  </channel>
+  <channel id="REALITY TV (GB)">
+    <display-name lang="en">REALITY TV (GB)</display-name>
+  </channel>
+  <channel id="REALLY (GB)">
+    <display-name lang="en">REALLY (GB)</display-name>
+  </channel>
+  <channel id="ROOPSTIGO (US)">
+    <display-name lang="en">ROOPSTIGO (US)</display-name>
+  </channel>
+  <channel id="S4C (GB)">
+    <display-name lang="en">S4C (GB)</display-name>
+  </channel>
+  <channel id="SET (GB)">
+    <display-name lang="en">SET (GB)</display-name>
+  </channel>
+  <channel id="SET MAX (GB)">
+    <display-name lang="en">SET MAX (GB)</display-name>
+  </channel>
+  <channel id="SKY ARTS 1 (GB)">
+    <display-name lang="en">SKY ARTS 1 (GB)</display-name>
+  </channel>
+  <channel id="SKY ARTS">
+    <display-name lang="en">SKY ARTS</display-name>
+  </channel>
+  <channel id="SKY ATLANTIC (GB)">
+    <display-name lang="en">SKY ATLANTIC (GB)</display-name>
+  </channel>
+  <channel id="SKY ATLANTIC">
+    <display-name lang="en">SKY ATLANTIC</display-name>
+  </channel>
+  <channel id="SKY ATLANTIC+1 (GB)">
+    <display-name lang="en">SKY ATLANTIC+1 (GB)</display-name>
+  </channel>
+  <channel id="SKY ONE (GB)">
+    <display-name lang="en">SKY ONE (GB)</display-name>
+  </channel>
+  <channel id="SKY 1">
+    <display-name lang="en">SKY 1</display-name>
+  </channel>
+  <channel id="SKY ONE+1 (GB)">
+    <display-name lang="en">SKY ONE+1 (GB)</display-name>
+  </channel>
+  <channel id="SKY TWO (GB)">
+    <display-name lang="en">SKY TWO (GB)</display-name>
+  </channel>
+  <channel id="SKY 2">
+    <display-name lang="en">SKY 2</display-name>
+  </channel>
+  <channel id="SPIKE (GB)">
+    <display-name lang="en">SPIKE (GB)</display-name>
+  </channel>
+  <channel id="SPIKE UK">
+    <display-name lang="en">SPIKE UK</display-name>
+  </channel>
+  <channel id="SPIKE">
+    <display-name lang="en">SPIKE</display-name>
+  </channel>
+  <channel id="SUPREME MASTER TV (CN)">
+    <display-name lang="en">SUPREME MASTER TV (CN)</display-name>
+  </channel>
+  <channel id="SYFY (GB)">
+    <display-name lang="en">SYFY (GB)</display-name>
+  </channel>
+  <channel id="SYFY+1 (GB)">
+    <display-name lang="en">SYFY+1 (GB)</display-name>
+  </channel>
+  <channel id="TBS">
+    <display-name lang="en">TBS</display-name>
+  </channel>
+  <channel id="TLC (GB)">
+    <display-name lang="en">TLC (GB)</display-name>
+  </channel>
+  <channel id="TLC">
+    <display-name lang="en">TLC</display-name>
+  </channel>
+  <channel id="TNT">
+    <display-name lang="en">TNT</display-name>
+  </channel>
+  <channel id="TRU TV (GB)">
+    <display-name lang="en">TRU TV (GB)</display-name>
+  </channel>
+  <channel id="TRUE ENTERTAINMENT (GB)">
+    <display-name lang="en">TRUE ENTERTAINMENT (GB)</display-name>
+  </channel>
+  <channel id="TRUTH FILES (US)">
+    <display-name lang="en">TRUTH FILES (US)</display-name>
+  </channel>
+  <channel id="TUFF TV (US)">
+    <display-name lang="en">TUFF TV (US)</display-name>
+  </channel>
+  <channel id="TV5 (GB)">
+    <display-name lang="en">TV5 (GB)</display-name>
+  </channel>
+  <channel id="UNIVERSAL CHANNEL (GB)">
+    <display-name lang="en">UNIVERSAL CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="UNIVERSAL CHANNEL+1 (GB)">
+    <display-name lang="en">UNIVERSAL CHANNEL+1 (GB)</display-name>
+  </channel>
+  <channel id="UNRELIABLE SOURCES (US)">
+    <display-name lang="en">UNRELIABLE SOURCES (US)</display-name>
+  </channel>
+  <channel id="UNIVISION TV-EN-VIVO">
+    <display-name lang="en">UNIVISION TV-EN-VIVO</display-name>
+  </channel>
+  <channel id="USA NETWORK">
+    <display-name lang="en">USA NETWORK</display-name>
+  </channel>
+  <channel id="V CHANNEL (GB)">
+    <display-name lang="en">V CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="VICELAND">
+    <display-name lang="en">VICELAND</display-name>
+  </channel>
+  <channel id="VOICE OF AMERICA (US)">
+    <display-name lang="en">VOICE OF AMERICA (US)</display-name>
+  </channel>
+  <channel id="WATCH (GB)">
+    <display-name lang="en">WATCH (GB)</display-name>
+  </channel>
+  <channel id="WATCH">
+    <display-name lang="en">WATCH</display-name>
+  </channel>
+  <channel id="WATCH+1 (GB)">
+    <display-name lang="en">WATCH+1 (GB)</display-name>
+  </channel>
+  <channel id="WEATHER NATION (US)">
+    <display-name lang="en">WEATHER NATION (US)</display-name>
+  </channel>
+  <channel id="WHAT AMERICA THINKS (US)">
+    <display-name lang="en">WHAT AMERICA THINKS (US)</display-name>
+  </channel>
+  <channel id="YESTERDAY (GB)">
+    <display-name lang="en">YESTERDAY (GB)</display-name>
+  </channel>
+  <channel id="YESTERDAY">
+    <display-name lang="en">YESTERDAY</display-name>
+  </channel>
+  <channel id="YESTERDAY+1 (GB)">
+    <display-name lang="en">YESTERDAY+1 (GB)</display-name>
+  </channel>
+  <channel id="ZEE TV (GB)">
+    <display-name lang="en">ZEE TV (GB)</display-name>
+  </channel>
+  <channel id="B4U MOVIES (GB)">
+    <display-name lang="en">B4U MOVIES (GB)</display-name>
+  </channel>
+  <channel id="CINEMAX">
+    <display-name lang="en">CINEMAX</display-name>
+  </channel>
+  <channel id="FILM4 (GB)">
+    <display-name lang="en">FILM4 (GB)</display-name>
+  </channel>
+  <channel id="FILM 4">
+    <display-name lang="en">FILM 4</display-name>
+  </channel>
+  <channel id="FILM4+1 (GB)">
+    <display-name lang="en">FILM4+1 (GB)</display-name>
+  </channel>
+  <channel id="HBO">
+    <display-name lang="en">HBO</display-name>
+  </channel>
+  <channel id="HBO COMEDY">
+    <display-name lang="en">HBO COMEDY</display-name>
+  </channel>
+  <channel id="HBO SIGNATURE">
+    <display-name lang="en">HBO SIGNATURE</display-name>
+  </channel>
+  <channel id="HBO ZONE">
+    <display-name lang="en">HBO ZONE</display-name>
+  </channel>
+  <channel id="MOVIES 4 MEN (GB)">
+    <display-name lang="en">MOVIES 4 MEN (GB)</display-name>
+  </channel>
+  <channel id="MOVIES4MEN+1 (GB)">
+    <display-name lang="en">MOVIES4MEN+1 (GB)</display-name>
+  </channel>
+  <channel id="MOVIES 24 (GB)">
+    <display-name lang="en">MOVIES 24 (GB)</display-name>
+  </channel>
+  <channel id="MOVIES 24+ (GB)">
+    <display-name lang="en">MOVIES 24+ (GB)</display-name>
+  </channel>
+  <channel id="SKY MOVIES ACTTHR (GB)">
+    <display-name lang="en">SKY MOVIES ACTTHR (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA ACTION AND ADVENTURE">
+    <display-name lang="en">SKY CINEMA ACTION AND ADVENTURE</display-name>
+  </channel>
+  <channel id="SKY CINEMA CHRISTMAS">
+    <display-name lang="en">SKY CINEMA CHRISTMAS</display-name>
+  </channel>
+  <channel id="SKY MOVIES COMEDY (GB)">
+    <display-name lang="en">SKY MOVIES COMEDY (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA COMEDY">
+    <display-name lang="en">SKY CINEMA COMEDY</display-name>
+  </channel>
+  <channel id="SKY CINEMA CRIME AND THRILLER">
+    <display-name lang="en">SKY CINEMA CRIME AND THRILLER</display-name>
+  </channel>
+  <channel id="SKY MOVIES DISNEY (GB)">
+    <display-name lang="en">SKY MOVIES DISNEY (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA DISNEY">
+    <display-name lang="en">SKY CINEMA DISNEY</display-name>
+  </channel>
+  <channel id="SKY MOVIES DRAMA (GB)">
+    <display-name lang="en">SKY MOVIES DRAMA (GB)</display-name>
+  </channel>
+  <channel id="SKY MOVIES FAMILY (GB)">
+    <display-name lang="en">SKY MOVIES FAMILY (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA FAMILY">
+    <display-name lang="en">SKY CINEMA FAMILY</display-name>
+  </channel>
+  <channel id="SKY MOVIES GREATS (GB)">
+    <display-name lang="en">SKY MOVIES GREATS (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA GREATS">
+    <display-name lang="en">SKY CINEMA GREATS</display-name>
+  </channel>
+  <channel id="SKY CINEMA HITS">
+    <display-name lang="en">SKY CINEMA HITS</display-name>
+  </channel>
+  <channel id="SKY MOVIES PREMIERE (GB)">
+    <display-name lang="en">SKY MOVIES PREMIERE (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA PREMIERE">
+    <display-name lang="en">SKY CINEMA PREMIERE</display-name>
+  </channel>
+  <channel id="SKY MOVIES SELECT (GB)">
+    <display-name lang="en">SKY MOVIES SELECT (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA SELECT">
+    <display-name lang="en">SKY CINEMA SELECT</display-name>
+  </channel>
+  <channel id="SKY MOVIES SCIHORR (GB)">
+    <display-name lang="en">SKY MOVIES SCIHORR (GB)</display-name>
+  </channel>
+  <channel id="SKY CINEMA SCI-FI AND HORROR">
+    <display-name lang="en">SKY CINEMA SCI-FI AND HORROR</display-name>
+  </channel>
+  <channel id="SKY MOVIES SHOWCASE (GB)">
+    <display-name lang="en">SKY MOVIES SHOWCASE (GB)</display-name>
+  </channel>
+  <channel id="SONY MOVIES">
+    <display-name lang="en">SONY MOVIES</display-name>
+  </channel>
+  <channel id="SHOWTIME">
+    <display-name lang="en">SHOWTIME</display-name>
+  </channel>
+  <channel id="STARZ">
+    <display-name lang="en">STARZ</display-name>
+  </channel>
+  <channel id="TCM (GB)">
+    <display-name lang="en">TCM (GB)</display-name>
+  </channel>
+  <channel id="TCM">
+    <display-name lang="en">TCM</display-name>
+  </channel>
+  <channel id="TCM+1 (GB)">
+    <display-name lang="en">TCM+1 (GB)</display-name>
+  </channel>
+  <channel id="TRUE MOVIES (GB)">
+    <display-name lang="en">TRUE MOVIES (GB)</display-name>
+  </channel>
+  <channel id="ZEE CINEMA (GB)">
+    <display-name lang="en">ZEE CINEMA (GB)</display-name>
+  </channel>
+  <channel id="4 MUSIC (GB)">
+    <display-name lang="en">4 MUSIC (GB)</display-name>
+  </channel>
+  <channel id="B4U MUSIC (GB)">
+    <display-name lang="en">B4U MUSIC (GB)</display-name>
+  </channel>
+  <channel id="MTV (GB)">
+    <display-name lang="en">MTV (GB)</display-name>
+  </channel>
+  <channel id="MTV UK">
+    <display-name lang="en">MTV UK</display-name>
+  </channel>
+  <channel id="MTV+1 (GB)">
+    <display-name lang="en">MTV+1 (GB)</display-name>
+  </channel>
+  <channel id="MTV MUSIC (GB)">
+    <display-name lang="en">MTV MUSIC (GB)</display-name>
+  </channel>
+  <channel id="MTV BASE (GB)">
+    <display-name lang="en">MTV BASE (GB)</display-name>
+  </channel>
+  <channel id="MTV HITS (GB)">
+    <display-name lang="en">MTV HITS (GB)</display-name>
+  </channel>
+  <channel id="MTV DANCE (GB)">
+    <display-name lang="en">MTV DANCE (GB)</display-name>
+  </channel>
+  <channel id="MTV ROCKS (GB)">
+    <display-name lang="en">MTV ROCKS (GB)</display-name>
+  </channel>
+  <channel id="MTV CLASSIC (GB)">
+    <display-name lang="en">MTV CLASSIC (GB)</display-name>
+  </channel>
+  <channel id="VH1 (GB)">
+    <display-name lang="en">VH1 (GB)</display-name>
+  </channel>
+  <channel id="VIVA (GB)">
+    <display-name lang="en">VIVA (GB)</display-name>
+  </channel>
+  <channel id="THE BOX (GB)">
+    <display-name lang="en">THE BOX (GB)</display-name>
+  </channel>
+  <channel id="KISS (GB)">
+    <display-name lang="en">KISS (GB)</display-name>
+  </channel>
+  <channel id="SMASH HITS! (GB)">
+    <display-name lang="en">SMASH HITS! (GB)</display-name>
+  </channel>
+  <channel id="MAGIC (GB)">
+    <display-name lang="en">MAGIC (GB)</display-name>
+  </channel>
+  <channel id="HEAT TV (GB)">
+    <display-name lang="en">HEAT TV (GB)</display-name>
+  </channel>
+  <channel id="KERRANG! (GB)">
+    <display-name lang="en">KERRANG! (GB)</display-name>
+  </channel>
+  <channel id="VINTAGE TV (GB)">
+    <display-name lang="en">VINTAGE TV (GB)</display-name>
+  </channel>
+  <channel id="SCUZZ (GB)">
+    <display-name lang="en">SCUZZ (GB)</display-name>
+  </channel>
+  <channel id="CHART SHOW DANCE (GB)">
+    <display-name lang="en">CHART SHOW DANCE (GB)</display-name>
+  </channel>
+  <channel id="TODAYS EVENTS">
+    <display-name lang="en">TODAYS EVENTS</display-name>
+  </channel>
+  <channel id="1 ON 1 BOXING (US)">
+    <display-name lang="en">1 ON 1 BOXING (US)</display-name>
+  </channel>
+  <channel id="1 ON 1 BOXING">
+    <display-name lang="en">1 ON 1 BOXING</display-name>
+  </channel>
+  <channel id="AFL CLASSIC (US)">
+    <display-name lang="en">AFL CLASSIC (US)</display-name>
+  </channel>
+  <channel id="AFL CLASSIC">
+    <display-name lang="en">AFL CLASSIC</display-name>
+  </channel>
+  <channel id="ARENA SPORT 1 (HR)">
+    <display-name lang="en">ARENA SPORT 1 (HR)</display-name>
+  </channel>
+  <channel id="ARENA SPORT 1">
+    <display-name lang="en">ARENA SPORT 1</display-name>
+  </channel>
+  <channel id="ARENA SPORT 2 (HR)">
+    <display-name lang="en">ARENA SPORT 2 (HR)</display-name>
+  </channel>
+  <channel id="ARENA SPORT 2">
+    <display-name lang="en">ARENA SPORT 2</display-name>
+  </channel>
+  <channel id="ARENA SPORT 3 (HR)">
+    <display-name lang="en">ARENA SPORT 3 (HR)</display-name>
+  </channel>
+  <channel id="ARENA SPORT 3">
+    <display-name lang="en">ARENA SPORT 3</display-name>
+  </channel>
+  <channel id="ARENA SPORT 4 (HR)">
+    <display-name lang="en">ARENA SPORT 4 (HR)</display-name>
+  </channel>
+  <channel id="ARENA SPORT 4">
+    <display-name lang="en">ARENA SPORT 4</display-name>
+  </channel>
+  <channel id="ARENA SPORT 5 (HR)">
+    <display-name lang="en">ARENA SPORT 5 (HR)</display-name>
+  </channel>
+  <channel id="ARMED FORCES BOXING (US)">
+    <display-name lang="en">ARMED FORCES BOXING (US)</display-name>
+  </channel>
+  <channel id="ARMED FORCES BOXING">
+    <display-name lang="en">ARMED FORCES BOXING</display-name>
+  </channel>
+  <channel id="ASTRO SUPERSPORT 1">
+    <display-name lang="en">ASTRO SUPERSPORT 1</display-name>
+  </channel>
+  <channel id="ASTRO SUPERSPORT 2">
+    <display-name lang="en">ASTRO SUPERSPORT 2</display-name>
+  </channel>
+  <channel id="ASTRO SUPERSPORT 3">
+    <display-name lang="en">ASTRO SUPERSPORT 3</display-name>
+  </channel>
+  <channel id="ASTRO SUPERSPORT 4">
+    <display-name lang="en">ASTRO SUPERSPORT 4</display-name>
+  </channel>
+  <channel id="AT THE RACES (GB)">
+    <display-name lang="en">AT THE RACES (GB)</display-name>
+  </channel>
+  <channel id="ATTHERACES (GB)">
+    <display-name lang="en">ATTHERACES (GB)</display-name>
+  </channel>
+  <channel id="AT THE RACES">
+    <display-name lang="en">AT THE RACES</display-name>
+  </channel>
+  <channel id="BEACH SPORTS NETWORK (US)">
+    <display-name lang="en">BEACH SPORTS NETWORK (US)</display-name>
+  </channel>
+  <channel id="BEACH SPORTS NETWORK">
+    <display-name lang="en">BEACH SPORTS NETWORK</display-name>
+  </channel>
+  <channel id="BEIN SPORTS">
+    <display-name lang="en">BEIN SPORTS</display-name>
+  </channel>
+  <channel id="BEIN SPORTS 11">
+    <display-name lang="en">BEIN SPORTS 11</display-name>
+  </channel>
+  <channel id="BEIN SPORTS 12">
+    <display-name lang="en">BEIN SPORTS 12</display-name>
+  </channel>
+  <channel id="BIG TEN NETWORK">
+    <display-name lang="en">BIG TEN NETWORK</display-name>
+  </channel>
+  <channel id="BOX NATION">
+    <display-name lang="en">BOX NATION</display-name>
+  </channel>
+  <channel id="BRITISH EUROSPORT 2 (GB)">
+    <display-name lang="en">BRITISH EUROSPORT 2 (GB)</display-name>
+  </channel>
+  <channel id="BT SPORT 1 (GB)">
+    <display-name lang="en">BT SPORT 1 (GB)</display-name>
+  </channel>
+  <channel id="BT SPORT 1">
+    <display-name lang="en">BT SPORT 1</display-name>
+  </channel>
+  <channel id="BT SPORT 2 (GB)">
+    <display-name lang="en">BT SPORT 2 (GB)</display-name>
+  </channel>
+  <channel id="BT SPORT 2">
+    <display-name lang="en">BT SPORT 2</display-name>
+  </channel>
+  <channel id="BT SPORT 3">
+    <display-name lang="en">BT SPORT 3</display-name>
+  </channel>
+  <channel id="BT SPORTS ESPN">
+    <display-name lang="en">BT SPORTS ESPN</display-name>
+  </channel>
+  <channel id="BT SPORT EXTRA 1">
+    <display-name lang="en">BT SPORT EXTRA 1</display-name>
+  </channel>
+  <channel id="BT SPORT EXTRA 2">
+    <display-name lang="en">BT SPORT EXTRA 2</display-name>
+  </channel>
+  <channel id="BT SPORT EXTRA 3">
+    <display-name lang="en">BT SPORT EXTRA 3</display-name>
+  </channel>
+  <channel id="BT SPORT EXTRA 4">
+    <display-name lang="en">BT SPORT EXTRA 4</display-name>
+  </channel>
+  <channel id="BT SPORT EXTRA 5">
+    <display-name lang="en">BT SPORT EXTRA 5</display-name>
+  </channel>
+  <channel id="BT SPORT EXTRA 6">
+    <display-name lang="en">BT SPORT EXTRA 6</display-name>
+  </channel>
+  <channel id="CBS SPORTS">
+    <display-name lang="en">CBS SPORTS</display-name>
+  </channel>
+  <channel id="CELTIC TV">
+    <display-name lang="en">CELTIC TV</display-name>
+  </channel>
+  <channel id="CHELSEA TV (GB)">
+    <display-name lang="en">CHELSEA TV (GB)</display-name>
+  </channel>
+  <channel id="CHELSEA TV">
+    <display-name lang="en">CHELSEA TV</display-name>
+  </channel>
+  <channel id="DESTINATION X (US)">
+    <display-name lang="en">DESTINATION X (US)</display-name>
+  </channel>
+  <channel id="EIR SPORTS 1">
+    <display-name lang="en">EIR SPORTS 1</display-name>
+  </channel>
+  <channel id="EIR SPORTS 2">
+    <display-name lang="en">EIR SPORTS 2</display-name>
+  </channel>
+  <channel id="ELEVEN">
+    <display-name lang="en">ELEVEN</display-name>
+  </channel>
+  <channel id="ELEVEN PLUS 103">
+    <display-name lang="en">ELEVEN PLUS 103</display-name>
+  </channel>
+  <channel id="ESPN (GB)">
+    <display-name lang="en">ESPN (GB)</display-name>
+  </channel>
+  <channel id="ESPN">
+    <display-name lang="en">ESPN</display-name>
+  </channel>
+  <channel id="ESPN USA">
+    <display-name lang="en">ESPN USA</display-name>
+  </channel>
+  <channel id="ESPN 2">
+    <display-name lang="en">ESPN 2</display-name>
+  </channel>
+  <channel id="ESPN U">
+    <display-name lang="en">ESPN U</display-name>
+  </channel>
+  <channel id="ESPN NEWS">
+    <display-name lang="en">ESPN NEWS</display-name>
+  </channel>
+  <channel id="ESPN GOAL LINE">
+    <display-name lang="en">ESPN GOAL LINE</display-name>
+  </channel>
+  <channel id="EUROSPORT UK (GB)">
+    <display-name lang="en">EUROSPORT UK (GB)</display-name>
+  </channel>
+  <channel id="EUROSPORT 1">
+    <display-name lang="en">EUROSPORT 1</display-name>
+  </channel>
+   <channel id="EUROSPORT 2 (GB)">
+    <display-name lang="en">EUROSPORT 2 (GB)</display-name>
+  </channel>
+  <channel id="EUROSPORT 2">
+    <display-name lang="en">EUROSPORT 2</display-name>
+  </channel>
+  <channel id="FIGHT TV PLUS (US)">
+    <display-name lang="en">FIGHT TV PLUS (US)</display-name>
+  </channel>
+  <channel id="FIGHT TV PLUS">
+    <display-name lang="en">FIGHT TV PLUS</display-name>
+  </channel>
+  <channel id="FIGHT NETWORK">
+    <display-name lang="en">FIGHT NETWORK</display-name>
+  </channel>
+  <channel id="FIGHTING ATHLETES NETWORK (US)">
+    <display-name lang="en">FIGHTING ATHLETES NETWORK (US)</display-name>
+  </channel>
+  <channel id="FIGHTING ATHLETES NETWORK">
+    <display-name lang="en">FIGHTING ATHLETES NETWORK</display-name>
+  </channel>
+   <channel id="FILMON FOOTBALL (GB)">
+    <display-name lang="en">FILMON FOOTBALL (GB)</display-name>
+  </channel>
+   <channel id="FILMON FOOTBALL">
+    <display-name lang="en">FILMON FOOTBALL</display-name>
+  </channel>
+  <channel id="FILMON TENNIS (GB)">
+    <display-name lang="en">FILMON TENNIS (GB)</display-name>
+  </channel>
+  <channel id="FILMON TENNIS">
+    <display-name lang="en">FILMON TENNIS</display-name>
+  </channel>
+  <channel id="FILMON WRESTLING NETWORK (US)">
+    <display-name lang="en">FILMON WRESTLING NETWORK (US)</display-name>
+  </channel>
+  <channel id="FILMON WRESTLING NETWORK">
+    <display-name lang="en">FILMON WRESTLING NETWORK</display-name>
+  </channel>
+  <channel id="FOOTBALL HEROES (GB)">
+    <display-name lang="en">FOOTBALL HEROES (GB)</display-name>
+  </channel>
+  <channel id="FOOTBALL HEROES">
+    <display-name lang="en">FOOTBALL HEROES</display-name>
+  </channel>
+  <channel id="FOX SPORTS 1 US">
+    <display-name lang="en">FOX SPORTS 1 US</display-name>
+  </channel>
+  <channel id="FOX SPORTS 2 US">
+    <display-name lang="en">FOX SPORTS 2 US</display-name>
+  </channel>
+  <channel id="FOX SPORTS 1 TH">
+    <display-name lang="en">FOX SPORTS 1 TH</display-name>
+  </channel>
+  <channel id="FOX SPORTS 2 TH">
+    <display-name lang="en">FOX SPORTS 2 TH</display-name>
+  </channel>
+  <channel id="FOX SPORTS 3 TH">
+    <display-name lang="en">FOX SPORTS 3 TH</display-name>
+  </channel>
+  <channel id="GALLI LUCHA LIBRE (MX)">
+    <display-name lang="en">GALLI LUCHA LIBRE (MX)</display-name>
+  </channel>
+  <channel id="GOLDEN BOY CHANNEL (US)">
+    <display-name lang="en">GOLDEN BOY CHANNEL (US)</display-name>
+  <channel id="GOLF">
+    <display-name lang="en">GOLF</display-name>
+  </channel>
+  <channel id="GAME TIME (US)">
+    <display-name lang="en">GAME TIME (US)</display-name>
+  </channel>
+  <channel id="GFL COMBAT SPORTS (US)">
+    <display-name lang="en">GFL COMBAT SPORTS (US)</display-name>
+  </channel>
+  <channel id="GFL COMBAT SPORTS">
+    <display-name lang="en">GFL COMBAT SPORTS</display-name>
+  </channel>
+  <channel id="GLORY KICKBOXING (US)">
+    <display-name lang="en">GLORY KICKBOXING (US)</display-name>
+  </channel>
+  <channel id="GLORY KICKBOXING">
+    <display-name lang="en">GLORY KICKBOXING</display-name>
+  </channel>
+  <channel id="INSIDE THE RING (US)">
+    <display-name lang="en">INSIDE THE RING (US)</display-name>
+  </channel>
+  <channel id="INSIDE THE RING">
+    <display-name lang="en">INSIDE THE RING</display-name>
+  </channel>
+ <channel id="LFC TV (GB)">
+    <display-name lang="en">LFC TV (GB)</display-name>
+  </channel>
+  <channel id="LIVERPOOL TV">
+    <display-name lang="en">LIVERPOOL TV</display-name>
+  </channel>
+  <channel id="LIVE BOXING (US)">
+    <display-name lang="en">LIVE BOXING (US)</display-name>
+  </channel>
+  <channel id="LIVE BOXING">
+    <display-name lang="en">LIVE BOXING</display-name>
+  </channel>
+  <channel id="MIO STADIUM 102">
+    <display-name lang="en">MIO STADIUM 102</display-name>
+  </channel>
+  <channel id="MLB NETWORK">
+    <display-name lang="en">MLB NETWORK</display-name>
+  </channel>
+  <channel id="MMA NOW (US)">
+    <display-name lang="en">MMA NOW (US)</display-name>
+  </channel>
+  <channel id="MMA NOW">
+    <display-name lang="en">MMA NOW</display-name>
+  </channel>
+  <channel id="MMA NOW 360 (US)">
+    <display-name lang="en">MMA NOW 360 (US)</display-name>
+  </channel>
+  <channel id="MMA NOW 360">
+    <display-name lang="en">MMA NOW 360</display-name>
+  </channel>
+  <channel id="MUTV (GB)">
+    <display-name lang="en">MUTV (GB)</display-name>
+  </channel>
+  <channel id="MUTV">
+    <display-name lang="en">MUTV</display-name>
+  </channel>
+  <channel id="NBA NETWORK">
+    <display-name lang="en">NBA NETWORK</display-name>
+  </channel>
+  <channel id="NBC SPORTS NETWORK">
+    <display-name lang="en">NBC SPORTS NETWORK</display-name>
+  </channel>
+  <channel id="NFL NETWORK">
+    <display-name lang="en">NFL NETWORK</display-name>
+  </channel>
+  <channel id="NHL NETWORK">
+    <display-name lang="en">NHL NETWORK</display-name>
+  </channel>
+  <channel id="PLANET X SPORT (US)">
+    <display-name lang="en">PLANET X SPORT (US)</display-name>
+  </channel>
+  <channel id="PLANET X SPORT">
+    <display-name lang="en">PLANET X SPORT</display-name>
+  </channel>
+  <channel id="POKER CENTRAL">
+    <display-name lang="en">POKER CENTRAL</display-name>
+  </channel>
+  <channel id="PREMIER SPORTS">
+    <display-name lang="en">PREMIER SPORTS</display-name>
+  </channel>
+  <channel id="RACING UK (GB)">
+    <display-name lang="en">RACING UK (GB)</display-name>
+  </channel>
+  <channel id="RACING UK">
+    <display-name lang="en">RACING UK</display-name>
+  </channel>
+  <channel id="RANDOM LIVE SPORTS">
+    <display-name lang="en">RANDOM LIVE SPORTS</display-name>
+  </channel>
+  <channel id="RANGERS TV">
+    <display-name lang="en">RANGERS TV</display-name>
+  </channel>
+  <channel id="SETANTA SPORTS THAILAND">
+    <display-name lang="en">SETANTA SPORTS THAILAND</display-name>
+  </channel>
+   <channel id="SKY SPORT 1 (DE)">
+    <display-name lang="en">SKY SPORT 1 (DE)</display-name>
+  </channel>
+  <channel id="SKY SPORTS 1 (GB)">
+    <display-name lang="en">SKY SPORTS 1 (GB)</display-name>
+  </channel>
+  <channel id="SKY SPORTS 1">
+    <display-name lang="en">SKY SPORTS 1</display-name>
+  </channel>
+  <channel id="SKY SPORTS 2 (GB)">
+    <display-name lang="en">SKY SPORTS 2 (GB)</display-name>
+  </channel>
+  <channel id="SKY SPORTS 2">
+    <display-name lang="en">SKY SPORTS 2</display-name>
+  </channel>
+  <channel id="SKY SPORTS 3 (GB)">
+    <display-name lang="en">SKY SPORTS 3 (GB)</display-name>
+  </channel>
+  <channel id="SKY SPORTS 3">
+    <display-name lang="en">SKY SPORTS 3</display-name>
+  </channel>
+  <channel id="SKY SPORTS 4 (GB)">
+    <display-name lang="en">SKY SPORTS 4 (GB)</display-name>
+  </channel>
+  <channel id="SKY SPORTS 4">
+    <display-name lang="en">SKY SPORTS 4</display-name>
+  </channel>
+  <channel id="SKY SPORTS 5">
+    <display-name lang="en">SKY SPORTS 5</display-name>
+  </channel>
+  <channel id="SKY SPTS EXTRA (GB)">
+    <display-name lang="en">SKY SPTS EXTRA (GB)</display-name>
+  </channel>
+  <channel id="SKY SPORTS F1 (GB)">
+    <display-name lang="en">SKY SPORTS F1 (GB)</display-name>
+  </channel>
+  <channel id="SKY SPORTS F1">
+    <display-name lang="en">SKY SPORTS F1</display-name>
+  </channel>
+  <channel id="SKY SPTS NEWS (GB)">
+    <display-name lang="en">SKY SPTS NEWS (GB)</display-name>
+  </channel>
+  <channel id="SKY SPORT NEWS">
+    <display-name lang="en">SKY SPORT NEWS</display-name>
+  </channel>
+  <channel id="SKY SPORT NEWS HQ">
+    <display-name lang="en">SKY SPORT NEWS HQ</display-name>
+  </channel>
+  <channel id="SKYNET SPORTS">
+    <display-name lang="en">SKYNET SPORTS</display-name>
+  </channel>
+  <channel id="SKYNET SPORTS 2">
+    <display-name lang="en">SKYNET SPORTS 2</display-name>
+  </channel>
+  <channel id="SKYNET SPORTS 3">
+    <display-name lang="en">SKYNET SPORTS 3</display-name>
+  </channel>
+  <channel id="SKYNET SPORTS 4">
+    <display-name lang="en">SKYNET SPORTS 4</display-name>
+  </channel>
+  <channel id="SKYNET SPORTS 5">
+    <display-name lang="en">SKYNET SPORTS 5</display-name>
+  </channel>
+  <channel id="SKYNET SPORTS 6">
+    <display-name lang="en">SKYNET SPORTS 6</display-name>
+  </channel>
+  <channel id="SNOOKER LEGENDS (GB)">
+    <display-name lang="en">SNOOKER LEGENDS (GB)</display-name>
+  </channel>
+  <channel id="SNOOKER LEGENDS">
+    <display-name lang="en">SNOOKER LEGENDS</display-name>
+  </channel>
+  <channel id="SOFTBALL 360 (US)">
+    <display-name lang="en">SOFTBALL 360 (US)</display-name>
+  </channel>
+  <channel id="SOFTBALL 360">
+    <display-name lang="en">SOFTBALL 360</display-name>
+  </channel>
+  <channel id="SPORTS AND OUTDOORS (US)">
+    <display-name lang="en">SPORTS AND OUTDOORS (US)</display-name>
+  </channel>
+  <channel id="SPORTS AND OUTDOORS">
+    <display-name lang="en">SPORTS AND OUTDOORS</display-name>
+  </channel>
+  <channel id="SPORTS TV 1">
+    <display-name lang="en">SPORTS TV 1</display-name>
+  </channel>
+  <channel id="SPORTS NET 360">
+    <display-name lang="en">SPORTS NET 360</display-name>
+  </channel>
+  <channel id="SPORTS NET ONE">
+    <display-name lang="en">SPORTS NET ONE</display-name>
+  </channel>
+  <channel id="SPORTS NET ONTARIO">
+    <display-name lang="en">SPORTS NET ONTARIO</display-name>
+  </channel>
+  <channel id="SPORTS NET WORLD">
+    <display-name lang="en">SPORTS NET WORLD</display-name>
+  </channel>
+  <channel id="SPORTS BLOOPERS TV (US)">
+    <display-name lang="en">SPORTS BLOOPERS TV (US)</display-name>
+  </channel>
+  <channel id="SPORTS BLOOPERS TV">
+    <display-name lang="en">SPORTS BLOOPERS TV</display-name>
+  </channel>
+  <channel id="SUPERCASINO (GB)">
+    <display-name lang="en">SUPERCASINO (GB)</display-name>
+  </channel>
+  <channel id="THE RING TV (US)">
+    <display-name lang="en">THE RING TV (US)</display-name>
+  </channel>
+  <channel id="THE RING TV">
+    <display-name lang="en">THE RING TV</display-name>
+  </channel>
+  <channel id="SPORTSKLUB 1">
+    <display-name lang="en">SPORTSKLUB 1</display-name>
+  </channel>
+  <channel id="SPORTSKLUB 2">
+    <display-name lang="en">SPORTSKLUB 2</display-name>
+  </channel>
+  <channel id="SPORTSKLUB 3">
+    <display-name lang="en">SPORTSKLUB 3</display-name>
+  </channel>
+  <channel id="TENNIS CHANNEL">
+    <display-name lang="en">TENNIS CHANNEL</display-name>
+  </channel>
+  <channel id="TSN 1 (CA)">
+    <display-name lang="en">TSN 1 (CA)</display-name>
+  </channel>
+  <channel id="TSN 1 CA">
+    <display-name lang="en">TSN 1 CA</display-name>
+  </channel>
+  <channel id="TSN 2 (CA)">
+    <display-name lang="en">TSN 2 (CA)</display-name>
+  </channel>
+  <channel id="TSN 2">
+    <display-name lang="en">TSN 2</display-name>
+  </channel>
+  <channel id="TSN 3 (CA)">
+    <display-name lang="en">TSN 3 (CA)</display-name>
+  </channel>
+  <channel id="TSN 3">
+    <display-name lang="en">TSN 3</display-name>
+  </channel>
+  <channel id="TSN 4 (CA)">
+    <display-name lang="en">TSN 4 (CA)</display-name>
+  </channel>
+  <channel id="TSN 4">
+    <display-name lang="en">TSN 4</display-name>
+  </channel>
+  <channel id="TSN 5">
+    <display-name lang="en">TSN 5</display-name>
+  </channel>
+  <channel id="UFC NEXT (US)">
+    <display-name lang="en">UFC NEXT (US)</display-name>
+  </channel>
+  <channel id="UFC NEXT">
+    <display-name lang="en">UFC NEXT</display-name>
+  </channel>
+  <channel id="ULTIMATE DISC TV (US)">
+    <display-name lang="en">ULTIMATE DISC TV (US)</display-name>
+  </channel>
+  <channel id="UNIVISION DEPORTES">
+    <display-name lang="en">UNIVISION DEPORTES</display-name>
+  </channel>
+  <channel id="WWE NETWORK">
+    <display-name lang="en">WWE NETWORK</display-name>
+  </channel>
+  <channel id="WILLOW CRICKET">
+    <display-name lang="en">WILLOW CRICKET</display-name>
+  </channel>
+  <channel id="BABY TV (GB)">
+    <display-name lang="en">BABY TV (GB)</display-name>
+  </channel>
+  <channel id="BABYTV">
+    <display-name lang="en">BABYTV</display-name>
+  </channel>
+  <channel id="BOOMERANG (GB)">
+    <display-name lang="en">BOOMERANG (GB)</display-name>
+  </channel>
+  <channel id="BOOMERANG KIDS">
+    <display-name lang="en">BOOMERANG KIDS</display-name>
+  </channel>
+  <channel id="BOOMERANG+1 (GB)">
+    <display-name lang="en">BOOMERANG+1 (GB)</display-name>
+  </channel>
+  <channel id="CARTOON NETW D (GB)">
+    <display-name lang="en">CARTOON NETW D (GB)</display-name>
+  </channel>
+  <channel id="CARTOON NETWORK">
+    <display-name lang="en">CARTOON NETWORK</display-name>
+  </channel>
+  <channel id="CARTOON NETWORK USA">
+    <display-name lang="en">CARTOON NETWORK USA</display-name>
+  </channel>
+  <channel id="CARTOONITO (GB)">
+    <display-name lang="en">CARTOONITO (GB)</display-name>
+  </channel>
+  <channel id="CARTOONITO">
+    <display-name lang="en">CARTOONITO</display-name>
+  </channel>
+  <channel id="CARTOON NET TOO (GB)">
+    <display-name lang="en">CARTOON NET TOO (GB)</display-name>
+  </channel>
+  <channel id="CBBC (GB)">
+    <display-name lang="en">CBBC (GB)</display-name>
+  </channel>
+  <channel id="CBBC">
+    <display-name lang="en">CBBC</display-name>
+  </channel>
+  <channel id="CBBC CHANNEL (GB)">
+    <display-name lang="en">CBBC CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="CBEEBIES (GB)">
+    <display-name lang="en">CBEEBIES (GB)</display-name>
+  </channel>
+  <channel id="CBEEBIES">
+    <display-name lang="en">CBEEBIES</display-name>
+  </channel>
+  <channel id="CITV (GB)">
+    <display-name lang="en">CITV (GB)</display-name>
+  </channel>
+  <channel id="DISNEY CHANNEL (GB)">
+    <display-name lang="en">DISNEY CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="DISNEY CHANNEL">
+    <display-name lang="en">DISNEY CHANNEL</display-name>
+  </channel>
+  <channel id="DISNEY CHAN+1 (GB)">
+    <display-name lang="en">DISNEY CHAN+1 (GB)</display-name>
+  </channel>
+  <channel id="DISNEY JUNIOR (GB)">
+    <display-name lang="en">DISNEY JUNIOR (GB)</display-name>
+  </channel>
+  <channel id="DISNEY JUNIOR">
+    <display-name lang="en">DISNEY JUNIOR</display-name>
+  </channel>
+  <channel id="DISNEY JUNIOR+1 (GB)">
+    <display-name lang="en">DISNEY JUNIOR+1 (GB)</display-name>
+  </channel>
+  <channel id="DISNEY XD (GB)">
+    <display-name lang="en">DISNEY XD (GB)</display-name>
+  </channel>
+  <channel id="DISNEY XD">
+    <display-name lang="en">DISNEY XD</display-name>
+  </channel>
+  <channel id="DISNEY XD+1 (GB)">
+    <display-name lang="en">DISNEY XD+1 (GB)</display-name>
+  </channel>
+  <channel id="NICKELODEON (GB)">
+    <display-name lang="en">NICKELODEON (GB)</display-name>
+  </channel>
+  <channel id="NICKELODEON">
+    <display-name lang="en">NICKELODEON</display-name>
+  </channel>
+  <channel id="NICKELODEON USA">
+    <display-name lang="en">NICKELODEON USA</display-name>
+  </channel>
+  <channel id="NICK+1 (GB)">
+    <display-name lang="en">NICK+1 (GB)</display-name>
+  </channel>
+  <channel id="NICK TOONS (GB)">
+    <display-name lang="en">NICK TOONS (GB)</display-name>
+  </channel>
+  <channel id="NICKTOONS">
+    <display-name lang="en">NICKTOONS</display-name>
+  </channel>
+  <channel id="NICK JR (GB)">
+    <display-name lang="en">NICK JR (GB)</display-name>
+  </channel>
+  <channel id="NICK JR">
+    <display-name lang="en">NICK JR</display-name>
+  </channel>
+  <channel id="NICK JR 2 (GB)">
+    <display-name lang="en">NICK JR 2 (GB)</display-name>
+  </channel>
+  <channel id="NICK JR TOO">
+    <display-name lang="en">NICK JR TOO</display-name>
+  </channel>
+  <channel id="POP (GB)">
+    <display-name lang="en">POP (GB)</display-name>
+  </channel>
+  <channel id="POP">
+    <display-name lang="en">POP</display-name>
+  </channel>
+  <channel id="RTE JUNIOR">
+    <display-name lang="en">RTE JUNIOR</display-name>
+  </channel>
+  <channel id="TINY POP (GB)">
+    <display-name lang="en">TINY POP (GB)</display-name>
+  </channel>
+  <channel id="TINY POP+1 (GB)">
+    <display-name lang="en">TINY POP+1 (GB)</display-name>
+  </channel>
+  <channel id="AL JAZEERA (GB)">
+    <display-name lang="en">AL JAZEERA (GB)</display-name>
+  </channel>
+  <channel id="BBC PARLIAMENT (GB)">
+    <display-name lang="en">BBC PARLIAMENT (GB)</display-name>
+  </channel>
+  <channel id="BBC NEWS (GB)">
+    <display-name lang="en">BBC NEWS (GB)</display-name>
+  </channel>
+  <channel id="BBC NEWS">
+    <display-name lang="en">BBC NEWS</display-name>
+  </channel>
+  <channel id="BLOOMBERG (GB)">
+    <display-name lang="en">BLOOMBERG (GB)</display-name>
+  </channel>
+  <channel id="CCTV NEWS (US)">
+    <display-name lang="en">CCTV NEWS (US)</display-name>
+  </channel>
+  <channel id="CNBC (GB)">
+    <display-name lang="en">CNBC (GB)</display-name>
+  </channel>
+  <channel id="CNBC">
+    <display-name lang="en">CNBC</display-name>
+  </channel>
+  <channel id="CNNI (GB)">
+    <display-name lang="en">CNNI (GB)</display-name>
+  </channel>
+  <channel id="CNN">
+    <display-name lang="en">CNN</display-name>
+  </channel>
+  <channel id="CP24">
+    <display-name lang="en">CP24</display-name>
+  </channel>
+  <channel id="EURONEWS (GB)">
+    <display-name lang="en">EURONEWS (GB)</display-name>
+  </channel>
+  <channel id="FILMON BREAKING NEWS (US)">
+    <display-name lang="en">FILMON BREAKING NEWS (US)</display-name>
+  </channel>
+  <channel id="FOX NEWS">
+    <display-name lang="en">FOX NEWS</display-name>
+  </channel>
+  <channel id="NEWSMAX (US)">
+    <display-name lang="en">NEWSMAX (US)</display-name>
+  </channel>
+  <channel id="NEWSY (US)">
+    <display-name lang="en">NEWSY (US)</display-name>
+  </channel>
+  <channel id="RUSSIA TODAY (GB)">
+    <display-name lang="en">RUSSIA TODAY (GB)</display-name>
+  </channel>
+  <channel id="RT ENGLISH (GB)">
+    <display-name lang="en">RT ENGLISH (GB)</display-name>
+  </channel>
+  <channel id="RTE 1">
+    <display-name lang="en">RTE 1</display-name>
+  </channel>
+  <channel id="RTE 2">
+    <display-name lang="en">RTE 2</display-name>
+  </channel>
+  <channel id="SKY NEWS">
+    <display-name lang="en">SKY NEWS</display-name>
+  </channel>
+  <channel id="FRANCE 24 (GB)">
+    <display-name lang="en">FRANCE 24 (GB)</display-name>
+  </channel>
+  <channel id="SKY NEWS (GB)">
+    <display-name lang="en">SKY NEWS (GB)</display-name>
+  </channel>
+  <channel id="ANIMAL PLANET (GB)">
+    <display-name lang="en">ANIMAL PLANET (GB)</display-name>
+  </channel>
+  <channel id="ANIMAL PLANET">
+    <display-name lang="en">ANIMAL PLANET</display-name>
+  </channel>
+  <channel id="ANIMALPLAN1 (GB)">
+    <display-name lang="en">ANIMALPLAN1 (GB)</display-name>
+  </channel>
+  <channel id="COMMUNITY (GB)">
+    <display-name lang="en">COMMUNITY (GB)</display-name>
+  </channel>
+  <channel id="CREATECRAF (GB)">
+    <display-name lang="en">CREATECRAF (GB)</display-name>
+  </channel>
+  <channel id="DESTINATION AMERICA">
+    <display-name lang="en">DESTINATION AMERICA</display-name>
+  </channel>
+  <channel id="DISCOVERY CHANNEL (GB)">
+    <display-name lang="en">DISCOVERY CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="DISCOVERY CHANNEL GB">
+    <display-name lang="en">DISCOVERY CHANNEL GB</display-name>
+  </channel>
+  <channel id="DISCOVERY CHANNEL US">
+    <display-name lang="en">DISCOVERY CHANNEL US</display-name>
+  </channel>
+  <channel id="DISC CHANNEL+1 (GB)">
+    <display-name lang="en">DISC CHANNEL+1 (GB)</display-name>
+  </channel>
+  <channel id="CRIME AND INVESTIGATION">
+    <display-name lang="en">CRIME AND INVESTIGATION</display-name>
+  </channel>
+  <channel id="DISCOVERY HISTORY (GB)">
+    <display-name lang="en">DISCOVERY HISTORY (GB)</display-name>
+  </channel>
+  <channel id="DISCOVERY HISTORY">
+    <display-name lang="en">DISCOVERY HISTORY</display-name>
+  </channel>
+  <channel id="DISCOVERY HISTORY+1 (GB)">
+    <display-name lang="en">DISCOVERY HISTORY+1 (GB)</display-name>
+  </channel>
+  <channel id="DISC HOME AND HEALTH (GB)">
+    <display-name lang="en">DISC HOME AND HEALTH (GB)</display-name>
+  </channel>
+  <channel id="DISCOVERY HOME AND H (GB)">
+    <display-name lang="en">DISCOVERY HOME AND H (GB)</display-name>
+  </channel>
+  <channel id="HOME AND HEALTH">
+    <display-name lang="en">HOME AND HEALTH</display-name>
+  </channel>
+  <channel id="INVESTIGATION DISCOVERY">
+    <display-name lang="en">INVESTIGATION DISCOVERY</display-name>
+  </channel>
+  <channel id="DISCOVERY SCIENCE">
+    <display-name lang="en">DISCOVERY SCIENCE</display-name>
+  </channel>
+  <channel id="DISCOVERY SHED (GB)">
+    <display-name lang="en">DISCOVERY SHED (GB)</display-name>
+  </channel>
+  <channel id="DISC TURBO (GB)">
+    <display-name lang="en">DISC TURBO (GB)</display-name>
+  </channel>
+  <channel id="DISCOVERY TURBO">
+    <display-name lang="en">DISCOVERY TURBO</display-name>
+  </channel>
+  <channel id="DISC SCIENCE (GB)">
+    <display-name lang="en">DISC SCIENCE (GB)</display-name>
+  </channel>
+  <channel id="DISCOVERY SCIENCE+1 (GB)">
+    <display-name lang="en">DISCOVERY SCIENCE+1 (GB)</display-name>
+  </channel>
+  <channel id="DISCOVERY VELOCITY">
+    <display-name lang="en">DISCOVERY VELOCITY</display-name>
+  </channel>
+  <channel id="DIY NETWORK">
+    <display-name lang="en">DIY NETWORK</display-name>
+  </channel>
+  <channel id="DR FAB SHOW (GB)">
+    <display-name lang="en">DR FAB SHOW (GB)</display-name>
+  </channel>
+  <channel id="EDEN (GB)">
+    <display-name lang="en">EDEN (GB)</display-name>
+  </channel>
+  <channel id="EDEN+1 (GB)">
+    <display-name lang="en">EDEN+1 (GB)</display-name>
+  </channel>
+  <channel id="FOOD NETWORK (GB)">
+    <display-name lang="en">FOOD NETWORK (GB)</display-name>
+  </channel>
+  <channel id="FOOD NETWORK">
+    <display-name lang="en">FOOD NETWORK</display-name>
+  </channel>
+  <channel id="FOOD NETWORK PLUS1 (GB)">
+    <display-name lang="en">FOOD NETWORK PLUS1 (GB)</display-name>
+  </channel>
+  <channel id="GOOD FOOD (GB)">
+    <display-name lang="en">GOOD FOOD (GB)</display-name>
+  </channel>
+  <channel id="GOOD FOOD">
+    <display-name lang="en">GOOD FOOD</display-name>
+  </channel>
+  <channel id="GOOD FOOD+1 (GB)">
+    <display-name lang="en">GOOD FOOD+1 (GB)</display-name>
+  </channel>
+  <channel id="HGTV US">
+    <display-name lang="en">HGTV US</display-name>
+  </channel>
+  <channel id="HISTORY CHANNEL (GB)">
+    <display-name lang="en">HISTORY CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="HISTORY GB">
+    <display-name lang="en">HISTORY GB</display-name>
+  </channel>
+  <channel id="HISTORY US">
+    <display-name lang="en">HISTORY US</display-name>
+  </channel>
+  <channel id="HISTORY+1 (GB)">
+    <display-name lang="en">HISTORY+1 (GB)</display-name>
+  </channel>
+  <channel id="H2 (GB)">
+    <display-name lang="en">H2 (GB)</display-name>
+  </channel>
+  <channel id="HOME (GB)">
+    <display-name lang="en">HOME (GB)</display-name>
+  </channel>
+  <channel id="HOME+1 (GB)">
+    <display-name lang="en">HOME+1 (GB)</display-name>
+  </channel>
+  <channel id="INVESTIGATION DISCOV (GB)">
+    <display-name lang="en">INVESTIGATION DISCOV (GB)</display-name>
+  </channel>
+  <channel id="NATIONAL GEOGRAPHIC (GB)">
+    <display-name lang="en">NATIONAL GEOGRAPHIC (GB)</display-name>
+  </channel>
+  <channel id="NATIONAL GEOGRAPHIC GB">
+    <display-name lang="en">NATIONAL GEOGRAPHIC GB</display-name>
+  </channel>
+  <channel id="NATIONAL GEOGRAPHIC US">
+    <display-name lang="en">NATIONAL GEOGRAPHIC US</display-name>
+  </channel>
+  <channel id="NATIONAL GEO+1 (GB)">
+    <display-name lang="en">NATIONAL GEO+1 (GB)</display-name>
+  </channel>
+  <channel id="NAT GEO WILD (GB)">
+    <display-name lang="en">NAT GEO WILD (GB)</display-name>
+  </channel>
+  <channel id="NATIONAL GEOGRAPHIC WILD">
+    <display-name lang="en">NATIONAL GEOGRAPHIC WILD</display-name>
+  </channel>
+  <channel id="TRAVEL UK (GB)">
+    <display-name lang="en">TRAVEL UK (GB)</display-name>
+  </channel>
+  <channel id="TRAVEL">
+    <display-name lang="en">TRAVEL</display-name>
+  </channel>
+  <channel id="TRAVEL CHANNEL+ 1 (GB)">
+    <display-name lang="en">TRAVEL CHANNEL+ 1 (GB)</display-name>
+  </channel>
+  <channel id="ADULT CHANNEL (GB)">
+    <display-name lang="en">ADULT CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="DATING CHANNEL (GB)">
+    <display-name lang="en">DATING CHANNEL (GB)</display-name>
+  </channel>
+  <channel id="PAUL RAYMOND TV (GB)">
+    <display-name lang="en">PAUL RAYMOND TV (GB)</display-name>
+  </channel>
+   <channel id="TVX  REDHOT (GB)">
+  <display-name lang="en">TVX  REDHOT (GB)</display-name>
+  </channel>
+</tv>

@@ -1,0 +1,406 @@
+v.4.5.1:
+- Bug fixes to custom lists (removal/adding of items)
+- Speed improvements on loading times of custom menus
+- Fixed the Removal of public shares
+- New addon_browser function available
+
+v.4.5.0:
+- Disclaimer option now shows in the Social TV menu so you can enable/disable at any time.
+
+v.4.4.9:
+- Home screen dialog selects now show custom titles which match what's set in admin panel
+
+v.4.4.8:
+- Added spartacus as dependency
+
+v.4.4.7:
+- Fixed the home background image synchronisation
+
+v.4.4.6:
+- Fixed add-on settings.xml synchronisation
+
+v.4.4.5:
+- Improved uploading social shares. Text formatting is removed (bold, color etc.) and if uploaded by the master user for that oem it automatically gets added as a master share rather than a user share and can be edited in admin panel.
+
+v.4.4.4:
+- Fixed bug with menus not opening if user wipes all SF addon_data
+- New Support option in Social TV, shows mac addresses, upload log option and if client has a custom dialog select script called tutorials.py it will also link into that.
+
+v.4.4.3.1:
+- Added mac lookup support for some linux based systems
+- Fixed bug with log upload not working unless user had previously opened social tv menu
+- Fixed bug with main menu items throwing an error if no results are returned
+
+v.4.4.3:
+- Now pointing to new base page for updates
+- Fixed the genre listing when dev changes name to blank string
+- No longer possible to remove share from the menu if uploaded as it meant the uploader could then no longer remove the share from the system.
+- Fixed the reset of menus in +- section.
+
+v.4.4.2:
+- Removed autoexec creation, shouldn't be needed now and was causing startup wizard to appear on every boot on LE
+
+v.4.4.1:
+- Removed a bunch of old debug logging
+
+v.4.4.0:
+- Moved settings out of openwindow into tbs to try and stop corruption
+
+v.4.3.9.9:
+- DEV RELEASE - adding checking for settings
+
+v.4.3.9.8:
+- Added setProperty of Menu_Running while running the Main_Menu_Sync
+
+v.4.3.9.7:
+- Added setProperty of Clean_Running while running the Repo Cleaner
+
+v.4.3.9.6:
+- Fixed genre filtering for menus
+
+v.4.3.9.5:
+- Fixed main_menu_sync
+- Fixed install social shares
+
+v.4.3.9.4:
+- Added autoexec for updating home menus
+
+v.4.3.9.3:
+- Fixed up add/remove menus code so far more optimised and working with new server
+
+v.4.3.9.2:
+- Added new setting for storing default menu items
+
+v.4.3.9.1:
+- Check for updates fixed when calling from Manage section
+
+v.4.3.9.0:
+- Removed test folders from Categories function
+- Changed domain link for addoninstall
+
+v.4.3.8.9:
+- SF Shares now install the correct repos automatically
+- Can now set option to auto clean any repos found on system not in use
+- Can now set option to also install the relevant repo as well as the add-ons
+
+v.4.3.8.8:
+- Fixed upload share options inc. adding to local db
+- Fixed removal of shares inc. removing from local db.
+
+v.4.3.8.7:
+- SF fix for Krypton, now opens into programs to fix window bug
+- If only one SF entry it will now open into that entry
+
+v.4.3.8.6:
+- Fixed update commands in maintenance
+
+v.4.3.8.5:
+- Changed SF menu behaviour, now opens into a dialog select
+
+v.4.3.8.4:
+- Fixed bug with genre in home.py
+
+v.4.3.8.3:
+- Bump to version number to try and get it updating
+
+v.4.3.8.2:
+- Edited to work with new genre system
+
+v.4.3.8.1:
+- Main Menu defaults fixed so all default items are reset
+- Fixed the sync of main menus functions when custom ones are already set
+
+v.4.3.8.0:
+- Fixed bug with removal of custom menu items
+
+v.4.3.7.9:
+- Fixed bug with dialog selects only working with the adult genre
+
+v.4.3.7.8:
+- Added backup server check genre checks and addon installs
+
+v.4.3.7.7:
+- Fixed keyword install and improved dialogs (set via add-on settings)
+
+v.4.3.7.6:
+- The +- menu now shows the custom names set in admin panel rather than defaults
+- The Add/Remove main menu items list now loads up a lot quicker (cached)
+- Fixed bug with menus not enabling/disabling correctly when changed in admin panel
+
+v.4.3.7.5:
+- Added option to show failed addon installs when installing keyword backup
+
+v.4.3.7.4:
+- If not registered keyword install will open directly into registration process
+
+v.4.3.7.3:
+- Busy symbol now only showing on startup and not on every update check
+
+v.4.3.7.2:
+- Main menu names can now be set in admin panel by OEM
+
+v.4.3.7.1:
+- Cleaned up some strings
+- Added addons.ini.creator data to keyword backup creation
+- Fixed problem with some chars getting stripped at start of settings when backing up.
+
+v.4.3.7:
+- Keyword now does a backup of redirects for main menus too
+- Keyword creation now allows overwrite of existing if owned by the uploader
+- Added ability to delete existing keywords
+- Moved personal keyword functions into Social TV menu
+
+v.4.3.6.9:
+- Added paths for QP Searches via popup dialog select
+
+v.4.3.6.8:
+- Increased the timeout for checking updates
+
+v.4.3.6.7:
+- Reverted last change, not sure if it's that or python koding causing problem on Android
+
+v.4.3.6.6:
+- Added sleep and busy dialog to addon install
+
+v.4.3.6.5:
+- Added option to enable all disabled add-ons
+- New method of installing SF Shares added. System now downloads current
+repo add-ons are hosted on rather than what "was" the official repo. To use this
+new method old SF XML files will need re-uploading via admin panel.
+
+v.4.3.6.4:
+- Fixed url encoded strings appearing in ADD CONTENT > Favourites section
+- Fixed IP Lookup function
+- Fixed System Version function
+- Fixed Clean System sections
+- Added confirm dialog to Force Updates option
+
+v.4.3.6.3:
+- Fixed bug with doing full backup where files don't exist
+
+v.4.3.6.1:
+- New keyword system in place, requires registration
+- Added ability to install addons in the dialog popup menu on homescreen
+- Fixed up various bugs with resetting menus to defaults
+
+v.4.3.6:
+- Added option to reset all menus to factory defaults
+- Added option to reset all main menus to defaults
+- Added option to reset all submenus to defaults
+- Added option to reset individual main menu items to defaults
+- Fixed the adding of add-ons to menus
+
+v.4.3.5:
+- Added support for submenus to be SF or DIALOG
+
+v.4.3.4:
+- Fixed string for fw updates
+- Added more WIP stuff for addon installs
+
+v.4.3.3:
+- Fixed bug with custom menus not re-enabling on some units
+- Lots of WIP stuff almost complete with addon installs
+
+v.4.3.2:
+- Added correct sleep for keyword install along with busy dialog
+
+v.4.3.1:
+- Fixed adult not being disabled on startup
+
+v.4.3.0:
+- Fixed typo causing genre lookup to fail
+- Added option to force a re-check of all social update items
+
+v.4.2.9:
+- Fixed enable/disable xxx in maintenance
+- Fixed genre/adult filter so no longer relies fully on NaN
+
+V.4.2.8:
+- Fixed install of multiple SF Social Shares, had to revert back to old Open_URL2 method.
+
+v.4.2.7:
+- Small tidy up for new server stuff
+
+v.4.2.6.2:
+- Fixed open_url statements so they use proper posts (sf installs especially)
+
+v.4.2.6.1:
+- Disabled WIP stuff (MY FRIENDS, UPDATE ACCOUNT PASSWORD, SHARE VIDEO) so it's ready for a public release
+- Create Keyword only appears if signed in with username.
+
+v.4.2.6:
+- Social update will check for default home items and enable if they've not already been disabled by user.
+- WIP share video with friend.
+
+v.4.2.5:
+- Recoded so it's now fully utilising python koding framework
+- Now creates a list of home menu enable/disable that need to be run at each social update
+- Added new Friend Request messaging/media share options (not yet live)
+- Removed trtv as a dependency as clients may want to remove that
+
+v.4.2.3.3:
+- Friend Request option added (basis of future features)
+- User Registration function added.
+- Fixed the IP lookup for whatismyipaddress.com
+- Fixed the IP lookup for iplocation.net
+- Added MY LOGS section to MY PROFILE
+- Added option for user to set their own adult password (MY PROFILE)
+
+v.4.2.3:
+- New upload log feature, logs now accessible via http://tlbb.me/log
+
+v.4.2.2:
+- New Social Sharing menu
+- Added ability to remove shares locally
+- Added ability to remove public shares
+- Added ability to update shares on server
+
+v.4.2.1:
+- Added option to periodically check for internet connection
+- Cleaned up some old strings
+- Reverted back to the newer post method for uploads, fixed bug introduced in v.4.1.7
+- Cleaned up all modules so they use Python Koding framework
+- Fixed social share upload, was the adding wrong case final path to db
+
+v.4.2:
+- Reverted back to 4.1.6 as an update error has occured somewhere between then and now
+
+v.4.1.9:
+- Fixed startup error
+
+v.4.1.7:
+- No limit on SF upload size
+
+v.4.1.6:
+- Fixed the default home menu items, they weren't being set in settings correctly
+
+v.4.1.5:
+- Added TV guide as a default to dialog menu
+
+v.4.1.4:
+- Added Sync_Settings to the update command
+- Converted old logging to new
+
+v.4.1.3:
+- Fixed the Create_Paths issue with paths not being created on certain platforms
+
+v.4.1.2:
+- New add/remove functionality for main menus. Can now add QP and Favourite items.
+- Fixed bad sleep function which was causing excess hits to server
+- Changed old try statements for xbmc:// paths to if.os.path.exists
+
+v.4.1:
+- Complete recoded the way the main menus and sub-menus work:
+-- Can now open into a list of specific category based addons
+-- Can now open into a custom list of any addons
+-- Can open into relevant Super Favourite folders
+-- Can open into a custom command. No need for xbmc.executebuiltin() to be used.
+-- Can revert back to the clients factory defaults for each menu
+
+- Recoded in line with Python Koding module
+- Removed unnecessary old code and functions no longer required
+- Converted all strings so they use the language resources
+- Recoded how the adult section is populated, now cached so should be quicker loading
+
+v.4.0.6:
+- Added keyword install improvements:
+-- userdata/custom_code.py (anything in this file will be run after extraction)
+-- APK_DATA (add any folders you want to add from sd_card/Android/data/ in here)
+-- APK_FILES (add any APK files you want installed, give them a clean name)
+
+v.4.0.5:
+- Fixed bug with keyword install complete appearing too early
+- Keyword will now show a dialog progress when unzipping
+- Added ability to run any code via submenu redirects, if it fails it will encase in a xbmc.executebuiltin command.
+
+v.4.0.4:
+- Can now add dialog selects for sub menu items as well as main menu items
+- New option added to dialog select for menus:
+
+-exec~<text_to_show>~<kodi_command>
+
+Lets say we want to run the command xbmc.executebuiltin('RunScript(special://home/addons/script.trtv/addon.py)') and give the name "Load TV Guide". Our line of text in the redirect file would be:
+
+-exec~Load TV Guide~RunScript(special://home/addons/script.trtv/addon.py)
+
+^ Note the command doesn't require xbmc.executebuiltin, you just need the xbmc command.
+
+
+v.4.0.3.2:
+- If favourites.xml exists in SF root folder it will load up into SF
+- New menu mode, can now display a dialog select of apks and addons. Details below:
+
+Add redirect file via admin panel:
+1) Add "# Select List Use NaN" to top of file and it will show all addons installed for that category based on addon tagging in NaN addon portal. If you want to add other apks/addons to this list you can add them below this line.
+
+2) Add "# Select List" to top of file followed by list of addons/apks to show those items when a main menu item is clicked. Only ones found on system will show
+
+
+v.4.0.2:
+- Android apps and data can now be included in keyword
+- Adult now has a global password which can be set via admin panel
+- System will now default to kodi settings unless redirect file found
+- Music will now open into the music window rather than video
+
+v.4.0:
+- Can now filter what menus are available in the +- section via admin panel
+- The +- menu now shows the clients corresponding artwork for that section
+- Firmware update can now be called from admin panel
+- Wipe function in maintenance will now perform a hard reset if running OE/LE
+- Can now have custom code running when a menu item is clicked so no longer stuck with the default setup of Super Favourites. Extremely useful for linking to external apps
+
+v.3.9.4:
+- Added black background to multi-select dialog
+- Added new mode for opening direct into the root menu (from maintenance)
+- Added new item in Social Shares, ability to enable/disable
+- Grouped social shares together by name so easier to find content
+- When installing a share any old ones are now fully uninstalled so they are available to install again.
+
+v.3.9:
+- OpenELEC/LibreELEC support
+- Fixed bug with failing to start from startup wizard
+
+v.3.8.9:
+- Service now checks every 12 hours for any social shares on local system that have changed from what’s online.
+- Fixed up lots of maintenance with new functions.
+- Update notification only shows if manually started via add-on and not via service.
+
+v.3.8.8:
+- Huge clean up of code
+- Social TV menu now has more options
+- Added function to remove files/paths if text file remlist exists in tbs addon_data
+
+v.3.6:
+- Added tvportal as a dependency
+
+v.3.5:
+- Improved context menu shares
+- Removed "unable to find any content" message if no response
+
+v.3.4:
+- Fixed install of items
+- Optimised hits to server
+- Only show install video if not live tv or removal item
+- Fixed issue with update zip file not being removed
+
+v.3.3:
+- Filter for disabling third party social shares
+- Added script for installing item from main menu
+- Tidied up maintenance area and added link to startup wizard
+- Added better checks for download/extract, no longer extracting to wrong location
+- Update Checks in place for important global updates
+
+v.3.1:
+- Added social sharing
+- Added search option for content
+
+v.3.0.8:
+- Added new keyword system
+- Removed install venz content
+
+v.3.0.7:
+- Bug fix for new update system
+
+v.3.0.6:
+- Fixed bug with constantly pinging site if no response
+- Notify if unable to contact servers and quit gracefully

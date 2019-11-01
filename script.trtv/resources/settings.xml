@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+
+    <setting id="streamURL"         	label="streamURL"   type="text"   		default="" 															visible="false" />
+
+<!-- Setup the mini guide key mapping -->
+	<setting type="lsep"				label="30897" 																								visible="true"/>
+	<setting type="lsep"            	label="30852"/>
+    <setting id="HOTKEY"            	label="30853" 		type="action"  	action="XBMC.RunScript(special://home/addons/script.trtv/keyProgrammer.py)"/>
+    <setting id="dummy"             	label="30878"		type="action"  	action="XBMC.RunScript(special://home/addons/script.trtv/resetHotkey.py)" />
+	
+<!-- Hidden settings in use when browsing through the EPG  -->
+    <setting id="epgskinchk"         	default="true"  																								visible="false" />
+    <setting id="CURRLOGO"         		label="30879"  		type="text"   	default=""  																visible="false" />
+    <setting id="PREVLOGO"         		label="30880"		type="text"   	default="None"  															visible="false" />
+	<setting id="FIRSTRUN"         		label="30881"		type="bool"   	default="false" 															visible="false" />
+	<setting id="MINIGUIDE"        		label="30882"    	type="bool"   	default="false" 															visible="false" />
+	<setting id="gmtprev"           	label="30883"		type="text" 	default="0" 																visible="false"/>
+	<setting id="categories"			label="30884"      	type="text" 	default="" 																	visible="false"/>
+    <setting id="VERSION"				label="30885" 		type="text" 	default="0.0.0" 															visible="false"/>
+	<setting id="SKINVERSION"			label="30886"    	type="text" 	default="7" 																visible="false"/>
+	<setting id="LOGOVERSION"			label="30887"    	type="text" 	default="0" 																visible="false"/>
+	<setting id="INIVERSION"			label="30888"     	type="text" 	default="0" 																visible="false"/>
+	<setting id="SF_FOLDER_LEN"			label="30889" 		type="text"		default="1" 																visible="false"/>
+	<setting id="DIXIEURL"    								type="labelenum"	default="All Channels"	values="All Channels"							visible="false"/>
+
+
+    <category label="30114">
+<!-- Super Favourite Settings -->
+ 		<setting type="lsep"				label="30854"/>
+	    <setting id="SF_CHANNELS"			label="30857" 		type="folder"	default=""      															visible="true"/>
+		<setting id="showEPGonly"			label="30983" 		type="bool" 	default="true" 																visible="true" />
+		<setting id="add_sf_items"			label="30895" 		type="bool"   	default="true" 																visible="true" />
+		<setting id="show_social"			label="30982" 		type="bool" 	default="false" 															visible="true" />
+		<setting id="inichansonly"			label="30989" 		type="bool" 	default="true" 																visible="true" />
+		<setting id="showSFchannels"		label="30855" 		type="bool" 	default="false" 															visible="true" />
+	    <setting id="SF_METALLIQ"			label="30967" 		type="bool"		default="false"      														visible="false"/>
+	    <setting id="enable_players"		label="30973" 		type="bool"		default="false"      														visible="false"/>
+		<setting id="autoplay" 		        label="30856"   	type="bool"   	default="false"  															visible="false" />
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ 		<setting type="lsep"                label="30987"																									visible="true"/>
+        <setting id="update_links"     	    label="30988"       type="bool"   	default="true" 																visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ 		<setting type="lsep"                label="30991"																									visible="true"/>
+        <setting id="clean_streams" 		label="30992"       type="bool"   	default="true" 																visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ 		<setting type="lsep"                label="30859"																									visible="true"/>
+        <setting id="ignore.stream"         label="30860"       type="bool"   	default="true" 																visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ 		<setting type="lsep"                label="30898" 																									visible="true"/>
+		<setting id="usecatchup"            label="30899"		type="bool"   	default="false" 															visible="true" />
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ 		<setting type="lsep"                label="30861" 																									visible="true"/>
+		<setting id="showcats"              label="30862"       type="bool"   	default="false" 																visible="true" />
+ 		<setting type="lsep"                label="30863"                                 																 	visible="false"/>
+        <setting id="ftv.ini"               label="30864"       type="labelenum" default="UK Links"		values="308901"										visible="false" />
+        <setting id="enable.osd"            label="30118"       type="bool"   	default="true" 										enable="eq(1,false)" 	visible="false"/>
+		<setting id="local.ini"             label="30865"       type="bool"   	default="true" 							 									visible="false"/>
+        <setting id="alternative.playback"  label="30120"       type="bool"   	default="false" 						 									visible="false"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ 		<setting type="lsep"                label="30866"                                 																 	visible="true"/>
+<!-- Enable touch screen -->
+        <setting id="enable.touch"          label="30123"       type="bool"   	default="false"			 													visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+<!-- autostart trtv on kodi boot -->
+ 		<setting type="lsep"                label="30867"                                 																 	visible="true"/>
+        <setting id="autoStart"             label="30868" 		type="bool"   	default="false" 						 									visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+<!-- set auto-stop streaming time (sleep) -->
+ 		<setting type="lsep"                label="30869"                                 																 	visible="true"/>
+		<setting id="idle"                  label="30870"       type="enum" 	values="Never|1 Hour|2 Hours|3 Hours|4 Hours" default="4"				 	visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+<!-- confifm exit from trtv when escaping out out EPG -->
+ 		<setting type="lsep"                label="30871"                                 																 	visible="true"/>
+ 		<setting id="confirm.exit"          label="30872"       type="bool" 	default="true" 															visible="true" />
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+<!-- set an offset for the global time, use when listings are out -->
+ 		<setting type="lsep"                label="30124" 																									visible="true"/>
+ 		<setting id="gmtfrom"               label="30873" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="true" />
+
+<!-- not currently being used -->
+        <setting id="dummy"                 label="30108"       type="action" 	 action="XBMC.RunScript(special://home/addons/script.trtv/notification.py)" visible="false"/>
+        <setting id="trailers.addon"        label="30915" 		type="labelenum" values="Apple iTunes Trailers|HD-Trailers.net" default="HD-Trailers.net" 		visible="false" />
+        <setting id="ustv.addon"            label="30914" 		type="labelenum" values="Hulu|Hulu-Beta|USTV VoD" 				default="USTV VoD" 				visible="false" />
+    </category>
+
+    <category label="30125">
+<!-- Logging details -->
+ 		<setting type="lsep" 				label="30903"                  																				 	visible="true"/>
+ 		<setting id="DEBUG" 				label="30904" 		type="bool" 	default="false"															 	visible="true"/>
+	    <setting id="skip_oldlog" 			label="30905"		type="bool"  	default="true" 																visible="true"/>
+ 		<setting id="email" 				label="30906"		type="text"  																				visible="true"/>
+ 		<setting id="dummy" 				label="30907" 		type="action" 	action="XBMC.RunScript(special://home/addons/script.trtv/uploadLog.py)" option="close"	visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+<!-- backup/restore options -->
+<!--  		<setting type="lsep" 				label="30908"																													visible="true"/>
+        <setting id="dummy" 				label="30909" 		type="action" option="close" action="XBMC.RunScript(special://home/addons/script.trtv/backup.py)"  		visible="true"/>
+        <setting id="dummy" 				label="30910" 		type="action" option="close" action="XBMC.RunScript(special://home/addons/script.trtv/backup.py,sync)"  visible="true"/>
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ -->
+ <!-- maintenance tasks -->
+ 		<setting type="lsep" 				label="30911" 																									visible="true"/>
+        <setting id="dummy" 				label="30126" 		type="action" action="XBMC.RunScript(special://home/addons/script.trtv/deleteDB.py,wipeEPG)"	visible="true"/>
+<!--         <setting id="dummy" 				label="30127" 		type="action" action="XBMC.RunScript(special://home/addons/script.trtv/resetChannels.py)"				visible="true"/>
+ -->
+ 		<setting id="dummy" 				label="30912" 	  	type="action" action="XBMC.RunScript(special://home/addons/script.trtv/createDB.py,update)" option="close" visible="true" />
+        <setting id="dummy" 				label="30913" 		type="action" action="XBMC.RunScript(special://home/addons/script.trtv/createDB.py,rescan)" option="close" visible="true" />
+        <setting id="dummy" 				label="30132" 		type="action" action="XBMC.RunScript(special://home/addons/script.trtv/resetAddon.py)" />
+    </category>
+
+    <category label="Custom Options">
+<!-- choose skin -->
+ 		<setting type="lsep"            	label="30916"																									visible="true"/>
+        <setting id="dixie.skin"        	label="30917"       type="select" source="../../userdata/addon_data/script.trtv/extras/skins/" 	mask="/" 	default="TR-BLUE"/>
+		<setting id="syncartwork" 			label="30832"  		type="bool" 	 default="true" 	 visible="true"  />
+ 		<setting type="lsep"            	label="30897" 																									visible="true"/>
+<!-- playlist details -->
+ 		<setting type="lsep"            	label="30923"																									visible="true"/>
+		<setting id="playlist.type"     	label="30924"  		type="enum"   default="URL" values="URL|File" 												visible="true"/>
+		<setting id="playlist.file"     	label="30925"       type="file"   																				visible="eq(-1,1)" />
+		<setting id="playlist.url"      	label="30926"       type="text"   default="" 																	visible="eq(-2,0)"/>
+ 		<setting type="lsep"            	label="30897" 																									visible="true"/>
+<!-- Add XML List to Tools -->
+ 		<setting type="lsep"            	label="30805"																									visible="true"/>
+        <setting id="usecustom"       	label="30801"       type="bool" 	 default="true" 															visible="true"/>
+		<setting id="custom.url"      	label="30802"       type="text" 	 default="https://friendpaste.com/5Xu6ETfd0vjj8lvpvQ390b/raw" 																visible="eq(-1,true)"/>
+		<setting id="custom.update.links"      	label="30825"   type="bool" 	 default="true" 																visible="eq(-2,true)"/>
+		<setting id="custom.config.links"      	label="30826"   type="bool" 	 default="true" 																visible="eq(-3,true)"/>
+		<setting id="custom.reset"      	label="30827"       type="bool" 	 default="true" 																visible="eq(-4,true)"/>
+		<setting id="custom.settings"      	label="30828"       type="bool" 	 default="true" 																visible="eq(-5,true)"/>
+		<setting id="custom.vpn"      		label="30843"       type="bool" 	 default="true" 																visible="eq(-6,true) + System.HasAddon(service.vpn.manager)"/>
+        <setting id="dummy" 				label="30806" 		type="action" action="XBMC.RunScript(special://home/addons/plugin.program.tbs/home.py,SUBMENU_EPG_TOOLS)" option="close" visible="eq(-7,true)"/>
+ 		<setting type="lsep"            	label="30897" 																									visible="true"/>
+<!-- XML 1 Listings details -->
+ 		<setting type="lsep"            	label="30927"																									visible="true"/>
+		<setting id="xmlpath1.type"     	label="30928"  		type="labelenum" default="None" 				values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath1.file"     	label="30929"       type="file"   																				visible="eq(-1,1)" />
+		<setting id="xmlpath1.url"      	label="30930"       type="text" 	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry1"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country1"	        	label="30932"       type="labelenum" default="United Kingdom"																					values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset1"           	label="30934" 		type="labelenum" default="-1" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 2 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath2.type"     	label="30935"  		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath2.file"     	label="30936"       type="file"   																				visible="eq(-1,1)" />
+		<setting id="xmlpath2.url"      	label="30937"       type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry2"       	label="30931"  		type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country2"	        	label="30932"       type="labelenum" default="United States"																					values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset2"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 3 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath3.type"     	label="30938"  		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath3.file"    		label="30939"       type="file"   																				visible="eq(-1,1)" />
+		<setting id="xmlpath3.url"      	label="30940"       type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry3"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country3"	        	label="30932"       type="labelenum" default="Canada"																							values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset3"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 4 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath4.type"     	label="30941" 		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath4.file"     	label="30942"       type="file"																					visible="eq(-1,1)" />
+		<setting id="xmlpath4.url"     		label="30943"		type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry4"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country4"	        	label="30932"       type="labelenum" default="0"																								values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset4"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 5 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath5.type"     	label="30944" 		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath5.file"     	label="30945"       type="file"																					visible="eq(-1,1)" />
+		<setting id="xmlpath5.url"     		label="30946"		type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry5"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country5"	        	label="30932"       type="labelenum" default="0"																								values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset5"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 6 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath6.type"     	label="30947" 		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath6.file"     	label="30948"       type="file"																					visible="eq(-1,1)" />
+		<setting id="xmlpath6.url"     		label="30949"		type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry6"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country6"	        	label="30932"       type="labelenum" default="0"																								values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset6"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 7 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath7.type"     	label="30950" 		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath7.file"     	label="30951"       type="file"																					visible="eq(-1,1)" />
+		<setting id="xmlpath7.url"     		label="30952"		type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry7"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country7"	        	label="30932"       type="labelenum" default="0"																								values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset7"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 8 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath8.type"     	label="30953" 		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath8.file"     	label="30954"       type="file"																					visible="eq(-1,1)" />
+		<setting id="xmlpath8.url"     		label="30955"		type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry8"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country8"	        	label="30932"       type="labelenum" default="0"																								values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset8"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 9 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath9.type"     	label="30956" 		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath9.file"     	label="30957"       type="file"																					visible="eq(-1,1)" />
+		<setting id="xmlpath9.url"     		label="30958"		type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry9"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country9"	        	label="30932"       type="labelenum" default="0"																								values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset9"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- XML 10 Listings details -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+		<setting id="xmlpath10.type"     	label="30959" 		type="labelenum" default="None" 			values="URL|File|None" 							visible="true"/>
+		<setting id="xmlpath10.file"     	label="30960"       type="file"																					visible="eq(-1,1)" />
+		<setting id="xmlpath10.url"     		label="30961"		type="text"   	 default="" 																visible="eq(-2,0)"/>
+        <setting id="usecountry10"       	label="30931"   	type="bool" 	 default="false" 															visible="eq(-3,0)|eq(-3,1)"/>
+		<setting id="country10"	        	label="30932"       type="labelenum" default="0"																								values="Afghanistan|Albania|Algeria|Angola|Argentina|Armenia|Australia|Austria|Azerbaijan|Bahamas|Belarus|Belgium|Bolivia|Bosnia|Brazil|Bulgaria|Cambodia|Cameroon|Canada|Chile|China|Colombia|Costa Rica|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Dominican Republic|Ecuador|Egypt|El Salvador|Estonia|Ethiopia|Finland|France|Gabon|Gambia|Georgia|Germany|Ghana|Greece|Guatemala|Guinea|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran|Iraq|Ireland|Israel|Italy|Ivory Coast|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kosovo|Kuwait|Kyrgyzstan|Laos|Latvia|Lebanon|Liberia|Libya|Liechstenstein|Lithuania|Luxembourg|Macedonia|Madagascar|Malawi|Malaysia|Mali|Malta|Mauritius|Mexico|Moldova|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|New Zealand|Nicaragua|Niger|Nigeria|Norway|Oman|Pakistan|Palestine|Panama|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russia|Rwanda|Saudi Arabia|Senegal|Serbia|Sierra Leone|Singapore|Slovakia|Slovenia|Somalia|South Africa|South Korea|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Sweden|Switzerland|Syria|Taiwan|Tajikistan|Tanzania|Thailand|Togo|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emireates|United Kingdom|United States|Uruguay|Uzbekistan|Venezuela|Vietnam|Yemen|Zambia|Zimbabwe"																	visible="eq(-1,true)" />
+ 		<setting id="offset10"           	label="30934" 		type="labelenum" default="0" 																								values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" 															visible="eq(-5,1)|eq(-5,0)" />
+<!-- custom ini file locations -->
+ 		<setting type="lsep"                label="30897" 																									visible="true"/>
+ 		<setting type="lsep"            label="Add ini Files - these contain mappings to various addons"/>
+        <setting id="INI_0_E"           label="Enable"   type="bool" default="true" visible="true"/>
+	    <setting id="INI_0"             label="ini file" type="file" default=""     visible="eq(-1,true)"/>
+		<setting id="INI_1_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_1"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_2_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_2"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_3_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_3"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_4_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_4"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_5_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_5"   	        label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_6_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_6"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_7_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_7"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_8_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_8"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+		<setting id="INI_9_E"           label="Enable"   type="bool" default="false" visible="!eq(-1,)"/>
+	    <setting id="INI_9"             label="ini file" type="file" default=""      visible="eq(-1,true) "/>
+	</category>
+</settings>

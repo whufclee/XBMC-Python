@@ -26,23 +26,23 @@
 		<setting id="dummy" label="30278" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.tbs/uploadLog.py)" option="close"/>
 
 <!-- HOME MENUS -->
-	<setting id="HOME_COMEDY" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_COOKING" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_FITNESS" type="text" visible="false" default="dialog"/>
-	<setting id="HOME_GAMING" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_KIDS" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_LIVE_TV" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_MOVIES" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_MUSIC" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_NEWS" type="text" visible="false" default="dialog"/>
-	<setting id="HOME_SPORTS" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_COMEDY" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_COOKING" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_FITNESS" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_GAMING" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_KIDS" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_LIVE_TV" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_MOVIES" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_MUSIC" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_NEWS" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_SPORTS" type="text" visible="false" default="dialog_plus"/>
 	<setting id="HOME_SYSTEM" type="text" visible="false" default="executable"/>
-	<setting id="HOME_TECHNOLOGY" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_TRAVEL" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_TV_SHOWS" type="text" visible="false" default="super_faves"/>
-	<setting id="HOME_WORLD" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_TECHNOLOGY" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_TRAVEL" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_TV_SHOWS" type="text" visible="false" default="dialog_plus"/>
+	<setting id="HOME_WORLD" type="text" visible="false" default="dialog_plus"/>
 	<setting id="HOME_XXX" type="text" visible="false" default="dialog_plus"/>
-	<setting id="HOME_YOUTUBE" type="text" visible="false" default="super_faves"/>
+	<setting id="HOME_YOUTUBE" type="text" visible="false" default="executable"/>
 	<setting id="HOME_COMEDY_APKS" type="text" visible="false"/>
 	<setting id="HOME_COOKING_APKS" type="text" visible="false"/>
 	<setting id="HOME_FITNESS_APKS" type="text" visible="false"/>
@@ -74,6 +74,8 @@
 	<setting id="kw" type="text" default="" visible="false"/>
 	<setting id="kw_date" type="text" default="" visible="false"/>
 	<setting id="repolist" type="text" default="" visible="false"/>	
+	<setting id="req_disclaimer" type="bool" default="false" visible="false"/>
+	<setting id="wipe_cache" type="bool" default="false" visible="false"/>
 
 <!-- Install the relevant repos when installing Super Favourite Shares 
  	(opposed to auto installing - providing disclaimer has been agreed) -->
@@ -82,6 +84,7 @@
 	<setting id="addons_use_repos"	type="bool"			default="true"	visible="false"/>
 <!-- Remove repos not being used -->
 	<setting id="clean_repos"		type="bool"			default="true"	visible="false"/>
-
+	<setting id="general.addonupdates"			type="text"		default="0"	visible="false"/>
+	<setting id="general.addonnotifications"	type="text"		default="false"	visible="false"/>
 
 </settings>

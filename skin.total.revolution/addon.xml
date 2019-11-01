@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.total.revolution"
+  version="0.2.4"
+  name="Total Revolution"
+  provider-name="Jezz_X, Team XBMC, whufclee">
+  <requires>
+    <import addon="xbmc.gui" version="5.0.0"/>
+    <import addon="script.globalsearch" version="2.0.8"/>	
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>A mod on the original Confluence by Jezz_X</summary>
+    <description>This needs some love and attention, it is not Helix ready. If anyone want to help on the project please contact me (whufclee)</description>
+    <platform>all</platform>
+  </extension>
+</addon>
